@@ -1,0 +1,21 @@
+{
+  "name": "langpatrol-devserver",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/index.ts"
+  },
+  "dependencies": {
+    "express": "^4.19.0",
+    "cors": "^2.8.5",
+    "langpatrol": "workspace:*"
+  },
+  "devDependencies": {
+    "tsx": "^4.7.0",
+    "typescript": "^5.6.0",
+    "@types/express": "^4.17.21",
+    "@types/cors": "^2.8.17"
+  }
+}
+

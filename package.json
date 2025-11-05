@@ -1,0 +1,19 @@
+{
+  "name": "langpatrol-monorepo",
+  "private": true,
+  "packageManager": "pnpm@9.0.0",
+  "scripts": {
+    "build": "pnpm -r build",
+    "dev": "pnpm -r --parallel dev",
+    "dev:apps": "pnpm --filter @langpatrol/engine --filter langpatrol --filter @langpatrol/rules --filter langpatrol-devserver --filter langpatrol-devui --parallel dev",
+    "test": "pnpm -r test",
+    "lint": "pnpm -r lint",
+    "format": "pnpm -r format",
+    "release": "pnpm -r build && changeset publish"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.27.1",
+    "tsx": "^4.7.0",
+    "typescript": "^5.6.0"
+  }
+}
