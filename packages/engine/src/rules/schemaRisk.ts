@@ -8,6 +8,7 @@
 import type { AnalyzeInput, Issue, Report, Suggestion } from '../types';
 import { extractText } from '../util/text';
 import { hasJsonKeywords, hasProseAfterJsonPattern } from '../util/schema';
+import { createIssueId, createPreview } from '../util/reporting';
 
 export function run(input: AnalyzeInput, acc: Report): void {
   if (!input.schema) return;
@@ -15,26 +16,59 @@ export function run(input: AnalyzeInput, acc: Report): void {
   const text = extractText(input);
   if (!text) return;
 
-  if (!hasJsonKeywords(text)) {
-    acc.issues.push({
-      code: 'SCHEMA_RISK',
-      severity: 'high',
-      detail: 'Schema provided but prompt does not request JSON output.'
+  const jsonCue = hasJsonKeywords(text);
+  const proseAfterJson = hasProseAfterJsonPattern(text);
+
+  if (!jsonCue || !proseAfterJson) return;
+
+  const issueId = createIssueId();
+
+  const jsonMatch = text.match(/json[^.\n]{0,120}/i);
+  const proseMatch = text.match(/(notes|commentary|explanation|discussion)[^.\n]{0,120}/i);
+
+  const occurrences = [];
+  if (jsonMatch && jsonMatch.index != null) {
+    const start = jsonMatch.index;
+    const end = start + jsonMatch[0].length;
+    occurrences.push({
+      text: jsonMatch[0],
+      start,
+      end,
+      preview: createPreview(text, start, end)
     });
-    return;
+  }
+  if (proseMatch && proseMatch.index != null) {
+    const start = proseMatch.index;
+    const end = start + proseMatch[0].length;
+    occurrences.push({
+      text: proseMatch[0],
+      start,
+      end,
+      preview: createPreview(text, start, end)
+    });
   }
 
-  if (hasProseAfterJsonPattern(text)) {
-    acc.issues.push({
-      code: 'SCHEMA_RISK',
-      severity: 'high',
-      detail: 'Prompt expects JSON but allows commentary after the JSON block.'
-    });
+  acc.issues.push({
+    id: issueId,
+    code: 'SCHEMA_RISK',
+    severity: 'medium',
+    detail: 'Prompt mixes strict JSON instructions with additional prose after the schema.',
+    evidence: {
+      summary: [
+        { text: 'json keywords', count: 1 },
+        { text: 'prose after json request', count: 1 }
+      ],
+      occurrences
+    },
+    scope: input.prompt ? { type: 'prompt' } : { type: 'messages' },
+    confidence: 'medium'
+  });
 
-    acc.suggestions.push({
-      type: 'ENFORCE_JSON',
-      text: 'Respond with a single JSON object that validates against the provided schema. Do not include any text outside the JSON.'
-    });
-  }
+  acc.suggestions = acc.suggestions || [];
+  acc.suggestions.push({
+    type: 'ENFORCE_JSON',
+    text: 'Move commentary into structured fields or drop it when requesting strict JSON.',
+    for: issueId
+  });
 }
 

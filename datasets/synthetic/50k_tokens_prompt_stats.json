@@ -1,0 +1,10 @@
+{
+  "targetTokens": 50000,
+  "estimatedTokensRaw": 50088,
+  "estimatedTokensAnnotated": 60991,
+  "units": 176,
+  "bytesRaw": 201755,
+  "bytesAnnotated": 245370,
+  "seedUsed": null,
+  "generatedAtISO": "2025-11-06T09:20:21.229Z"
+}

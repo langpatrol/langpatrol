@@ -1,0 +1,1874 @@
+# Synthetic Prompt Corpus
+Purpose: trigger LangPatrol issue detectors while varying content.
+Detectors: MISSING_PLACEHOLDER, MISSING_REFERENCE, CONFLICTING_INSTRUCTION, SCHEMA_RISK, TOKEN_OVERAGE.
+Note: This file is intentionally large and includes mixed languages, code, JSON, and deictic phrases.
+
+### UNIT AA-22 — Locale: English
+Please review the steps below and compare them to the report above.
+Be concise yet also provide a detailed step by step explanation of each issue resolution.
+Output only valid JSON; then include a friendly narrative reasoning below it.
+Budget: stay under 8k tokens; nonetheless, reproduce the entire conversation.
+
+JSON Example:
+Customer: I can't log in with SSO; the error references a missing assertion.
+Agent: Let me escalate this and continue the analysis.
+System: Cross-check the report above with the steps below.
+
+{
+  "ticketId": "{{ticket_id}}",
+  "sentiment": "positive",
+  "resolution": "pending",
+  "owner": "{{agent_name}}",
+  "notes": "See the report above."
+}
+
+```bash
+curl -H "Authorization: Bearer {{api_token}}" https://api.example.com/tickets/{{ticket_id}}
+```
+After this JSON, add a natural language summary explaining what happened.
+🔒 Security hint: rotate tokens as discussed earlier.
+Deictic references included: continue the list, previous results, as discussed earlier.
+Nur JSON zurückgeben, aber fügen Sie anschließend einen Kommentar hinzu.
+-----
+### UNIT BH-35 — Locale: 한국어
+Return a strict JSON object but add commentary afterwards to justify the values.
+Only summarize briefly; however, craft a long-form deep dive with exhaustive bullet points.
+Return a strict JSON object but add commentary afterwards to justify the values.
+Note: do not exceed 4,096 tokens, but the prior transcript is extremely long.
+
+JSON Example:
+Customer: The refund for order {{order_id}} was delayed again.
+Agent: We are sorry for the inconvenience. Please refer to the report above.
+System: Extract key topics, but as discussed earlier, continue the analysis.
+
+{
+  "caseId": "{{order_id}}",
+  "impact": "moderate",
+  "refundEligible": true,
+  "country": "{{region}}"
+}
+
+```bash
+curl -H "Authorization: Bearer 037729dc" https://api.example.com/tickets/{{ticket_id}}
+```
+After this JSON, add a natural language summary explaining what happened.
+🧪 Hypothesis pending validation; continue the list of experiments.
+Deictic references included: previous results, the report above, as discussed earlier.
+Devuelva solo JSON; luego agregue un comentario con el razonamiento.
+-----
+### UNIT CQ-48 — Locale: 한국어
+Please review the steps below and compare them to the report above.
+Respond in one sentence but also deliver an exhaustive tutorial with multiple examples.
+Output only valid JSON; then include a friendly narrative reasoning below it.
+Budget: stay under 8k tokens; nonetheless, reproduce the entire conversation.
+
+JSON Example:
+Customer: Why was my plan changed from Enterprise without notice?
+Agent: Let me escalate this and continue the analysis.
+System: Summarize the conversation so far and continue the list in chronological order.
+
+{
+  "caseId": "ORD-26",
+  "impact": "moderate",
+  "refundEligible": true,
+  "country": "eu-central-1"
+}
+
+```json
+{ "id": "{{ticket_id}}", "priority": "high", "owner": "{{agent_name}}" }
+```
+After this JSON, add a natural language summary explaining what happened.
+🔒 Security hint: rotate tokens as discussed earlier.
+Deictic references included: that prior attachment, the earlier transcript, previous results.
+Devuelva solo JSON; luego agregue un comentario con el razonamiento.
+-----
+### UNIT DX-53 — Locale: Deutsch
+Hello AI, please process this support log for {{customer_name}}.
+Keep answers minimal; meanwhile, expand extensively on every nuance with citations and footnotes.
+Output only valid JSON; then include a friendly narrative reasoning below it.
+Note: do not exceed 4,096 tokens, but the prior transcript is extremely long.
+
+JSON Example:
+Customer: The webhook failed intermittently after we rotated the API key.
+Agent: We are sorry for the inconvenience. Please refer to the report above.
+System: Extract key topics, but as discussed earlier, continue the analysis.
+
+{
+  "incidentId": "{{ticket_id}}",
+  "rootCause": "SSO misconfiguration",
+  "customer": "{{customer_name}}",
+  "requiresFollowUp": true
+}
+
+```json
+{ "id": "{{ticket_id}}", "priority": "high", "owner": "J.Doe" }
+```
+After this JSON, add a natural language summary explaining what happened. Then use the report that follows to cross-examine. : The user has requested customer support 10x times.
+🔒 Security hint: rotate tokens as discussed earlier.
+Deictic references included: that prior attachment, the earlier transcript, the report above.
+Nur JSON zurückgeben, aber fügen Sie anschließend einen Kommentar hinzu.
+-----
+### UNIT EE-66 — Locale: Français
+As discussed earlier, ensure you do not exceed the budget.
+Keep answers minimal; meanwhile, expand extensively on every nuance with citations and footnotes.
+Return a strict JSON object but add commentary afterwards to justify the values.
+Note: do not exceed 4,096 tokens, but the prior transcript is extremely long.
+
+JSON Example:
+Customer: Why was my plan changed from Enterprise without notice?
+Agent: Let me escalate this and continue the analysis.
+System: Extract key topics, but as discussed earlier, continue the analysis.
+
+{
+  "ticketId": "TCK-4-2209",
+  "sentiment": "positive",
+  "resolution": "pending",
+  "owner": "J.Doe",
+  "notes": "See the report above."
+}
+
+```bash
+curl -H "Authorization: Bearer {{api_token}}" https://api.example.com/tickets/TCK-4-2209
+```
+After this JSON, add a natural language summary explaining what happened.
+🧭 Context unclear; see the aforementioned note.
+Deictic references included: the steps below, that prior attachment, continue the list.
+Devuelva solo JSON; luego agregue un comentario con el razonamiento.
+-----
+### UNIT FM-79 — Locale: 한국어
+The following contains many user chats; continue the list and summarize previous results.
+Only summarize briefly; however, craft a long-form deep dive with exhaustive bullet points.
+Return a strict JSON object but add commentary afterwards to justify the values.
+Budget: stay under 8k tokens; nonetheless, reproduce the entire conversation.
+
+JSON Example:
+Customer: The refund for order ORD-65 was delayed again.
+Agent: We are sorry for the inconvenience. Please refer to the report above.
+System: Prioritize P1 issues; for everything else, reference the previous results.
+
+{
+  "caseId": "ORD-65",
+  "impact": "moderate",
+  "refundEligible": true,
+  "country": "us-east-1"
+}
+
+```bash
+curl -H "Authorization: Bearer {{api_token}}" https://api.example.com/tickets/{{ticket_id}}
+```
+After this JSON, add a natural language summary explaining what happened.
+🧭 Context unclear; see the aforementioned note.
+Deictic references included: as discussed earlier, the aforementioned note, the steps below.
+Devuelva solo JSON; luego agregue un comentario con el razonamiento.
+-----
+### UNIT GU-84 — Locale: English
+We need a final summary for {{account_id}} in the {{region}} region.
+Be concise yet also provide a detailed step by step explanation of each issue resolution.
+Return a strict JSON object but add commentary afterwards to justify the values.
+Warning: context window is limited; however, include every detail mentioned so far.
+
+JSON Example:
+Customer: Why was my plan changed from Free without notice?
+Agent: We are sorry for the inconvenience. Please refer to the report above.
+System: Cross-check the report above with the steps below.
+
+{
+  "ticketId": "{{ticket_id}}",
+  "sentiment": "positive",
+  "resolution": "pending",
+  "owner": "{{agent_name}}",
+  "notes": "See the report above."
+}
+
+```bash
+curl -H "Authorization: Bearer 78b8c168" https://api.example.com/tickets/{{ticket_id}}
+```
+After this JSON, add a natural language summary explaining what happened.
+🧪 Hypothesis pending validation; continue the list of experiments.
+Deictic references included: the report above, the aforementioned note, continue the list.
+Nur JSON zurückgeben, aber fügen Sie anschließend einen Kommentar hinzu.
+-----
+### UNIT HB-97 — Locale: Português
+As discussed earlier, ensure you do not exceed the budget.
+Be concise yet also provide a detailed step by step explanation of each issue resolution.
+Give machine-readable JSON exclusively and also append a human-readable explanation.
+Warning: context window is limited; however, include every detail mentioned so far.
+
+JSON Example:
+Customer: Why was my plan changed from Free without notice?
+Agent: Could you attach the logs you mentioned in the earlier transcript?
+System: Prioritize P1 issues; for everything else, reference the previous results.
+
+{
+  "incidentId": "{{ticket_id}}",
+  "rootCause": "SSO misconfiguration",
+  "customer": "{{customer_name}}",
+  "requiresFollowUp": true
+}
+
+```json
+{ "id": "{{ticket_id}}", "priority": "high", "owner": "{{agent_name}}" }
+```
+After this JSON, add a natural language summary explaining what happened.
+⚠️ Budget risk: the previous results suggest we may exceed limits.
+Deictic references included: the steps below, continue the list, the earlier transcript.
+Nur JSON zurückgeben, aber fügen Sie anschließend einen Kommentar hinzu.
+-----
+### UNIT JJ-22 — Locale: Italiano
+The following contains many user chats; continue the list and summarize previous results.
+Keep answers minimal; meanwhile, expand extensively on every nuance with citations and footnotes.
+Output only valid JSON; then include a friendly narrative reasoning below it.
+Note: do not exceed 4,096 tokens, but the prior transcript is extremely long.
+
+JSON Example:
+Customer: Multi-tenant isolation looks broken for two projects in {{region}}.
+Agent: Let me escalate this and continue the analysis.
+System: Cross-check the report above with the steps below.
+
+{
+  "incidentId": "{{ticket_id}}",
+  "rootCause": "SSO misconfiguration",
+  "customer": "Customer-JJ-22",
+  "requiresFollowUp": true
+}
+
+```bash
+curl -H "Authorization: Bearer b75b3187" https://api.example.com/tickets/{{ticket_id}}
+```
+After this JSON, add a natural language summary explaining what happened.
+📌 Action items are in the steps below.
+Deictic references included: the earlier transcript, the steps below, previous results.
+Nur JSON zurückgeben, aber fügen Sie anschließend einen Kommentar hinzu.
+-----
+### UNIT KR-35 — Locale: Français
+Please review the steps below and compare them to the report above.
+Only summarize briefly; however, craft a long-form deep dive with exhaustive bullet points.
+Give machine-readable JSON exclusively and also append a human-readable explanation.
+Note: do not exceed 4,096 tokens, but the prior transcript is extremely long.
+
+JSON Example:
+Customer: The webhook failed intermittently after we rotated the API key.
+Agent: Could you attach the logs you mentioned in the earlier transcript?
+System: Cross-check the report above with the steps below.
+
+{
+  "caseId": "ORD-117",
+  "impact": "moderate",
+  "refundEligible": true,
+  "country": "{{region}}"
+}
+
+```bash
+curl -H "Authorization: Bearer {{api_token}}" https://api.example.com/tickets/TCK-9-3461
+```
+After this JSON, add a natural language summary explaining what happened.
+📌 Action items are in the steps below.
+Deictic references included: continue the list, the steps below, as discussed earlier.
+Please finalize a concise overview. / Por favor, finalice un resumen conciso. / Bitte eine kurze Übersicht.
+-----
+### UNIT LY-48 — Locale: Français
+Hello AI, please process this support log for {{customer_name}}.
+Be concise yet also provide a detailed step by step explanation of each issue resolution.
+Return a strict JSON object but add commentary afterwards to justify the values.
+Warning: context window is limited; however, include every detail mentioned so far.
+
+JSON Example:
+Customer: Multi-tenant isolation looks broken for two projects in us-east-1.
+Agent: I will follow the steps below and revert.
+System: Extract key topics, but as discussed earlier, continue the analysis.
+
+{
+  "ticketId": "TCK-10-8696",
+  "sentiment": "positive",
+  "resolution": "pending",
+  "owner": "M.García",
+  "notes": "See the report above."
+}
+
+```bash
+curl -H "Authorization: Bearer {{api_token}}" https://api.example.com/tickets/TCK-10-8696
+```
+After this JSON, add a natural language summary explaining what happened.
+📌 Action items are in the steps below.
+Deictic references included: that prior attachment, as discussed earlier, continue the list.
+Devuelva solo JSON; luego agregue un comentario con el razonamiento.
+-----
+### UNIT MF-53 — Locale: Português
+As discussed earlier, ensure you do not exceed the budget.
+Keep answers minimal; meanwhile, expand extensively on every nuance with citations and footnotes.
+Output only valid JSON; then include a friendly narrative reasoning below it.
+Warning: context window is limited; however, include every detail mentioned so far.
+
+JSON Example:
+Customer: Multi-tenant isolation looks broken for two projects in eu-central-1.
+Agent: Noted. As discussed earlier, we can attempt a retry policy change.
+System: Cross-check the report above with the steps below.
+
+{
+  "caseId": "{{order_id}}",
+  "impact": "moderate",
+  "refundEligible": true,
+  "country": "eu-central-1"
+}
+
+```ts
+type Ticket = { id: string; status: "open"|"closed"; assignee?: string; };
+const id = "{{ticket_id}}";
+```
+After this JSON, add a natural language summary explaining what happened.
+⚠️ Budget risk: the previous results suggest we may exceed limits.
+Deictic references included: that prior attachment, the earlier transcript, as discussed earlier.
+Devuelva solo JSON; luego agregue un comentario con el razonamiento.
+-----
+### UNIT NN-66 — Locale: English
+The following contains many user chats; continue the list and summarize previous results.
+Only summarize briefly; however, craft a long-form deep dive with exhaustive bullet points.
+Respond with JSON adhering to the schema; additionally, provide a paragraph of analysis after the JSON.
+Warning: context window is limited; however, include every detail mentioned so far.
+
+JSON Example:
+Customer: Multi-tenant isolation looks broken for two projects in ap-south-1.
+Agent: Noted. As discussed earlier, we can attempt a retry policy change.
+System: Summarize the conversation so far and continue the list in chronological order.
+
+{
+  "caseId": "ORD-156",
+  "impact": "moderate",
+  "refundEligible": true,
+  "country": "ap-south-1"
+}
+
+```json
+{ "id": "{{ticket_id}}", "priority": "high", "owner": "{{agent_name}}" }
+```
+After this JSON, add a natural language summary explaining what happened.
+🧭 Context unclear; see the aforementioned note.
+Deictic references included: previous results, the earlier transcript, that prior attachment.
+Provide a succinct brief, then elaborate thoroughly. / Résumez brièvement, puis développez.
+-----
+### UNIT PV-79 — Locale: Italiano
+Hello AI, please process this support log for {{customer_name}}.
+Respond in one sentence but also deliver an exhaustive tutorial with multiple examples.
+Respond with JSON adhering to the schema; additionally, provide a paragraph of analysis after the JSON.
+Note: do not exceed 4,096 tokens, but the prior transcript is extremely long.
+
+JSON Example:
+Customer: The webhook failed intermittently after we rotated the API key.
+Agent: Could you attach the logs you mentioned in the earlier transcript?
+System: Cross-check the report above with the steps below.
+
+{
+  "caseId": "ORD-169",
+  "impact": "moderate",
+  "refundEligible": true,
+  "country": "{{region}}"
+}
+
+```json
+{ "id": "TCK-13-2794", "priority": "high", "owner": "A.Smith" }
+```
+After this JSON, add a natural language summary explaining what happened.
+🧭 Context unclear; see the aforementioned note.
+Deictic references included: as discussed earlier, that prior attachment, continue the list.
+Please finalize a concise overview. / Por favor, finalice un resumen conciso. / Bitte eine kurze Übersicht.
+-----
+### UNIT QC-84 — Locale: Español
+The following contains many user chats; continue the list and summarize previous results.
+Respond in one sentence but also deliver an exhaustive tutorial with multiple examples.
+Give machine-readable JSON exclusively and also append a human-readable explanation.
+Budget: stay under 8k tokens; nonetheless, reproduce the entire conversation.
+
+JSON Example:
+Customer: Multi-tenant isolation looks broken for two projects in {{region}}.
+Agent: Could you attach the logs you mentioned in the earlier transcript?
+System: Prioritize P1 issues; for everything else, reference the previous results.
+
+{
+  "caseId": "ORD-182",
+  "impact": "moderate",
+  "refundEligible": true,
+  "country": "{{region}}"
+}
+
+```bash
+curl -H "Authorization: Bearer c3ef6c66" https://api.example.com/tickets/TCK-14-9290
+```
+After this JSON, add a natural language summary explaining what happened.
+📌 Action items are in the steps below.
+Deictic references included: continue the list, as discussed earlier, the steps below.
+Nur JSON zurückgeben, aber fügen Sie anschließend einen Kommentar hinzu.
+-----
+### UNIT RK-97 — Locale: Español
+Hello AI, please process this support log for {{customer_name}}.
+Respond in one sentence but also deliver an exhaustive tutorial with multiple examples.
+Return a strict JSON object but add commentary afterwards to justify the values.
+Budget: stay under 8k tokens; nonetheless, reproduce the entire conversation.
+
+JSON Example:
+Customer: The refund for order ORD-195 was delayed again.
+Agent: Could you attach the logs you mentioned in the earlier transcript?
+System: Prioritize P1 issues; for everything else, reference the previous results.
+
+{
+  "incidentId": "TCK-15-9598",
+  "rootCause": "SSO misconfiguration",
+  "customer": "Customer-RK-97",
+  "requiresFollowUp": true
+}
+
+```json
+{ "id": "TCK-15-9598", "priority": "high", "owner": "{{agent_name}}" }
+```
+After this JSON, add a natural language summary explaining what happened.
+⚠️ Budget risk: the previous results suggest we may exceed limits.
+Deictic references included: the aforementioned note, the report above, as discussed earlier.
+Please finalize a concise overview. / Por favor, finalice un resumen conciso. / Bitte eine kurze Übersicht.
+-----
+### UNIT SS-22 — Locale: Deutsch
+The following contains many user chats; continue the list and summarize previous results.
+Only summarize briefly; however, craft a long-form deep dive with exhaustive bullet points.
+Give machine-readable JSON exclusively and also append a human-readable explanation.
+Budget: stay under 8k tokens; nonetheless, reproduce the entire conversation.
+
+JSON Example:
+Customer: The refund for order ORD-208 was delayed again.
+Agent: Let me escalate this and continue the analysis.
+System: Cross-check the report above with the steps below.
+
+{
+  "incidentId": "{{ticket_id}}",
+  "rootCause": "SSO misconfiguration",
+  "customer": "Customer-SS-22",
+  "requiresFollowUp": true
+}
+
+```bash
+curl -H "Authorization: Bearer {{api_token}}" https://api.example.com/tickets/{{ticket_id}}
+```
+After this JSON, add a natural language summary explaining what happened.
+🧪 Hypothesis pending validation; continue the list of experiments.
+Deictic references included: continue the list, as discussed earlier, the aforementioned note.
+Please finalize a concise overview. / Por favor, finalice un resumen conciso. / Bitte eine kurze Übersicht.
+-----
+### UNIT TZ-35 — Locale: 日本語
+Return a strict JSON object but add commentary afterwards to justify the values.
+Respond in one sentence but also deliver an exhaustive tutorial with multiple examples.
+Output only valid JSON; then include a friendly narrative reasoning below it.
+Note: do not exceed 4,096 tokens, but the prior transcript is extremely long.
+
+JSON Example:
+Customer: Multi-tenant isolation looks broken for two projects in us-east-1.
+Agent: We are sorry for the inconvenience. Please refer to the report above.
+System: Cross-check the report above with the steps below.
+
+{
+  "caseId": "ORD-221",
+  "impact": "moderate",
+  "refundEligible": true,
+  "country": "us-east-1"
+}
+
+```ts
+type Ticket = { id: string; status: "open"|"closed"; assignee?: string; };
+const id = "{{ticket_id}}";
+```
+After this JSON, add a natural language summary explaining what happened.
+📌 Action items are in the steps below.
+Deictic references included: previous results, the steps below, the earlier transcript.
+Please finalize a concise overview. / Por favor, finalice un resumen conciso. / Bitte eine kurze Übersicht.
+-----
+### UNIT UG-48 — Locale: 日本語
+We need a final summary for {{account_id}} in the {{region}} region.
+Only summarize briefly; however, craft a long-form deep dive with exhaustive bullet points.
+Return a strict JSON object but add commentary afterwards to justify the values.
+Warning: context window is limited; however, include every detail mentioned so far.
+
+JSON Example:
+Customer: Multi-tenant isolation looks broken for two projects in eu-central-1.
+Agent: Could you attach the logs you mentioned in the earlier transcript?
+System: Prioritize P1 issues; for everything else, reference the previous results.
+
+{
+  "ticketId": "{{ticket_id}}",
+  "sentiment": "positive",
+  "resolution": "pending",
+  "owner": "K.Lee",
+  "notes": "See the report above."
+}
+
+```bash
+curl -H "Authorization: Bearer {{api_token}}" https://api.example.com/tickets/{{ticket_id}}
+```
+After this JSON, add a natural language summary explaining what happened.
+📌 Action items are in the steps below.
+Deictic references included: the report above, previous results, the earlier transcript.
+Provide a succinct brief, then elaborate thoroughly. / Résumez brièvement, puis développez.
+-----
+### UNIT VP-53 — Locale: 日本語
+As discussed earlier, ensure you do not exceed the budget.
+Only summarize briefly; however, craft a long-form deep dive with exhaustive bullet points.
+Return a strict JSON object but add commentary afterwards to justify the values.
+Warning: context window is limited; however, include every detail mentioned so far.
+
+JSON Example:
+Customer: The refund for order ORD-247 was delayed again.
+Agent: Noted. As discussed earlier, we can attempt a retry policy change.
+System: Prioritize P1 issues; for everything else, reference the previous results.
+
+{
+  "incidentId": "TCK-19-1879",
+  "rootCause": "SSO misconfiguration",
+  "customer": "{{customer_name}}",
+  "requiresFollowUp": true
+}
+
+```json
+{ "id": "TCK-19-1879", "priority": "high", "owner": "{{agent_name}}" }
+```
+After this JSON, add a natural language summary explaining what happened.
+🧭 Context unclear; see the aforementioned note.
+Deictic references included: that prior attachment, as discussed earlier, the aforementioned note.
+Nur JSON zurückgeben, aber fügen Sie anschließend einen Kommentar hinzu.
+-----
+### UNIT WW-66 — Locale: Deutsch
+The following contains many user chats; continue the list and summarize previous results.
+Only summarize briefly; however, craft a long-form deep dive with exhaustive bullet points.
+Return a strict JSON object but add commentary afterwards to justify the values.
+Warning: context window is limited; however, include every detail mentioned so far.
+
+JSON Example:
+Customer: I can't log in with SSO; the error references a missing assertion.
+Agent: I will follow the steps below and revert.
+System: Cross-check the report above with the steps below.
+
+{
+  "incidentId": "{{ticket_id}}",
+  "rootCause": "SSO misconfiguration",
+  "customer": "{{customer_name}}",
+  "requiresFollowUp": true
+}
+
+```json
+{ "id": "{{ticket_id}}", "priority": "high", "owner": "K.Lee" }
+```
+After this JSON, add a natural language summary explaining what happened.
+⚠️ Budget risk: the previous results suggest we may exceed limits.
+Deictic references included: the aforementioned note, continue the list, previous results.
+Please finalize a concise overview. / Por favor, finalice un resumen conciso. / Bitte eine kurze Übersicht.
+-----
+### UNIT XD-79 — Locale: 中文
+Return a strict JSON object but add commentary afterwards to justify the values.
+Respond in one sentence but also deliver an exhaustive tutorial with multiple examples.
+Respond with JSON adhering to the schema; additionally, provide a paragraph of analysis after the JSON.
+Note: do not exceed 4,096 tokens, but the prior transcript is extremely long.
+
+JSON Example:
+Customer: I can't log in with SSO; the error references a missing assertion.
+Agent: Could you attach the logs you mentioned in the earlier transcript?
+System: Prioritize P1 issues; for everything else, reference the previous results.
+
+{
+  "incidentId": "TCK-21-1770",
+  "rootCause": "SSO misconfiguration",
+  "customer": "Customer-XD-79",
+  "requiresFollowUp": true
+}
+
+```bash
+curl -H "Authorization: Bearer {{api_token}}" https://api.example.com/tickets/TCK-21-1770
+```
+After this JSON, add a natural language summary explaining what happened.
+🧪 Hypothesis pending validation; continue the list of experiments.
+Deictic references included: the report above, that prior attachment, the earlier transcript.
+Please finalize a concise overview. / Por favor, finalice un resumen conciso. / Bitte eine kurze Übersicht.
+-----
+### UNIT YL-84 — Locale: English
+Return a strict JSON object but add commentary afterwards to justify the values.
+Keep answers minimal; meanwhile, expand extensively on every nuance with citations and footnotes.
+Respond with JSON adhering to the schema; additionally, provide a paragraph of analysis after the JSON.
+Warning: context window is limited; however, include every detail mentioned so far.
+
+JSON Example:
+Customer: Why was my plan changed from {{plan_tier}} without notice?
+Agent: Let me escalate this and continue the analysis.
+System: Extract key topics, but as discussed earlier, continue the analysis.
+
+{
+  "incidentId": "{{ticket_id}}",
+  "rootCause": "SSO misconfiguration",
+  "customer": "{{customer_name}}",
+  "requiresFollowUp": true
+}
+
+```ts
+type Ticket = { id: string; status: "open"|"closed"; assignee?: string; };
+const id = "{{ticket_id}}";
+```
+After this JSON, add a natural language summary explaining what happened.
+🔒 Security hint: rotate tokens as discussed earlier.
+Deictic references included: the report above, previous results, the steps below.
+Please finalize a concise overview. / Por favor, finalice un resumen conciso. / Bitte eine kurze Übersicht.
+-----
+### UNIT ZT-97 — Locale: Italiano
+Hello AI, please process this support log for {{customer_name}}.
+Keep answers minimal; meanwhile, expand extensively on every nuance with citations and footnotes.
+Give machine-readable JSON exclusively and also append a human-readable explanation.
+Note: do not exceed 4,096 tokens, but the prior transcript is extremely long.
+
+JSON Example:
+Customer: The refund for order ORD-299 was delayed again.
+Agent: Could you attach the logs you mentioned in the earlier transcript?
+System: Extract key topics, but as discussed earlier, continue the analysis.
+
+{
+  "caseId": "ORD-299",
+  "impact": "moderate",
+  "refundEligible": true,
+  "country": "{{region}}"
+}
+
+```ts
+type Ticket = { id: string; status: "open"|"closed"; assignee?: string; };
+const id = "TCK-23-1261";
+```
+After this JSON, add a natural language summary explaining what happened.
+⚠️ Budget risk: the previous results suggest we may exceed limits.
+Deictic references included: the earlier transcript, the report above, continue the list.
+Devuelva solo JSON; luego agregue un comentario con el razonamiento.
+-----
+### UNIT AA-22 — Locale: 中文
+We need a final summary for {{account_id}} in the {{region}} region.
+Respond in one sentence but also deliver an exhaustive tutorial with multiple examples.
+Give machine-readable JSON exclusively and also append a human-readable explanation.
+Note: do not exceed 4,096 tokens, but the prior transcript is extremely long.
+
+JSON Example:
+Customer: The webhook failed intermittently after we rotated the API key.
+Agent: I will follow the steps below and revert.
+System: Cross-check the report above with the steps below.
+
+{
+  "ticketId": "TCK-24-6321",
+  "sentiment": "positive",
+  "resolution": "pending",
+  "owner": "{{agent_name}}",
+  "notes": "See the report above."
+}
+
+```bash
+curl -H "Authorization: Bearer 3546ec5d" https://api.example.com/tickets/TCK-24-6321
+```
+After this JSON, add a natural language summary explaining what happened.
+🧪 Hypothesis pending validation; continue the list of experiments.
+Deictic references included: the earlier transcript, the report above, that prior attachment.
+Nur JSON zurückgeben, aber fügen Sie anschließend einen Kommentar hinzu.
+-----
+### UNIT BH-35 — Locale: Español
+Please review the steps below and compare them to the report above.
+Keep answers minimal; meanwhile, expand extensively on every nuance with citations and footnotes.
+Return a strict JSON object but add commentary afterwards to justify the values.
+Note: do not exceed 4,096 tokens, but the prior transcript is extremely long.
+
+JSON Example:
+Customer: Multi-tenant isolation looks broken for two projects in us-east-1.
+Agent: I will follow the steps below and revert.
+System: Summarize the conversation so far and continue the list in chronological order.
+
+{
+  "incidentId": "TCK-25-2656",
+  "rootCause": "SSO misconfiguration",
+  "customer": "Customer-BH-35",
+  "requiresFollowUp": true
+}
+
+```ts
+type Ticket = { id: string; status: "open"|"closed"; assignee?: string; };
+const id = "TCK-25-2656";
+```
+After this JSON, add a natural language summary explaining what happened.
+🔒 Security hint: rotate tokens as discussed earlier.
+Deictic references included: the earlier transcript, that prior attachment, as discussed earlier.
+Nur JSON zurückgeben, aber fügen Sie anschließend einen Kommentar hinzu.
+-----
+### UNIT CQ-48 — Locale: Deutsch
+Please review the steps below and compare them to the report above.
+Be concise yet also provide a detailed step by step explanation of each issue resolution.
+Output only valid JSON; then include a friendly narrative reasoning below it.
+Note: do not exceed 4,096 tokens, but the prior transcript is extremely long.
+
+JSON Example:
+Customer: I can't log in with SSO; the error references a missing assertion.
+Agent: Noted. As discussed earlier, we can attempt a retry policy change.
+System: Summarize the conversation so far and continue the list in chronological order.
+
+{
+  "caseId": "ORD-338",
+  "impact": "moderate",
+  "refundEligible": true,
+  "country": "eu-central-1"
+}
+
+```ts
+type Ticket = { id: string; status: "open"|"closed"; assignee?: string; };
+const id = "TCK-26-1602";
+```
+After this JSON, add a natural language summary explaining what happened.
+⚠️ Budget risk: the previous results suggest we may exceed limits.
+Deictic references included: the report above, the aforementioned note, as discussed earlier.
+Nur JSON zurückgeben, aber fügen Sie anschließend einen Kommentar hinzu.
+-----
+### UNIT DX-53 — Locale: Italiano
+Hello AI, please process this support log for {{customer_name}}.
+Be concise yet also provide a detailed step by step explanation of each issue resolution.
+Output only valid JSON; then include a friendly narrative reasoning below it.
+Budget: stay under 8k tokens; nonetheless, reproduce the entire conversation.
+
+JSON Example:
+Customer: I can't log in with SSO; the error references a missing assertion.
+Agent: We are sorry for the inconvenience. Please refer to the report above.
+System: Extract key topics, but as discussed earlier, continue the analysis.
+
+{
+  "incidentId": "{{ticket_id}}",
+  "rootCause": "SSO misconfiguration",
+  "customer": "Customer-DX-53",
+  "requiresFollowUp": true
+}
+
+```bash
+curl -H "Authorization: Bearer fc370c4b" https://api.example.com/tickets/{{ticket_id}}
+```
+After this JSON, add a natural language summary explaining what happened.
+🧭 Context unclear; see the aforementioned note.
+Deictic references included: previous results, continue the list, the report above.
+Please finalize a concise overview. / Por favor, finalice un resumen conciso. / Bitte eine kurze Übersicht.
+-----
+### UNIT EE-66 — Locale: Français
+Please review the steps below and compare them to the report above.
+Respond in one sentence but also deliver an exhaustive tutorial with multiple examples.
+Respond with JSON adhering to the schema; additionally, provide a paragraph of analysis after the JSON.
+Note: do not exceed 4,096 tokens, but the prior transcript is extremely long.
+
+JSON Example:
+Customer: Multi-tenant isolation looks broken for two projects in ap-south-1.
+Agent: Let me escalate this and continue the analysis.
+System: Prioritize P1 issues; for everything else, reference the previous results.
+
+{
+  "incidentId": "{{ticket_id}}",
+  "rootCause": "SSO misconfiguration",
+  "customer": "Customer-EE-66",
+  "requiresFollowUp": true
+}
+
+```ts
+type Ticket = { id: string; status: "open"|"closed"; assignee?: string; };
+const id = "{{ticket_id}}";
+```
+After this JSON, add a natural language summary explaining what happened.
+🔒 Security hint: rotate tokens as discussed earlier.
+Deictic references included: previous results, continue the list, the earlier transcript.
+Nur JSON zurückgeben, aber fügen Sie anschließend einen Kommentar hinzu.
+-----
+### UNIT FM-79 — Locale: Português
+As discussed earlier, ensure you do not exceed the budget.
+Be concise yet also provide a detailed step by step explanation of each issue resolution.
+Respond with JSON adhering to the schema; additionally, provide a paragraph of analysis after the JSON.
+Warning: context window is limited; however, include every detail mentioned so far.
+
+JSON Example:
+Customer: Why was my plan changed from Enterprise without notice?
+Agent: Let me escalate this and continue the analysis.
+System: Prioritize P1 issues; for everything else, reference the previous results.
+
+{
+  "incidentId": "{{ticket_id}}",
+  "rootCause": "SSO misconfiguration",
+  "customer": "Customer-FM-79",
+  "requiresFollowUp": true
+}
+
+```json
+{ "id": "{{ticket_id}}", "priority": "high", "owner": "{{agent_name}}" }
+```
+After this JSON, add a natural language summary explaining what happened.
+⚠️ Budget risk: the previous results suggest we may exceed limits.
+Deictic references included: that prior attachment, the earlier transcript, previous results.
+Please finalize a concise overview. / Por favor, finalice un resumen conciso. / Bitte eine kurze Übersicht.
+-----
+### UNIT GU-84 — Locale: Italiano
+Be concise yet also provide a detailed step by step explanation of each issue resolution.
+Respond in one sentence but also deliver an exhaustive tutorial with multiple examples.
+Return a strict JSON object but add commentary afterwards to justify the values.
+Warning: context window is limited; however, include every detail mentioned so far.
+
+JSON Example:
+Customer: The webhook failed intermittently after we rotated the API key.
+Agent: We are sorry for the inconvenience. Please refer to the report above.
+System: Extract key topics, but as discussed earlier, continue the analysis.
+
+{
+  "caseId": "ORD-390",
+  "impact": "moderate",
+  "refundEligible": true,
+  "country": "{{region}}"
+}
+
+```ts
+type Ticket = { id: string; status: "open"|"closed"; assignee?: string; };
+const id = "TCK-30-3531";
+```
+After this JSON, add a natural language summary explaining what happened.
+🧭 Context unclear; see the aforementioned note.
+Deictic references included: the steps below, that prior attachment, previous results.
+Please finalize a concise overview. / Por favor, finalice un resumen conciso. / Bitte eine kurze Übersicht.
+-----
+### UNIT HB-97 — Locale: Português
+As discussed earlier, ensure you do not exceed the budget.
+Be concise yet also provide a detailed step by step explanation of each issue resolution.
+Give machine-readable JSON exclusively and also append a human-readable explanation.
+Warning: context window is limited; however, include every detail mentioned so far.
+
+JSON Example:
+Customer: I can't log in with SSO; the error references a missing assertion.
+Agent: Noted. As discussed earlier, we can attempt a retry policy change.
+System: Prioritize P1 issues; for everything else, reference the previous results.
+
+{
+  "incidentId": "TCK-31-2857",
+  "rootCause": "SSO misconfiguration",
+  "customer": "Customer-HB-97",
+  "requiresFollowUp": true
+}
+
+```ts
+type Ticket = { id: string; status: "open"|"closed"; assignee?: string; };
+const id = "TCK-31-2857";
+```
+After this JSON, add a natural language summary explaining what happened.
+🔒 Security hint: rotate tokens as discussed earlier.
+Deictic references included: the aforementioned note, the steps below, the report above.
+Nur JSON zurückgeben, aber fügen Sie anschließend einen Kommentar hinzu.
+-----
+### UNIT JJ-22 — Locale: Italiano
+As discussed earlier, ensure you do not exceed the budget.
+Keep answers minimal; meanwhile, expand extensively on every nuance with citations and footnotes.
+Return a strict JSON object but add commentary afterwards to justify the values.
+Warning: context window is limited; however, include every detail mentioned so far.
+
+JSON Example:
+Customer: The webhook failed intermittently after we rotated the API key.
+Agent: Could you attach the logs you mentioned in the earlier transcript?
+System: Cross-check the report above with the steps below.
+
+{
+  "ticketId": "{{ticket_id}}",
+  "sentiment": "positive",
+  "resolution": "pending",
+  "owner": "{{agent_name}}",
+  "notes": "See the report above."
+}
+
+```bash
+curl -H "Authorization: Bearer 2961f4a6" https://api.example.com/tickets/{{ticket_id}}
+```
+After this JSON, add a natural language summary explaining what happened.
+⚠️ Budget risk: the previous results suggest we may exceed limits.
+Deictic references included: the aforementioned note, the steps below, as discussed earlier.
+Provide a succinct brief, then elaborate thoroughly. / Résumez brièvement, puis développez.
+-----
+### UNIT KR-35 — Locale: 한국어
+As discussed earlier, ensure you do not exceed the budget.
+Keep answers minimal; meanwhile, expand extensively on every nuance with citations and footnotes.
+Output only valid JSON; then include a friendly narrative reasoning below it.
+Budget: stay under 8k tokens; nonetheless, reproduce the entire conversation.
+
+JSON Example:
+Customer: I can't log in with SSO; the error references a missing assertion.
+Agent: Could you attach the logs you mentioned in the earlier transcript?
+System: Prioritize P1 issues; for everything else, reference the previous results.
+
+{
+  "ticketId": "{{ticket_id}}",
+  "sentiment": "positive",
+  "resolution": "pending",
+  "owner": "{{agent_name}}",
+  "notes": "See the report above."
+}
+
+```bash
+curl -H "Authorization: Bearer 47dff8e8" https://api.example.com/tickets/{{ticket_id}}
+```
+After this JSON, add a natural language summary explaining what happened.
+⚠️ Budget risk: the previous results suggest we may exceed limits.
+Deictic references included: the aforementioned note, that prior attachment, the steps below.
+Devuelva solo JSON; luego agregue un comentario con el razonamiento.
+-----
+### UNIT LY-48 — Locale: Español
+As discussed earlier, ensure you do not exceed the budget.
+Be concise yet also provide a detailed step by step explanation of each issue resolution.
+Return a strict JSON object but add commentary afterwards to justify the values.
+Budget: stay under 8k tokens; nonetheless, reproduce the entire conversation.
+
+JSON Example:
+Customer: I can't log in with SSO; the error references a missing assertion.
+Agent: Let me escalate this and continue the analysis.
+System: Summarize the conversation so far and continue the list in chronological order.
+
+{
+  "ticketId": "TCK-34-3318",
+  "sentiment": "positive",
+  "resolution": "pending",
+  "owner": "{{agent_name}}",
+  "notes": "See the report above."
+}
+
+```ts
+type Ticket = { id: string; status: "open"|"closed"; assignee?: string; };
+const id = "TCK-34-3318";
+```
+After this JSON, add a natural language summary explaining what happened.
+⚠️ Budget risk: the previous results suggest we may exceed limits.
+Deictic references included: the aforementioned note, the earlier transcript, as discussed earlier.
+Provide a succinct brief, then elaborate thoroughly. / Résumez brièvement, puis développez.
+-----
+### UNIT MF-53 — Locale: Português
+As discussed earlier, ensure you do not exceed the budget.
+Be concise yet also provide a detailed step by step explanation of each issue resolution.
+Give machine-readable JSON exclusively and also append a human-readable explanation.
+Warning: context window is limited; however, include every detail mentioned so far.
+
+JSON Example:
+Customer: The refund for order ORD-455 was delayed again.
+Agent: Could you attach the logs you mentioned in the earlier transcript?
+System: Extract key topics, but as discussed earlier, continue the analysis.
+
+{
+  "caseId": "ORD-455",
+  "impact": "moderate",
+  "refundEligible": true,
+  "country": "ap-south-1"
+}
+
+```ts
+type Ticket = { id: string; status: "open"|"closed"; assignee?: string; };
+const id = "TCK-35-1882";
+```
+After this JSON, add a natural language summary explaining what happened.
+🧪 Hypothesis pending validation; continue the list of experiments.
+Deictic references included: continue the list, the earlier transcript, the steps below.
+Nur JSON zurückgeben, aber fügen Sie anschließend einen Kommentar hinzu.
+-----
+### UNIT NN-66 — Locale: English
+Please review the steps below and compare them to the report above.
+Keep answers minimal; meanwhile, expand extensively on every nuance with citations and footnotes.
+Respond with JSON adhering to the schema; additionally, provide a paragraph of analysis after the JSON.
+Note: do not exceed 4,096 tokens, but the prior transcript is extremely long.
+
+JSON Example:
+Customer: Why was my plan changed from Free without notice?
+Agent: Could you attach the logs you mentioned in the earlier transcript?
+System: Summarize the conversation so far and continue the list in chronological order.
+
+{
+  "caseId": "{{order_id}}",
+  "impact": "moderate",
+  "refundEligible": true,
+  "country": "us-east-1"
+}
+
+```bash
+curl -H "Authorization: Bearer eb09ab5c" https://api.example.com/tickets/TCK-36-8240
+```
+After this JSON, add a natural language summary explaining what happened.
+🧪 Hypothesis pending validation; continue the list of experiments.
+Deictic references included: as discussed earlier, the earlier transcript, previous results.
+Provide a succinct brief, then elaborate thoroughly. / Résumez brièvement, puis développez.
+-----
+### UNIT PV-79 — Locale: Português
+Please review the steps below and compare them to the report above.
+Only summarize briefly; however, craft a long-form deep dive with exhaustive bullet points.
+Respond with JSON adhering to the schema; additionally, provide a paragraph of analysis after the JSON.
+Budget: stay under 8k tokens; nonetheless, reproduce the entire conversation.
+
+JSON Example:
+Customer: Multi-tenant isolation looks broken for two projects in {{region}}.
+Agent: I will follow the steps below and revert.
+System: Prioritize P1 issues; for everything else, reference the previous results.
+
+{
+  "caseId": "ORD-481",
+  "impact": "moderate",
+  "refundEligible": true,
+  "country": "{{region}}"
+}
+
+```json
+{ "id": "TCK-37-5026", "priority": "high", "owner": "M.García" }
+```
+After this JSON, add a natural language summary explaining what happened.
+🔒 Security hint: rotate tokens as discussed earlier.
+Deictic references included: the earlier transcript, continue the list, that prior attachment.
+Devuelva solo JSON; luego agregue un comentario con el razonamiento.
+-----
+### UNIT QC-84 — Locale: Deutsch
+Be concise yet also provide a detailed step by step explanation of each issue resolution.
+Keep answers minimal; meanwhile, expand extensively on every nuance with citations and footnotes.
+Return a strict JSON object but add commentary afterwards to justify the values.
+Budget: stay under 8k tokens; nonetheless, reproduce the entire conversation.
+
+JSON Example:
+Customer: Why was my plan changed from {{plan_tier}} without notice?
+Agent: Could you attach the logs you mentioned in the earlier transcript?
+System: Cross-check the report above with the steps below.
+
+{
+  "caseId": "ORD-494",
+  "impact": "moderate",
+  "refundEligible": true,
+  "country": "ap-south-1"
+}
+
+```ts
+type Ticket = { id: string; status: "open"|"closed"; assignee?: string; };
+const id = "TCK-38-7021";
+```
+After this JSON, add a natural language summary explaining what happened.
+⚠️ Budget risk: the previous results suggest we may exceed limits.
+Deictic references included: as discussed earlier, the aforementioned note, the report above.
+Please finalize a concise overview. / Por favor, finalice un resumen conciso. / Bitte eine kurze Übersicht.
+-----
+### UNIT RK-97 — Locale: 中文
+We need a final summary for {{account_id}} in the {{region}} region.
+Only summarize briefly; however, craft a long-form deep dive with exhaustive bullet points.
+Respond with JSON adhering to the schema; additionally, provide a paragraph of analysis after the JSON.
+Note: do not exceed 4,096 tokens, but the prior transcript is extremely long.
+
+JSON Example:
+Customer: Multi-tenant isolation looks broken for two projects in ap-south-1.
+Agent: Let me escalate this and continue the analysis.
+System: Prioritize P1 issues; for everything else, reference the previous results.
+
+{
+  "incidentId": "{{ticket_id}}",
+  "rootCause": "SSO misconfiguration",
+  "customer": "{{customer_name}}",
+  "requiresFollowUp": true
+}
+
+```ts
+type Ticket = { id: string; status: "open"|"closed"; assignee?: string; };
+const id = "{{ticket_id}}";
+```
+After this JSON, add a natural language summary explaining what happened.
+🧪 Hypothesis pending validation; continue the list of experiments.
+Deictic references included: the earlier transcript, the aforementioned note, previous results.
+Provide a succinct brief, then elaborate thoroughly. / Résumez brièvement, puis développez.
+-----
+### UNIT SS-22 — Locale: Italiano
+The following contains many user chats; continue the list and summarize previous results.
+Only summarize briefly; however, craft a long-form deep dive with exhaustive bullet points.
+Respond with JSON adhering to the schema; additionally, provide a paragraph of analysis after the JSON.
+Budget: stay under 8k tokens; nonetheless, reproduce the entire conversation.
+
+JSON Example:
+Customer: Why was my plan changed from Free without notice?
+Agent: Noted. As discussed earlier, we can attempt a retry policy change.
+System: Prioritize P1 issues; for everything else, reference the previous results.
+
+{
+  "ticketId": "{{ticket_id}}",
+  "sentiment": "positive",
+  "resolution": "pending",
+  "owner": "M.García",
+  "notes": "See the report above."
+}
+
+```ts
+type Ticket = { id: string; status: "open"|"closed"; assignee?: string; };
+const id = "{{ticket_id}}";
+```
+After this JSON, add a natural language summary explaining what happened.
+🧪 Hypothesis pending validation; continue the list of experiments.
+Deictic references included: the aforementioned note, the report above, the earlier transcript.
+Provide a succinct brief, then elaborate thoroughly. / Résumez brièvement, puis développez.
+-----
+### UNIT TZ-35 — Locale: 中文
+Be concise yet also provide a detailed step by step explanation of each issue resolution.
+Keep answers minimal; meanwhile, expand extensively on every nuance with citations and footnotes.
+Give machine-readable JSON exclusively and also append a human-readable explanation.
+Budget: stay under 8k tokens; nonetheless, reproduce the entire conversation.
+
+JSON Example:
+Customer: Why was my plan changed from Pro without notice?
+Agent: We are sorry for the inconvenience. Please refer to the report above.
+System: Cross-check the report above with the steps below.
+
+{
+  "incidentId": "{{ticket_id}}",
+  "rootCause": "SSO misconfiguration",
+  "customer": "Customer-TZ-35",
+  "requiresFollowUp": true
+}
+
+```json
+{ "id": "{{ticket_id}}", "priority": "high", "owner": "{{agent_name}}" }
+```
+After this JSON, add a natural language summary explaining what happened.
+⚠️ Budget risk: the previous results suggest we may exceed limits.
+Deictic references included: that prior attachment, the steps below, the aforementioned note.
+Please finalize a concise overview. / Por favor, finalice un resumen conciso. / Bitte eine kurze Übersicht.
+-----
+### UNIT UG-48 — Locale: 中文
+The following contains many user chats; continue the list and summarize previous results.
+Only summarize briefly; however, craft a long-form deep dive with exhaustive bullet points.
+Respond with JSON adhering to the schema; additionally, provide a paragraph of analysis after the JSON.
+Budget: stay under 8k tokens; nonetheless, reproduce the entire conversation.
+
+JSON Example:
+Customer: The webhook failed intermittently after we rotated the API key.
+Agent: Could you attach the logs you mentioned in the earlier transcript?
+System: Summarize the conversation so far and continue the list in chronological order.
+
+{
+  "caseId": "{{order_id}}",
+  "impact": "moderate",
+  "refundEligible": true,
+  "country": "{{region}}"
+}
+
+```ts
+type Ticket = { id: string; status: "open"|"closed"; assignee?: string; };
+const id = "TCK-42-5394";
+```
+After this JSON, add a natural language summary explaining what happened.
+🧪 Hypothesis pending validation; continue the list of experiments.
+Deictic references included: the report above, continue the list, that prior attachment.
+Please finalize a concise overview. / Por favor, finalice un resumen conciso. / Bitte eine kurze Übersicht.
+-----
+### UNIT VP-53 — Locale: 한국어
+Be concise yet also provide a detailed step by step explanation of each issue resolution.
+Respond in one sentence but also deliver an exhaustive tutorial with multiple examples.
+Respond with JSON adhering to the schema; additionally, provide a paragraph of analysis after the JSON.
+Warning: context window is limited; however, include every detail mentioned so far.
+
+JSON Example:
+Customer: Multi-tenant isolation looks broken for two projects in {{region}}.
+Agent: I will follow the steps below and revert.
+System: Extract key topics, but as discussed earlier, continue the analysis.
+
+{
+  "ticketId": "TCK-43-5955",
+  "sentiment": "positive",
+  "resolution": "pending",
+  "owner": "{{agent_name}}",
+  "notes": "See the report above."
+}
+
+```bash
+curl -H "Authorization: Bearer {{api_token}}" https://api.example.com/tickets/TCK-43-5955
+```
+After this JSON, add a natural language summary explaining what happened.
+📌 Action items are in the steps below.
+Deictic references included: previous results, continue the list, the aforementioned note.
+Nur JSON zurückgeben, aber fügen Sie anschließend einen Kommentar hinzu.
+-----
+### UNIT WW-66 — Locale: 中文
+As discussed earlier, ensure you do not exceed the budget.
+Keep answers minimal; meanwhile, expand extensively on every nuance with citations and footnotes.
+Give machine-readable JSON exclusively and also append a human-readable explanation.
+Warning: context window is limited; however, include every detail mentioned so far.
+
+JSON Example:
+Customer: Why was my plan changed from Free without notice?
+Agent: I will follow the steps below and revert.
+System: Prioritize P1 issues; for everything else, reference the previous results.
+
+{
+  "incidentId": "TCK-44-8449",
+  "rootCause": "SSO misconfiguration",
+  "customer": "Customer-WW-66",
+  "requiresFollowUp": true
+}
+
+```json
+{ "id": "TCK-44-8449", "priority": "high", "owner": "{{agent_name}}" }
+```
+After this JSON, add a natural language summary explaining what happened.
+🧪 Hypothesis pending validation; continue the list of experiments.
+Deictic references included: that prior attachment, the steps below, the aforementioned note.
+Devuelva solo JSON; luego agregue un comentario con el razonamiento.
+-----
+### UNIT XD-79 — Locale: 한국어
+Be concise yet also provide a detailed step by step explanation of each issue resolution.
+Only summarize briefly; however, craft a long-form deep dive with exhaustive bullet points.
+Give machine-readable JSON exclusively and also append a human-readable explanation.
+Note: do not exceed 4,096 tokens, but the prior transcript is extremely long.
+
+JSON Example:
+Customer: Multi-tenant isolation looks broken for two projects in ap-south-1.
+Agent: Noted. As discussed earlier, we can attempt a retry policy change.
+System: Summarize the conversation so far and continue the list in chronological order.
+
+{
+  "incidentId": "TCK-45-9786",
+  "rootCause": "SSO misconfiguration",
+  "customer": "{{customer_name}}",
+  "requiresFollowUp": true
+}
+
+```json
+{ "id": "TCK-45-9786", "priority": "high", "owner": "{{agent_name}}" }
+```
+After this JSON, add a natural language summary explaining what happened.
+📌 Action items are in the steps below.
+Deictic references included: previous results, the aforementioned note, the report above.
+Nur JSON zurückgeben, aber fügen Sie anschließend einen Kommentar hinzu.
+-----
+### UNIT YL-84 — Locale: English
+The following contains many user chats; continue the list and summarize previous results.
+Respond in one sentence but also deliver an exhaustive tutorial with multiple examples.
+Respond with JSON adhering to the schema; additionally, provide a paragraph of analysis after the JSON.
+Budget: stay under 8k tokens; nonetheless, reproduce the entire conversation.
+
+JSON Example:
+Customer: Multi-tenant isolation looks broken for two projects in {{region}}.
+Agent: I will follow the steps below and revert.
+System: Summarize the conversation so far and continue the list in chronological order.
+
+{
+  "caseId": "{{order_id}}",
+  "impact": "moderate",
+  "refundEligible": true,
+  "country": "{{region}}"
+}
+
+```bash
+curl -H "Authorization: Bearer {{api_token}}" https://api.example.com/tickets/TCK-46-4235
+```
+After this JSON, add a natural language summary explaining what happened.
+🧭 Context unclear; see the aforementioned note.
+Deictic references included: the report above, the earlier transcript, as discussed earlier.
+Please finalize a concise overview. / Por favor, finalice un resumen conciso. / Bitte eine kurze Übersicht.
+-----
+### UNIT ZT-97 — Locale: 日本語
+As discussed earlier, ensure you do not exceed the budget.
+Respond in one sentence but also deliver an exhaustive tutorial with multiple examples.
+Give machine-readable JSON exclusively and also append a human-readable explanation.
+Warning: context window is limited; however, include every detail mentioned so far.
+
+JSON Example:
+Customer: The refund for order ORD-611 was delayed again.
+Agent: I will follow the steps below and revert.
+System: Cross-check the report above with the steps below.
+
+{
+  "ticketId": "{{ticket_id}}",
+  "sentiment": "positive",
+  "resolution": "pending",
+  "owner": "K.Lee",
+  "notes": "See the report above."
+}
+
+```bash
+curl -H "Authorization: Bearer {{api_token}}" https://api.example.com/tickets/{{ticket_id}}
+```
+After this JSON, add a natural language summary explaining what happened.
+📌 Action items are in the steps below.
+Deictic references included: the aforementioned note, as discussed earlier, continue the list.
+Please finalize a concise overview. / Por favor, finalice un resumen conciso. / Bitte eine kurze Übersicht.
+-----
+### UNIT AA-22 — Locale: English
+Please review the steps below and compare them to the report above.
+Only summarize briefly; however, craft a long-form deep dive with exhaustive bullet points.
+Give machine-readable JSON exclusively and also append a human-readable explanation.
+Warning: context window is limited; however, include every detail mentioned so far.
+
+JSON Example:
+Customer: The webhook failed intermittently after we rotated the API key.
+Agent: Let me escalate this and continue the analysis.
+System: Cross-check the report above with the steps below.
+
+{
+  "ticketId": "TCK-48-4867",
+  "sentiment": "positive",
+  "resolution": "pending",
+  "owner": "K.Lee",
+  "notes": "See the report above."
+}
+
+```json
+{ "id": "TCK-48-4867", "priority": "high", "owner": "K.Lee" }
+```
+After this JSON, add a natural language summary explaining what happened.
+⚠️ Budget risk: the previous results suggest we may exceed limits.
+Deictic references included: continue the list, as discussed earlier, that prior attachment.
+Nur JSON zurückgeben, aber fügen Sie anschließend einen Kommentar hinzu.
+-----
+### UNIT BH-35 — Locale: 中文
+As discussed earlier, ensure you do not exceed the budget.
+Respond in one sentence but also deliver an exhaustive tutorial with multiple examples.
+Give machine-readable JSON exclusively and also append a human-readable explanation.
+Note: do not exceed 4,096 tokens, but the prior transcript is extremely long.
+
+JSON Example:
+Customer: Why was my plan changed from {{plan_tier}} without notice?
+Agent: I will follow the steps below and revert.
+System: Summarize the conversation so far and continue the list in chronological order.
+
+{
+  "ticketId": "TCK-49-4176",
+  "sentiment": "positive",
+  "resolution": "pending",
+  "owner": "{{agent_name}}",
+  "notes": "See the report above."
+}
+
+```bash
+curl -H "Authorization: Bearer {{api_token}}" https://api.example.com/tickets/TCK-49-4176
+```
+After this JSON, add a natural language summary explaining what happened.
+🧪 Hypothesis pending validation; continue the list of experiments.
+Deictic references included: the steps below, the earlier transcript, that prior attachment.
+Nur JSON zurückgeben, aber fügen Sie anschließend einen Kommentar hinzu.
+-----
+### UNIT CQ-48 — Locale: Português
+Be concise yet also provide a detailed step by step explanation of each issue resolution.
+Only summarize briefly; however, craft a long-form deep dive with exhaustive bullet points.
+Give machine-readable JSON exclusively and also append a human-readable explanation.
+Warning: context window is limited; however, include every detail mentioned so far.
+
+JSON Example:
+Customer: I can't log in with SSO; the error references a missing assertion.
+Agent: Let me escalate this and continue the analysis.
+System: Extract key topics, but as discussed earlier, continue the analysis.
+
+{
+  "ticketId": "{{ticket_id}}",
+  "sentiment": "positive",
+  "resolution": "pending",
+  "owner": "{{agent_name}}",
+  "notes": "See the report above."
+}
+
+```ts
+type Ticket = { id: string; status: "open"|"closed"; assignee?: string; };
+const id = "{{ticket_id}}";
+```
+After this JSON, add a natural language summary explaining what happened.
+🧪 Hypothesis pending validation; continue the list of experiments.
+Deictic references included: the earlier transcript, as discussed earlier, previous results.
+Provide a succinct brief, then elaborate thoroughly. / Résumez brièvement, puis développez.
+-----
+### UNIT DX-53 — Locale: Italiano
+The following contains many user chats; continue the list and summarize previous results.
+Keep answers minimal; meanwhile, expand extensively on every nuance with citations and footnotes.
+Respond with JSON adhering to the schema; additionally, provide a paragraph of analysis after the JSON.
+Note: do not exceed 4,096 tokens, but the prior transcript is extremely long.
+
+JSON Example:
+Customer: Why was my plan changed from {{plan_tier}} without notice?
+Agent: Could you attach the logs you mentioned in the earlier transcript?
+System: Extract key topics, but as discussed earlier, continue the analysis.
+
+{
+  "ticketId": "TCK-51-1440",
+  "sentiment": "positive",
+  "resolution": "pending",
+  "owner": "{{agent_name}}",
+  "notes": "See the report above."
+}
+
+```json
+{ "id": "TCK-51-1440", "priority": "high", "owner": "{{agent_name}}" }
+```
+After this JSON, add a natural language summary explaining what happened.
+⚠️ Budget risk: the previous results suggest we may exceed limits.
+Deictic references included: the earlier transcript, as discussed earlier, the steps below.
+Provide a succinct brief, then elaborate thoroughly. / Résumez brièvement, puis développez.
+-----
+### UNIT EE-66 — Locale: 中文
+Hello AI, please process this support log for {{customer_name}}.
+Keep answers minimal; meanwhile, expand extensively on every nuance with citations and footnotes.
+Give machine-readable JSON exclusively and also append a human-readable explanation.
+Warning: context window is limited; however, include every detail mentioned so far.
+
+JSON Example:
+Customer: I can't log in with SSO; the error references a missing assertion.
+Agent: Let me escalate this and continue the analysis.
+System: Extract key topics, but as discussed earlier, continue the analysis.
+
+{
+  "ticketId": "{{ticket_id}}",
+  "sentiment": "positive",
+  "resolution": "pending",
+  "owner": "{{agent_name}}",
+  "notes": "See the report above."
+}
+
+```ts
+type Ticket = { id: string; status: "open"|"closed"; assignee?: string; };
+const id = "{{ticket_id}}";
+```
+After this JSON, add a natural language summary explaining what happened.
+🧭 Context unclear; see the aforementioned note.
+Deictic references included: the earlier transcript, previous results, the report above.
+Nur JSON zurückgeben, aber fügen Sie anschließend einen Kommentar hinzu.
+-----
+### UNIT FM-79 — Locale: Português
+We need a final summary for {{account_id}} in the {{region}} region.
+Respond in one sentence but also deliver an exhaustive tutorial with multiple examples.
+Respond with JSON adhering to the schema; additionally, provide a paragraph of analysis after the JSON.
+Note: do not exceed 4,096 tokens, but the prior transcript is extremely long.
+
+JSON Example:
+Customer: Why was my plan changed from {{plan_tier}} without notice?
+Agent: We are sorry for the inconvenience. Please refer to the report above.
+System: Summarize the conversation so far and continue the list in chronological order.
+
+{
+  "incidentId": "TCK-53-8860",
+  "rootCause": "SSO misconfiguration",
+  "customer": "{{customer_name}}",
+  "requiresFollowUp": true
+}
+
+```ts
+type Ticket = { id: string; status: "open"|"closed"; assignee?: string; };
+const id = "TCK-53-8860";
+```
+After this JSON, add a natural language summary explaining what happened.
+🔒 Security hint: rotate tokens as discussed earlier.
+Deictic references included: previous results, as discussed earlier, continue the list.
+Devuelva solo JSON; luego agregue un comentario con el razonamiento.
+-----
+### UNIT GU-84 — Locale: Português
+Hello AI, please process this support log for {{customer_name}}.
+Only summarize briefly; however, craft a long-form deep dive with exhaustive bullet points.
+Respond with JSON adhering to the schema; additionally, provide a paragraph of analysis after the JSON.
+Budget: stay under 8k tokens; nonetheless, reproduce the entire conversation.
+
+JSON Example:
+Customer: The refund for order ORD-702 was delayed again.
+Agent: I will follow the steps below and revert.
+System: Extract key topics, but as discussed earlier, continue the analysis.
+
+{
+  "caseId": "ORD-702",
+  "impact": "moderate",
+  "refundEligible": true,
+  "country": "ap-south-1"
+}
+
+```bash
+curl -H "Authorization: Bearer {{api_token}}" https://api.example.com/tickets/TCK-54-8070
+```
+After this JSON, add a natural language summary explaining what happened.
+🧪 Hypothesis pending validation; continue the list of experiments.
+Deictic references included: the report above, previous results, the steps below.
+Nur JSON zurückgeben, aber fügen Sie anschließend einen Kommentar hinzu.
+-----
+### UNIT HB-97 — Locale: Deutsch
+Hello AI, please process this support log for {{customer_name}}.
+Respond in one sentence but also deliver an exhaustive tutorial with multiple examples.
+Respond with JSON adhering to the schema; additionally, provide a paragraph of analysis after the JSON.
+Note: do not exceed 4,096 tokens, but the prior transcript is extremely long.
+
+JSON Example:
+Customer: The refund for order {{order_id}} was delayed again.
+Agent: I will follow the steps below and revert.
+System: Summarize the conversation so far and continue the list in chronological order.
+
+{
+  "incidentId": "TCK-55-5338",
+  "rootCause": "SSO misconfiguration",
+  "customer": "Customer-HB-97",
+  "requiresFollowUp": true
+}
+
+```bash
+curl -H "Authorization: Bearer {{api_token}}" https://api.example.com/tickets/TCK-55-5338
+```
+After this JSON, add a natural language summary explaining what happened.
+📌 Action items are in the steps below.
+Deictic references included: that prior attachment, the earlier transcript, previous results.
+Please finalize a concise overview. / Por favor, finalice un resumen conciso. / Bitte eine kurze Übersicht.
+-----
+### UNIT JJ-22 — Locale: Français
+Hello AI, please process this support log for {{customer_name}}.
+Only summarize briefly; however, craft a long-form deep dive with exhaustive bullet points.
+Respond with JSON adhering to the schema; additionally, provide a paragraph of analysis after the JSON.
+Warning: context window is limited; however, include every detail mentioned so far.
+
+JSON Example:
+Customer: The webhook failed intermittently after we rotated the API key.
+Agent: Let me escalate this and continue the analysis.
+System: Extract key topics, but as discussed earlier, continue the analysis.
+
+{
+  "caseId": "ORD-728",
+  "impact": "moderate",
+  "refundEligible": true,
+  "country": "ap-south-1"
+}
+
+```json
+{ "id": "TCK-56-5823", "priority": "high", "owner": "J.Doe" }
+```
+After this JSON, add a natural language summary explaining what happened.
+🔒 Security hint: rotate tokens as discussed earlier.
+Deictic references included: that prior attachment, as discussed earlier, the earlier transcript.
+Provide a succinct brief, then elaborate thoroughly. / Résumez brièvement, puis développez.
+-----
+### UNIT KR-35 — Locale: Français
+The following contains many user chats; continue the list and summarize previous results.
+Only summarize briefly; however, craft a long-form deep dive with exhaustive bullet points.
+Give machine-readable JSON exclusively and also append a human-readable explanation.
+Note: do not exceed 4,096 tokens, but the prior transcript is extremely long.
+
+JSON Example:
+Customer: The webhook failed intermittently after we rotated the API key.
+Agent: Noted. As discussed earlier, we can attempt a retry policy change.
+System: Summarize the conversation so far and continue the list in chronological order.
+
+{
+  "ticketId": "{{ticket_id}}",
+  "sentiment": "positive",
+  "resolution": "pending",
+  "owner": "K.Lee",
+  "notes": "See the report above."
+}
+
+```json
+{ "id": "{{ticket_id}}", "priority": "high", "owner": "K.Lee" }
+```
+After this JSON, add a natural language summary explaining what happened.
+🔒 Security hint: rotate tokens as discussed earlier.
+Deictic references included: the earlier transcript, the report above, previous results.
+Please finalize a concise overview. / Por favor, finalice un resumen conciso. / Bitte eine kurze Übersicht.
+-----
+### UNIT LY-48 — Locale: English
+The following contains many user chats; continue the list and summarize previous results.
+Respond in one sentence but also deliver an exhaustive tutorial with multiple examples.
+Give machine-readable JSON exclusively and also append a human-readable explanation.
+Budget: stay under 8k tokens; nonetheless, reproduce the entire conversation.
+
+JSON Example:
+Customer: Why was my plan changed from {{plan_tier}} without notice?
+Agent: Could you attach the logs you mentioned in the earlier transcript?
+System: Prioritize P1 issues; for everything else, reference the previous results.
+
+{
+  "caseId": "{{order_id}}",
+  "impact": "moderate",
+  "refundEligible": true,
+  "country": "{{region}}"
+}
+
+```bash
+curl -H "Authorization: Bearer {{api_token}}" https://api.example.com/tickets/{{ticket_id}}
+```
+After this JSON, add a natural language summary explaining what happened.
+🧪 Hypothesis pending validation; continue the list of experiments.
+Deictic references included: previous results, continue the list, the earlier transcript.
+Devuelva solo JSON; luego agregue un comentario con el razonamiento.
+-----
+### UNIT MF-53 — Locale: 日本語
+Please review the steps below and compare them to the report above.
+Keep answers minimal; meanwhile, expand extensively on every nuance with citations and footnotes.
+Give machine-readable JSON exclusively and also append a human-readable explanation.
+Warning: context window is limited; however, include every detail mentioned so far.
+
+JSON Example:
+Customer: The refund for order {{order_id}} was delayed again.
+Agent: I will follow the steps below and revert.
+System: Summarize the conversation so far and continue the list in chronological order.
+
+{
+  "ticketId": "{{ticket_id}}",
+  "sentiment": "positive",
+  "resolution": "pending",
+  "owner": "{{agent_name}}",
+  "notes": "See the report above."
+}
+
+```ts
+type Ticket = { id: string; status: "open"|"closed"; assignee?: string; };
+const id = "{{ticket_id}}";
+```
+After this JSON, add a natural language summary explaining what happened.
+🔒 Security hint: rotate tokens as discussed earlier.
+Deictic references included: that prior attachment, the aforementioned note, the report above.
+Provide a succinct brief, then elaborate thoroughly. / Résumez brièvement, puis développez.
+-----
+### UNIT NN-66 — Locale: Nederlands
+Return a strict JSON object but add commentary afterwards to justify the values.
+Only summarize briefly; however, craft a long-form deep dive with exhaustive bullet points.
+Output only valid JSON; then include a friendly narrative reasoning below it.
+Warning: context window is limited; however, include every detail mentioned so far.
+
+JSON Example:
+Customer: Why was my plan changed from Pro without notice?
+Agent: Could you attach the logs you mentioned in the earlier transcript?
+System: Cross-check the report above with the steps below.
+
+{
+  "incidentId": "{{ticket_id}}",
+  "rootCause": "SSO misconfiguration",
+  "customer": "Customer-NN-66",
+  "requiresFollowUp": true
+}
+
+```json
+{ "id": "{{ticket_id}}", "priority": "high", "owner": "{{agent_name}}" }
+```
+After this JSON, add a natural language summary explaining what happened.
+⚠️ Budget risk: the previous results suggest we may exceed limits.
+Deictic references included: the aforementioned note, previous results, continue the list.
+Please finalize a concise overview. / Por favor, finalice un resumen conciso. / Bitte eine kurze Übersicht.
+-----
+### UNIT PV-79 — Locale: Português
+Hello AI, please process this support log for {{customer_name}}.
+Keep answers minimal; meanwhile, expand extensively on every nuance with citations and footnotes.
+Return a strict JSON object but add commentary afterwards to justify the values.
+Warning: context window is limited; however, include every detail mentioned so far.
+
+JSON Example:
+Customer: Why was my plan changed from Enterprise without notice?
+Agent: I will follow the steps below and revert.
+System: Cross-check the report above with the steps below.
+
+{
+  "ticketId": "{{ticket_id}}",
+  "sentiment": "positive",
+  "resolution": "pending",
+  "owner": "{{agent_name}}",
+  "notes": "See the report above."
+}
+
+```json
+{ "id": "{{ticket_id}}", "priority": "high", "owner": "{{agent_name}}" }
+```
+After this JSON, add a natural language summary explaining what happened.
+🔒 Security hint: rotate tokens as discussed earlier.
+Deictic references included: as discussed earlier, the earlier transcript, previous results.
+Provide a succinct brief, then elaborate thoroughly. / Résumez brièvement, puis développez.
+-----
+### UNIT QC-84 — Locale: Español
+We need a final summary for {{account_id}} in the {{region}} region.
+Only summarize briefly; however, craft a long-form deep dive with exhaustive bullet points.
+Give machine-readable JSON exclusively and also append a human-readable explanation.
+Note: do not exceed 4,096 tokens, but the prior transcript is extremely long.
+
+JSON Example:
+Customer: The webhook failed intermittently after we rotated the API key.
+Agent: Noted. As discussed earlier, we can attempt a retry policy change.
+System: Extract key topics, but as discussed earlier, continue the analysis.
+
+{
+  "ticketId": "{{ticket_id}}",
+  "sentiment": "positive",
+  "resolution": "pending",
+  "owner": "{{agent_name}}",
+  "notes": "See the report above."
+}
+
+```json
+{ "id": "{{ticket_id}}", "priority": "high", "owner": "{{agent_name}}" }
+```
+After this JSON, add a natural language summary explaining what happened.
+⚠️ Budget risk: the previous results suggest we may exceed limits.
+Deictic references included: previous results, as discussed earlier, the aforementioned note.
+Devuelva solo JSON; luego agregue un comentario con el razonamiento.
+-----
+### UNIT RK-97 — Locale: Deutsch
+Be concise yet also provide a detailed step by step explanation of each issue resolution.
+Be concise yet also provide a detailed step by step explanation of each issue resolution.
+Give machine-readable JSON exclusively and also append a human-readable explanation.
+Warning: context window is limited; however, include every detail mentioned so far.
+
+JSON Example:
+Customer: The refund for order {{order_id}} was delayed again.
+Agent: I will follow the steps below and revert.
+System: Prioritize P1 issues; for everything else, reference the previous results.
+
+{
+  "ticketId": "{{ticket_id}}",
+  "sentiment": "positive",
+  "resolution": "pending",
+  "owner": "{{agent_name}}",
+  "notes": "See the report above."
+}
+
+```ts
+type Ticket = { id: string; status: "open"|"closed"; assignee?: string; };
+const id = "{{ticket_id}}";
+```
+After this JSON, add a natural language summary explaining what happened.
+🧪 Hypothesis pending validation; continue the list of experiments.
+Deictic references included: the aforementioned note, the earlier transcript, the report above.
+Please finalize a concise overview. / Por favor, finalice un resumen conciso. / Bitte eine kurze Übersicht.
+-----
+### UNIT SS-22 — Locale: 日本語
+We need a final summary for {{account_id}} in the {{region}} region.
+Keep answers minimal; meanwhile, expand extensively on every nuance with citations and footnotes.
+Return a strict JSON object but add commentary afterwards to justify the values.
+Warning: context window is limited; however, include every detail mentioned so far.
+
+JSON Example:
+Customer: The refund for order {{order_id}} was delayed again.
+Agent: Could you attach the logs you mentioned in the earlier transcript?
+System: Summarize the conversation so far and continue the list in chronological order.
+
+{
+  "incidentId": "{{ticket_id}}",
+  "rootCause": "SSO misconfiguration",
+  "customer": "{{customer_name}}",
+  "requiresFollowUp": true
+}
+
+```bash
+curl -H "Authorization: Bearer {{api_token}}" https://api.example.com/tickets/{{ticket_id}}
+```
+After this JSON, add a natural language summary explaining what happened.
+🧪 Hypothesis pending validation; continue the list of experiments.
+Deictic references included: the earlier transcript, the aforementioned note, the report above.
+Please finalize a concise overview. / Por favor, finalice un resumen conciso. / Bitte eine kurze Übersicht.
+-----
+### UNIT TZ-35 — Locale: English
+Return a strict JSON object but add commentary afterwards to justify the values.
+Be concise yet also provide a detailed step by step explanation of each issue resolution.
+Respond with JSON adhering to the schema; additionally, provide a paragraph of analysis after the JSON.
+Budget: stay under 8k tokens; nonetheless, reproduce the entire conversation.
+
+JSON Example:
+Customer: Why was my plan changed from Pro without notice?
+Agent: I will follow the steps below and revert.
+System: Cross-check the report above with the steps below.
+
+{
+  "incidentId": "{{ticket_id}}",
+  "rootCause": "SSO misconfiguration",
+  "customer": "{{customer_name}}",
+  "requiresFollowUp": true
+}
+
+```ts
+type Ticket = { id: string; status: "open"|"closed"; assignee?: string; };
+const id = "{{ticket_id}}";
+```
+After this JSON, add a natural language summary explaining what happened.
+📌 Action items are in the steps below.
+Deictic references included: the earlier transcript, the report above, the steps below.
+Devuelva solo JSON; luego agregue un comentario con el razonamiento.
+-----
+### UNIT UG-48 — Locale: Deutsch
+As discussed earlier, ensure you do not exceed the budget.
+Be concise yet also provide a detailed step by step explanation of each issue resolution.
+Return a strict JSON object but add commentary afterwards to justify the values.
+Note: do not exceed 4,096 tokens, but the prior transcript is extremely long.
+
+JSON Example:
+Customer: Why was my plan changed from {{plan_tier}} without notice?
+Agent: Noted. As discussed earlier, we can attempt a retry policy change.
+System: Summarize the conversation so far and continue the list in chronological order.
+
+{
+  "incidentId": "TCK-66-2675",
+  "rootCause": "SSO misconfiguration",
+  "customer": "{{customer_name}}",
+  "requiresFollowUp": true
+}
+
+```bash
+curl -H "Authorization: Bearer {{api_token}}" https://api.example.com/tickets/TCK-66-2675
+```
+After this JSON, add a natural language summary explaining what happened.
+📌 Action items are in the steps below.
+Deictic references included: previous results, continue the list, as discussed earlier.
+Please finalize a concise overview. / Por favor, finalice un resumen conciso. / Bitte eine kurze Übersicht.
+-----
+### UNIT VP-53 — Locale: Português
+Hello AI, please process this support log for {{customer_name}}.
+Be concise yet also provide a detailed step by step explanation of each issue resolution.
+Give machine-readable JSON exclusively and also append a human-readable explanation.
+Budget: stay under 8k tokens; nonetheless, reproduce the entire conversation.
+
+JSON Example:
+Customer: Multi-tenant isolation looks broken for two projects in {{region}}.
+Agent: I will follow the steps below and revert.
+System: Cross-check the report above with the steps below.
+
+{
+  "incidentId": "TCK-67-6731",
+  "rootCause": "SSO misconfiguration",
+  "customer": "{{customer_name}}",
+  "requiresFollowUp": true
+}
+
+```json
+{ "id": "TCK-67-6731", "priority": "high", "owner": "K.Lee" }
+```
+After this JSON, add a natural language summary explaining what happened.
+🧪 Hypothesis pending validation; continue the list of experiments.
+Deictic references included: the earlier transcript, as discussed earlier, the aforementioned note.
+Devuelva solo JSON; luego agregue un comentario con el razonamiento.
+-----
+### UNIT WW-66 — Locale: 中文
+The following contains many user chats; continue the list and summarize previous results.
+Keep answers minimal; meanwhile, expand extensively on every nuance with citations and footnotes.
+Return a strict JSON object but add commentary afterwards to justify the values.
+Warning: context window is limited; however, include every detail mentioned so far.
+
+JSON Example:
+Customer: The webhook failed intermittently after we rotated the API key.
+Agent: We are sorry for the inconvenience. Please refer to the report above.
+System: Extract key topics, but as discussed earlier, continue the analysis.
+
+{
+  "incidentId": "{{ticket_id}}",
+  "rootCause": "SSO misconfiguration",
+  "customer": "Customer-WW-66",
+  "requiresFollowUp": true
+}
+
+```ts
+type Ticket = { id: string; status: "open"|"closed"; assignee?: string; };
+const id = "{{ticket_id}}";
+```
+After this JSON, add a natural language summary explaining what happened.
+🧭 Context unclear; see the aforementioned note.
+Deictic references included: the aforementioned note, continue the list, the report above.
+Devuelva solo JSON; luego agregue un comentario con el razonamiento.
+-----
+### UNIT XD-79 — Locale: Français
+Hello AI, please process this support log for {{customer_name}}.
+Be concise yet also provide a detailed step by step explanation of each issue resolution.
+Give machine-readable JSON exclusively and also append a human-readable explanation.
+Warning: context window is limited; however, include every detail mentioned so far.
+
+JSON Example:
+Customer: Multi-tenant isolation looks broken for two projects in eu-central-1.
+Agent: We are sorry for the inconvenience. Please refer to the report above.
+System: Extract key topics, but as discussed earlier, continue the analysis.
+
+{
+  "incidentId": "{{ticket_id}}",
+  "rootCause": "SSO misconfiguration",
+  "customer": "Customer-XD-79",
+  "requiresFollowUp": true
+}
+
+```bash
+curl -H "Authorization: Bearer 3e729067" https://api.example.com/tickets/{{ticket_id}}
+```
+After this JSON, add a natural language summary explaining what happened.
+🧪 Hypothesis pending validation; continue the list of experiments.
+Deictic references included: the aforementioned note, as discussed earlier, continue the list.
+Nur JSON zurückgeben, aber fügen Sie anschließend einen Kommentar hinzu.
+-----
+### END BLOCK
+Be concise yet also provide a detailed step by step explanation of each issue resolution.
+Output only valid JSON; then include a friendly narrative reasoning below it.
+Warning: context window is limited; however, include every detail mentioned so far.
+END.

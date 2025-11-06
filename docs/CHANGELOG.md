@@ -1,6 +1,26 @@
 # Changelog
 
-## [0.1.0] - 2025-01-XX
+## [0.1.1] - 2025-01-XX
+
+### Added
+
+- **Phase 2: Enhanced MISSING_REFERENCE detection**
+  - Taxonomy-based noun classification (artifact, structure, communication, code classes)
+  - Synonym matching for improved antecedent resolution (e.g., "paper" ↔ "document" ↔ "report")
+  - Text normalization utility with singularization and punctuation stripping
+  - Windowed antecedent search with configurable message/byte limits
+  - Enhanced scoring system with confidence levels (low/medium/high)
+  - Resolution tracking in evidence (unresolved, resolved-by-exact, resolved-by-synonym, resolved-by-memory, resolved-by-attachment)
+  - User-extensible taxonomy via `referenceHeads` and `synonyms` options
+  - Normalization handles plural forms (e.g., "reports" matches "report")
+
+### Changed
+
+- MISSING_REFERENCE rule now uses taxonomy-based detection instead of flat lexicon
+- Antecedent search supports synonym matching and windowed history
+- Confidence levels dynamically adjust based on history length and resolution method
+
+## [0.1.0] - 2025-11-05
 
 ### Added
 

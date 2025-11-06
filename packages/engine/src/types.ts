@@ -58,31 +58,86 @@ export type IssueCode =
   | 'SCHEMA_RISK'
   | 'TOKEN_OVERAGE';
 
+export type IssueEvidenceSummary = { text: string; count: number };
+
+export type IssueEvidenceOccurrence = {
+  text: string;
+  start: number;
+  end: number;
+  preview?: string;
+  messageIndex?: number;
+  bucket?: string;
+  resolution?: 'unresolved' | 'resolved-by-exact' | 'resolved-by-synonym' | 'resolved-by-memory' | 'resolved-by-attachment';
+  pairedWith?: {
+    text: string;
+    start: number;
+    end: number;
+    preview?: string;
+    messageIndex?: number;
+  };
+};
+
+export type IssueEvidence = {
+  summary?: IssueEvidenceSummary[];
+  occurrences?: IssueEvidenceOccurrence[];
+  firstSeenAt?: {
+    messageIndex?: number;
+    char?: number;
+  };
+};
+
+export type IssueScope = { type: 'prompt' | 'messages'; messageIndex?: number };
+
 export type Issue = {
+  id?: string;
   code: IssueCode;
   severity: 'low' | 'medium' | 'high';
   detail: string;
-  evidence?: string[];
+  evidence?: string[] | IssueEvidence;
+  scope?: IssueScope;
+  confidence?: 'low' | 'medium' | 'high';
 };
 
 export type Suggestion =
-  | { type: 'ADD_CONTEXT'; text: string }
-  | { type: 'TIGHTEN_INSTRUCTION'; text: string }
-  | { type: 'ENFORCE_JSON'; text: string }
-  | { type: 'TRIM_CONTEXT'; text: string };
+  | { type: 'ADD_CONTEXT'; text: string; for?: string }
+  | { type: 'TIGHTEN_INSTRUCTION'; text: string; for?: string }
+  | { type: 'ENFORCE_JSON'; text: string; for?: string }
+  | { type: 'TRIM_CONTEXT'; text: string; for?: string };
 
-export type Patch = { original: string; proposed: string; diff: string };
+export type Patch = {
+  original?: string;
+  proposed?: string;
+  diff?: string;
+  safe?: boolean;
+};
+
+export type ReportCost = {
+  estInputTokens: number;
+  estUSD?: number;
+  charCount?: number;
+  method?: string;
+};
+
+export type ReportSummary = {
+  issueCounts: Partial<Record<IssueCode, number>>;
+  confidence?: 'low' | 'medium' | 'high';
+};
+
+export type ReportMeta = {
+  latencyMs: number;
+  modelHint?: string;
+  ruleTimings?: Record<string, number>;
+  contextWindow?: number;
+  traceId?: string;
+};
 
 export type Report = {
   issues: Issue[];
-  suggestions: Suggestion[];
+  suggestions?: Suggestion[];
   patch?: Patch;
-  cost?: { estInputTokens: number; estUSD?: number };
-  meta?: {
-    latencyMs: number;
-    modelHint?: string;
-    ruleTimings?: Record<string, number>;
-  };
+  cost?: ReportCost;
+  meta?: ReportMeta;
+  summary?: ReportSummary;
 };
 
 export type Attachment = {
@@ -101,7 +156,13 @@ export type AnalyzeInput = {
     maxCostUSD?: number;
     maxInputTokens?: number;
     maxChars?: number; // fallback guard for early bail (e.g., 120_000)
-    referenceHeads?: string[]; // extend default lexicon
+    referenceHeads?: string[]; // extend default taxonomy
+    synonyms?: Record<string, string[]>; // custom synonym map (extends default)
+    similarityThreshold?: number; // for future embedding matching (default 0.6)
+    antecedentWindow?: {
+      messages?: number; // max messages to search back (default: all)
+      bytes?: number; // max bytes to search back (default: unlimited)
+    };
     disabledRules?: IssueCode[]; // rules to skip
     tokenEstimation?: 'auto' | 'cheap' | 'exact' | 'off'; // token estimation mode
   };

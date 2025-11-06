@@ -6,6 +6,7 @@
 // SPDX-License-Identifier: Elastic-2.0
 
 import type { AnalyzeInput, Issue, Report } from '../types';
+import { createIssueId, createPreview } from '../util/reporting';
 
 const PLACEHOLDER_HANDLEBARS = /\{\{\s*([#/>!&^]?)([a-zA-Z0-9_.]+)\s*\}\}/g;
 const PLACEHOLDER_JINJA = /\{\{\s*([a-zA-Z0-9_.]+)\s*\}\}/g;
@@ -22,22 +23,52 @@ export function run(input: AnalyzeInput, acc: Report): void {
   // Get regex pattern and create a fresh instance to avoid lastIndex issues
   const regexPattern = getRegexForDialect(dialect);
   const regex = new RegExp(regexPattern.source, regexPattern.flags);
-  const unresolved: string[] = [];
+  const unresolvedMap = new Map<string, { count: number; positions: number[] }>();
 
   let match: RegExpExecArray | null;
   while ((match = regex.exec(text)) !== null) {
     const varName = match[2] || match[1];
-    if (varName && !unresolved.includes(varName)) {
-      unresolved.push(varName);
-    }
+    if (!varName) continue;
+    const entry = unresolvedMap.get(varName) || { count: 0, positions: [] };
+    entry.count += 1;
+    entry.positions.push(match.index);
+    unresolvedMap.set(varName, entry);
   }
 
-  if (unresolved.length > 0) {
+  if (unresolvedMap.size > 0) {
+    const issueId = createIssueId();
+    const summary = Array.from(unresolvedMap.entries()).map(([key, value]) => ({
+      text: key,
+      count: value.count
+    }));
+
+    const occurrences = Array.from(unresolvedMap.entries())
+      .flatMap(([key, value]) =>
+        value.positions.slice(0, 3).map((start) => ({
+          text: `{{${key}}}`,
+          start,
+          end: start + key.length + 4,
+          preview: createPreview(text, start, start + key.length + 4)
+        }))
+      )
+      .slice(0, 50);
+
     acc.issues.push({
+      id: issueId,
       code: 'MISSING_PLACEHOLDER',
       severity: 'high',
-      detail: `Unresolved placeholder${unresolved.length > 1 ? 's' : ''}: ${unresolved.join(', ')}`,
-      evidence: unresolved.map((u) => `{{${u}}}`)
+      detail: `Unresolved placeholder${summary.length > 1 ? 's' : ''}: ${summary
+        .map((s) => `${s.text}${s.count > 1 ? ` (×${s.count})` : ''}`)
+        .join(', ')}`,
+      evidence: {
+        summary,
+        occurrences,
+        firstSeenAt: {
+          char: Math.min(...Array.from(unresolvedMap.values()).flatMap((v) => v.positions))
+        }
+      },
+      scope: { type: 'prompt' },
+      confidence: 'high'
     });
   }
 }

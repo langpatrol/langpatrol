@@ -5,12 +5,14 @@
  */
 // SPDX-License-Identifier: Elastic-2.0
 
-import type { AnalyzeInput, Report } from './types';
+import type { AnalyzeInput, Report, IssueCode } from './types';
 import { run as runPlaceholders } from './rules/placeholders';
 import { run as runReference } from './rules/reference';
 import { run as runConflicts } from './rules/conflicts';
 import { run as runSchemaRisk } from './rules/schemaRisk';
 import { run as runTokens } from './rules/tokens';
+import { createTraceId, createIssueId } from './util/reporting';
+import { getModelWindow } from './util/tokenize';
 
 export function analyze(input: AnalyzeInput): Report {
   const report: Report = {
@@ -54,11 +56,44 @@ export function analyze(input: AnalyzeInput): Report {
   ruleTimings.tokens = performance.now() - t;
 
   const totalTime = performance.now() - t0;
+  const traceId = createTraceId();
+
+  const contextWindow = report.meta?.contextWindow;
+
   report.meta = {
     ...report.meta,
     latencyMs: totalTime,
-    ruleTimings
+    ruleTimings,
+    traceId,
+    contextWindow: contextWindow ?? (input.model ? getModelWindow(input.model) : undefined)
   };
+
+  // Ensure suggestions array exists
+  if (!report.suggestions) {
+    report.suggestions = [];
+  }
+
+  // Assign ids if missing and build summary counts
+  const issueCounts: Partial<Record<IssueCode, number>> = {};
+  const seenIds = new Set<string>();
+  for (const issue of report.issues) {
+    if (!issue.id) {
+      let generated: string;
+      do {
+        generated = createIssueId();
+      } while (seenIds.has(generated));
+      issue.id = generated;
+    }
+    seenIds.add(issue.id);
+    issueCounts[issue.code] = (issueCounts[issue.code] || 0) + 1;
+  }
+
+  if (report.issues.length > 0) {
+    report.summary = {
+      issueCounts,
+      confidence: 'high'
+    };
+  }
 
   return report;
 }

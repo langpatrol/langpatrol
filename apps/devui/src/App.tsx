@@ -260,7 +260,7 @@ export default function App() {
                       </option>
                     ))}
                   </select>
-                  {!loadingFile && <span style={{ marginLeft: 8 }}>Files in 'datasets/synthetic/...'</span>}
+                  {!loadingFile && <span style={{ marginLeft: 8,fontSize: 12, color: '#666' }}>Load .txt/.csv files from directory /datasets/synthetic/</span>}
                   {loadingFile && <span style={{ marginLeft: 8 }}>Loading...</span>}
                 </span>
               </label>
@@ -323,8 +323,170 @@ export default function App() {
           <div style={{ padding: 16 }}>
             <h2 style={{ marginTop: 0 }}>Report</h2>
             {report ? (
-              <div style={{ background: '#111', color: '#0f0', padding: 16, borderRadius: 4, overflowX: 'auto' }}>
-                <pre style={{ margin: 0, fontSize: 12 }}>{JSON.stringify(report, null, 2)}</pre>
+              <div>
+                {/* Summary */}
+                {report.summary && (
+                  <div style={{ marginBottom: 16, padding: 12, backgroundColor: '#f5f5f5', borderRadius: 4 }}>
+                    <div style={{ fontWeight: 'bold', marginBottom: 8 }}>Summary</div>
+                    <div style={{ fontSize: 14 }}>
+                      {Object.entries(report.summary.issueCounts || {}).map(([code, count]) => (
+                        <span key={code} style={{ marginRight: 12 }}>
+                          <strong>{code}:</strong> {count}
+                        </span>
+                      ))}
+                    </div>
+                    {report.summary.confidence && (
+                      <div style={{ fontSize: 12, color: '#666', marginTop: 4 }}>
+                        Confidence: {report.summary.confidence}
+                      </div>
+                    )}
+                  </div>
+                )}
+
+                {/* Issues */}
+                {report.issues.length > 0 && (
+                  <div style={{ marginBottom: 16 }}>
+                    <h3 style={{ marginTop: 0, marginBottom: 12 }}>Issues ({report.issues.length})</h3>
+                    {report.issues.map((issue, idx) => (
+                      <div
+                        key={issue.id || idx}
+                        style={{
+                          marginBottom: 12,
+                          padding: 12,
+                          border: '1px solid #ddd',
+                          borderRadius: 4,
+                          backgroundColor: issue.severity === 'high' ? '#fff5f5' : issue.severity === 'medium' ? '#fffbf0' : '#f5f5f5'
+                        }}
+                      >
+                        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'start', marginBottom: 8 }}>
+                          <div>
+                            <strong style={{ color: issue.severity === 'high' ? '#c00' : issue.severity === 'medium' ? '#f80' : '#666' }}>
+                              {issue.code}
+                            </strong>
+                            {issue.scope && (
+                              <span style={{ fontSize: 12, color: '#666', marginLeft: 8 }}>
+                                ({issue.scope.type}
+                                {issue.scope.messageIndex != null ? `, msg ${issue.scope.messageIndex}` : ''})
+                              </span>
+                            )}
+                          </div>
+                          {issue.confidence && (
+                            <span style={{ fontSize: 12, color: '#666' }}>{issue.confidence}</span>
+                          )}
+                        </div>
+                        <div style={{ fontSize: 14, marginBottom: 8 }}>{issue.detail}</div>
+                        {issue.evidence && (() => {
+                          const evidence = issue.evidence;
+                          return (
+                            <div style={{ fontSize: 12, color: '#666' }}>
+                              {Array.isArray(evidence) ? (
+                                <div>
+                                  <strong>Evidence:</strong> {evidence.slice(0, 5).join(', ')}
+                                  {evidence.length > 5 && ` (+${evidence.length - 5} more)`}
+                                </div>
+                              ) : (
+                                <div>
+                                  {evidence.summary && evidence.summary.length > 0 && (
+                                    <div style={{ marginBottom: 4 }}>
+                                      <strong>Summary:</strong>{' '}
+                                      {evidence.summary.map((s, i) => (
+                                        <span key={i}>
+                                          "{s.text}" ×{s.count}
+                                          {i < evidence.summary!.length - 1 ? ', ' : ''}
+                                        </span>
+                                      ))}
+                                    </div>
+                                  )}
+                                  {evidence.occurrences && evidence.occurrences.length > 0 && (
+                                    <div>
+                                      <strong>Occurrences:</strong> {evidence.occurrences.length} found
+                                      {evidence.firstSeenAt && (
+                                        <span>
+                                          {' '}
+                                          (first at char {evidence.firstSeenAt.char}
+                                          {evidence.firstSeenAt.messageIndex != null
+                                            ? `, msg ${evidence.firstSeenAt.messageIndex}`
+                                            : ''}
+                                          )
+                                        </span>
+                                      )}
+                                    </div>
+                                  )}
+                                </div>
+                              )}
+                            </div>
+                          );
+                        })()}
+                      </div>
+                    ))}
+                  </div>
+                )}
+
+                {/* Suggestions */}
+                {report.suggestions && report.suggestions.length > 0 && (
+                  <div style={{ marginBottom: 16 }}>
+                    <h3 style={{ marginTop: 0, marginBottom: 12 }}>Suggestions ({report.suggestions.length})</h3>
+                    {report.suggestions.map((suggestion, idx) => (
+                      <div
+                        key={idx}
+                        style={{
+                          marginBottom: 8,
+                          padding: 8,
+                          backgroundColor: '#f0f8ff',
+                          borderRadius: 4,
+                          fontSize: 14
+                        }}
+                      >
+                        <strong>{suggestion.type}:</strong> {suggestion.text}
+                        {suggestion.for && (
+                          <span style={{ fontSize: 12, color: '#666', marginLeft: 8 }}>(for {suggestion.for})</span>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                )}
+
+                {/* Cost & Meta */}
+                {(report.cost || report.meta) && (
+                  <div style={{ marginBottom: 16, padding: 12, backgroundColor: '#f5f5f5', borderRadius: 4 }}>
+                    <div style={{ fontWeight: 'bold', marginBottom: 8 }}>Metadata</div>
+                    {report.cost && (
+                      <div style={{ fontSize: 14, marginBottom: 4 }}>
+                        <strong>Cost:</strong> {report.cost.estInputTokens.toLocaleString()} tokens
+                        {report.cost.estUSD && ` ($${report.cost.estUSD.toFixed(4)})`}
+                        {report.cost.charCount && ` • ${report.cost.charCount.toLocaleString()} chars`}
+                        {report.cost.method && ` • method: ${report.cost.method}`}
+                      </div>
+                    )}
+                    {report.meta && (
+                      <div style={{ fontSize: 14 }}>
+                        <strong>Performance:</strong> {report.meta.latencyMs.toFixed(2)}ms
+                        {report.meta.contextWindow && ` • window: ${report.meta.contextWindow.toLocaleString()}`}
+                        {report.meta.traceId && (
+                          <div style={{ fontSize: 12, color: '#666', marginTop: 4 }}>
+                            Trace ID: {report.meta.traceId}
+                          </div>
+                        )}
+                        {report.meta.ruleTimings && (
+                          <div style={{ fontSize: 12, color: '#666', marginTop: 4 }}>
+                            Rule timings:{' '}
+                            {Object.entries(report.meta.ruleTimings)
+                              .map(([rule, ms]) => `${rule}: ${ms.toFixed(2)}ms`)
+                              .join(', ')}
+                          </div>
+                        )}
+                      </div>
+                    )}
+                  </div>
+                )}
+
+                {/* Raw JSON (collapsible) */}
+                <details style={{ marginTop: 16 }}>
+                  <summary style={{ cursor: 'pointer', fontWeight: 'bold', marginBottom: 8 }}>Raw JSON</summary>
+                  <div style={{ background: '#111', color: '#0f0', padding: 16, borderRadius: 4, overflowX: 'auto' }}>
+                    <pre style={{ margin: 0, fontSize: 12 }}>{JSON.stringify(report, null, 2)}</pre>
+                  </div>
+                </details>
               </div>
             ) : (
               <div style={{ padding: 24, textAlign: 'center', color: '#999', fontSize: 14 }}>

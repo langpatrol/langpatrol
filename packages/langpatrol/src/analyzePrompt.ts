@@ -8,14 +8,17 @@
 import { analyze, type AnalyzeInput, type Report } from '@langpatrol/engine';
 
 export async function analyzePrompt(input: AnalyzeInput): Promise<Report> {
-  const t0 = performance.now();
   const report = analyze(input);
-  // Preserve rule timings from analyze() and add model hint
-  report.meta = {
-    ...report.meta,
-    latencyMs: report.meta?.latencyMs || performance.now() - t0,
-    modelHint: input.model
-  };
+  // Ensure meta exists with required fields
+  if (!report.meta) {
+    report.meta = {
+      latencyMs: 0
+    };
+  }
+  // Ensure modelHint is set if not already present
+  if (input.model && !report.meta.modelHint) {
+    report.meta.modelHint = input.model;
+  }
   return report;
 }
 
