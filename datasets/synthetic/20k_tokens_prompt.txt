@@ -103,7 +103,7 @@ System: Extract key topics, but as discussed earlier, continue the analysis.
 ```json
 { "id": "{{ticket_id}}", "priority": "high", "owner": "J.Doe" }
 ```
-After this JSON, add a natural language summary explaining what happened. Then use the report that follows to cross-examine. : The user has requested customer support 10x times.
+After this JSON, add a natural language summary explaining what happened.
 🔒 Security hint: rotate tokens as discussed earlier.
 Deictic references included: that prior attachment, the earlier transcript, the report above.
 Nur JSON zurückgeben, aber fügen Sie anschließend einen Kommentar hinzu.

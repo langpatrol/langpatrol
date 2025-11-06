@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.1.2] - 2025-11-06
+
+### Fixed
+
+- Context-aware synonym matching to reduce false positives (e.g., "This file" no longer incorrectly resolves "the report")
+- Synonym matching now verifies context to avoid false positives from phrases like "this file", "the file", "a file"
+- Bare mention resolution now includes context verification to prevent incorrect antecedent matching
+- Confidence penalty system for synonym-based resolutions with large distance (>5000 chars) to reduce false positives
+
 ## [0.1.1] - 2025-11-06
 
 ### Added

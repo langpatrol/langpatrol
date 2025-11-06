@@ -147,7 +147,7 @@ export function run(input: AnalyzeInput, acc: Report): void {
     .join(' ');
 
   // Phase 2: Enhanced antecedent check with normalization and synonym matching
-  const antecedentFound = (cand: { head: string; index: number }): { found: boolean; method?: 'exact' | 'synonym' | 'memory' | 'attachment' } => {
+  const antecedentFound = (cand: { head: string; index: number }): { found: boolean; method?: 'exact' | 'synonym' | 'memory' | 'attachment'; confidencePenalty?: boolean } => {
     const token = cand.head; // already normalized
     const searchText = normalizePhrase(searchableHistory);
     const searchTextLower = searchText.toLowerCase();
@@ -158,43 +158,174 @@ export function run(input: AnalyzeInput, acc: Report): void {
       return { found: true, method: 'exact' };
     }
     
-    // 2. Synonym match in history
+    // 2. For prompt-only input, check if token appears BEFORE this candidate in current text
+    // (This handles cases where "report" appears earlier in the same prompt)
+    // But exclude matches within "the X" phrases (those don't count as antecedents)
+    if (!hasHistory) {
+      const textBefore = current.slice(0, cand.index);
+      const textBeforeNormalized = normalizePhrase(textBefore);
+      const beforeLower = textBeforeNormalized.toLowerCase();
+      const matches = [...beforeLower.matchAll(new RegExp(`\\b${token}s?\\b`, 'gi'))];
+      for (const match of matches) {
+        const matchIndex = match.index!;
+        const beforeMatch = beforeLower.slice(Math.max(0, matchIndex - 10), matchIndex);
+        // Only count if it's NOT part of "the X" phrase
+        if (!beforeMatch.endsWith('the ') && !beforeMatch.endsWith('the\n') && !beforeMatch.endsWith('the\t')) {
+          return { found: true, method: 'exact' };
+        }
+      }
+    }
+    
+    // 3. Synonym match in history (with context awareness)
     const synonyms = effectiveSynonyms[token] || new Set([token]);
     for (const syn of synonyms) {
       const synPattern = new RegExp(`\\b${syn}s?\\b`, 'i');
       if (hasHistory && synPattern.test(searchTextLower)) {
-        return { found: true, method: 'synonym' };
+        // Check if synonym appears in a reasonable context (not just "this file" or "the file")
+        const synMatches = [...searchTextLower.matchAll(new RegExp(`\\b${syn}s?\\b`, 'gi'))];
+        for (const match of synMatches) {
+          const matchIndex = match.index!;
+          const contextBefore = searchTextLower.slice(Math.max(0, matchIndex - 30), matchIndex);
+          const contextAfter = searchTextLower.slice(matchIndex, Math.min(searchTextLower.length, matchIndex + 30));
+          // Skip if it's clearly referring to something else (e.g., "this file", "the file", "a file")
+          const skipPatterns = ['this ', 'that ', 'a ', 'an ', 'some ', 'any ', 'each ', 'every '];
+          const shouldSkip = skipPatterns.some(p => contextBefore.endsWith(p));
+          if (!shouldSkip) {
+            return { found: true, method: 'synonym' };
+          }
+        }
+      }
+      // Also check synonyms in current text before this candidate
+      if (!hasHistory) {
+        const textBefore = current.slice(0, cand.index);
+        const textBeforeNormalized = normalizePhrase(textBefore);
+        const beforeLower = textBeforeNormalized.toLowerCase();
+        const synMatches = [...beforeLower.matchAll(new RegExp(`\\b${syn}s?\\b`, 'gi'))];
+        for (const match of synMatches) {
+          const matchIndex = match.index!;
+          const beforeMatch = beforeLower.slice(Math.max(0, matchIndex - 30), matchIndex);
+          // Skip if it's clearly referring to something else (e.g., "this file", "the file", "a file")
+          const skipPatterns = ['this ', 'that ', 'a ', 'an ', 'some ', 'any ', 'each ', 'every '];
+          const shouldSkip = skipPatterns.some(p => beforeMatch.endsWith(p));
+          // Also skip if it's part of "the X" phrase (those don't count as antecedents)
+          const shouldSkipThe = beforeMatch.endsWith('the ') || beforeMatch.endsWith('the\n') || beforeMatch.endsWith('the\t');
+          if (!shouldSkip && !shouldSkipThe) {
+            // Additional check: if synonym is very far from candidate, add confidence penalty
+            const distance = cand.index - matchIndex;
+            const hasPenalty = distance > 5000; // More than 5000 chars away
+            return { found: true, method: 'synonym', confidencePenalty: hasPenalty };
+          }
+        }
       }
     }
     
-    // 3. Check noun memory from history (was this noun mentioned earlier as a bare mention?)
+    // 4. Check noun memory from history (was this noun mentioned earlier as a bare mention?)
+    // But only if it's not in a context that suggests it's referring to something else
     if (nounMemory.has(token)) {
-      return { found: true, method: 'memory' };
+      // Double-check: was this really a valid bare mention, or was it in "this file" etc?
+      if (hasHistory) {
+        const historyMatches = [...searchTextLower.matchAll(new RegExp(`\\b${token}s?\\b`, 'gi'))];
+        for (const match of historyMatches) {
+          const matchIndex = match.index!;
+          const contextBefore = searchTextLower.slice(Math.max(0, matchIndex - 30), matchIndex);
+          const skipPatterns = ['this ', 'that ', 'a ', 'an ', 'some ', 'any ', 'each ', 'every '];
+          const shouldSkip = skipPatterns.some(p => contextBefore.endsWith(p));
+          if (!shouldSkip) {
+            return { found: true, method: 'memory' };
+          }
+        }
+      } else {
+        // For prompt-only, check current text before candidate
+        const textBefore = current.slice(0, cand.index);
+        const textBeforeNormalized = normalizePhrase(textBefore);
+        const beforeLower = textBeforeNormalized.toLowerCase();
+        const matches = [...beforeLower.matchAll(new RegExp(`\\b${token}s?\\b`, 'gi'))];
+        for (const match of matches) {
+          const matchIndex = match.index!;
+          const beforeMatch = beforeLower.slice(Math.max(0, matchIndex - 30), matchIndex);
+          const skipPatterns = ['this ', 'that ', 'a ', 'an ', 'some ', 'any ', 'each ', 'every ', 'the '];
+          const shouldSkip = skipPatterns.some(p => beforeMatch.endsWith(p));
+          if (!shouldSkip) {
+            return { found: true, method: 'memory' };
+          }
+        }
+      }
     }
     
-    // 4. Check synonyms in noun memory
+    // 5. Check synonyms in noun memory (with context awareness)
     for (const syn of synonyms) {
       if (nounMemory.has(syn)) {
-        return { found: true, method: 'synonym' };
+        // Double-check context for the synonym
+        if (hasHistory) {
+          const synMatches = [...searchTextLower.matchAll(new RegExp(`\\b${syn}s?\\b`, 'gi'))];
+          for (const match of synMatches) {
+            const matchIndex = match.index!;
+            const contextBefore = searchTextLower.slice(Math.max(0, matchIndex - 30), matchIndex);
+            const skipPatterns = ['this ', 'that ', 'a ', 'an ', 'some ', 'any ', 'each ', 'every '];
+            const shouldSkip = skipPatterns.some(p => contextBefore.endsWith(p));
+            if (!shouldSkip) {
+              return { found: true, method: 'synonym' };
+            }
+          }
+        } else {
+          // For prompt-only, check current text before candidate
+          const textBefore = current.slice(0, cand.index);
+          const textBeforeNormalized = normalizePhrase(textBefore);
+          const beforeLower = textBeforeNormalized.toLowerCase();
+          const synMatches = [...beforeLower.matchAll(new RegExp(`\\b${syn}s?\\b`, 'gi'))];
+          for (const match of synMatches) {
+            const matchIndex = match.index!;
+            const beforeMatch = beforeLower.slice(Math.max(0, matchIndex - 30), matchIndex);
+            const skipPatterns = ['this ', 'that ', 'a ', 'an ', 'some ', 'any ', 'each ', 'every ', 'the '];
+            const shouldSkip = skipPatterns.some(p => beforeMatch.endsWith(p));
+            if (!shouldSkip) {
+              return { found: true, method: 'synonym' };
+            }
+          }
+        }
       }
     }
     
-    // 5. Check if this specific "the X" appears AFTER a bare mention of X in current text
+    // 6. Check if this specific "the X" appears AFTER a bare mention of X in current text
     // (sequential order check - bare mention must come BEFORE "the X")
     const textBefore = current.slice(0, cand.index);
     const bareBefore = findBareMentions(textBefore);
     if (bareBefore.has(token)) {
-      return { found: true, method: 'memory' };
-    }
-    
-    // Check synonyms in text before
-    for (const syn of synonyms) {
-      if (bareBefore.has(syn)) {
-        return { found: true, method: 'synonym' };
+      // Verify context - make sure it's not "this X" or "the X"
+      const textBeforeNormalized = normalizePhrase(textBefore);
+      const beforeLower = textBeforeNormalized.toLowerCase();
+      const matches = [...beforeLower.matchAll(new RegExp(`\\b${token}s?\\b`, 'gi'))];
+      for (const match of matches) {
+        const matchIndex = match.index!;
+        const beforeMatch = beforeLower.slice(Math.max(0, matchIndex - 30), matchIndex);
+        const skipPatterns = ['this ', 'that ', 'a ', 'an ', 'some ', 'any ', 'each ', 'every ', 'the '];
+        const shouldSkip = skipPatterns.some(p => beforeMatch.endsWith(p));
+        if (!shouldSkip) {
+          return { found: true, method: 'memory' };
+        }
       }
     }
     
-    // 6. Check attachments (normalized)
+    // Check synonyms in text before (with context verification)
+    for (const syn of synonyms) {
+      if (bareBefore.has(syn)) {
+        // Verify context - make sure it's not "this X" or "the X"
+        const textBeforeNormalized = normalizePhrase(textBefore);
+        const beforeLower = textBeforeNormalized.toLowerCase();
+        const synMatches = [...beforeLower.matchAll(new RegExp(`\\b${syn}s?\\b`, 'gi'))];
+        for (const match of synMatches) {
+          const matchIndex = match.index!;
+          const beforeMatch = beforeLower.slice(Math.max(0, matchIndex - 30), matchIndex);
+          const skipPatterns = ['this ', 'that ', 'a ', 'an ', 'some ', 'any ', 'each ', 'every ', 'the '];
+          const shouldSkip = skipPatterns.some(p => beforeMatch.endsWith(p));
+          if (!shouldSkip) {
+            return { found: true, method: 'synonym' };
+          }
+        }
+      }
+    }
+    
+    // 7. Check attachments (normalized)
     const normalizedAttachments = normalizePhrase(attachmentsText);
     if (normalizedAttachments.includes(token)) {
       return { found: true, method: 'attachment' };
@@ -209,6 +340,15 @@ export function run(input: AnalyzeInput, acc: Report): void {
   };
 
   const uncovered = candidates.filter((c) => !antecedentFound(c).found);
+  
+  // Track resolved candidates with confidence penalties
+  const resolvedWithPenalty = new Set<string>();
+  for (const cand of candidates) {
+    const result = antecedentFound(cand);
+    if (result.found && result.confidencePenalty) {
+      resolvedWithPenalty.add(cand.head);
+    }
+  }
   
   // Phase 2: Scoring system
   // Score = +1 deictic, +1 definite NP with known head, +1 instruction like continue
@@ -243,6 +383,12 @@ export function run(input: AnalyzeInput, acc: Report): void {
     if (hasUncertainResolution) {
       confidence = 'medium';
     }
+  }
+  
+  // Apply confidence penalty if any candidates were resolved via synonym with penalty flag
+  if (resolvedWithPenalty.size > 0 && uncovered.length === 0) {
+    // If all candidates were resolved but some had confidence penalties, reduce confidence
+    confidence = confidence === 'high' ? 'medium' : 'low';
   }
   
   // Flag if we have any uncovered references (these lack antecedents)

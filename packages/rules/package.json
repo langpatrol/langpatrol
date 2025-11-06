@@ -1,6 +1,6 @@
 {
   "name": "@langpatrol/rules",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "Default lexicons and rule configurations for LangPatrol",
   "license": "MIT",
   "type": "module",
