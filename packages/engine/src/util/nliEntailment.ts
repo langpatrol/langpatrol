@@ -4,11 +4,15 @@
  * See LICENSE file for details.
  */
 // SPDX-License-Identifier: Elastic-2.0
-import { pipeline, ZeroShotClassificationPipeline } from '@xenova/transformers';
+import { pipeline, ZeroShotClassificationOutput, ZeroShotClassificationPipeline } from '@xenova/transformers';
 
 // Lazy-load the NLI model
 let nliPipeline: ZeroShotClassificationPipeline|null = null;
 
+interface ZeroShotNLIResult extends ZeroShotClassificationOutput {
+  labels: string[];
+  scores: number[];
+}
 async function getNLIPipeline(): Promise<ZeroShotClassificationPipeline> {
   if (!nliPipeline) {
     // Load the distilbert-base-uncased-mnli model for NLI
@@ -50,7 +54,7 @@ export async function checkEntailment(premise: string, hypothesis: string): Prom
     // For zero-shot-classification, we use the premise as the sequence to classify
     // and the hypothesis as a candidate label
     // The model will return scores for how well the premise entails the hypothesis
-    const result = await pipeline(premise, [hypothesis]);
+    const result = await pipeline(premise, [hypothesis]) as  ZeroShotNLIResult;
     console.log('[NLI] Inference result:', JSON.stringify(result, null, 2));
 
     // The result should have scores array with the hypothesis score
