@@ -17,6 +17,8 @@ import {
 import { joinMessages } from '../util/text';
 import { createIssueId, createPreview } from '../util/reporting';
 import { normalizeNoun, normalizePhrase } from '../util/normalize';
+import { detectForwardReferences, type ForwardRefMatch } from '../util/forwardRef';
+import { checkFulfillmentPattern, type FulfillmentResult } from '../util/fulfillmentChecker';
 
 export function run(input: AnalyzeInput, acc: Report): void {
   const messages = input.messages || [];
@@ -138,20 +140,90 @@ export function run(input: AnalyzeInput, acc: Report): void {
     }
   }
 
+  // Detect forward references (e.g., "the following report", "as shown below")
+  const forwardRefs = detectForwardReferences(current);
+  const forwardRefCandidates: Array<{ span: string; head?: string; index: number; isForwardRef: boolean }> = [];
+  
+  for (const fref of forwardRefs) {
+    // If the forward reference extracted a noun, check if it's in our taxonomy
+    if (fref.extractedNoun) {
+      const normalizedNoun = normalizeNoun(fref.extractedNoun);
+      if (effectiveNouns.has(fref.extractedNoun) || effectiveNouns.has(normalizedNoun)) {
+        forwardRefCandidates.push({
+          span: fref.text,
+          head: normalizedNoun,
+          index: fref.start,
+          isForwardRef: true
+        });
+      } else {
+        // Forward reference without a specific noun (e.g., "as shown below")
+        forwardRefCandidates.push({
+          span: fref.text,
+          index: fref.start,
+          isForwardRef: true
+        });
+      }
+    } else {
+      // Forward reference without a specific noun (e.g., "as shown below")
+      forwardRefCandidates.push({
+        span: fref.text,
+        index: fref.start,
+        isForwardRef: true
+      });
+    }
+  }
+
   const deicticCue = DEICTIC_CUES.test(current);
-  if (candidates.length === 0 && !deicticCue) return;
+  if (candidates.length === 0 && forwardRefCandidates.length === 0 && !deicticCue) return;
 
   const hasHistory = searchableHistory.trim().split(/\s+/).length > 40;
   const attachmentsText = (input.attachments || [])
     .map((a) => normalizePhrase(a.name || a.type))
     .join(' ');
 
-  // Phase 2: Enhanced antecedent check with normalization and synonym matching
-  const antecedentFound = (cand: { head: string; index: number }): { found: boolean; method?: 'exact' | 'synonym' | 'memory' | 'attachment'; confidencePenalty?: boolean } => {
+  // Phase 2: Enhanced antecedent check with hierarchical fulfillment (pattern → semantic similarity → NLI entailment)
+  // For forward references, also check future content in multi-turn conversations
+  const antecedentFound = (cand: { span?: string; head: string; index: number; isForwardRef?: boolean }): { found: boolean; method?: 'exact' | 'synonym' | 'memory' | 'attachment' | 'pattern' | 'semantic-similarity' | 'nli-entailment'; confidencePenalty?: boolean; fulfillmentResult?: FulfillmentResult } => {
     const token = cand.head; // already normalized
     const searchText = normalizePhrase(searchableHistory);
     const searchTextLower = searchText.toLowerCase();
     
+    // Get the reference span text
+    const refSpan = cand.span || current.slice(cand.index, cand.index + 50);
+    
+    // For forward references, also check future content (text after the reference in current message)
+    let futureContent = '';
+    if (cand.isForwardRef) {
+      // Check text after the reference in the current message
+      const textAfterRef = current.slice(cand.index + (cand.span?.length || 0));
+      futureContent = normalizePhrase(textAfterRef);
+    }
+    
+    // Use hierarchical fulfillment checker (pattern matching first)
+    const fulfillmentResult = checkFulfillmentPattern(refSpan, searchText, effectiveNouns, effectiveSynonyms);
+    
+    // If pattern matching found it in history, return early
+    if (fulfillmentResult.status === 'fulfilled' && fulfillmentResult.method === 'pattern') {
+      return { 
+        found: true, 
+        method: 'pattern',
+        fulfillmentResult 
+      };
+    }
+    
+    // For forward references, also check future content (text after the reference)
+    if (cand.isForwardRef && futureContent) {
+      const futureFulfillment = checkFulfillmentPattern(refSpan, futureContent, effectiveNouns, effectiveSynonyms);
+      if (futureFulfillment.status === 'fulfilled') {
+        return { 
+          found: true, 
+          method: 'pattern',
+          fulfillmentResult: futureFulfillment 
+        };
+      }
+    }
+    
+    // Fall back to existing logic for backward compatibility
     // 1. Exact match in history (normalized)
     const exactPattern = new RegExp(`\\b${token}s?\\b`, 'i');
     if (hasHistory && exactPattern.test(searchTextLower)) {
@@ -339,28 +411,63 @@ export function run(input: AnalyzeInput, acc: Report): void {
     return { found: false };
   };
 
-  const uncovered = candidates.filter((c) => !antecedentFound(c).found);
+  // Combine regular candidates and forward reference candidates
+  const allCandidates = [
+    ...candidates.map(c => ({ ...c, isForwardRef: false as const })),
+    ...forwardRefCandidates.map(c => ({ 
+      span: c.span, 
+      head: c.head || '', 
+      index: c.index, 
+      isForwardRef: true as const 
+    }))
+  ];
   
-  // Track resolved candidates with confidence penalties
+  const uncovered = allCandidates.filter((c) => {
+    if (!c.head && c.isForwardRef) {
+      // Forward reference without specific noun - check if it's fulfilled
+      const result = antecedentFound(c);
+      return !result.found;
+    }
+    return !antecedentFound(c).found;
+  });
+  
+  // Track resolved candidates with confidence penalties and fulfillment results
   const resolvedWithPenalty = new Set<string>();
-  for (const cand of candidates) {
+  const fulfillmentResults = new Map<number, FulfillmentResult>();
+  for (const cand of allCandidates) {
     const result = antecedentFound(cand);
-    if (result.found && result.confidencePenalty) {
-      resolvedWithPenalty.add(cand.head);
+    if (result.found) {
+      if (result.confidencePenalty && cand.head) {
+        resolvedWithPenalty.add(cand.head);
+      }
+      if (result.fulfillmentResult) {
+        fulfillmentResults.set(cand.index, result.fulfillmentResult);
+      }
+    }
+  }
+  
+  // Also check forward references for fulfillment in future content
+  for (const fref of forwardRefCandidates) {
+    if (fref.head) {
+      const cand = { span: fref.span, head: fref.head, index: fref.index, isForwardRef: true };
+      const result = antecedentFound(cand);
+      if (result.found && result.fulfillmentResult) {
+        fulfillmentResults.set(fref.index, result.fulfillmentResult);
+      }
     }
   }
   
   // Phase 2: Scoring system
   // Score = +1 deictic, +1 definite NP with known head, +1 instruction like continue
-  //        -2 if antecedent found by exact/synonym, -1 if found by embedding (future)
+  //        -2 if antecedent found by exact/synonym/pattern, -1 if found by memory/attachment
   let score = 0;
   if (deicticCue) score += 1;
-  if (candidates.length > 0) score += 1;
+  if (allCandidates.length > 0) score += 1;
   // Subtract for resolved candidates
-  for (const cand of candidates) {
+  for (const cand of allCandidates) {
     const result = antecedentFound(cand);
     if (result.found) {
-      if (result.method === 'exact' || result.method === 'synonym') {
+      if (result.method === 'exact' || result.method === 'synonym' || result.method === 'pattern') {
         score -= 2;
       } else if (result.method === 'memory' || result.method === 'attachment') {
         score -= 1;
@@ -375,10 +482,10 @@ export function run(input: AnalyzeInput, acc: Report): void {
     confidence = 'low';
   } else if (uncovered.length > 0) {
     // If we have uncovered references, check if any resolved candidates used uncertain methods
-    const resolvedCandidates = candidates.filter(c => antecedentFound(c).found);
+    const resolvedCandidates = allCandidates.filter(c => antecedentFound(c).found);
     const hasUncertainResolution = resolvedCandidates.some(cand => {
       const result = antecedentFound(cand);
-      return result.method === 'synonym' || result.method === 'memory';
+      return result.method === 'synonym' || result.method === 'memory' || result.method === 'pattern';
     });
     if (hasUncertainResolution) {
       confidence = 'medium';
@@ -394,7 +501,7 @@ export function run(input: AnalyzeInput, acc: Report): void {
   // Flag if we have any uncovered references (these lack antecedents)
   // OR if we have deictic cues without any candidates that have antecedents
   // OR if score >= 2 (scoring threshold)
-  const shouldFlag = uncovered.length > 0 || (deicticCue && candidates.length === 0) || score >= 2;
+  const shouldFlag = uncovered.length > 0 || (deicticCue && allCandidates.length === 0) || score >= 2;
 
   if (!shouldFlag) return;
 
@@ -415,14 +522,40 @@ export function run(input: AnalyzeInput, acc: Report): void {
 
   const occurrences = uncovered.slice(0, 50).map((item) => {
     const start = item.index;
-    const end = start + item.span.length;
+    const span = item.span || current.slice(start, start + 50);
+    const end = start + span.length;
+    const fulfillmentResult = fulfillmentResults.get(start);
+    const result = antecedentFound(item);
+    
+    // Determine fulfillment status
+    let fulfillmentStatus: 'fulfilled' | 'unfulfilled' | 'uncertain' = 'unfulfilled';
+    if (result.found && fulfillmentResult) {
+      fulfillmentStatus = fulfillmentResult.status;
+    } else if (result.found) {
+      fulfillmentStatus = 'fulfilled';
+    }
+    
     return {
-      text: item.span,
+      text: span,
       start,
       end,
       messageIndex: scope.messageIndex,
       preview: createPreview(current, start, end),
-      resolution: 'unresolved' as const
+      resolution: result.found ? 
+        (result.method === 'exact' ? 'resolved-by-exact' as const :
+         result.method === 'synonym' ? 'resolved-by-synonym' as const :
+         result.method === 'memory' ? 'resolved-by-memory' as const :
+         result.method === 'attachment' ? 'resolved-by-attachment' as const :
+         'unresolved' as const) : 
+        'unresolved' as const,
+      fulfillmentStatus,
+      fulfillmentMethod: fulfillmentResult?.method || 
+        (result.method === 'pattern' ? 'pattern' :
+         result.method === 'semantic-similarity' ? 'semantic-similarity' :
+         result.method === 'nli-entailment' ? 'nli-entailment' : 'none'),
+      fulfillmentConfidence: fulfillmentResult?.confidence || (result.found ? 0.8 : 0.0),
+      term: item.head || undefined,
+      turn: scope.messageIndex
     };
   });
 
@@ -432,7 +565,13 @@ export function run(input: AnalyzeInput, acc: Report): void {
       start: -1,
       end: -1,
       messageIndex: scope.messageIndex,
-      preview: undefined
+      preview: '',
+      resolution: 'unresolved' as const,
+      fulfillmentStatus: 'unfulfilled' as const,
+      fulfillmentMethod: 'none' as const,
+      fulfillmentConfidence: 0.0,
+      term: undefined,
+      turn: scope.messageIndex
     });
   }
 

@@ -92,6 +92,16 @@ export const DEICTIC_CUES = /\b(as (?:discussed|mentioned|above)|continue|same a
 
 export const DEF_NP = /\b(the|this|that|these|those|aforementioned)\s+([a-z][a-z0-9_-]{2,})\b/gi;
 
+// Forward-reference patterns: expressions that refer to content that appears later
+export const FORWARD_REF_PATTERNS = [
+  /\bthe following\s+([a-z][a-z0-9_-]{2,})\b/gi,  // "the following report", "the following data"
+  /\bas shown below\b/gi,                          // "as shown below"
+  /\bas (?:shown|demonstrated|illustrated|listed|detailed)\s+(?:below|hereafter|next)\b/gi,
+  /\bthese\s+(?:files?|data|items?|results?|reports?|documents?|lists?)\b/gi,  // "these files", "these data"
+  /\bthe\s+(?:files?|data|items?|results?|reports?|documents?|lists?)\s+(?:below|following|next|ahead)\b/gi,
+  /\b(?:see|refer to|check)\s+(?:the\s+)?(?:following|below|next)\b/gi
+];
+
 export const VERBOSE_PATTERNS = /\b(detailed|comprehensive|step by step|exhaustive)\b/i;
 
 export const CONCISE_PATTERNS = /\b(concise|brief|minimal|short)\b/i;

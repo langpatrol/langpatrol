@@ -1,4 +1,27 @@
 # Changelog
+## [0.1.3] - 2025-11-09
+
+### Added
+
+* **Lightweight inference mode** using ONNX-based NLI models (`distilbert-base-uncased-mnli`) under 400 MB total footprint.
+* Support for **semantic entailment validation** across multi-turn contexts using ONNX Runtime for Node.js.
+* **Forward-reference detector** for expressions like “the following …”, “as shown below”, “these files/data/items”.
+* Optional **semantic similarity scoring** via `MiniLM-L6-v2` embeddings for paraphrase-aware fulfillment checks.
+* JSON-formatted reporting for missing-referent diagnostics (term, turn, confidence, fulfillment status).
+
+### Changed
+
+* Refactored **MISSING_REFERENCE rule** to run hierarchical checks (pattern → semantic similarity → NLI entailment).
+* Simplified SDK structure for modular Node.js usage (`forwardRefDetector`, `fulfillmentChecker`, `analyzer`).
+* Reduced model size requirements from >1 GB to <400 MB total without major accuracy loss.
+* Optimized ONNX session caching and tokenization throughput for short prompt analytics.
+
+### Fixed
+
+* False negatives when references spanned multiple turns (e.g., “the following data” followed by delayed content).
+* Overlapping phrase detection now correctly handles nested forward-reference patterns.
+* Tokenization mismatch bug when using UTF-8 multibyte symbols in entailment checks.
+
 
 ## [0.1.2] - 2025-11-06
 

@@ -68,6 +68,11 @@ export type IssueEvidenceOccurrence = {
   messageIndex?: number;
   bucket?: string;
   resolution?: 'unresolved' | 'resolved-by-exact' | 'resolved-by-synonym' | 'resolved-by-memory' | 'resolved-by-attachment';
+  fulfillmentStatus?: 'fulfilled' | 'unfulfilled' | 'uncertain';
+  fulfillmentMethod?: 'pattern' | 'semantic-similarity' | 'nli-entailment' | 'none';
+  fulfillmentConfidence?: number;
+  term?: string;
+  turn?: number;
   pairedWith?: {
     text: string;
     start: number;
