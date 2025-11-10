@@ -5,22 +5,32 @@
 
 * **Lightweight inference mode** using ONNX-based NLI models (`distilbert-base-uncased-mnli`) under 400 MB total footprint.
 * Support for **semantic entailment validation** across multi-turn contexts using ONNX Runtime for Node.js.
-* **Forward-reference detector** for expressions like “the following …”, “as shown below”, “these files/data/items”.
+* **Forward-reference detector** for expressions like "the following …", "as shown below", "these files/data/items".
 * Optional **semantic similarity scoring** via `MiniLM-L6-v2` embeddings for paraphrase-aware fulfillment checks.
-* JSON-formatted reporting for missing-referent diagnostics (term, turn, confidence, fulfillment status).
+* **Combined scoring mode** that runs pattern matching, semantic similarity, and NLI entailment in parallel and combines their scores with configurable weights.
+* **NLP-based noun extraction** using TinyBERT NER model for dynamic noun detection (alternative to taxonomy-based approach).
+* **Context-aware matching strategies**: chunked matching, sentence-level matching, phrase-level matching, and multi-hypothesis NLI.
+* **Configurable pattern matching** - can be disabled to rely solely on semantic/NLI methods.
+* **Verb filtering** in NLP extraction to prevent detecting verbs (e.g., "contain") as noun phrases.
+* **Entity type filtering** in NLP extraction to only extract noun-like entities (MISC, ORG, PRODUCT, LOC, etc.).
+* JSON-formatted reporting for missing-referent diagnostics (term, turn, confidence, fulfillment status, detailed scoring breakdown).
 
 ### Changed
 
-* Refactored **MISSING_REFERENCE rule** to run hierarchical checks (pattern → semantic similarity → NLI entailment).
+* Refactored **MISSING_REFERENCE rule** to support both hierarchical checks (pattern → semantic similarity → NLI entailment) and combined scoring modes.
+* Pattern matching is now optional and can be disabled via `usePatternMatching` option.
+* NLP extraction filters entities to only noun-like types and excludes verbs for better accuracy.
 * Simplified SDK structure for modular Node.js usage (`forwardRefDetector`, `fulfillmentChecker`, `analyzer`).
 * Reduced model size requirements from >1 GB to <400 MB total without major accuracy loss.
 * Optimized ONNX session caching and tokenization throughput for short prompt analytics.
 
 ### Fixed
 
-* False negatives when references spanned multiple turns (e.g., “the following data” followed by delayed content).
+* False negatives when references spanned multiple turns (e.g., "the following data" followed by delayed content).
 * Overlapping phrase detection now correctly handles nested forward-reference patterns.
 * Tokenization mismatch bug when using UTF-8 multibyte symbols in entailment checks.
+* Pattern matching now correctly extracts head nouns from phrases like "the rows below" (extracts "rows" not "below").
+* Search text construction now includes text before the reference in prompt-only scenarios for better context.
 
 
 ## [0.1.2] - 2025-11-06
