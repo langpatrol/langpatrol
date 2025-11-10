@@ -163,7 +163,9 @@ export type AnalyzeInput = {
     maxChars?: number; // fallback guard for early bail (e.g., 120_000)
     referenceHeads?: string[]; // extend default taxonomy
     synonyms?: Record<string, string[]>; // custom synonym map (extends default)
-    similarityThreshold?: number; // for future embedding matching (default 0.6)
+    similarityThreshold?: number; // for embedding matching (default 0.6)
+    useSemanticSimilarity?: boolean; // enable semantic similarity checking (default: false, enabled if similarityThreshold is set)
+    useNLIEntailment?: boolean; // enable NLI entailment checking (default: false, enabled if similarityThreshold is set)
     antecedentWindow?: {
       messages?: number; // max messages to search back (default: all)
       bytes?: number; // max bytes to search back (default: unlimited)

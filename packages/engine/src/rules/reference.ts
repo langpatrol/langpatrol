@@ -18,7 +18,9 @@ import { joinMessages } from '../util/text';
 import { createIssueId, createPreview } from '../util/reporting';
 import { normalizeNoun, normalizePhrase } from '../util/normalize';
 import { detectForwardReferences, type ForwardRefMatch } from '../util/forwardRef';
-import { checkFulfillmentPattern, type FulfillmentResult } from '../util/fulfillmentChecker';
+import { checkFulfillmentPattern, checkFulfillment, type FulfillmentResult } from '../util/fulfillmentChecker';
+import { isSemanticSimilarityAvailable } from '../util/semanticSimilarity';
+import { isNLIEntailmentAvailable } from '../util/nliEntailment';
 
 export function run(input: AnalyzeInput, acc: Report): void {
   const messages = input.messages || [];
@@ -181,6 +183,15 @@ export function run(input: AnalyzeInput, acc: Report): void {
     .map((a) => normalizePhrase(a.name || a.type))
     .join(' ');
 
+  // Check if semantic/NLI features are enabled
+  const useSemanticFeatures = 
+    input.options?.similarityThreshold !== undefined ||
+    input.options?.useSemanticSimilarity === true ||
+    input.options?.useNLIEntailment === true;
+  
+  const semanticAvailable = useSemanticFeatures && 
+    (isSemanticSimilarityAvailable() || isNLIEntailmentAvailable());
+
   // Phase 2: Enhanced antecedent check with hierarchical fulfillment (pattern → semantic similarity → NLI entailment)
   // For forward references, also check future content in multi-turn conversations
   const antecedentFound = (cand: { span?: string; head: string; index: number; isForwardRef?: boolean }): { found: boolean; method?: 'exact' | 'synonym' | 'memory' | 'attachment' | 'pattern' | 'semantic-similarity' | 'nli-entailment'; confidencePenalty?: boolean; fulfillmentResult?: FulfillmentResult } => {
@@ -222,6 +233,8 @@ export function run(input: AnalyzeInput, acc: Report): void {
         };
       }
     }
+    
+    // Note: Async semantic/NLI checking will be done in runAsync when semantic features are enabled
     
     // Fall back to existing logic for backward compatibility
     // 1. Exact match in history (normalized)
@@ -601,6 +614,402 @@ export function run(input: AnalyzeInput, acc: Report): void {
 
   // Generate targeted suggestions based on head noun
   const heads = new Set(uncovered.map((c) => c.head));
+  for (const head of heads) {
+    if (head === 'report' || head === 'document' || head === 'transcript') {
+      acc.suggestions = acc.suggestions || [];
+      acc.suggestions.push({
+        type: 'ADD_CONTEXT',
+        text: 'Inline a 1–3 line summary or attach the file metadata.',
+        for: issueId
+      });
+    } else if (head === 'list' || head === 'results') {
+      acc.suggestions = acc.suggestions || [];
+      acc.suggestions.push({
+        type: 'ADD_CONTEXT',
+        text: 'Paste the prior items or a compact summary before asking to continue.',
+        for: issueId
+      });
+    }
+  }
+}
+
+/**
+ * Async version of run that supports semantic similarity and NLI entailment checking.
+ * This is used when semantic features are enabled via options.
+ */
+export async function runAsync(input: AnalyzeInput, acc: Report): Promise<void> {
+  // Check if semantic/NLI features are enabled
+  const useSemanticFeatures = 
+    input.options?.similarityThreshold !== undefined ||
+    input.options?.useSemanticSimilarity === true ||
+    input.options?.useNLIEntailment === true;
+  
+  // If semantic features are not enabled, use the sync version
+  if (!useSemanticFeatures || (!isSemanticSimilarityAvailable() && !isNLIEntailmentAvailable())) {
+    run(input, acc);
+    return;
+  }
+
+  // Otherwise, use async version with semantic/NLI checking
+  const messages = input.messages || [];
+  const scope: { type: 'prompt' | 'messages'; messageIndex?: number } =
+    messages.length > 0
+      ? { type: 'messages', messageIndex: messages.length - 1 }
+      : { type: 'prompt' };
+
+  // Handle both prompt-only and messages scenarios
+  let current: string;
+  let historyText: string;
+
+  if (messages.length > 0) {
+    current = messages[messages.length - 1]?.content || '';
+    const history = messages.slice(0, -1);
+    historyText = joinMessages(history);
+  } else if (input.prompt) {
+    current = input.prompt;
+    historyText = '';
+  } else {
+    return;
+  }
+
+  // Build effective noun lexicon and synonyms (same as sync version)
+  const effectiveNouns = new Set(getAllTaxonomyNouns());
+  if (input.options?.referenceHeads) {
+    input.options.referenceHeads.forEach(noun => effectiveNouns.add(noun.toLowerCase()));
+  }
+  
+  const effectiveSynonyms: Record<string, Set<string>> = {};
+  Object.keys(SYNONYMS).forEach(head => {
+    effectiveSynonyms[head] = getSynonyms(head);
+  });
+  if (input.options?.synonyms) {
+    Object.entries(input.options.synonyms).forEach(([head, syns]) => {
+      const headLower = head.toLowerCase();
+      if (!effectiveSynonyms[headLower]) {
+        effectiveSynonyms[headLower] = new Set([headLower]);
+      }
+      syns.forEach(syn => effectiveSynonyms[headLower].add(syn.toLowerCase()));
+    });
+  }
+  
+  // Get search window limits
+  const windowMessages = input.options?.antecedentWindow?.messages;
+  const windowBytes = input.options?.antecedentWindow?.bytes;
+  
+  let searchableHistory = historyText;
+  if (messages.length > 0 && windowMessages) {
+    const historyMessages = messages.slice(0, -1);
+    const windowedMessages = windowMessages > 0 
+      ? historyMessages.slice(-windowMessages)
+      : historyMessages;
+    searchableHistory = joinMessages(windowedMessages);
+  }
+  if (windowBytes && searchableHistory.length > windowBytes) {
+    searchableHistory = searchableHistory.slice(-windowBytes);
+  }
+
+  // Build noun memory cache
+  const nounMemory = new Set<string>();
+  const findBareMentions = (text: string): Set<string> => {
+    const found = new Set<string>();
+    const textLower = text.toLowerCase();
+    
+    for (const noun of effectiveNouns) {
+      const nounPattern = new RegExp(`\\b${noun}s?\\b`, 'gi');
+      let match: RegExpExecArray | null;
+      const regex = new RegExp(nounPattern.source, nounPattern.flags);
+      
+      while ((match = regex.exec(textLower)) !== null) {
+        const start = match.index;
+        const beforeStart = Math.max(0, start - 10);
+        const beforeText = textLower.slice(beforeStart, start);
+        if (!beforeText.endsWith('the ') && !beforeText.endsWith('the\n') && !beforeText.endsWith('the\t')) {
+          found.add(noun);
+          break;
+        }
+      }
+    }
+    
+    return found;
+  };
+  
+  if (searchableHistory) {
+    const historyBare = findBareMentions(searchableHistory);
+    historyBare.forEach(noun => nounMemory.add(noun));
+  }
+
+  // Find candidates (same as sync version)
+  const candidates: Array<{ span: string; head: string; index: number }> = [];
+  const regex = new RegExp(DEF_NP.source, DEF_NP.flags);
+  let match: RegExpExecArray | null;
+  while ((match = regex.exec(current)) !== null) {
+    const head = match[2].toLowerCase();
+    const normalizedHead = normalizeNoun(head);
+    if (effectiveNouns.has(head) || effectiveNouns.has(normalizedHead)) {
+      candidates.push({ span: match[0], head: normalizedHead, index: match.index });
+    }
+  }
+
+  // Detect forward references
+  const forwardRefs = detectForwardReferences(current);
+  const forwardRefCandidates: Array<{ span: string; head?: string; index: number; isForwardRef: boolean }> = [];
+  
+  for (const fref of forwardRefs) {
+    if (fref.extractedNoun) {
+      const normalizedNoun = normalizeNoun(fref.extractedNoun);
+      if (effectiveNouns.has(fref.extractedNoun) || effectiveNouns.has(normalizedNoun)) {
+        forwardRefCandidates.push({
+          span: fref.text,
+          head: normalizedNoun,
+          index: fref.start,
+          isForwardRef: true
+        });
+      } else {
+        forwardRefCandidates.push({
+          span: fref.text,
+          index: fref.start,
+          isForwardRef: true
+        });
+      }
+    } else {
+      forwardRefCandidates.push({
+        span: fref.text,
+        index: fref.start,
+        isForwardRef: true
+      });
+    }
+  }
+
+  const deicticCue = DEICTIC_CUES.test(current);
+  if (candidates.length === 0 && forwardRefCandidates.length === 0 && !deicticCue) return;
+
+  const hasHistory = searchableHistory.trim().split(/\s+/).length > 40;
+  const attachmentsText = (input.attachments || [])
+    .map((a) => normalizePhrase(a.name || a.type))
+    .join(' ');
+
+  // Async antecedent check with hierarchical fulfillment
+  const antecedentFoundAsync = async (cand: { span?: string; head: string; index: number; isForwardRef?: boolean }): Promise<{ found: boolean; method?: 'exact' | 'synonym' | 'memory' | 'attachment' | 'pattern' | 'semantic-similarity' | 'nli-entailment'; confidencePenalty?: boolean; fulfillmentResult?: FulfillmentResult }> => {
+    const token = cand.head;
+    const searchText = normalizePhrase(searchableHistory);
+    const refSpan = cand.span || current.slice(cand.index, cand.index + 50);
+    
+    // Step 1: Fast synchronous pattern matching
+    const patternResult = checkFulfillmentPattern(refSpan, searchText, effectiveNouns, effectiveSynonyms);
+    if (patternResult.status === 'fulfilled') {
+      return { found: true, method: 'pattern', fulfillmentResult: patternResult };
+    }
+    
+    // Step 2: Async semantic similarity and NLI (if enabled)
+    if (useSemanticFeatures) {
+      try {
+        const asyncResult = await checkFulfillment(
+          refSpan,
+          searchText,
+          effectiveNouns,
+          effectiveSynonyms,
+          {
+            similarityThreshold: input.options?.similarityThreshold,
+            useSemanticSimilarity: input.options?.useSemanticSimilarity !== false,
+            useNLIEntailment: input.options?.useNLIEntailment !== false
+          }
+        );
+        
+        if (asyncResult.status === 'fulfilled') {
+          const method = asyncResult.method === 'semantic-similarity' ? 'semantic-similarity' as const :
+                         asyncResult.method === 'nli-entailment' ? 'nli-entailment' as const :
+                         'pattern' as const;
+          return { found: true, method, fulfillmentResult: asyncResult };
+        }
+      } catch (error) {
+        // Fall through to existing logic
+      }
+    }
+    
+    // Step 3: Fall back to existing synchronous logic (same as sync version)
+    const searchTextLower = searchText.toLowerCase();
+    const exactPattern = new RegExp(`\\b${token}s?\\b`, 'i');
+    if (hasHistory && exactPattern.test(searchTextLower)) {
+      return { found: true, method: 'exact' };
+    }
+    
+    // Check attachments
+    const normalizedAttachments = normalizePhrase(attachmentsText);
+    if (normalizedAttachments.includes(token)) {
+      return { found: true, method: 'attachment' };
+    }
+    
+    return { found: false };
+  };
+
+  // Combine candidates
+  const allCandidates = [
+    ...candidates.map(c => ({ ...c, isForwardRef: false as const })),
+    ...forwardRefCandidates.map(c => ({ 
+      span: c.span, 
+      head: c.head || '', 
+      index: c.index, 
+      isForwardRef: true as const 
+    }))
+  ];
+  
+  // Check all candidates with async fulfillment
+  const uncovered: typeof allCandidates = [];
+  const resolvedWithPenalty = new Set<string>();
+  const fulfillmentResults = new Map<number, FulfillmentResult>();
+  
+  for (const cand of allCandidates) {
+    const result = await antecedentFoundAsync(cand);
+    if (!result.found) {
+      uncovered.push(cand);
+    } else {
+      if (result.confidencePenalty && cand.head) {
+        resolvedWithPenalty.add(cand.head);
+      }
+      if (result.fulfillmentResult) {
+        fulfillmentResults.set(cand.index, result.fulfillmentResult);
+      }
+    }
+  }
+  
+  // Scoring and confidence (same logic as sync version)
+  let score = 0;
+  if (deicticCue) score += 1;
+  if (allCandidates.length > 0) score += 1;
+  
+  for (const cand of allCandidates) {
+    const result = await antecedentFoundAsync(cand);
+    if (result.found) {
+      if (result.method === 'exact' || result.method === 'synonym' || result.method === 'pattern' || result.method === 'semantic-similarity' || result.method === 'nli-entailment') {
+        score -= 2;
+      } else if (result.method === 'memory' || result.method === 'attachment') {
+        score -= 1;
+      }
+    }
+  }
+  
+  let confidence: 'low' | 'medium' | 'high' = 'high';
+  const historyWordCount = searchableHistory.trim().split(/\s+/).length;
+  if (historyWordCount < 20) {
+    confidence = 'low';
+  } else if (uncovered.length > 0) {
+    // Check if any resolved candidates used uncertain methods
+    const resolvedResults = new Map<number, { found: boolean; method?: string }>();
+    for (const cand of allCandidates) {
+      if (!uncovered.includes(cand)) {
+        const result = await antecedentFoundAsync(cand);
+        resolvedResults.set(cand.index, result);
+      }
+    }
+    const hasUncertainResolution = Array.from(resolvedResults.values()).some(result => 
+      result.found && (result.method === 'synonym' || result.method === 'memory' || result.method === 'pattern')
+    );
+    if (hasUncertainResolution) {
+      confidence = 'medium';
+    }
+  }
+  
+  if (resolvedWithPenalty.size > 0 && uncovered.length === 0) {
+    confidence = confidence === 'high' ? 'medium' : 'low';
+  }
+  
+  const shouldFlag = uncovered.length > 0 || (deicticCue && allCandidates.length === 0) || score >= 2;
+  if (!shouldFlag) return;
+
+  const issueId = createIssueId();
+  const summaryMap = new Map<string, number>();
+  for (const item of uncovered) {
+    const key = item.span?.toLowerCase() || 'forward reference';
+    summaryMap.set(key, (summaryMap.get(key) || 0) + 1);
+  }
+  if (deicticCue) {
+    summaryMap.set('deictic cue', (summaryMap.get('deictic cue') || 0) + 1);
+  }
+
+  const summary = Array.from(summaryMap.entries())
+    .sort((a, b) => b[1] - a[1])
+    .map(([text, count]) => ({ text, count }));
+
+  const occurrences = await Promise.all(uncovered.slice(0, 50).map(async (item) => {
+    const start = item.index;
+    const span = item.span || current.slice(start, start + 50);
+    const end = start + span.length;
+    const fulfillmentResult = fulfillmentResults.get(start);
+    const result = await antecedentFoundAsync(item);
+    
+    let fulfillmentStatus: 'fulfilled' | 'unfulfilled' | 'uncertain' = 'unfulfilled';
+    if (result.found && fulfillmentResult) {
+      fulfillmentStatus = fulfillmentResult.status;
+    } else if (result.found) {
+      fulfillmentStatus = 'fulfilled';
+    }
+    
+    return {
+      text: span,
+      start,
+      end,
+      messageIndex: scope.messageIndex,
+      preview: createPreview(current, start, end),
+      resolution: result.found ? 
+        (result.method === 'exact' ? 'resolved-by-exact' as const :
+         result.method === 'synonym' ? 'resolved-by-synonym' as const :
+         result.method === 'memory' ? 'resolved-by-memory' as const :
+         result.method === 'attachment' ? 'resolved-by-attachment' as const :
+         'unresolved' as const) : 
+        'unresolved' as const,
+      fulfillmentStatus,
+      fulfillmentMethod: fulfillmentResult?.method || 
+        (result.method === 'pattern' ? 'pattern' :
+         result.method === 'semantic-similarity' ? 'semantic-similarity' :
+         result.method === 'nli-entailment' ? 'nli-entailment' : 'none'),
+      fulfillmentConfidence: fulfillmentResult?.confidence || (result.found ? 0.8 : 0.0),
+      term: item.head || undefined,
+      turn: scope.messageIndex
+    };
+  }));
+
+  if (deicticCue) {
+    occurrences.push({
+      text: 'deictic cue present',
+      start: -1,
+      end: -1,
+      messageIndex: scope.messageIndex,
+      preview: '',
+      resolution: 'unresolved' as const,
+      fulfillmentStatus: 'unfulfilled' as const,
+      fulfillmentMethod: 'none' as const,
+      fulfillmentConfidence: 0.0,
+      term: undefined,
+      turn: scope.messageIndex
+    });
+  }
+
+  const firstMatch = occurrences.find((occ) => occ.start >= 0);
+
+  const detail = `References ${summary
+    .slice(0, 3)
+    .map((s) => `"${s.text}"${s.count > 1 ? ` (×${s.count})` : ''}`)
+    .join(', ')} without antecedent in prior context or attachments.`;
+
+  acc.issues.push({
+    id: issueId,
+    code: 'MISSING_REFERENCE',
+    severity: 'high',
+    detail,
+    evidence: {
+      summary,
+      occurrences,
+      firstSeenAt: {
+        messageIndex: scope.messageIndex,
+        char: firstMatch && firstMatch.start >= 0 ? firstMatch.start : undefined
+      }
+    },
+    scope,
+    confidence
+  });
+
+  // Generate suggestions
+  const heads = new Set(uncovered.map((c) => c.head).filter(Boolean));
   for (const head of heads) {
     if (head === 'report' || head === 'document' || head === 'transcript') {
       acc.suggestions = acc.suggestions || [];

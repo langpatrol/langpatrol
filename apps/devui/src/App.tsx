@@ -20,6 +20,9 @@ export default function App() {
   });
   const [tokenEstimation, setTokenEstimation] = useState<'auto' | 'cheap' | 'exact' | 'off'>('auto');
   const [maxChars, setMaxChars] = useState<number>(120000);
+  const [useSemanticSimilarity, setUseSemanticSimilarity] = useState<boolean>(false);
+  const [useNLIEntailment, setUseNLIEntailment] = useState<boolean>(false);
+  const [similarityThreshold, setSimilarityThreshold] = useState<number>(0.6);
 
   // Load test files on mount
   useEffect(() => {
@@ -99,7 +102,10 @@ export default function App() {
         options: {
           disabledRules: disabledRules.length > 0 ? disabledRules : undefined,
           tokenEstimation,
-          maxChars: maxChars > 0 ? maxChars : undefined
+          maxChars: maxChars > 0 ? maxChars : undefined,
+          useSemanticSimilarity: useSemanticSimilarity || undefined,
+          useNLIEntailment: useNLIEntailment || undefined,
+          similarityThreshold: (useSemanticSimilarity || useNLIEntailment) ? similarityThreshold : undefined
         }
       };
 
