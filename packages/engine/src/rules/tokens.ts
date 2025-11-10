@@ -5,7 +5,7 @@
  */
 // SPDX-License-Identifier: Elastic-2.0
 
-import type { AnalyzeInput, Issue, Report, Suggestion } from '../types';
+import type { AnalyzeInput, Report } from '../types';
 import { extractText } from '../util/text';
 import {
   estimateTokensAuto,
@@ -64,7 +64,7 @@ export function run(input: AnalyzeInput, acc: Report): void {
 
     acc.meta = {
       ...acc.meta,
-      contextWindow: window
+      contextWindow: window!
     };
     return;
   }

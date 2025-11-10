@@ -34,6 +34,7 @@ if (args[0] === 'analyze') {
   }
 
   const files = globSync(pathGlob);
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const reports: Array<{ file: string; report: any }> = [];
 
   for (const file of files) {

@@ -5,9 +5,8 @@
  */
 // SPDX-License-Identifier: Elastic-2.0
 
-import type { AnalyzeInput, Issue, Report, Suggestion } from '../types';
+import type { AnalyzeInput, Report } from '../types';
 import { 
-  NP_LEXICON, 
   DEICTIC_CUES, 
   DEF_NP,
   getAllTaxonomyNouns,
@@ -17,7 +16,7 @@ import {
 import { joinMessages } from '../util/text';
 import { createIssueId, createPreview } from '../util/reporting';
 import { normalizeNoun, normalizePhrase } from '../util/normalize';
-import { detectForwardReferences, type ForwardRefMatch } from '../util/forwardRef';
+import { detectForwardReferences} from '../util/forwardRef';
 import { checkFulfillmentPattern, checkFulfillment, checkFulfillmentCombined, type FulfillmentResult } from '../util/fulfillmentChecker';
 import { isSemanticSimilarityAvailable } from '../util/semanticSimilarity';
 import { isNLIEntailmentAvailable } from '../util/nliEntailment';
@@ -186,16 +185,7 @@ export function run(input: AnalyzeInput, acc: Report): void {
   const attachmentsText = (input.attachments || [])
     .map((a) => normalizePhrase(a.name || a.type))
     .join(' ');
-
-  // Check if semantic/NLI features are enabled
-  const useSemanticFeatures = 
-    input.options?.similarityThreshold !== undefined ||
-    input.options?.useSemanticSimilarity === true ||
-    input.options?.useNLIEntailment === true;
   
-  const semanticAvailable = useSemanticFeatures && 
-    (isSemanticSimilarityAvailable() || isNLIEntailmentAvailable());
-
   // Phase 2: Enhanced antecedent check with hierarchical fulfillment (pattern → semantic similarity → NLI entailment)
   // For forward references, also check future content in multi-turn conversations
   const antecedentFound = (cand: { span?: string; head: string; index: number; isForwardRef?: boolean }): { found: boolean; method?: 'exact' | 'synonym' | 'memory' | 'attachment' | 'pattern' | 'semantic-similarity' | 'nli-entailment'; confidencePenalty?: boolean; fulfillmentResult?: FulfillmentResult } => {
@@ -275,7 +265,6 @@ export function run(input: AnalyzeInput, acc: Report): void {
         for (const match of synMatches) {
           const matchIndex = match.index!;
           const contextBefore = searchTextLower.slice(Math.max(0, matchIndex - 30), matchIndex);
-          const contextAfter = searchTextLower.slice(matchIndex, Math.min(searchTextLower.length, matchIndex + 30));
           // Skip if it's clearly referring to something else (e.g., "this file", "the file", "a file")
           const skipPatterns = ['this ', 'that ', 'a ', 'an ', 'some ', 'any ', 'each ', 'every '];
           const shouldSkip = skipPatterns.some(p => contextBefore.endsWith(p));
@@ -1066,7 +1055,7 @@ export async function runAsync(input: AnalyzeInput, acc: Report): Promise<void> 
         const cand = allCandidates.find(c => c.index === idx);
         return cand && !uncovered.includes(cand) && result.found;
       })
-      .map(([_, result]) => result);
+      .map(([, result]) => result);
     const hasUncertainResolution = resolvedResults.some(result => 
       result.found && (result.method === 'synonym' || result.method === 'memory' || result.method === 'pattern')
     );

@@ -5,7 +5,7 @@
  */
 // SPDX-License-Identifier: Elastic-2.0
 
-import { encodingForModel, getEncoding } from 'js-tiktoken';
+import { encodingForModel, getEncoding, TiktokenModel } from 'js-tiktoken';
 
 const MODEL_WINDOWS: Record<string, number> = {
   'gpt-4o': 128000,
@@ -58,7 +58,7 @@ export function exactTokens(text: string, model?: string): number {
     let encoding;
     if (model) {
       try {
-        encoding = encodingForModel(model as any);
+        encoding = encodingForModel(model as TiktokenModel);
       } catch {
         encoding = getEncoding('cl100k_base');
       }

@@ -5,15 +5,16 @@
  */
 // SPDX-License-Identifier: Elastic-2.0
 
-// JSONSchema7 type definition (compatible with json-schema draft-07)
+type JSONValue = string | number | boolean | null | JSONValue[] | { [key: string]: JSONValue };
+
 export type JSONSchema7 = {
   $id?: string;
   $schema?: string;
   $ref?: string;
   title?: string;
   description?: string;
-  default?: any;
-  examples?: any[];
+  default?: JSONValue;
+  examples?: JSONValue[];
   multipleOf?: number;
   maximum?: number;
   exclusiveMaximum?: number;
@@ -34,7 +35,7 @@ export type JSONSchema7 = {
   properties?: { [key: string]: JSONSchema7 };
   patternProperties?: { [key: string]: JSONSchema7 };
   dependencies?: { [key: string]: JSONSchema7 | string[] };
-  enum?: any[];
+  enum?: JSONValue[];
   type?: string | string[];
   allOf?: JSONSchema7[];
   anyOf?: JSONSchema7[];
@@ -44,7 +45,7 @@ export type JSONSchema7 = {
   then?: JSONSchema7;
   else?: JSONSchema7;
   format?: string;
-  const?: any;
+  const?: JSONValue;
 };
 
 export type Role = 'system' | 'user' | 'assistant';

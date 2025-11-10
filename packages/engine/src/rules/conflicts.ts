@@ -5,7 +5,7 @@
  */
 // SPDX-License-Identifier: Elastic-2.0
 
-import type { AnalyzeInput, Issue, Report } from '../types';
+import type { AnalyzeInput, Report } from '../types';
 import { VERBOSE_PATTERNS, CONCISE_PATTERNS, JSON_ONLY_PATTERNS, EXPLANATORY_PATTERNS } from '@langpatrol/rules';
 import { extractText } from '../util/text';
 import { createIssueId, createPreview } from '../util/reporting';

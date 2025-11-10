@@ -5,7 +5,7 @@
  */
 // SPDX-License-Identifier: Elastic-2.0
 
-import { pipeline, TokenClassificationPipeline } from '@xenova/transformers';
+import { pipeline, TokenClassificationPipeline, TokenClassificationSingle } from '@xenova/transformers';
 import { join } from 'path';
 import { normalizeNoun } from './normalize';
 
@@ -54,6 +54,9 @@ async function getNERPipeline(): Promise<TokenClassificationPipeline> {
   return nerPipeline;
 }
 
+interface NlpPipelineOutput extends TokenClassificationSingle {
+  label: string
+}
 /**
  * Extract nouns and entities from text using NER
  * This provides better coverage than hardcoded taxonomy
@@ -70,10 +73,10 @@ export async function extractNounsFromText(text: string): Promise<Set<string>> {
     
     // Extract all identified entities and tokens
     // Results can be an array or a single object
-    const entities = Array.isArray(results) ? results : [results];
+    const entities: NlpPipelineOutput[] = (Array.isArray(results) ? results : [results]) as NlpPipelineOutput[];
     
     // Filter to only noun-like entity types
-    const nounEntities = entities.filter((e: any) => {
+    const nounEntities = entities.filter((e: NlpPipelineOutput) => {
       const entityType = e.entity || e.label;
       return entityType && NOUN_ENTITY_TYPES.includes(entityType);
     });
@@ -82,13 +85,13 @@ export async function extractNounsFromText(text: string): Promise<Set<string>> {
     
     // Debug: log entity types to see what the model outputs
     if (entities.length > 0) {
-      const entityTypes = new Set(entities.map((e: any) => e.entity || e.label).filter(Boolean));
+      const entityTypes = new Set(entities.map((e: NlpPipelineOutput) => e.entity || e.label).filter(Boolean));
       console.log('[NLP] Entity types found:', Array.from(entityTypes));
     }
     
     for (const entity of nounEntities) {
       // Handle both TokenClassificationSingle and array formats
-      const word = (entity as any).word?.toLowerCase().trim() || (entity as any).entity?.toLowerCase().trim();
+      const word = (entity as NlpPipelineOutput).word?.toLowerCase().trim() || (entity as NlpPipelineOutput).entity?.toLowerCase().trim();
       if (word && word.length >= 3 && !isStopWord(word)) {
         // Add the entity word
         nouns.add(word);
@@ -157,10 +160,10 @@ export async function extractDefiniteNounPhrases(
     const results = await pipeline(text);
     
     // Results can be an array or a single object
-    const entities = Array.isArray(results) ? results : [results];
+    const entities = (Array.isArray(results) ? results : [results]) as NlpPipelineOutput[];
     
     // Filter to only noun-like entity types
-    const nounEntities = entities.filter((e: any) => {
+    const nounEntities = entities.filter((e: NlpPipelineOutput) => {
       const entityType = e.entity || e.label;
       return entityType && NOUN_ENTITY_TYPES.includes(entityType);
     });
@@ -169,7 +172,7 @@ export async function extractDefiniteNounPhrases(
     
     // Map NER results to phrases
     for (const entity of nounEntities) {
-      const entityAny = entity as any;
+      const entityAny = entity as NlpPipelineOutput;
       const word = entityAny.word?.toLowerCase().trim() || entityAny.entity?.toLowerCase().trim();
       const start = entityAny.start !== undefined ? entityAny.start : entityAny.index;
       const end = entityAny.end !== undefined ? entityAny.end : (start !== undefined && word ? start + word.length : undefined);

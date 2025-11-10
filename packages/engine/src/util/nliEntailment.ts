@@ -4,12 +4,12 @@
  * See LICENSE file for details.
  */
 // SPDX-License-Identifier: Elastic-2.0
-import { pipeline } from '@xenova/transformers';
+import { pipeline, ZeroShotClassificationPipeline } from '@xenova/transformers';
 
 // Lazy-load the NLI model
-let nliPipeline: any = null;
+let nliPipeline: ZeroShotClassificationPipeline|null = null;
 
-async function getNLIPipeline(): Promise<any> {
+async function getNLIPipeline(): Promise<ZeroShotClassificationPipeline> {
   if (!nliPipeline) {
     // Load the distilbert-base-uncased-mnli model for NLI
     // Using zero-shot-classification task which is appropriate for NLI
