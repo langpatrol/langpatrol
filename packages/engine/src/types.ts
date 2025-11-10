@@ -69,8 +69,15 @@ export type IssueEvidenceOccurrence = {
   bucket?: string;
   resolution?: 'unresolved' | 'resolved-by-exact' | 'resolved-by-synonym' | 'resolved-by-memory' | 'resolved-by-attachment';
   fulfillmentStatus?: 'fulfilled' | 'unfulfilled' | 'uncertain';
-  fulfillmentMethod?: 'pattern' | 'semantic-similarity' | 'nli-entailment' | 'none';
+      fulfillmentMethod?: 'pattern' | 'semantic-similarity' | 'nli-entailment' | 'combined' | 'none';
   fulfillmentConfidence?: number;
+  fulfillmentDetails?: {
+    patternScore?: number;
+    similarityScore?: number;
+    entailmentScore?: number;
+    combinedScore?: number;
+    matchedText?: string;
+  };
   term?: string;
   turn?: number;
   pairedWith?: {
@@ -163,9 +170,26 @@ export type AnalyzeInput = {
     maxChars?: number; // fallback guard for early bail (e.g., 120_000)
     referenceHeads?: string[]; // extend default taxonomy
     synonyms?: Record<string, string[]>; // custom synonym map (extends default)
-    similarityThreshold?: number; // for embedding matching (default 0.6)
-    useSemanticSimilarity?: boolean; // enable semantic similarity checking (default: false, enabled if similarityThreshold is set)
-    useNLIEntailment?: boolean; // enable NLI entailment checking (default: false, enabled if similarityThreshold is set)
+        similarityThreshold?: number; // for embedding matching (default 0.6)
+        useSemanticSimilarity?: boolean; // enable semantic similarity checking (default: false, enabled if similarityThreshold is set)
+        useNLIEntailment?: boolean; // enable NLI entailment checking (default: false, enabled if similarityThreshold is set)
+        usePatternMatching?: boolean; // enable pattern matching for fulfillment checks (default: true)
+        useCombinedScoring?: boolean; // use combined scoring instead of hierarchical (default: false)
+        combineWeights?: {
+          pattern?: number; // weight for pattern matching (default: 0.4)
+          semantic?: number; // weight for semantic similarity (default: 0.3)
+          nli?: number; // weight for NLI entailment (default: 0.3)
+        };
+        combinedThreshold?: number; // threshold for combined score to be considered fulfilled (default: 0.5)
+        // Context-aware matching options
+        useChunkedMatching?: boolean; // use chunked matching for long contexts (auto-enabled for texts > 1000 chars)
+        chunkSize?: number; // size of each chunk for chunked matching (default: 500)
+        chunkOverlap?: number; // overlap between chunks (default: 100)
+        useSentenceLevel?: boolean; // use sentence-level matching (default: false)
+        usePhraseLevel?: boolean; // use phrase-level matching (default: false)
+        useMultiHypothesis?: boolean; // use multiple NLI hypotheses (default: true)
+        // NLP-based noun extraction options
+        useNLPExtraction?: boolean; // use NER model for noun extraction instead of taxonomy (default: false)
     antecedentWindow?: {
       messages?: number; // max messages to search back (default: all)
       bytes?: number; // max bytes to search back (default: unlimited)

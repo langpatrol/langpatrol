@@ -64,10 +64,14 @@ export async function computeSemanticSimilarity(
 ): Promise<number | null> {
   try {
     if (!text1 || !text2) {
+      console.log('[SemanticSimilarity] Skipping: empty text');
       return null;
     }
     
+    console.log('[SemanticSimilarity] Computing similarity between:', text1.substring(0, 50), 'and', text2.substring(0, 50));
+    console.log('[SemanticSimilarity] Loading model...');
     const pipeline = await getEmbeddingPipeline();
+    console.log('[SemanticSimilarity] Model loaded, computing embeddings...');
     
     // Compute embeddings for both texts
     const [embedding1, embedding2] = await Promise.all([
@@ -79,21 +83,31 @@ export async function computeSemanticSimilarity(
     const vec1 = Array.from(embedding1.data);
     const vec2 = Array.from(embedding2.data);
     
+    console.log('[SemanticSimilarity] Embeddings computed, vec1 length:', vec1.length, 'vec2 length:', vec2.length);
+    
     // Calculate cosine similarity
     const similarity = cosineSimilarity(vec1, vec2);
     
+    console.log('[SemanticSimilarity] Similarity score:', similarity);
+    
     // Normalize to 0-1 range (cosine similarity is already -1 to 1, but embeddings are normalized)
     // For normalized embeddings, cosine similarity should already be in 0-1 range
-    return Math.max(0, Math.min(1, similarity));
+    const normalized = Math.max(0, Math.min(1, similarity));
+    console.log('[SemanticSimilarity] Normalized score:', normalized);
+    return normalized;
   } catch (error) {
-    console.error('Error computing semantic similarity:', error);
+    console.error('[SemanticSimilarity] Error computing semantic similarity:', error);
     return null;
   }
 }
 
 /**
  * Check if semantic similarity is enabled/available
+ * Note: Models are lazy-loaded, so this returns true if the library is available
+ * The actual model will be loaded on first use
  */
 export function isSemanticSimilarityAvailable(): boolean {
-  return embeddingPipeline !== null;
+  // Always return true - model will be loaded lazily on first use
+  // This allows the system to attempt loading even if not pre-loaded
+  return true;
 }

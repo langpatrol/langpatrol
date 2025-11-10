@@ -18,9 +18,10 @@ import { joinMessages } from '../util/text';
 import { createIssueId, createPreview } from '../util/reporting';
 import { normalizeNoun, normalizePhrase } from '../util/normalize';
 import { detectForwardReferences, type ForwardRefMatch } from '../util/forwardRef';
-import { checkFulfillmentPattern, checkFulfillment, type FulfillmentResult } from '../util/fulfillmentChecker';
+import { checkFulfillmentPattern, checkFulfillment, checkFulfillmentCombined, type FulfillmentResult } from '../util/fulfillmentChecker';
 import { isSemanticSimilarityAvailable } from '../util/semanticSimilarity';
 import { isNLIEntailmentAvailable } from '../util/nliEntailment';
+import { extractNounsFromText, extractDefiniteNounPhrases, isNLPExtractionAvailable } from '../util/nlpExtract';
 
 export function run(input: AnalyzeInput, acc: Report): void {
   const messages = input.messages || [];
@@ -47,11 +48,14 @@ export function run(input: AnalyzeInput, acc: Report): void {
     return;
   }
 
-  // Phase 2: Build effective noun lexicon (taxonomy + user extensions)
+  // Phase 2: Build effective noun lexicon (taxonomy + user extensions + NLP extraction if enabled)
   const effectiveNouns = new Set(getAllTaxonomyNouns());
   if (input.options?.referenceHeads) {
     input.options.referenceHeads.forEach(noun => effectiveNouns.add(noun.toLowerCase()));
   }
+  
+  // If NLP extraction is enabled, extract nouns from current text and history
+  // Note: This is async, so we'll handle it in runAsync. For sync version, use taxonomy only.
   
   // Phase 2: Build effective synonym map (default + user extensions)
   const effectiveSynonyms: Record<string, Set<string>> = {};
@@ -240,7 +244,7 @@ export function run(input: AnalyzeInput, acc: Report): void {
     // 1. Exact match in history (normalized)
     const exactPattern = new RegExp(`\\b${token}s?\\b`, 'i');
     if (hasHistory && exactPattern.test(searchTextLower)) {
-      return { found: true, method: 'exact' };
+      return { found: true, method: 'exact', fulfillmentResult };
     }
     
     // 2. For prompt-only input, check if token appears BEFORE this candidate in current text
@@ -413,15 +417,16 @@ export function run(input: AnalyzeInput, acc: Report): void {
     // 7. Check attachments (normalized)
     const normalizedAttachments = normalizePhrase(attachmentsText);
     if (normalizedAttachments.includes(token)) {
-      return { found: true, method: 'attachment' };
+      return { found: true, method: 'attachment', fulfillmentResult };
     }
     for (const syn of synonyms) {
       if (normalizedAttachments.includes(syn)) {
-        return { found: true, method: 'attachment' };
+        return { found: true, method: 'attachment', fulfillmentResult };
       }
     }
     
-    return { found: false };
+    // Always return pattern result for details, even if not found
+    return { found: false, method: 'pattern' as const, fulfillmentResult };
   };
 
   // Combine regular candidates and forward reference candidates
@@ -449,12 +454,13 @@ export function run(input: AnalyzeInput, acc: Report): void {
   const fulfillmentResults = new Map<number, FulfillmentResult>();
   for (const cand of allCandidates) {
     const result = antecedentFound(cand);
+    // Always store fulfillmentResult if available, even if not found, so we can show scores
+    if (result.fulfillmentResult) {
+      fulfillmentResults.set(cand.index, result.fulfillmentResult);
+    }
     if (result.found) {
       if (result.confidencePenalty && cand.head) {
         resolvedWithPenalty.add(cand.head);
-      }
-      if (result.fulfillmentResult) {
-        fulfillmentResults.set(cand.index, result.fulfillmentResult);
       }
     }
   }
@@ -464,7 +470,8 @@ export function run(input: AnalyzeInput, acc: Report): void {
     if (fref.head) {
       const cand = { span: fref.span, head: fref.head, index: fref.index, isForwardRef: true };
       const result = antecedentFound(cand);
-      if (result.found && result.fulfillmentResult) {
+      // Always store fulfillmentResult if available
+      if (result.fulfillmentResult) {
         fulfillmentResults.set(fref.index, result.fulfillmentResult);
       }
     }
@@ -567,6 +574,13 @@ export function run(input: AnalyzeInput, acc: Report): void {
          result.method === 'semantic-similarity' ? 'semantic-similarity' :
          result.method === 'nli-entailment' ? 'nli-entailment' : 'none'),
       fulfillmentConfidence: fulfillmentResult?.confidence || (result.found ? 0.8 : 0.0),
+      fulfillmentDetails: fulfillmentResult?.details ? {
+        patternScore: fulfillmentResult.details.patternScore,
+        similarityScore: fulfillmentResult.details.similarityScore,
+        entailmentScore: fulfillmentResult.details.entailmentScore,
+        combinedScore: fulfillmentResult.details.combinedScore,
+        matchedText: fulfillmentResult.details.matchedText
+      } : undefined,
       term: item.head || undefined,
       turn: scope.messageIndex
     };
@@ -583,6 +597,7 @@ export function run(input: AnalyzeInput, acc: Report): void {
       fulfillmentStatus: 'unfulfilled' as const,
       fulfillmentMethod: 'none' as const,
       fulfillmentConfidence: 0.0,
+      fulfillmentDetails: undefined,
       term: undefined,
       turn: scope.messageIndex
     });
@@ -644,11 +659,24 @@ export async function runAsync(input: AnalyzeInput, acc: Report): Promise<void> 
     input.options?.useSemanticSimilarity === true ||
     input.options?.useNLIEntailment === true;
   
+  console.log('[Reference] runAsync called. useSemanticFeatures:', useSemanticFeatures);
+  console.log('[Reference] Options:', {
+    similarityThreshold: input.options?.similarityThreshold,
+    useSemanticSimilarity: input.options?.useSemanticSimilarity,
+    useNLIEntailment: input.options?.useNLIEntailment,
+    useCombinedScoring: input.options?.useCombinedScoring
+  });
+  console.log('[Reference] Semantic similarity available:', isSemanticSimilarityAvailable());
+  console.log('[Reference] NLI available:', isNLIEntailmentAvailable());
+  
   // If semantic features are not enabled, use the sync version
   if (!useSemanticFeatures || (!isSemanticSimilarityAvailable() && !isNLIEntailmentAvailable())) {
+    console.log('[Reference] Falling back to sync version');
     run(input, acc);
     return;
   }
+  
+  console.log('[Reference] Using async version with semantic features');
 
   // Otherwise, use async version with semantic/NLI checking
   const messages = input.messages || [];
@@ -738,15 +766,53 @@ export async function runAsync(input: AnalyzeInput, acc: Report): Promise<void> 
     historyBare.forEach(noun => nounMemory.add(noun));
   }
 
-  // Find candidates (same as sync version)
+  // Find candidates - use NLP extraction if enabled, otherwise use taxonomy
   const candidates: Array<{ span: string; head: string; index: number }> = [];
-  const regex = new RegExp(DEF_NP.source, DEF_NP.flags);
-  let match: RegExpExecArray | null;
-  while ((match = regex.exec(current)) !== null) {
-    const head = match[2].toLowerCase();
-    const normalizedHead = normalizeNoun(head);
-    if (effectiveNouns.has(head) || effectiveNouns.has(normalizedHead)) {
-      candidates.push({ span: match[0], head: normalizedHead, index: match.index });
+  let useNLP = input.options?.useNLPExtraction === true && isNLPExtractionAvailable();
+  
+  if (useNLP) {
+    // Use NLP to extract noun phrases from current text
+    console.log('[Reference] Using NLP extraction for noun phrases');
+    try {
+      const nlpPhrases = await extractDefiniteNounPhrases(current);
+      for (const phrase of nlpPhrases) {
+        // Accept all nouns found by NLP (broader coverage)
+        candidates.push({
+          span: phrase.text,
+          head: phrase.head,
+          index: phrase.index
+        });
+      }
+      
+      // Also extract all nouns to expand effectiveNouns set
+      const extractedNouns = await extractNounsFromText(current);
+      extractedNouns.forEach(noun => effectiveNouns.add(noun));
+      
+      // Also extract from history for better context
+      if (searchableHistory) {
+        const historyNouns = await extractNounsFromText(searchableHistory);
+        historyNouns.forEach(noun => effectiveNouns.add(noun));
+      }
+      
+      console.log('[Reference] NLP extracted', candidates.length, 'candidates,', effectiveNouns.size, 'total nouns');
+    } catch (error) {
+      console.error('[Reference] Error in NLP extraction, falling back to taxonomy:', error);
+      // Fall through to taxonomy-based extraction
+      useNLP = false;
+    }
+  }
+  
+  // Taxonomy-based extraction (used if NLP is disabled or failed)
+  if (!useNLP) {
+    console.log('[Reference] Using taxonomy-based extraction');
+    const regex = new RegExp(DEF_NP.source, DEF_NP.flags);
+    let match: RegExpExecArray | null;
+    while ((match = regex.exec(current)) !== null) {
+      const head = match[2].toLowerCase();
+      const normalizedHead = normalizeNoun(head);
+      if (effectiveNouns.has(head) || effectiveNouns.has(normalizedHead)) {
+        candidates.push({ span: match[0], head: normalizedHead, index: match.index });
+      }
     }
   }
 
@@ -757,7 +823,8 @@ export async function runAsync(input: AnalyzeInput, acc: Report): Promise<void> 
   for (const fref of forwardRefs) {
     if (fref.extractedNoun) {
       const normalizedNoun = normalizeNoun(fref.extractedNoun);
-      if (effectiveNouns.has(fref.extractedNoun) || effectiveNouns.has(normalizedNoun)) {
+      // If using NLP, accept all extracted nouns; otherwise check against taxonomy
+      if (useNLP || effectiveNouns.has(fref.extractedNoun) || effectiveNouns.has(normalizedNoun)) {
         forwardRefCandidates.push({
           span: fref.text,
           head: normalizedNoun,
@@ -779,6 +846,35 @@ export async function runAsync(input: AnalyzeInput, acc: Report): Promise<void> 
       });
     }
   }
+  
+  // If using NLP, also detect forward references with dynamic patterns
+  // e.g., "the rows below", "the table below" - these aren't in FORWARD_REF_PATTERNS
+  if (useNLP) {
+    try {
+      // Extract nouns that appear with "below", "following", etc.
+      const forwardPattern = /\b(the|this|that|these|those)\s+([a-z][a-z0-9_-]{2,})\s+(below|following|next|ahead)\b/gi;
+      let match: RegExpExecArray | null;
+      while ((match = forwardPattern.exec(current)) !== null) {
+        const head = match[2].toLowerCase();
+        const normalizedHead = normalizeNoun(head);
+        // Check if we haven't already added this
+        const alreadyAdded = forwardRefCandidates.some(
+          f => f.index === match!.index && f.head === normalizedHead
+        );
+        if (!alreadyAdded) {
+          forwardRefCandidates.push({
+            span: match[0],
+            head: normalizedHead,
+            index: match.index,
+            isForwardRef: true
+          });
+        }
+      }
+      console.log('[Reference] NLP found', forwardRefCandidates.length, 'forward references');
+    } catch (error) {
+      console.error('[Reference] Error in NLP forward reference detection:', error);
+    }
+  }
 
   const deicticCue = DEICTIC_CUES.test(current);
   if (candidates.length === 0 && forwardRefCandidates.length === 0 && !deicticCue) return;
@@ -791,35 +887,94 @@ export async function runAsync(input: AnalyzeInput, acc: Report): Promise<void> 
   // Async antecedent check with hierarchical fulfillment
   const antecedentFoundAsync = async (cand: { span?: string; head: string; index: number; isForwardRef?: boolean }): Promise<{ found: boolean; method?: 'exact' | 'synonym' | 'memory' | 'attachment' | 'pattern' | 'semantic-similarity' | 'nli-entailment'; confidencePenalty?: boolean; fulfillmentResult?: FulfillmentResult }> => {
     const token = cand.head;
-    const searchText = normalizePhrase(searchableHistory);
+    // For semantic checks, use current text if history is empty (prompt-only scenario)
+    // We need to search in the text BEFORE the reference to find antecedents
     const refSpan = cand.span || current.slice(cand.index, cand.index + 50);
+    const refIndex = cand.index;
     
-    // Step 1: Fast synchronous pattern matching
-    const patternResult = checkFulfillmentPattern(refSpan, searchText, effectiveNouns, effectiveSynonyms);
-    if (patternResult.status === 'fulfilled') {
-      return { found: true, method: 'pattern', fulfillmentResult: patternResult };
+    // Build search text: history + current text before the reference
+    let textToSearch = searchableHistory;
+    if (refIndex > 0) {
+      // Include text before the reference from current text
+      const beforeRef = current.slice(0, refIndex);
+      textToSearch = searchableHistory ? `${searchableHistory} ${beforeRef}` : beforeRef;
+    }
+    const searchText = normalizePhrase(textToSearch);
+    
+    console.log('[Reference] antecedentFoundAsync - refSpan:', refSpan.substring(0, 50), 'searchText length:', searchText.length, 'hasHistory:', !!searchableHistory);
+    
+    // Step 1: Fast synchronous pattern matching (only if enabled)
+    const usePatternMatching = input.options?.usePatternMatching !== false;
+    let patternResult: FulfillmentResult | undefined;
+    if (usePatternMatching) {
+      patternResult = checkFulfillmentPattern(refSpan, searchText, effectiveNouns, effectiveSynonyms);
+      if (patternResult.status === 'fulfilled') {
+        return { found: true, method: 'pattern', fulfillmentResult: patternResult };
+      }
+    } else {
+      console.log('[Reference] Pattern matching disabled, skipping pattern check');
+      // Create a default pattern result for consistency
+      patternResult = {
+        status: 'unfulfilled',
+        method: 'pattern',
+        confidence: 0.0
+      };
     }
     
     // Step 2: Async semantic similarity and NLI (if enabled)
     if (useSemanticFeatures) {
       try {
-        const asyncResult = await checkFulfillment(
-          refSpan,
-          searchText,
-          effectiveNouns,
-          effectiveSynonyms,
-          {
-            similarityThreshold: input.options?.similarityThreshold,
-            useSemanticSimilarity: input.options?.useSemanticSimilarity !== false,
-            useNLIEntailment: input.options?.useNLIEntailment !== false
-          }
-        );
+        // Use combined scoring if enabled, otherwise use hierarchical
+        const useCombined = input.options?.useCombinedScoring === true;
+        const asyncResult = useCombined
+          ? await checkFulfillmentCombined(
+              refSpan,
+              searchText,
+              effectiveNouns,
+              effectiveSynonyms,
+              {
+                similarityThreshold: input.options?.similarityThreshold,
+                useSemanticSimilarity: input.options?.useSemanticSimilarity !== false,
+                useNLIEntailment: input.options?.useNLIEntailment !== false,
+                usePatternMatching: input.options?.usePatternMatching !== false,
+                combineWeights: input.options?.combineWeights,
+                combinedThreshold: input.options?.combinedThreshold,
+                // Context-aware matching options
+                useChunkedMatching: input.options?.useChunkedMatching,
+                chunkSize: input.options?.chunkSize,
+                chunkOverlap: input.options?.chunkOverlap,
+                useSentenceLevel: input.options?.useSentenceLevel,
+                usePhraseLevel: input.options?.usePhraseLevel,
+                useMultiHypothesis: input.options?.useMultiHypothesis
+              }
+            )
+          : await checkFulfillment(
+              refSpan,
+              searchText,
+              effectiveNouns,
+              effectiveSynonyms,
+              {
+                similarityThreshold: input.options?.similarityThreshold,
+                useSemanticSimilarity: input.options?.useSemanticSimilarity !== false,
+                useNLIEntailment: input.options?.useNLIEntailment !== false,
+                usePatternMatching: input.options?.usePatternMatching !== false
+              }
+            );
         
-        if (asyncResult.status === 'fulfilled') {
+        // Always return the result with details, even if unfulfilled, so we can show scores
+        if (asyncResult.status === 'fulfilled' || asyncResult.status === 'uncertain') {
           const method = asyncResult.method === 'semantic-similarity' ? 'semantic-similarity' as const :
                          asyncResult.method === 'nli-entailment' ? 'nli-entailment' as const :
+                         asyncResult.method === 'combined' ? 'semantic-similarity' as const : // combined uses semantic-similarity for reporting
                          'pattern' as const;
-          return { found: true, method, fulfillmentResult: asyncResult };
+          return { found: asyncResult.status === 'fulfilled', method, fulfillmentResult: asyncResult };
+        } else {
+          // Even if unfulfilled, return the result so we can show the scores
+          const method = asyncResult.method === 'semantic-similarity' ? 'semantic-similarity' as const :
+                         asyncResult.method === 'nli-entailment' ? 'nli-entailment' as const :
+                         asyncResult.method === 'combined' ? 'semantic-similarity' as const :
+                         'pattern' as const;
+          return { found: false, method, fulfillmentResult: asyncResult };
         }
       } catch (error) {
         // Fall through to existing logic
@@ -830,16 +985,21 @@ export async function runAsync(input: AnalyzeInput, acc: Report): Promise<void> 
     const searchTextLower = searchText.toLowerCase();
     const exactPattern = new RegExp(`\\b${token}s?\\b`, 'i');
     if (hasHistory && exactPattern.test(searchTextLower)) {
-      return { found: true, method: 'exact' };
+      return { found: true, method: 'exact', fulfillmentResult: patternResult }; // Include pattern result for details
     }
     
     // Check attachments
     const normalizedAttachments = normalizePhrase(attachmentsText);
     if (normalizedAttachments.includes(token)) {
-      return { found: true, method: 'attachment' };
+      return { found: true, method: 'attachment', fulfillmentResult: patternResult }; // Include pattern result for details
     }
     
-    return { found: false };
+    // Always return pattern result for details, even if not found
+    return { found: false, method: 'pattern' as const, fulfillmentResult: patternResult || {
+      status: 'unfulfilled',
+      method: 'pattern',
+      confidence: 0.0
+    } };
   };
 
   // Combine candidates
@@ -857,29 +1017,35 @@ export async function runAsync(input: AnalyzeInput, acc: Report): Promise<void> 
   const uncovered: typeof allCandidates = [];
   const resolvedWithPenalty = new Set<string>();
   const fulfillmentResults = new Map<number, FulfillmentResult>();
+  const candidateResults = new Map<number, { found: boolean; method?: string; confidencePenalty?: boolean; fulfillmentResult?: FulfillmentResult }>();
   
   for (const cand of allCandidates) {
     const result = await antecedentFoundAsync(cand);
+    // Store the full result for later use
+    candidateResults.set(cand.index, result);
+    // Always store fulfillmentResult if available, even if not found, so we can show scores
+    if (result.fulfillmentResult) {
+      fulfillmentResults.set(cand.index, result.fulfillmentResult);
+      console.log('[Reference] Stored fulfillmentResult for index', cand.index, 'method:', result.fulfillmentResult.method, 'hasDetails:', !!result.fulfillmentResult.details);
+    }
     if (!result.found) {
       uncovered.push(cand);
     } else {
       if (result.confidencePenalty && cand.head) {
         resolvedWithPenalty.add(cand.head);
       }
-      if (result.fulfillmentResult) {
-        fulfillmentResults.set(cand.index, result.fulfillmentResult);
-      }
     }
   }
   
   // Scoring and confidence (same logic as sync version)
+  // Use the results we already computed instead of re-running
   let score = 0;
   if (deicticCue) score += 1;
   if (allCandidates.length > 0) score += 1;
   
   for (const cand of allCandidates) {
-    const result = await antecedentFoundAsync(cand);
-    if (result.found) {
+    const result = candidateResults.get(cand.index);
+    if (result?.found) {
       if (result.method === 'exact' || result.method === 'synonym' || result.method === 'pattern' || result.method === 'semantic-similarity' || result.method === 'nli-entailment') {
         score -= 2;
       } else if (result.method === 'memory' || result.method === 'attachment') {
@@ -894,14 +1060,14 @@ export async function runAsync(input: AnalyzeInput, acc: Report): Promise<void> 
     confidence = 'low';
   } else if (uncovered.length > 0) {
     // Check if any resolved candidates used uncertain methods
-    const resolvedResults = new Map<number, { found: boolean; method?: string }>();
-    for (const cand of allCandidates) {
-      if (!uncovered.includes(cand)) {
-        const result = await antecedentFoundAsync(cand);
-        resolvedResults.set(cand.index, result);
-      }
-    }
-    const hasUncertainResolution = Array.from(resolvedResults.values()).some(result => 
+    // Use the results we already computed instead of re-running
+    const resolvedResults = Array.from(candidateResults.entries())
+      .filter(([idx, result]) => {
+        const cand = allCandidates.find(c => c.index === idx);
+        return cand && !uncovered.includes(cand) && result.found;
+      })
+      .map(([_, result]) => result);
+    const hasUncertainResolution = resolvedResults.some(result => 
       result.found && (result.method === 'synonym' || result.method === 'memory' || result.method === 'pattern')
     );
     if (hasUncertainResolution) {
@@ -934,14 +1100,20 @@ export async function runAsync(input: AnalyzeInput, acc: Report): Promise<void> 
     const start = item.index;
     const span = item.span || current.slice(start, start + 50);
     const end = start + span.length;
+    // Get fulfillmentResult and result from the first pass (don't re-run)
     const fulfillmentResult = fulfillmentResults.get(start);
-    const result = await antecedentFoundAsync(item);
+    const result = candidateResults.get(start) || { found: false };
+    
+    console.log('[Reference] Building occurrence for index', start, 'fulfillmentResult:', fulfillmentResult ? 'exists' : 'missing', 'method:', fulfillmentResult?.method, 'hasDetails:', !!fulfillmentResult?.details);
     
     let fulfillmentStatus: 'fulfilled' | 'unfulfilled' | 'uncertain' = 'unfulfilled';
     if (result.found && fulfillmentResult) {
       fulfillmentStatus = fulfillmentResult.status;
     } else if (result.found) {
       fulfillmentStatus = 'fulfilled';
+    } else if (fulfillmentResult) {
+      // Use the status from fulfillmentResult even if not found
+      fulfillmentStatus = fulfillmentResult.status;
     }
     
     return {
@@ -963,6 +1135,13 @@ export async function runAsync(input: AnalyzeInput, acc: Report): Promise<void> 
          result.method === 'semantic-similarity' ? 'semantic-similarity' :
          result.method === 'nli-entailment' ? 'nli-entailment' : 'none'),
       fulfillmentConfidence: fulfillmentResult?.confidence || (result.found ? 0.8 : 0.0),
+      fulfillmentDetails: fulfillmentResult?.details ? {
+        patternScore: fulfillmentResult.details.patternScore,
+        similarityScore: fulfillmentResult.details.similarityScore,
+        entailmentScore: fulfillmentResult.details.entailmentScore,
+        combinedScore: fulfillmentResult.details.combinedScore,
+        matchedText: fulfillmentResult.details.matchedText
+      } : undefined,
       term: item.head || undefined,
       turn: scope.messageIndex
     };
@@ -979,6 +1158,7 @@ export async function runAsync(input: AnalyzeInput, acc: Report): Promise<void> 
       fulfillmentStatus: 'unfulfilled' as const,
       fulfillmentMethod: 'none' as const,
       fulfillmentConfidence: 0.0,
+      fulfillmentDetails: undefined,
       term: undefined,
       turn: scope.messageIndex
     });

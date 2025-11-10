@@ -25,8 +25,14 @@ export async function analyzePrompt(input: AnalyzeInput): Promise<Report> {
   const semanticAvailable = useSemanticFeatures && 
     (isSemanticSimilarityAvailable() || isNLIEntailmentAvailable());
   
+  console.log('[analyzePrompt] useSemanticFeatures:', useSemanticFeatures);
+  console.log('[analyzePrompt] semanticAvailable:', semanticAvailable);
+  console.log('[analyzePrompt] disabledRules:', input.options?.disabledRules);
+  console.log('[analyzePrompt] MISSING_REFERENCE disabled?', input.options?.disabledRules?.includes('MISSING_REFERENCE'));
+  
   // If semantic features are enabled, use async version for reference rule
   if (semanticAvailable && !input.options?.disabledRules?.includes('MISSING_REFERENCE')) {
+    console.log('[analyzePrompt] Using async version with semantic features');
     // Temporarily disable MISSING_REFERENCE in analyze() to avoid running it twice
     const inputWithDisabledRef: AnalyzeInput = {
       ...input,
@@ -38,9 +44,12 @@ export async function analyzePrompt(input: AnalyzeInput): Promise<Report> {
     
     // Create report with all other rules first (synchronous)
     const report = analyze(inputWithDisabledRef);
+    console.log('[analyzePrompt] Report created, issues before async:', report.issues.length);
     
     // Then run the reference rule with async semantic/NLI checking
+    console.log('[analyzePrompt] Calling runReferenceAsync...');
     await runReferenceAsync(input, report);
+    console.log('[analyzePrompt] runReferenceAsync completed, issues after:', report.issues.length);
     
     // Ensure meta exists with required fields
     if (!report.meta) {
@@ -55,6 +64,7 @@ export async function analyzePrompt(input: AnalyzeInput): Promise<Report> {
     return report;
   }
   
+  console.log('[analyzePrompt] Using standard synchronous analyze');
   // Otherwise use standard synchronous analyze
   const report = analyze(input);
   // Ensure meta exists with required fields
