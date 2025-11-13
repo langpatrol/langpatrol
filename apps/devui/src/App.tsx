@@ -214,6 +214,8 @@ export default function App() {
         {/* Left Panel - Controls */}
         <div style={{ flex: '0 0 50%', borderRight: '1px solid #ddd', backgroundColor: '#fafafa', display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
           <div style={{ flex: 1, overflowY: 'auto', padding: 16 }}>
+
+            <h1 style={{ marginBottom: 16, fontSize: 24, fontWeight: 'bold' }}>Settings</h1>
             <div style={{ marginBottom: 16 }}>
               <label style={{ display: 'block', marginBottom: 8, fontWeight: 'bold' }}>Model:</label>
               <select value={model} onChange={(e) => setModel(e.target.value)} style={{ padding: 8, width: '100%', maxWidth: 300 }}>
@@ -225,7 +227,7 @@ export default function App() {
             </div>
 
             <div style={{ marginBottom: 16, padding: 12, border: '1px solid #ddd', borderRadius: 4, backgroundColor: '#f9f9f9' }}>
-              <label style={{ display: 'block', marginBottom: 8, fontWeight: 'bold' }}>Enabled Rules:</label>
+              <label style={{ display: 'block', marginBottom: 8, fontWeight: 'bold' }}>Enabled Checks & Rules:</label>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: 12 }}>
                 {Object.entries(enabledRules).map(([rule, enabled]) => (
                   <label key={rule} style={{ display: 'flex', alignItems: 'center', cursor: 'pointer', fontSize: 14 }}>
@@ -246,7 +248,10 @@ export default function App() {
 
             {enabledRules.MISSING_REFERENCE && (
               <div style={{ marginBottom: 16, padding: 12, border: '1px solid #ddd', borderRadius: 4, backgroundColor: '#f0f9ff' }}>
-                <label style={{ display: 'block', marginBottom: 8, fontWeight: 'bold' }}>Semantic Features (MISSING_REFERENCE):</label>
+                <label style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 8, fontWeight: 'bold' }}>
+                  <span>Semantic Features:</span>
+                  <code style={{ fontFamily: 'monospace', backgroundColor: '#fcba03', padding: '2px 6px', borderRadius: 3 }}>MISSING_REFERENCE</code>
+                </label>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
                   <label style={{ display: 'flex', alignItems: 'center', cursor: 'pointer', fontSize: 14 }}>
                     <input
@@ -482,7 +487,10 @@ export default function App() {
 
             {enabledRules.TOKEN_OVERAGE && (
               <div style={{ marginBottom: 16, padding: 12, border: '1px solid #ddd', borderRadius: 4, backgroundColor: '#f0f8ff' }}>
-                <label style={{ display: 'block', marginBottom: 8, fontWeight: 'bold' }}>Token Estimation:</label>
+                <label style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 8, fontWeight: 'bold' }}>
+                  <span>Token Estimation:</span>
+                  <code style={{ fontFamily: 'monospace', backgroundColor: '#fcba03', padding: '2px 6px', borderRadius: 3 }}>TOKEN_OVERAGE</code>
+                </label>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
                   <label style={{ display: 'flex', alignItems: 'center', cursor: 'pointer', fontSize: 14 }}>
                     <input
@@ -555,6 +563,7 @@ export default function App() {
               </div>
             )}
 
+            <h1 style={{ marginBottom: 16, fontSize: 24, fontWeight: 'bold', paddingTop: 16 }}>Input</h1>
             <div style={{ marginBottom: 16 }}>
               <label style={{ display: 'block', marginBottom: 8, fontWeight: 'bold' }}>
                 Prompt:
@@ -615,42 +624,45 @@ export default function App() {
           </div>
           {/* Fixed button at bottom */}
           <div style={{ padding: 16, borderTop: '1px solid #ddd', backgroundColor: '#fff', flexShrink: 0 }}>
-            <div style={{ display: 'flex', gap: 8, marginBottom: 8 }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 8, marginBottom: 8 }}>
               <button
-                onClick={runSemanticTest}
-                disabled={testing}
+                onClick={run}
+                disabled={loading}
                 style={{
-                  flex: 1,
-                  padding: '10px 16px',
-                  fontSize: 14,
+                  width: '100%',
+                  padding: '12px 24px',
+                  fontSize: 16,
                   fontWeight: 'bold',
-                  backgroundColor: testing ? '#ccc' : '#28a745',
+                  backgroundColor: loading ? '#ccc' : '#007bff',
                   color: 'white',
                   border: 'none',
                   borderRadius: 4,
-                  cursor: testing ? 'not-allowed' : 'pointer'
+                  cursor: loading ? 'not-allowed' : 'pointer'
                 }}
               >
-                {testing ? 'Testing...' : 'Test Semantic Features'}
+                {loading ? 'Analyzing...' : 'Analyze'}
               </button>
+
+              {enabledRules.MISSING_REFERENCE && (
+                <button
+                  onClick={runSemanticTest}
+                  disabled={testing}
+                  style={{
+                    flex: 1,
+                    padding: '12px 24px',
+                    fontSize: 16,
+                    fontWeight: 'bold',
+                    backgroundColor: testing ? '#ccc' : '#28a745',
+                    color: 'white',
+                    border: 'none',
+                    borderRadius: 4,
+                    cursor: testing ? 'not-allowed' : 'pointer'
+                  }}
+                >
+                  {testing ? 'Testing...' : 'Test Semantic Features • MISSING_REFERENCE'}
+                </button>
+              )}
             </div>
-            <button
-              onClick={run}
-              disabled={loading}
-              style={{
-                width: '100%',
-                padding: '12px 24px',
-                fontSize: 16,
-                fontWeight: 'bold',
-                backgroundColor: loading ? '#ccc' : '#007bff',
-                color: 'white',
-                border: 'none',
-                borderRadius: 4,
-                cursor: loading ? 'not-allowed' : 'pointer'
-              }}
-            >
-              {loading ? 'Analyzing...' : 'Analyze'}
-            </button>
           </div>
         </div>
 
