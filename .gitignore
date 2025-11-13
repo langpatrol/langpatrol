@@ -32,3 +32,6 @@ dist-ssr
 .cursorrules
 BRAND_VOICE_GUIDE.md
 POSTHOG_ANALYTICS_CONVENTIONS.md
+coverage/
+**/coverage/
+*.lcov

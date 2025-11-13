@@ -2,7 +2,7 @@ import { describe, it, expect } from 'vitest';
 import { readFileSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { analyze } from './analyze';
-import type { AnalyzeInput } from './types';
+import type { AnalyzeInput, IssueCode, JSONSchema7, Msg } from './types';
 
 function parseCsv(csv: string): Array<Record<string, string>> {
   const lines = csv.trim().split('\n');
@@ -30,14 +30,14 @@ describe('synthetic dataset validation', () => {
     const rows = parseCsv(csv);
 
     for (const row of rows) {
-      let messages: any;
+      let messages: Msg[]|undefined;
       try {
         messages = row.messages_json ? JSON.parse(row.messages_json) : undefined;
       } catch {
         messages = undefined;
       }
 
-      let schema: any;
+      let schema: JSONSchema7|undefined;
       try {
         schema = row.schema_json ? JSON.parse(row.schema_json) : undefined;
       } catch {
@@ -62,7 +62,7 @@ describe('synthetic dataset validation', () => {
       }
 
       for (const code of want) {
-        expect(got.has(code)).toBe(true);
+        expect(got.has(code as IssueCode)).toBe(true);
       }
     }
   });

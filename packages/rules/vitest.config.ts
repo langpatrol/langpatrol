@@ -5,7 +5,8 @@ export default defineConfig({
     coverage: {
       enabled: true,
       reporter: ['text', 'json', 'html']
-    }
+    },
+    passWithNoTests: true,
   }
 });
 

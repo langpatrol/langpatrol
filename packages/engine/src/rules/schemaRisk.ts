@@ -5,7 +5,7 @@
  */
 // SPDX-License-Identifier: Elastic-2.0
 
-import type { AnalyzeInput, Issue, Report, Suggestion } from '../types';
+import type { AnalyzeInput, Report } from '../types';
 import { extractText } from '../util/text';
 import { hasJsonKeywords, hasProseAfterJsonPattern } from '../util/schema';
 import { createIssueId, createPreview } from '../util/reporting';

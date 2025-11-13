@@ -5,15 +5,16 @@
  */
 // SPDX-License-Identifier: Elastic-2.0
 
-// JSONSchema7 type definition (compatible with json-schema draft-07)
+type JSONValue = string | number | boolean | null | JSONValue[] | { [key: string]: JSONValue };
+
 export type JSONSchema7 = {
   $id?: string;
   $schema?: string;
   $ref?: string;
   title?: string;
   description?: string;
-  default?: any;
-  examples?: any[];
+  default?: JSONValue;
+  examples?: JSONValue[];
   multipleOf?: number;
   maximum?: number;
   exclusiveMaximum?: number;
@@ -34,7 +35,7 @@ export type JSONSchema7 = {
   properties?: { [key: string]: JSONSchema7 };
   patternProperties?: { [key: string]: JSONSchema7 };
   dependencies?: { [key: string]: JSONSchema7 | string[] };
-  enum?: any[];
+  enum?: JSONValue[];
   type?: string | string[];
   allOf?: JSONSchema7[];
   anyOf?: JSONSchema7[];
@@ -44,7 +45,7 @@ export type JSONSchema7 = {
   then?: JSONSchema7;
   else?: JSONSchema7;
   format?: string;
-  const?: any;
+  const?: JSONValue;
 };
 
 export type Role = 'system' | 'user' | 'assistant';
@@ -68,6 +69,18 @@ export type IssueEvidenceOccurrence = {
   messageIndex?: number;
   bucket?: string;
   resolution?: 'unresolved' | 'resolved-by-exact' | 'resolved-by-synonym' | 'resolved-by-memory' | 'resolved-by-attachment';
+  fulfillmentStatus?: 'fulfilled' | 'unfulfilled' | 'uncertain';
+      fulfillmentMethod?: 'pattern' | 'semantic-similarity' | 'nli-entailment' | 'combined' | 'none';
+  fulfillmentConfidence?: number;
+  fulfillmentDetails?: {
+    patternScore?: number;
+    similarityScore?: number;
+    entailmentScore?: number;
+    combinedScore?: number;
+    matchedText?: string;
+  };
+  term?: string;
+  turn?: number;
   pairedWith?: {
     text: string;
     start: number;
@@ -158,7 +171,26 @@ export type AnalyzeInput = {
     maxChars?: number; // fallback guard for early bail (e.g., 120_000)
     referenceHeads?: string[]; // extend default taxonomy
     synonyms?: Record<string, string[]>; // custom synonym map (extends default)
-    similarityThreshold?: number; // for future embedding matching (default 0.6)
+        similarityThreshold?: number; // for embedding matching (default 0.6)
+        useSemanticSimilarity?: boolean; // enable semantic similarity checking (default: false, enabled if similarityThreshold is set)
+        useNLIEntailment?: boolean; // enable NLI entailment checking (default: false, enabled if similarityThreshold is set)
+        usePatternMatching?: boolean; // enable pattern matching for fulfillment checks (default: true)
+        useCombinedScoring?: boolean; // use combined scoring instead of hierarchical (default: false)
+        combineWeights?: {
+          pattern?: number; // weight for pattern matching (default: 0.4)
+          semantic?: number; // weight for semantic similarity (default: 0.3)
+          nli?: number; // weight for NLI entailment (default: 0.3)
+        };
+        combinedThreshold?: number; // threshold for combined score to be considered fulfilled (default: 0.5)
+        // Context-aware matching options
+        useChunkedMatching?: boolean; // use chunked matching for long contexts (auto-enabled for texts > 1000 chars)
+        chunkSize?: number; // size of each chunk for chunked matching (default: 500)
+        chunkOverlap?: number; // overlap between chunks (default: 100)
+        useSentenceLevel?: boolean; // use sentence-level matching (default: false)
+        usePhraseLevel?: boolean; // use phrase-level matching (default: false)
+        useMultiHypothesis?: boolean; // use multiple NLI hypotheses (default: true)
+        // NLP-based noun extraction options
+        useNLPExtraction?: boolean; // use NER model for noun extraction instead of taxonomy (default: false)
     antecedentWindow?: {
       messages?: number; // max messages to search back (default: all)
       bytes?: number; // max bytes to search back (default: unlimited)

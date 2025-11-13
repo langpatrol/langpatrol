@@ -5,12 +5,11 @@
  */
 // SPDX-License-Identifier: Elastic-2.0
 
-import type { AnalyzeInput, Issue, Report } from '../types';
+import type { AnalyzeInput, Report } from '../types';
 import { createIssueId, createPreview } from '../util/reporting';
 
 const PLACEHOLDER_HANDLEBARS = /\{\{\s*([#/>!&^]?)([a-zA-Z0-9_.]+)\s*\}\}/g;
 const PLACEHOLDER_JINJA = /\{\{\s*([a-zA-Z0-9_.]+)\s*\}\}/g;
-const PLACEHOLDER_MUSTACHE = /\{\{\s*([#/>!&^]?)([a-zA-Z0-9_.]+)\s*\}\}/g;
 const PLACEHOLDER_EJS = /<%\s*([a-zA-Z0-9_.]+)\s*%>/g;
 
 export function run(input: AnalyzeInput, acc: Report): void {
