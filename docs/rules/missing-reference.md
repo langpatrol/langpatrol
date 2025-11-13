@@ -1,4 +1,4 @@
-# Missing Reference Detection System
+# Missing Reference Detection
 
 ## Overview
 
