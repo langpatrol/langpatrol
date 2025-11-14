@@ -35,5 +35,5 @@ langpatrol analyze prompt.txt --model gpt-4o-mini
 
 ## License
 
-MIT
+Elastic License 2.0
 

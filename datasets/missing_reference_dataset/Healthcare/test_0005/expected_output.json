@@ -1,0 +1,200 @@
+{
+  "expected_issue_codes": [
+    "MISSING_REFERENCE"
+  ],
+  "missing_references": [
+    {
+      "text": "as discussed earlier",
+      "start": 53,
+      "end": 73,
+      "type": "deictic"
+    },
+    {
+      "text": "the admin",
+      "start": 79,
+      "end": 88,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the past",
+      "start": 281,
+      "end": 289,
+      "type": "definite_noun"
+    },
+    {
+      "text": "The previous",
+      "start": 363,
+      "end": 375,
+      "type": "definite_noun"
+    },
+    {
+      "text": "The previous report",
+      "start": 363,
+      "end": 382,
+      "type": "deictic_noun"
+    },
+    {
+      "text": "the new",
+      "start": 444,
+      "end": 451,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the potential",
+      "start": 514,
+      "end": 527,
+      "type": "definite_noun"
+    },
+    {
+      "text": "these symptoms",
+      "start": 613,
+      "end": 627,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the next",
+      "start": 698,
+      "end": 706,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the form",
+      "start": 1149,
+      "end": 1157,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the necessary",
+      "start": 1277,
+      "end": 1290,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the best",
+      "start": 1323,
+      "end": 1331,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the date",
+      "start": 1394,
+      "end": 1402,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the appointment",
+      "start": 1465,
+      "end": 1480,
+      "type": "definite_noun"
+    },
+    {
+      "text": "This would",
+      "start": 1482,
+      "end": 1492,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that she",
+      "start": 1574,
+      "end": 1582,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the meeting",
+      "start": 1607,
+      "end": 1618,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the possible",
+      "start": 1644,
+      "end": 1656,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this test",
+      "start": 1669,
+      "end": 1678,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the appointment",
+      "start": 1465,
+      "end": 1480,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the initial",
+      "start": 2182,
+      "end": 2193,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the type",
+      "start": 2257,
+      "end": 2265,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the appointment",
+      "start": 1465,
+      "end": 1480,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the test",
+      "start": 2370,
+      "end": 2378,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that require",
+      "start": 2439,
+      "end": 2451,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the typical",
+      "start": 2484,
+      "end": 2495,
+      "type": "definite_noun"
+    },
+    {
+      "text": "these ranges",
+      "start": 2575,
+      "end": 2587,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the meeting",
+      "start": 1607,
+      "end": 1618,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the past",
+      "start": 281,
+      "end": 289,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that you",
+      "start": 3347,
+      "end": 3355,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this appointment",
+      "start": 3466,
+      "end": 3482,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the best",
+      "start": 1323,
+      "end": 1331,
+      "type": "definite_noun"
+    }
+  ],
+  "notes": "The reference to the 'previous report' is missing its clear antecedent, as it was not explicitly mentioned in the conversation history."
+}

@@ -65,9 +65,9 @@ LangPatrol is organized as a pnpm workspace monorepo:
 langpatrol/
 ├── packages/
 │   ├── engine/          # Core analysis engine (Elastic License 2.0)
-│   ├── langpatrol/      # Public SDK (MIT)
-│   ├── cli/             # Command-line tool (MIT)
-│   └── rules/           # Shared lexicons and patterns (MIT)
+│   ├── langpatrol/      # Public SDK (Elastic License 2.0)
+│   ├── cli/             # Command-line tool (Elastic License 2.0)
+│   └── rules/           # Shared lexicons and patterns (Elastic License 2.0)
 ├── apps/
 │   ├── devserver/       # Express API for testing
 │   └── devui/           # React/Vite UI for interactive testing
@@ -92,7 +92,7 @@ The public-facing API. Provides:
 - **Framework adapters** (`adapters/`) - Integrations for LangChain, Vercel AI SDK
 - **Re-exports** - Re-exports engine types and utilities
 
-**License:** MIT
+**License:** Elastic License 2.0
 
 #### `langpatrol-cli` (CLI Tool)
 Command-line interface for batch analysis:
@@ -101,7 +101,7 @@ Command-line interface for batch analysis:
 - Table formatting
 - Model specification
 
-**License:** MIT
+**License:** Elastic License 2.0
 
 #### `@langpatrol/rules` (Shared Rules)
 Shared lexicons and patterns used across rules:
@@ -109,7 +109,7 @@ Shared lexicons and patterns used across rules:
 - Synonym maps
 - Pattern definitions
 
-**License:** MIT
+**License:** Elastic License 2.0
 
 ## Core Engine
 

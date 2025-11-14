@@ -1,0 +1,296 @@
+{
+  "expected_issue_codes": [
+    "MISSING_REFERENCE"
+  ],
+  "missing_references": [
+    {
+      "text": "that summarizes",
+      "start": 44,
+      "end": 59,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the key",
+      "start": 60,
+      "end": 67,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the university",
+      "start": 199,
+      "end": 213,
+      "type": "definite_noun"
+    },
+    {
+      "text": "The agenda",
+      "start": 292,
+      "end": 302,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the new",
+      "start": 323,
+      "end": 330,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the impact",
+      "start": 378,
+      "end": 388,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the materials",
+      "start": 452,
+      "end": 465,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that are",
+      "start": 525,
+      "end": 533,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the following",
+      "start": 620,
+      "end": 633,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the following points",
+      "start": 620,
+      "end": 640,
+      "type": "forward_reference"
+    },
+    {
+      "text": "the number",
+      "start": 646,
+      "end": 656,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the business",
+      "start": 681,
+      "end": 693,
+      "type": "definite_noun"
+    },
+    {
+      "text": "those who",
+      "start": 709,
+      "end": 718,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the average",
+      "start": 761,
+      "end": 772,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the effectiveness",
+      "start": 870,
+      "end": 887,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the new",
+      "start": 323,
+      "end": 330,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that these",
+      "start": 960,
+      "end": 970,
+      "type": "definite_noun"
+    },
+    {
+      "text": "these gaps",
+      "start": 965,
+      "end": 975,
+      "type": "plural_reference"
+    },
+    {
+      "text": "the credibility",
+      "start": 999,
+      "end": 1014,
+      "type": "definite_noun"
+    },
+    {
+      "text": "these limitations",
+      "start": 1101,
+      "end": 1118,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that have",
+      "start": 1173,
+      "end": 1182,
+      "type": "definite_noun"
+    },
+    {
+      "text": "these topics",
+      "start": 1196,
+      "end": 1208,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that have",
+      "start": 1173,
+      "end": 1182,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the enrollment",
+      "start": 1294,
+      "end": 1308,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the academic",
+      "start": 1350,
+      "end": 1362,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the effectiveness",
+      "start": 870,
+      "end": 887,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the data",
+      "start": 1554,
+      "end": 1562,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the course",
+      "start": 1568,
+      "end": 1578,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that may",
+      "start": 1627,
+      "end": 1635,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that can",
+      "start": 1729,
+      "end": 1737,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the catalog",
+      "start": 1754,
+      "end": 1765,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this analysis",
+      "start": 1876,
+      "end": 1889,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the scope",
+      "start": 1972,
+      "end": 1981,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that need",
+      "start": 2067,
+      "end": 2076,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that need",
+      "start": 2067,
+      "end": 2076,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the findings",
+      "start": 2287,
+      "end": 2299,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the existing",
+      "start": 2384,
+      "end": 2396,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this one",
+      "start": 2540,
+      "end": 2548,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the complex",
+      "start": 2590,
+      "end": 2601,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the importance",
+      "start": 2707,
+      "end": 2721,
+      "type": "definite_noun"
+    },
+    {
+      "text": "these gaps",
+      "start": 965,
+      "end": 975,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the potential",
+      "start": 2838,
+      "end": 2851,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the outcomes",
+      "start": 3023,
+      "end": 3035,
+      "type": "definite_noun"
+    },
+    {
+      "text": "these challenges",
+      "start": 3159,
+      "end": 3175,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that can",
+      "start": 1729,
+      "end": 1737,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that addresses",
+      "start": 3280,
+      "end": 3294,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the key",
+      "start": 60,
+      "end": 67,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the course",
+      "start": 1568,
+      "end": 1578,
+      "type": "definite_noun"
+    }
+  ],
+  "notes": "The report and the number of students enrolled in the business program versus those who dropped out due to lack of resources are missing from the user's prompt. The average GPA of students who completed an online degree compared to their on-campus counterparts is also not mentioned."
+}

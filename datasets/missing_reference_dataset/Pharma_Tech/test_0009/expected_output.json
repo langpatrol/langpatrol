@@ -1,0 +1,20 @@
+{
+  "expected_issue_codes": [
+    "MISSING_REFERENCE"
+  ],
+  "missing_references": [
+    {
+      "text": "pharmatech startups",
+      "start": 10,
+      "end": 20,
+      "type": "definite_noun"
+    },
+    {
+      "text": "blockchain technology",
+      "start": 1580,
+      "end": 1601,
+      "type": "definite_noun"
+    }
+  ],
+  "notes": "The phrases 'pharmatech startups' and 'blockchain technology' were not explicitly mentioned in the conversation history, but are clearly related to the topic. The system should flag these references as missing."
+}

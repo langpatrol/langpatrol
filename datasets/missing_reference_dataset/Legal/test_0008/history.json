@@ -1,0 +1,26 @@
+[
+  {
+    "role": "user",
+    "content": "Hello, I'm reaching out about the current status of my divorce case. Can you please provide me with an update on the report that was submitted last week?"
+  },
+  {
+    "role": "assistant",
+    "content": "I've checked our system and it appears that we received a report on Friday, but I couldn't find any information about a specific report from last week."
+  },
+  {
+    "role": "user",
+    "content": "That's not what I heard. Can you check the court records again? I need to know if the judge has made a decision on the custody arrangement."
+  },
+  {
+    "role": "assistant",
+    "content": "I've looked into the court records and it seems that there is some confusion about the custody arrangement. However, I couldn't find any specific information about the report you mentioned earlier."
+  },
+  {
+    "role": "user",
+    "content": "This is really frustrating. Can you please provide me with a copy of the report so I can review it and understand what's going on? And also, can you confirm that the judge has made a decision on the case in general?"
+  },
+  {
+    "role": "assistant",
+    "content": "I apologize for the confusion, but I couldn't find any information about a specific report being sent to us. However, I did find that the court has scheduled a hearing for next week to discuss the custody arrangement."
+  }
+]

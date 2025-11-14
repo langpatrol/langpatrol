@@ -1,0 +1,134 @@
+{
+  "expected_issue_codes": [
+    "MISSING_REFERENCE"
+  ],
+  "missing_references": [
+    {
+      "text": "that can",
+      "start": 209,
+      "end": 217,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that some",
+      "start": 270,
+      "end": 279,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the Dell",
+      "start": 326,
+      "end": 334,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the laptop",
+      "start": 433,
+      "end": 443,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the laptop",
+      "start": 433,
+      "end": 443,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that offers",
+      "start": 838,
+      "end": 849,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the battery",
+      "start": 947,
+      "end": 958,
+      "type": "definite_noun"
+    },
+    {
+      "text": "these two",
+      "start": 967,
+      "end": 976,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that might",
+      "start": 1023,
+      "end": 1033,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the XPS",
+      "start": 1349,
+      "end": 1356,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the Envy",
+      "start": 1412,
+      "end": 1420,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that the",
+      "start": 1438,
+      "end": 1446,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this class",
+      "start": 1556,
+      "end": 1566,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the two",
+      "start": 1639,
+      "end": 1646,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that might",
+      "start": 1023,
+      "end": 1033,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the Lenovo",
+      "start": 1820,
+      "end": 1830,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the Asus",
+      "start": 1848,
+      "end": 1856,
+      "type": "definite_noun"
+    },
+    {
+      "text": "these laptops",
+      "start": 1949,
+      "end": 1962,
+      "type": "definite_noun"
+    },
+    {
+      "text": "these laptops",
+      "start": 1949,
+      "end": 1962,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the device",
+      "start": 2497,
+      "end": 2507,
+      "type": "definite_noun"
+    },
+    {
+      "text": "these laptops",
+      "start": 1949,
+      "end": 1962,
+      "type": "definite_noun"
+    }
+  ],
+  "notes": "The reference to 'the report' is missing from the conversation history."
+}

@@ -1,0 +1,230 @@
+{
+  "expected_issue_codes": [
+    "MISSING_REFERENCE"
+  ],
+  "missing_references": [
+    {
+      "text": "the report",
+      "start": 34,
+      "end": 44,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the CEO",
+      "start": 63,
+      "end": 70,
+      "type": "definite_noun"
+    },
+    {
+      "text": "The meeting",
+      "start": 175,
+      "end": 186,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the financial",
+      "start": 369,
+      "end": 382,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the key",
+      "start": 523,
+      "end": 530,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the same",
+      "start": 653,
+      "end": 661,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that have",
+      "start": 981,
+      "end": 990,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that might",
+      "start": 1017,
+      "end": 1027,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this increase",
+      "start": 1042,
+      "end": 1055,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that have",
+      "start": 981,
+      "end": 990,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that might",
+      "start": 1017,
+      "end": 1027,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the potential",
+      "start": 1299,
+      "end": 1312,
+      "type": "definite_noun"
+    },
+    {
+      "text": "these changes",
+      "start": 1323,
+      "end": 1336,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the report",
+      "start": 34,
+      "end": 44,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the board",
+      "start": 1515,
+      "end": 1524,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the meeting",
+      "start": 1621,
+      "end": 1632,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the date",
+      "start": 1668,
+      "end": 1676,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that need",
+      "start": 1765,
+      "end": 1774,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the report",
+      "start": 34,
+      "end": 44,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that the",
+      "start": 1836,
+      "end": 1844,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the main",
+      "start": 2024,
+      "end": 2032,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the preferred",
+      "start": 2062,
+      "end": 2075,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the report",
+      "start": 34,
+      "end": 44,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that need",
+      "start": 1765,
+      "end": 1774,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the presentation",
+      "start": 2208,
+      "end": 2224,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the CEO",
+      "start": 63,
+      "end": 70,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this would",
+      "start": 2369,
+      "end": 2379,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the past",
+      "start": 2484,
+      "end": 2492,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the market",
+      "start": 2589,
+      "end": 2599,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that the",
+      "start": 1836,
+      "end": 1844,
+      "type": "definite_noun"
+    },
+    {
+      "text": "The format",
+      "start": 2968,
+      "end": 2978,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that our",
+      "start": 3127,
+      "end": 3135,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that our",
+      "start": 3127,
+      "end": 3135,
+      "type": "definite_noun"
+    },
+    {
+      "text": "these issues",
+      "start": 3394,
+      "end": 3406,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this report",
+      "start": 3501,
+      "end": 3512,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the company",
+      "start": 3528,
+      "end": 3539,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the CEO",
+      "start": 63,
+      "end": 70,
+      "type": "definite_noun"
+    }
+  ],
+  "notes": "The noun 'report' is not mentioned in the conversation history, but it appears in the user's prompt."
+}

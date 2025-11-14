@@ -1,0 +1,206 @@
+{
+  "expected_issue_codes": [
+    "MISSING_REFERENCE"
+  ],
+  "missing_references": [
+    {
+      "text": "the issue",
+      "start": 80,
+      "end": 89,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the error",
+      "start": 164,
+      "end": 173,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that says",
+      "start": 182,
+      "end": 191,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the lack",
+      "start": 327,
+      "end": 335,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this error",
+      "start": 592,
+      "end": 602,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the website",
+      "start": 625,
+      "end": 636,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the ordinary",
+      "start": 662,
+      "end": 674,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the error",
+      "start": 164,
+      "end": 173,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that all",
+      "start": 810,
+      "end": 818,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that works",
+      "start": 931,
+      "end": 941,
+      "type": "definite_noun"
+    },
+    {
+      "text": "The only",
+      "start": 943,
+      "end": 951,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the same",
+      "start": 1008,
+      "end": 1016,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the problem",
+      "start": 1055,
+      "end": 1066,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this didn",
+      "start": 1107,
+      "end": 1116,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that there",
+      "start": 1160,
+      "end": 1170,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this issue",
+      "start": 1428,
+      "end": 1438,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the status",
+      "start": 1660,
+      "end": 1670,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the current",
+      "start": 1694,
+      "end": 1705,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that might",
+      "start": 1865,
+      "end": 1875,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this problem",
+      "start": 1887,
+      "end": 1899,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this error",
+      "start": 592,
+      "end": 602,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that might",
+      "start": 1865,
+      "end": 1875,
+      "type": "definite_noun"
+    },
+    {
+      "text": "these types",
+      "start": 2187,
+      "end": 2198,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this issue",
+      "start": 1428,
+      "end": 1438,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this case",
+      "start": 2537,
+      "end": 2546,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the issue",
+      "start": 80,
+      "end": 89,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the service",
+      "start": 2651,
+      "end": 2662,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this ongoing",
+      "start": 2713,
+      "end": 2725,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the level",
+      "start": 2768,
+      "end": 2777,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this issue",
+      "start": 1428,
+      "end": 1438,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the necessary",
+      "start": 2906,
+      "end": 2919,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that this",
+      "start": 2998,
+      "end": 3007,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the next",
+      "start": 3142,
+      "end": 3150,
+      "type": "definite_noun"
+    }
+  ],
+  "notes": "The user references a 'report' in their final message, but it is not mentioned anywhere else in the conversation history."
+}

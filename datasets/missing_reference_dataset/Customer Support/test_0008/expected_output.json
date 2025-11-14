@@ -1,0 +1,236 @@
+{
+  "expected_issue_codes": [
+    "MISSING_REFERENCE"
+  ],
+  "missing_references": [
+    {
+      "text": "that says",
+      "start": 88,
+      "end": 97,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the report",
+      "start": 99,
+      "end": 109,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the emails",
+      "start": 189,
+      "end": 199,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the issue",
+      "start": 273,
+      "end": 282,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this further",
+      "start": 320,
+      "end": 332,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that you",
+      "start": 400,
+      "end": 408,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the past",
+      "start": 441,
+      "end": 449,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the transaction",
+      "start": 583,
+      "end": 598,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this issue",
+      "start": 827,
+      "end": 837,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the bottom",
+      "start": 889,
+      "end": 899,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the issue",
+      "start": 273,
+      "end": 282,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this quickly",
+      "start": 1056,
+      "end": 1068,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this email",
+      "start": 1243,
+      "end": 1253,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the investigation",
+      "start": 1362,
+      "end": 1379,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that all",
+      "start": 1444,
+      "end": 1452,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the report",
+      "start": 99,
+      "end": 109,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the past",
+      "start": 441,
+      "end": 449,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the date",
+      "start": 1770,
+      "end": 1778,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the reason",
+      "start": 1921,
+      "end": 1931,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the flagging",
+      "start": 1936,
+      "end": 1948,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the process",
+      "start": 2015,
+      "end": 2026,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the issue",
+      "start": 273,
+      "end": 282,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that need",
+      "start": 2179,
+      "end": 2188,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this issue",
+      "start": 827,
+      "end": 837,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that your",
+      "start": 2250,
+      "end": 2259,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the level",
+      "start": 2460,
+      "end": 2469,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this issue",
+      "start": 827,
+      "end": 837,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the investigation",
+      "start": 1362,
+      "end": 1379,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this matter",
+      "start": 2784,
+      "end": 2795,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the status",
+      "start": 2860,
+      "end": 2870,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that need",
+      "start": 2179,
+      "end": 2188,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this issue",
+      "start": 827,
+      "end": 837,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the investigation",
+      "start": 1362,
+      "end": 1379,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that this",
+      "start": 3471,
+      "end": 3480,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the quality",
+      "start": 3538,
+      "end": 3549,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this issue",
+      "start": 827,
+      "end": 837,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that all",
+      "start": 1444,
+      "end": 1452,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that need",
+      "start": 2179,
+      "end": 2188,
+      "type": "definite_noun"
+    }
+  ],
+  "notes": "The user mentioned 'the report' as a missing reference, which is not present in the conversation history. Additionally, they requested a summary of their account activity for the past 6 months, but the word 'summary' was not explicitly mentioned."
+}

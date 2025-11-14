@@ -1,0 +1,20 @@
+{
+  "expected_issue_codes": [
+    "MISSING_REFERENCE"
+  ],
+  "missing_references": [
+    {
+      "text": "the previous report",
+      "start": 619,
+      "end": 638,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the proposed timeline",
+      "start": 1282,
+      "end": 1303,
+      "type": "definite_noun"
+    }
+  ],
+  "notes": "The user is missing references to the 'previous report' and 'proposed timeline', which are not explicitly mentioned in the conversation history."
+}

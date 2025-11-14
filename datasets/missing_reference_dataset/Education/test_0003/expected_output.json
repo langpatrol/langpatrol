@@ -1,0 +1,272 @@
+{
+  "expected_issue_codes": [
+    "MISSING_REFERENCE"
+  ],
+  "missing_references": [
+    {
+      "text": "that can",
+      "start": 112,
+      "end": 120,
+      "type": "definite_noun"
+    },
+    {
+      "text": "The meeting",
+      "start": 215,
+      "end": 226,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the implementation",
+      "start": 268,
+      "end": 286,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the new",
+      "start": 290,
+      "end": 297,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the notes",
+      "start": 413,
+      "end": 422,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the key",
+      "start": 474,
+      "end": 481,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that meeting",
+      "start": 506,
+      "end": 518,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the field",
+      "start": 531,
+      "end": 540,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the importance",
+      "start": 585,
+      "end": 599,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the interconnectedness",
+      "start": 689,
+      "end": 711,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that offer",
+      "start": 903,
+      "end": 913,
+      "type": "definite_noun"
+    },
+    {
+      "text": "The meeting",
+      "start": 215,
+      "end": 226,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the logistics",
+      "start": 1016,
+      "end": 1029,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the field",
+      "start": 531,
+      "end": 540,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that without",
+      "start": 1138,
+      "end": 1150,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the notes",
+      "start": 413,
+      "end": 422,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the area",
+      "start": 1258,
+      "end": 1266,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that match",
+      "start": 1267,
+      "end": 1277,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that can",
+      "start": 112,
+      "end": 120,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the facility",
+      "start": 1653,
+      "end": 1665,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that the",
+      "start": 1830,
+      "end": 1838,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the report we discussed",
+      "start": 1835,
+      "end": 1858,
+      "type": "positional_reference"
+    },
+    {
+      "text": "the necessary",
+      "start": 1898,
+      "end": 1911,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the report",
+      "start": 1835,
+      "end": 1845,
+      "type": "definite_noun"
+    },
+    {
+      "text": "The report",
+      "start": 2017,
+      "end": 2027,
+      "type": "definite_noun"
+    },
+    {
+      "text": "The report mentioned",
+      "start": 2017,
+      "end": 2037,
+      "type": "positional_reference"
+    },
+    {
+      "text": "the benefits",
+      "start": 2038,
+      "end": 2050,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the report",
+      "start": 1835,
+      "end": 1845,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the recent",
+      "start": 2290,
+      "end": 2300,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the school",
+      "start": 2312,
+      "end": 2322,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the field",
+      "start": 531,
+      "end": 540,
+      "type": "definite_noun"
+    },
+    {
+      "text": "these changes",
+      "start": 2435,
+      "end": 2448,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the estimated",
+      "start": 2564,
+      "end": 2577,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the area",
+      "start": 1258,
+      "end": 1266,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that might",
+      "start": 2710,
+      "end": 2720,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that offer",
+      "start": 903,
+      "end": 913,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that may",
+      "start": 3007,
+      "end": 3015,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that you",
+      "start": 3350,
+      "end": 3358,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the following",
+      "start": 3418,
+      "end": 3431,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the following points",
+      "start": 3418,
+      "end": 3438,
+      "type": "forward_reference"
+    },
+    {
+      "text": "the maximum",
+      "start": 3451,
+      "end": 3462,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that each",
+      "start": 3482,
+      "end": 3491,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that need",
+      "start": 3584,
+      "end": 3593,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the costs",
+      "start": 3721,
+      "end": 3730,
+      "type": "definite_noun"
+    }
+  ],
+  "notes": "The reference to 'the report' is missing in the conversation history."
+}

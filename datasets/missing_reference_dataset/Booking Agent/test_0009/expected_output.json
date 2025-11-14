@@ -1,0 +1,158 @@
+{
+  "expected_issue_codes": [
+    "MISSING_REFERENCE"
+  ],
+  "missing_references": [
+    {
+      "text": "that she",
+      "start": 81,
+      "end": 89,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this report",
+      "start": 224,
+      "end": 235,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that Jane",
+      "start": 274,
+      "end": 283,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that Jane",
+      "start": 274,
+      "end": 283,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the time",
+      "start": 591,
+      "end": 599,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that she",
+      "start": 81,
+      "end": 89,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that she",
+      "start": 81,
+      "end": 89,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this information",
+      "start": 658,
+      "end": 674,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the years",
+      "start": 790,
+      "end": 799,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the following",
+      "start": 893,
+      "end": 906,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the following details",
+      "start": 893,
+      "end": 914,
+      "type": "forward_reference"
+    },
+    {
+      "text": "The number",
+      "start": 952,
+      "end": 962,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the cities",
+      "start": 1016,
+      "end": 1026,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that stood",
+      "start": 1135,
+      "end": 1145,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the past",
+      "start": 1271,
+      "end": 1279,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that Jane",
+      "start": 274,
+      "end": 283,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this guide",
+      "start": 1855,
+      "end": 1865,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that Jane",
+      "start": 274,
+      "end": 283,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that includes",
+      "start": 2121,
+      "end": 2134,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this information",
+      "start": 658,
+      "end": 674,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the requirements",
+      "start": 2324,
+      "end": 2340,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the way",
+      "start": 2464,
+      "end": 2471,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that the",
+      "start": 2488,
+      "end": 2496,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the consequences",
+      "start": 2623,
+      "end": 2639,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the deadline",
+      "start": 2658,
+      "end": 2670,
+      "type": "definite_noun"
+    }
+  ],
+  "notes": "The 'Destination Guide' section and the personalized travel itinerary are mentioned in Jane Smith's website but not in the conversation history. The report is mentioned as something Jane needs to see, but its content and requirements are not discussed."
+}

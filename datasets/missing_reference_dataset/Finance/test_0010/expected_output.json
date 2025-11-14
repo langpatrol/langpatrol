@@ -1,0 +1,20 @@
+{
+  "expected_issue_codes": [
+    "MISSING_REFERENCE"
+  ],
+  "missing_references": [
+    {
+      "text": "report",
+      "start": 1855,
+      "end": 1861,
+      "type": "definite_noun"
+    },
+    {
+      "text": "report",
+      "start": 1855,
+      "end": 1861,
+      "type": "definite_noun"
+    }
+  ],
+  "notes": "The first mention of 'report' in the prompt is expected to be flagged as a missing reference, while the second mention should not be flagged."
+}

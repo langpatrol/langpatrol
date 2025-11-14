@@ -1,0 +1,14 @@
+[
+  {
+    "role": "user",
+    "content": "Hi, I'm scheduling an appointment for my annual check-up. Can you please let me know what time slots are available?"
+  },
+  {
+    "role": "assistant",
+    "content": "Hello! Let me check the schedule for today. We have a few options available: 9am, 10am, or 2pm."
+  },
+  {
+    "role": "user",
+    "content": "I was thinking of coming in at 10am, but I'm also interested in hearing about any new procedures you've been working on. How's the new screening process going?"
+  }
+]

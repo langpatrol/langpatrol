@@ -1,0 +1,218 @@
+{
+  "expected_issue_codes": [
+    "MISSING_REFERENCE"
+  ],
+  "missing_references": [
+    {
+      "text": "the report",
+      "start": 207,
+      "end": 217,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that was",
+      "start": 246,
+      "end": 254,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this report",
+      "start": 363,
+      "end": 374,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the future",
+      "start": 545,
+      "end": 555,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that this",
+      "start": 765,
+      "end": 774,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the current",
+      "start": 822,
+      "end": 833,
+      "type": "definite_noun"
+    },
+    {
+      "text": "The blood",
+      "start": 1001,
+      "end": 1010,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that accessing",
+      "start": 1267,
+      "end": 1281,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the lack",
+      "start": 1333,
+      "end": 1341,
+      "type": "definite_noun"
+    },
+    {
+      "text": "This has",
+      "start": 1379,
+      "end": 1387,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the electronic",
+      "start": 1686,
+      "end": 1700,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this setup",
+      "start": 1735,
+      "end": 1745,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the risk",
+      "start": 1805,
+      "end": 1813,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the lack",
+      "start": 1333,
+      "end": 1341,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that advocate",
+      "start": 2180,
+      "end": 2193,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the use",
+      "start": 2198,
+      "end": 2205,
+      "type": "definite_noun"
+    },
+    {
+      "text": "These solutions",
+      "start": 2274,
+      "end": 2289,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the use",
+      "start": 2198,
+      "end": 2205,
+      "type": "definite_noun"
+    },
+    {
+      "text": "these new",
+      "start": 2665,
+      "end": 2674,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that caters",
+      "start": 2736,
+      "end": 2747,
+      "type": "definite_noun"
+    },
+    {
+      "text": "those with",
+      "start": 2784,
+      "end": 2794,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that may",
+      "start": 3113,
+      "end": 3121,
+      "type": "definite_noun"
+    },
+    {
+      "text": "these concerns",
+      "start": 3130,
+      "end": 3144,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that can",
+      "start": 3232,
+      "end": 3240,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the development",
+      "start": 3248,
+      "end": 3263,
+      "type": "definite_noun"
+    },
+    {
+      "text": "This would",
+      "start": 3380,
+      "end": 3390,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that this",
+      "start": 765,
+      "end": 774,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the measures",
+      "start": 3737,
+      "end": 3749,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that could",
+      "start": 3947,
+      "end": 3957,
+      "type": "definite_noun"
+    },
+    {
+      "text": "This would",
+      "start": 3380,
+      "end": 3390,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the latest",
+      "start": 4075,
+      "end": 4085,
+      "type": "definite_noun"
+    },
+    {
+      "text": "these proposed",
+      "start": 4430,
+      "end": 4444,
+      "type": "definite_noun"
+    },
+    {
+      "text": "This will",
+      "start": 4497,
+      "end": 4506,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this matter",
+      "start": 4653,
+      "end": 4664,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that education",
+      "start": 4822,
+      "end": 4836,
+      "type": "definite_noun"
+    }
+  ],
+  "notes": "The reference to the report from last week's blood work is missing, and its existence needs to be verified."
+}

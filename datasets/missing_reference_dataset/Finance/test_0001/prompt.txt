@@ -1,0 +1,13 @@
+The user's message with the reference to 'report' is being considered as part of an ongoing discussion regarding a specific financial transaction that has raised some concerns among stakeholders. The transaction in question involves a large investment made by a company into a new venture, and there are doubts about whether certain conditions have been met. As such, it would be beneficial for the user to provide more context about their message so that the situation can be fully understood.
+
+In this scenario, the financial institution is required to maintain strict compliance with regulatory guidelines, particularly those related to money laundering and terrorist financing. Therefore, any report submitted must adhere to these guidelines and provide all necessary information for thorough review.
+
+The background information on this transaction indicates that it was approved by the company's board of directors, but there are questions about whether the necessary approvals were also obtained from relevant regulatory bodies. As such, it would be helpful if the user could clarify their message in relation to the specific requirements of these regulations.
+
+One example of a report that might be required in this situation is one that outlines the details of the investment, including the amount involved, the company involved, and any notable milestones or achievements since the initial approval. Another report might focus on the due diligence process undertaken by the financial institution, detailing any steps taken to verify the legitimacy of the transaction and ensure compliance with regulatory requirements.
+
+Additional instructions for this task are as follows: please ensure that your response includes all relevant information from the user's message, without omitting or altering key details. Additionally, provide clear explanations of any terms or concepts mentioned in the original message, especially those related to financial regulations and compliance.
+
+In terms of constraints, it is worth noting that any report submitted must be concise and easy to understand, while also providing all necessary information for a thorough review. Furthermore, the user's message should be free from errors and ambiguities, ensuring that the intended meaning is conveyed clearly and without confusion.
+
+Lastly, please keep in mind that this task requires a high level of attention to detail and analytical thinking. The user's message may contain subtle hints or implications that need to be carefully considered when interpreting their request for a report.

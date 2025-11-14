@@ -1,0 +1,272 @@
+{
+  "expected_issue_codes": [
+    "MISSING_REFERENCE"
+  ],
+  "missing_references": [
+    {
+      "text": "the United",
+      "start": 31,
+      "end": 41,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the next",
+      "start": 52,
+      "end": 60,
+      "type": "definite_noun"
+    },
+    {
+      "text": "those that",
+      "start": 154,
+      "end": 164,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the shift",
+      "start": 319,
+      "end": 328,
+      "type": "definite_noun"
+    },
+    {
+      "text": "The goal",
+      "start": 391,
+      "end": 399,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the idea",
+      "start": 555,
+      "end": 563,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the benefits",
+      "start": 736,
+      "end": 748,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this approach",
+      "start": 766,
+      "end": 779,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that might",
+      "start": 812,
+      "end": 822,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that educators",
+      "start": 893,
+      "end": 907,
+      "type": "definite_noun"
+    },
+    {
+      "text": "those without",
+      "start": 1098,
+      "end": 1111,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this approach",
+      "start": 766,
+      "end": 779,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that have",
+      "start": 1418,
+      "end": 1427,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this approach",
+      "start": 766,
+      "end": 779,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the needs",
+      "start": 1585,
+      "end": 1594,
+      "type": "definite_noun"
+    },
+    {
+      "text": "those from",
+      "start": 1668,
+      "end": 1678,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that all",
+      "start": 1728,
+      "end": 1736,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the resources",
+      "start": 1761,
+      "end": 1774,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that have",
+      "start": 1418,
+      "end": 1427,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this type",
+      "start": 1956,
+      "end": 1965,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that could",
+      "start": 2055,
+      "end": 2065,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this topic",
+      "start": 2091,
+      "end": 2101,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that have",
+      "start": 1418,
+      "end": 1427,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the effectiveness",
+      "start": 2181,
+      "end": 2198,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that educators",
+      "start": 893,
+      "end": 907,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this type",
+      "start": 1956,
+      "end": 1965,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that have",
+      "start": 1418,
+      "end": 1427,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the autonomy",
+      "start": 2807,
+      "end": 2819,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that align",
+      "start": 2851,
+      "end": 2861,
+      "type": "definite_noun"
+    },
+    {
+      "text": "This could",
+      "start": 2897,
+      "end": 2907,
+      "type": "definite_noun"
+    },
+    {
+      "text": "The ultimate",
+      "start": 3046,
+      "end": 3058,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the logistics",
+      "start": 3312,
+      "end": 3325,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the school",
+      "start": 3349,
+      "end": 3359,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this type",
+      "start": 1956,
+      "end": 1965,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the need",
+      "start": 1585,
+      "end": 1593,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the need",
+      "start": 1585,
+      "end": 1593,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that supports",
+      "start": 3684,
+      "end": 3697,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that could",
+      "start": 2055,
+      "end": 2065,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the current",
+      "start": 4132,
+      "end": 4143,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this topic",
+      "start": 2091,
+      "end": 2101,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that have",
+      "start": 1418,
+      "end": 1427,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the effectiveness",
+      "start": 2181,
+      "end": 2198,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that educators",
+      "start": 893,
+      "end": 907,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this topic",
+      "start": 2091,
+      "end": 2101,
+      "type": "definite_noun"
+    }
+  ],
+  "notes": "The references 'report' and 'system' were not mentioned in the conversation history."
+}

@@ -1,0 +1,105 @@
+{
+  "expected_issue_codes": [
+    "MISSING_REFERENCE",
+    "MISSING_REFERENCE"
+  ],
+  "missing_references": [
+    {
+      "text": "the arrangements",
+      "start": 239,
+      "end": 255,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the report",
+      "start": 330,
+      "end": 340,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the airline",
+      "start": 627,
+      "end": 638,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the flight",
+      "start": 783,
+      "end": 793,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the visa",
+      "start": 910,
+      "end": 918,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that all",
+      "start": 1013,
+      "end": 1021,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that may",
+      "start": 1152,
+      "end": 1160,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the airline",
+      "start": 627,
+      "end": 638,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the past",
+      "start": 1359,
+      "end": 1367,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the report",
+      "start": 330,
+      "end": 340,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the process",
+      "start": 2038,
+      "end": 2049,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the flight",
+      "start": 783,
+      "end": 793,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that cater",
+      "start": 2583,
+      "end": 2593,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the report",
+      "start": 330,
+      "end": 340,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the airport",
+      "start": 2756,
+      "end": 2767,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the booking",
+      "start": 2845,
+      "end": 2856,
+      "type": "definite_noun"
+    }
+  ],
+  "notes": "The 'report' reference is missing because it was not mentioned in the conversation history. The 'visa requirements' reference is also missing because it was not mentioned earlier in the conversation."
+}

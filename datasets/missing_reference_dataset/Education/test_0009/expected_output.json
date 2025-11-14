@@ -1,0 +1,13 @@
+{
+  "expected_issue_codes": [
+    "MISSING_REFERENCE"
+  ],
+  "missing_references": [
+    {
+      "text": "curriculum",
+      "start": 163,
+      "end": 173
+    }
+  ],
+  "notes": "The reference to the curriculum was not mentioned in the conversation history, indicating a missing reference."
+}

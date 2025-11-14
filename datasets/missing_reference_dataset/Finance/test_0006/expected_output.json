@@ -1,0 +1,248 @@
+{
+  "expected_issue_codes": [
+    "MISSING_REFERENCE"
+  ],
+  "missing_references": [
+    {
+      "text": "that will",
+      "start": 74,
+      "end": 83,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the past",
+      "start": 151,
+      "end": 159,
+      "type": "definite_noun"
+    },
+    {
+      "text": "The finance",
+      "start": 166,
+      "end": 177,
+      "type": "definite_noun"
+    },
+    {
+      "text": "This impact",
+      "start": 333,
+      "end": 344,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the same",
+      "start": 462,
+      "end": 470,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the financial",
+      "start": 516,
+      "end": 529,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the key",
+      "start": 547,
+      "end": 554,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that have",
+      "start": 566,
+      "end": 575,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this increase",
+      "start": 591,
+      "end": 604,
+      "type": "definite_noun"
+    },
+    {
+      "text": "These cost",
+      "start": 917,
+      "end": 927,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the same",
+      "start": 462,
+      "end": 470,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the finance",
+      "start": 1084,
+      "end": 1095,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that there",
+      "start": 1101,
+      "end": 1111,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this investment",
+      "start": 1204,
+      "end": 1219,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this matter",
+      "start": 1302,
+      "end": 1313,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the same",
+      "start": 462,
+      "end": 470,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the current",
+      "start": 1546,
+      "end": 1557,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that have",
+      "start": 566,
+      "end": 575,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the industry",
+      "start": 1650,
+      "end": 1662,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that could",
+      "start": 1756,
+      "end": 1766,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that have",
+      "start": 566,
+      "end": 575,
+      "type": "definite_noun"
+    },
+    {
+      "text": "these partnerships",
+      "start": 2016,
+      "end": 2034,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the expected",
+      "start": 2145,
+      "end": 2157,
+      "type": "definite_noun"
+    },
+    {
+      "text": "these partnerships",
+      "start": 2016,
+      "end": 2034,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the current",
+      "start": 1546,
+      "end": 1557,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that need",
+      "start": 2504,
+      "end": 2513,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the product",
+      "start": 2538,
+      "end": 2549,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the target",
+      "start": 2676,
+      "end": 2686,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this metric",
+      "start": 2770,
+      "end": 2781,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that need",
+      "start": 2504,
+      "end": 2513,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the report",
+      "start": 2811,
+      "end": 2821,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the updated",
+      "start": 2845,
+      "end": 2856,
+      "type": "definite_noun"
+    },
+    {
+      "text": "these key",
+      "start": 2957,
+      "end": 2966,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the historical",
+      "start": 3083,
+      "end": 3097,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that have",
+      "start": 566,
+      "end": 575,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that all",
+      "start": 3324,
+      "end": 3332,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the report",
+      "start": 2811,
+      "end": 2821,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this analysis",
+      "start": 3452,
+      "end": 3465,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that need",
+      "start": 2504,
+      "end": 2513,
+      "type": "definite_noun"
+    },
+    {
+      "text": "these key",
+      "start": 2957,
+      "end": 2966,
+      "type": "definite_noun"
+    }
+  ],
+  "notes": "The user is missing references to 'costs' and 'market trends', which are likely key metrics in the quarterly report."
+}

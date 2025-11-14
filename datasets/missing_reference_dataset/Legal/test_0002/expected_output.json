@@ -1,0 +1,242 @@
+{
+  "expected_issue_codes": [
+    "MISSING_REFERENCE"
+  ],
+  "missing_references": [
+    {
+      "text": "The dispute",
+      "start": 142,
+      "end": 153,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that dictates",
+      "start": 178,
+      "end": 191,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the event",
+      "start": 222,
+      "end": 231,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that NovaSpire",
+      "start": 273,
+      "end": 287,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this condition",
+      "start": 297,
+      "end": 311,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the agreement",
+      "start": 445,
+      "end": 458,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the situation",
+      "start": 482,
+      "end": 495,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the current",
+      "start": 581,
+      "end": 592,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the partnership",
+      "start": 602,
+      "end": 617,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this context",
+      "start": 832,
+      "end": 844,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that outlines",
+      "start": 906,
+      "end": 919,
+      "type": "definite_noun"
+    },
+    {
+      "text": "The key",
+      "start": 975,
+      "end": 982,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the agreement",
+      "start": 445,
+      "end": 458,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the process",
+      "start": 1268,
+      "end": 1279,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the following",
+      "start": 1374,
+      "end": 1387,
+      "type": "definite_noun"
+    },
+    {
+      "text": "The steps",
+      "start": 1393,
+      "end": 1402,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the process",
+      "start": 1268,
+      "end": 1279,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that might",
+      "start": 1615,
+      "end": 1625,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this situation",
+      "start": 1643,
+      "end": 1657,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this context",
+      "start": 832,
+      "end": 844,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that all",
+      "start": 1745,
+      "end": 1753,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the other",
+      "start": 2059,
+      "end": 2068,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the terms",
+      "start": 2156,
+      "end": 2165,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the distinction",
+      "start": 2177,
+      "end": 2192,
+      "type": "definite_noun"
+    },
+    {
+      "text": "these types",
+      "start": 2201,
+      "end": 2212,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the specific",
+      "start": 2244,
+      "end": 2256,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this contract",
+      "start": 2387,
+      "end": 2400,
+      "type": "definite_noun"
+    },
+    {
+      "text": "The best",
+      "start": 2428,
+      "end": 2436,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that might",
+      "start": 1615,
+      "end": 1625,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the negotiation",
+      "start": 2692,
+      "end": 2707,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that illustrate",
+      "start": 2835,
+      "end": 2850,
+      "type": "definite_noun"
+    },
+    {
+      "text": "these principles",
+      "start": 2855,
+      "end": 2871,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that can",
+      "start": 2974,
+      "end": 2982,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this case",
+      "start": 3005,
+      "end": 3014,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the negotiation",
+      "start": 2692,
+      "end": 2707,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the situation",
+      "start": 482,
+      "end": 495,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the current",
+      "start": 581,
+      "end": 592,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the partnership",
+      "start": 602,
+      "end": 617,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the negotiation",
+      "start": 2692,
+      "end": 2707,
+      "type": "definite_noun"
+    }
+  ],
+  "notes": "The 'report' reference is missing from the conversation history."
+}

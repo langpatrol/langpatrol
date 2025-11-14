@@ -1,0 +1,176 @@
+{
+  "expected_issue_codes": [
+    "MISSING_REFERENCE"
+  ],
+  "missing_references": [
+    {
+      "text": "this expansion",
+      "start": 250,
+      "end": 264,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the Japanese",
+      "start": 312,
+      "end": 324,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the role",
+      "start": 384,
+      "end": 392,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the CEO",
+      "start": 397,
+      "end": 404,
+      "type": "definite_noun"
+    },
+    {
+      "text": "these companies",
+      "start": 417,
+      "end": 432,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that the",
+      "start": 472,
+      "end": 480,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that this",
+      "start": 821,
+      "end": 830,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the following",
+      "start": 1011,
+      "end": 1024,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the following steps",
+      "start": 1011,
+      "end": 1030,
+      "type": "forward_reference"
+    },
+    {
+      "text": "these companies",
+      "start": 417,
+      "end": 432,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the current",
+      "start": 1647,
+      "end": 1658,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the market",
+      "start": 1668,
+      "end": 1678,
+      "type": "definite_noun"
+    },
+    {
+      "text": "these stakeholders",
+      "start": 1718,
+      "end": 1736,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the specific",
+      "start": 2125,
+      "end": 2137,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that would",
+      "start": 2182,
+      "end": 2192,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the CEO",
+      "start": 397,
+      "end": 404,
+      "type": "definite_noun"
+    },
+    {
+      "text": "These resources",
+      "start": 2650,
+      "end": 2665,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this initial",
+      "start": 2989,
+      "end": 3001,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the CEO",
+      "start": 397,
+      "end": 404,
+      "type": "definite_noun"
+    },
+    {
+      "text": "This may",
+      "start": 3339,
+      "end": 3347,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the CEO",
+      "start": 397,
+      "end": 404,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the CEO",
+      "start": 397,
+      "end": 404,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the company",
+      "start": 3759,
+      "end": 3770,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that addresses",
+      "start": 3921,
+      "end": 3935,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the importance",
+      "start": 4308,
+      "end": 4322,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that may",
+      "start": 4584,
+      "end": 4592,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the current",
+      "start": 1647,
+      "end": 1658,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the market",
+      "start": 1668,
+      "end": 1678,
+      "type": "definite_noun"
+    }
+  ],
+  "notes": "The reference to 'the CEO' was not mentioned in the conversation history, indicating a missing reference."
+}

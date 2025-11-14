@@ -1,0 +1,296 @@
+{
+  "expected_issue_codes": [
+    "MISSING_REFERENCE"
+  ],
+  "missing_references": [
+    {
+      "text": "that all",
+      "start": 233,
+      "end": 241,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the system",
+      "start": 306,
+      "end": 316,
+      "type": "definite_noun"
+    },
+    {
+      "text": "As discussed earlier",
+      "start": 319,
+      "end": 339,
+      "type": "deictic"
+    },
+    {
+      "text": "this week",
+      "start": 363,
+      "end": 372,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the clinic",
+      "start": 602,
+      "end": 612,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the revised",
+      "start": 829,
+      "end": 840,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that was",
+      "start": 848,
+      "end": 856,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the hospital",
+      "start": 870,
+      "end": 882,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the immunization",
+      "start": 936,
+      "end": 952,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the status",
+      "start": 1065,
+      "end": 1075,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the revised",
+      "start": 829,
+      "end": 840,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that need",
+      "start": 1173,
+      "end": 1182,
+      "type": "definite_noun"
+    },
+    {
+      "text": "these new",
+      "start": 1244,
+      "end": 1253,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the specific",
+      "start": 1344,
+      "end": 1356,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the immunization",
+      "start": 936,
+      "end": 952,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that patients",
+      "start": 1431,
+      "end": 1444,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the previous",
+      "start": 1509,
+      "end": 1521,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the previous email",
+      "start": 1509,
+      "end": 1527,
+      "type": "deictic_noun"
+    },
+    {
+      "text": "the dates",
+      "start": 1638,
+      "end": 1647,
+      "type": "definite_noun"
+    },
+    {
+      "text": "these sessions",
+      "start": 1662,
+      "end": 1676,
+      "type": "definite_noun"
+    },
+    {
+      "text": "these trainings",
+      "start": 1749,
+      "end": 1764,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that will",
+      "start": 1818,
+      "end": 1827,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the updated",
+      "start": 1928,
+      "end": 1939,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that was",
+      "start": 848,
+      "end": 856,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this document",
+      "start": 2001,
+      "end": 2014,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the report",
+      "start": 2031,
+      "end": 2041,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that was",
+      "start": 848,
+      "end": 856,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the hospital",
+      "start": 870,
+      "end": 882,
+      "type": "definite_noun"
+    },
+    {
+      "text": "these updates",
+      "start": 2178,
+      "end": 2191,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the new",
+      "start": 2288,
+      "end": 2295,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that need",
+      "start": 1173,
+      "end": 1182,
+      "type": "definite_noun"
+    },
+    {
+      "text": "these new",
+      "start": 1244,
+      "end": 1253,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this morning",
+      "start": 2555,
+      "end": 2567,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that need",
+      "start": 1173,
+      "end": 1182,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the booking",
+      "start": 2672,
+      "end": 2683,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that the",
+      "start": 2851,
+      "end": 2859,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the revised",
+      "start": 829,
+      "end": 840,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that was",
+      "start": 848,
+      "end": 856,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the hospital",
+      "start": 870,
+      "end": 882,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that patients",
+      "start": 1431,
+      "end": 1444,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this process",
+      "start": 3142,
+      "end": 3154,
+      "type": "definite_noun"
+    },
+    {
+      "text": "these trainings",
+      "start": 1749,
+      "end": 1764,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the updated",
+      "start": 1928,
+      "end": 1939,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the specific",
+      "start": 1344,
+      "end": 1356,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this process",
+      "start": 3142,
+      "end": 3154,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that all",
+      "start": 233,
+      "end": 241,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this matter",
+      "start": 4331,
+      "end": 4342,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the details",
+      "start": 4404,
+      "end": 4415,
+      "type": "definite_noun"
+    }
+  ],
+  "notes": "The reference to 'the report' is missing its clear antecedent, and the phrase 'new protocols' lacks context without knowing what specific changes were made."
+}

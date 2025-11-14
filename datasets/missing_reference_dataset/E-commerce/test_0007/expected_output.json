@@ -1,0 +1,224 @@
+{
+  "expected_issue_codes": [
+    "MISSING_REFERENCE"
+  ],
+  "missing_references": [
+    {
+      "text": "the new",
+      "start": 30,
+      "end": 37,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the report",
+      "start": 65,
+      "end": 75,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the tech",
+      "start": 121,
+      "end": 129,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the company",
+      "start": 174,
+      "end": 185,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this time",
+      "start": 238,
+      "end": 247,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the process",
+      "start": 297,
+      "end": 308,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the different",
+      "start": 473,
+      "end": 486,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the laptop",
+      "start": 563,
+      "end": 573,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that requires",
+      "start": 684,
+      "end": 697,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that the",
+      "start": 791,
+      "end": 799,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the company",
+      "start": 174,
+      "end": 185,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this time",
+      "start": 238,
+      "end": 247,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the near",
+      "start": 1123,
+      "end": 1131,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the current",
+      "start": 1244,
+      "end": 1255,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the tech",
+      "start": 121,
+      "end": 129,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that can",
+      "start": 1400,
+      "end": 1408,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the company",
+      "start": 174,
+      "end": 185,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the payment",
+      "start": 1631,
+      "end": 1642,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the new",
+      "start": 30,
+      "end": 37,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the different",
+      "start": 473,
+      "end": 486,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that need",
+      "start": 1835,
+      "end": 1844,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the different",
+      "start": 473,
+      "end": 486,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the near",
+      "start": 1123,
+      "end": 1131,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that will",
+      "start": 2265,
+      "end": 2274,
+      "type": "definite_noun"
+    },
+    {
+      "text": "these scenarios",
+      "start": 2400,
+      "end": 2415,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that may",
+      "start": 2666,
+      "end": 2674,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the optimal",
+      "start": 2706,
+      "end": 2717,
+      "type": "definite_noun"
+    },
+    {
+      "text": "these different",
+      "start": 2845,
+      "end": 2860,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the company",
+      "start": 174,
+      "end": 185,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the past",
+      "start": 3249,
+      "end": 3257,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this growth",
+      "start": 3304,
+      "end": 3315,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the future",
+      "start": 3373,
+      "end": 3383,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the report",
+      "start": 65,
+      "end": 75,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the tech",
+      "start": 121,
+      "end": 129,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this mean",
+      "start": 3719,
+      "end": 3728,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the company",
+      "start": 174,
+      "end": 185,
+      "type": "definite_noun"
+    }
+  ],
+  "notes": "The reference to the report from last quarter regarding sales trends for the tech industry is missing. It was mentioned in the prompt, but not in any of the conversation history."
+}

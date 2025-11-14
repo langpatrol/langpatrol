@@ -1,0 +1,350 @@
+{
+  "expected_issue_codes": [
+    "MISSING_REFERENCE"
+  ],
+  "missing_references": [
+    {
+      "text": "the contract",
+      "start": 24,
+      "end": 36,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the potential",
+      "start": 58,
+      "end": 71,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the new",
+      "start": 217,
+      "end": 224,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that were",
+      "start": 247,
+      "end": 256,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the report",
+      "start": 270,
+      "end": 280,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the conversation",
+      "start": 348,
+      "end": 364,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the report",
+      "start": 270,
+      "end": 280,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the report",
+      "start": 270,
+      "end": 280,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this conversation",
+      "start": 494,
+      "end": 511,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that provides",
+      "start": 550,
+      "end": 563,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the new",
+      "start": 217,
+      "end": 224,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the expected",
+      "start": 672,
+      "end": 684,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the legal",
+      "start": 812,
+      "end": 821,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that our",
+      "start": 855,
+      "end": 863,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the financial",
+      "start": 884,
+      "end": 897,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the area",
+      "start": 931,
+      "end": 939,
+      "type": "definite_noun"
+    },
+    {
+      "text": "The new",
+      "start": 1172,
+      "end": 1179,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the report",
+      "start": 270,
+      "end": 280,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that our",
+      "start": 855,
+      "end": 863,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that the",
+      "start": 1413,
+      "end": 1421,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this new",
+      "start": 1438,
+      "end": 1446,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the following",
+      "start": 1570,
+      "end": 1583,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the following requirements",
+      "start": 1570,
+      "end": 1596,
+      "type": "forward_reference"
+    },
+    {
+      "text": "the new",
+      "start": 217,
+      "end": 224,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that our",
+      "start": 855,
+      "end": 863,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the ever-evolving",
+      "start": 1994,
+      "end": 2011,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the latest",
+      "start": 2083,
+      "end": 2093,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the industry",
+      "start": 2110,
+      "end": 2122,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that this",
+      "start": 2247,
+      "end": 2256,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the impact",
+      "start": 2342,
+      "end": 2352,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the new",
+      "start": 217,
+      "end": 224,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the costs",
+      "start": 2847,
+      "end": 2856,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the new",
+      "start": 217,
+      "end": 224,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the changes",
+      "start": 3090,
+      "end": 3101,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the transition",
+      "start": 3147,
+      "end": 3161,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this topic",
+      "start": 3272,
+      "end": 3282,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the latest",
+      "start": 2083,
+      "end": 2093,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that our",
+      "start": 855,
+      "end": 863,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this complex",
+      "start": 3501,
+      "end": 3513,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that the",
+      "start": 1413,
+      "end": 1421,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this conversation",
+      "start": 494,
+      "end": 511,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the new",
+      "start": 217,
+      "end": 224,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the necessary",
+      "start": 3843,
+      "end": 3856,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that may",
+      "start": 3909,
+      "end": 3917,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this topic",
+      "start": 3272,
+      "end": 3282,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the latest",
+      "start": 2083,
+      "end": 2093,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the industry",
+      "start": 2110,
+      "end": 2122,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the following",
+      "start": 1570,
+      "end": 1583,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this message",
+      "start": 4198,
+      "end": 4210,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the requirements",
+      "start": 4249,
+      "end": 4265,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the costs",
+      "start": 2847,
+      "end": 2856,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the new",
+      "start": 217,
+      "end": 224,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the necessary",
+      "start": 3843,
+      "end": 3856,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that may",
+      "start": 3909,
+      "end": 3917,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this topic",
+      "start": 3272,
+      "end": 3282,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the latest",
+      "start": 2083,
+      "end": 2093,
+      "type": "definite_noun"
+    },
+    {
+      "text": "these next",
+      "start": 4755,
+      "end": 4765,
+      "type": "definite_noun"
+    }
+  ],
+  "notes": "The reference to 'the report' is missing from the conversation history, despite being mentioned in the prompt."
+}

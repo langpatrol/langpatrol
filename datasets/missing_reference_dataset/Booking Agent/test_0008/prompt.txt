@@ -1,0 +1,27 @@
+As a booking agent for a large corporate client, I've been tasked with finding the cheapest days to fly from New York to Los Angeles for an upcoming business trip. The client has a tight budget and is looking for any available discounts or promotions that can help reduce costs. With over 500 flights operating daily between these two cities, it's essential to have access to reliable data on flight schedules, availability, and pricing.
+
+Specifically, I'm looking for a detailed breakdown of the cheapest days to fly from New York (JFK/LGA/EWR) to Los Angeles (LAX), as well as any upcoming sales or promotions. The report should include the average price per flight, discounts or promo codes available, and confirmation that the data reflects the current flight schedules for next month.
+
+I'd like to request a report that includes all available routes, including those operated by partner airlines, such as American Airlines, Delta Air Lines, United Airlines, and JetBlue Airways. Additionally, please confirm that the report includes any restrictions or blackout dates that may affect my booking, such as holidays, special events, or maintenance schedules.
+
+Given the complexity of flight schedules and availability, I'd appreciate it if you could provide me with a clear breakdown of the cheapest days to fly, including examples of flights that may be available at these times. For instance, what are the most affordable days to travel during the month of March, and which airlines offer the best deals on those days?
+
+To further assist my client, I'd like to know more about the booking process and any specific requirements or constraints that need to be considered. Are there any layovers or connections that may impact the overall cost of the flight? What are the client's preferred travel dates, and are they willing to consider flying on off-peak days or during the off-season?
+
+In terms of background information, my client is a large corporation with multiple employees traveling between New York and Los Angeles on a regular basis. They have a long-term partnership with one airline, but they're open to exploring other options if it means finding better deals. The client's budget for this trip is relatively tight, so any savings or discounts would be greatly appreciated.
+
+To provide more context, I've been working with my client for several months now, and we've had some success with booking flights through a travel agency. However, the agency has recommended that we consider using online travel agencies (OTAs) to find better deals, especially on last-minute bookings or during sales events. I'd like to know more about how OTAs can help us save money and what types of discounts or promotions are available.
+
+In terms of specific requirements, please confirm that the report includes all available flights from New York to Los Angeles, including those operated by partner airlines. Also, please ensure that the report is up-to-date and reflects the current flight schedules for next month. I'd also appreciate it if you could provide me with a list of flights that are available for booking on the cheapest days, including any discounts or promo codes available.
+
+To confirm, can you please clarify the following:
+
+* What is the average price per flight from New York to Los Angeles?
+* Are there any specific airlines that offer better deals on certain days of the week or during specific times of the year?
+* Can you provide more information about any layovers or connections that may impact the overall cost of the flight?
+* How do OTAs work, and what types of discounts or promotions are available?
+* Are there any restrictions or blackout dates that may affect my booking, such as holidays or special events?
+
+I'd appreciate it if you could also provide some examples or use cases to illustrate how these findings can be applied in real-world scenarios. For instance, what are the cheapest days to fly from New York to Los Angeles for a business trip, and which airlines offer the best deals on those days? How can we use this information to optimize our client's travel plans and save money?
+
+Finally, I'd like to request any additional instructions or clarifications that may be necessary to complete this project. Are there any specific data sources or APIs that need to be accessed in order to gather the required information? Are there any additional steps or processes that need to be taken to ensure accuracy and reliability of the report?

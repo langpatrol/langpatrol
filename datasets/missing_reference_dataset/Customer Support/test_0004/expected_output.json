@@ -1,0 +1,326 @@
+{
+  "expected_issue_codes": [
+    "MISSING_REFERENCE"
+  ],
+  "missing_references": [
+    {
+      "text": "the login",
+      "start": 59,
+      "end": 68,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this matter",
+      "start": 171,
+      "end": 182,
+      "type": "definite_noun"
+    },
+    {
+      "text": "As discussed earlier",
+      "start": 184,
+      "end": 204,
+      "type": "deictic"
+    },
+    {
+      "text": "that mentioned",
+      "start": 245,
+      "end": 259,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the report",
+      "start": 396,
+      "end": 406,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that there",
+      "start": 424,
+      "end": 434,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the details",
+      "start": 461,
+      "end": 472,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the report",
+      "start": 396,
+      "end": 406,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the incident",
+      "start": 518,
+      "end": 530,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the security",
+      "start": 558,
+      "end": 570,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that occurred",
+      "start": 578,
+      "end": 591,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this incident",
+      "start": 700,
+      "end": 713,
+      "type": "definite_noun"
+    },
+    {
+      "text": "as discussed earlier",
+      "start": 746,
+      "end": 766,
+      "type": "deictic"
+    },
+    {
+      "text": "this new",
+      "start": 781,
+      "end": 789,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the status",
+      "start": 840,
+      "end": 850,
+      "type": "definite_noun"
+    },
+    {
+      "text": "The attackers",
+      "start": 1100,
+      "end": 1113,
+      "type": "definite_noun"
+    },
+    {
+      "text": "This incident",
+      "start": 1205,
+      "end": 1218,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the security",
+      "start": 558,
+      "end": 570,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the potential",
+      "start": 1277,
+      "end": 1290,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that may",
+      "start": 1305,
+      "end": 1313,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this new",
+      "start": 781,
+      "end": 789,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the status",
+      "start": 840,
+      "end": 850,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that some",
+      "start": 1489,
+      "end": 1498,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the security",
+      "start": 558,
+      "end": 570,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this incident",
+      "start": 700,
+      "end": 713,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this issue",
+      "start": 1799,
+      "end": 1809,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the relevant",
+      "start": 1896,
+      "end": 1908,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the breach",
+      "start": 1936,
+      "end": 1946,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the future",
+      "start": 2022,
+      "end": 2032,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the steps",
+      "start": 2106,
+      "end": 2115,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that have",
+      "start": 2116,
+      "end": 2125,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that have",
+      "start": 2116,
+      "end": 2125,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this issue",
+      "start": 1799,
+      "end": 1809,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that you",
+      "start": 2252,
+      "end": 2260,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the future",
+      "start": 2022,
+      "end": 2032,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this issue",
+      "start": 1799,
+      "end": 1809,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the status",
+      "start": 840,
+      "end": 850,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that resolving",
+      "start": 2936,
+      "end": 2950,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the urgency",
+      "start": 3020,
+      "end": 3031,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this situation",
+      "start": 3035,
+      "end": 3049,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the measures",
+      "start": 3153,
+      "end": 3165,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this issue",
+      "start": 1799,
+      "end": 1809,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the progress",
+      "start": 3234,
+      "end": 3246,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that you",
+      "start": 2252,
+      "end": 2260,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the future",
+      "start": 2022,
+      "end": 2032,
+      "type": "definite_noun"
+    },
+    {
+      "text": "This could",
+      "start": 3446,
+      "end": 3456,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the frequency",
+      "start": 3509,
+      "end": 3522,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that these",
+      "start": 3619,
+      "end": 3629,
+      "type": "definite_noun"
+    },
+    {
+      "text": "these changes",
+      "start": 3624,
+      "end": 3637,
+      "type": "plural_reference"
+    },
+    {
+      "text": "this opportunity",
+      "start": 3795,
+      "end": 3811,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the support",
+      "start": 3843,
+      "end": 3854,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the efforts",
+      "start": 3965,
+      "end": 3976,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the status",
+      "start": 840,
+      "end": 850,
+      "type": "definite_noun"
+    }
+  ],
+  "notes": "The user reference to 'the incident' in the final message does not match any previous mention of the incident in the conversation history."
+}

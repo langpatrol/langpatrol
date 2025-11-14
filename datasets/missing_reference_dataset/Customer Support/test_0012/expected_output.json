@@ -1,0 +1,200 @@
+{
+  "expected_issue_codes": [
+    "MISSING_REFERENCE"
+  ],
+  "missing_references": [
+    {
+      "text": "the orders",
+      "start": 337,
+      "end": 347,
+      "type": "definite_noun"
+    },
+    {
+      "text": "The first",
+      "start": 613,
+      "end": 622,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the expected",
+      "start": 716,
+      "end": 728,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that something",
+      "start": 842,
+      "end": 856,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the order",
+      "start": 337,
+      "end": 346,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the package",
+      "start": 929,
+      "end": 940,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that there",
+      "start": 988,
+      "end": 998,
+      "type": "definite_noun"
+    },
+    {
+      "text": "This lack",
+      "start": 1045,
+      "end": 1054,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the tracking",
+      "start": 1213,
+      "end": 1225,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the email",
+      "start": 1246,
+      "end": 1255,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the status",
+      "start": 1389,
+      "end": 1399,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this order",
+      "start": 1403,
+      "end": 1413,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that there",
+      "start": 988,
+      "end": 998,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that led",
+      "start": 1530,
+      "end": 1538,
+      "type": "definite_noun"
+    },
+    {
+      "text": "these issues",
+      "start": 1542,
+      "end": 1554,
+      "type": "definite_noun"
+    },
+    {
+      "text": "these problems",
+      "start": 1594,
+      "end": 1608,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the shipping",
+      "start": 1758,
+      "end": 1770,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the replacement",
+      "start": 1784,
+      "end": 1799,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the status",
+      "start": 1389,
+      "end": 1399,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the report",
+      "start": 1865,
+      "end": 1875,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that was",
+      "start": 1876,
+      "end": 1884,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the delay",
+      "start": 2078,
+      "end": 2087,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the overall",
+      "start": 2132,
+      "end": 2143,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the content",
+      "start": 2376,
+      "end": 2387,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the report",
+      "start": 1865,
+      "end": 1875,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that was",
+      "start": 1876,
+      "end": 1884,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that may",
+      "start": 2461,
+      "end": 2469,
+      "type": "definite_noun"
+    },
+    {
+      "text": "these delays",
+      "start": 2482,
+      "end": 2494,
+      "type": "definite_noun"
+    },
+    {
+      "text": "these issues",
+      "start": 1542,
+      "end": 1554,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this issue",
+      "start": 3119,
+      "end": 3129,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that you",
+      "start": 3188,
+      "end": 3196,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the status",
+      "start": 1389,
+      "end": 1399,
+      "type": "definite_noun"
+    }
+  ],
+  "notes": "The 'report' reference is missing from the conversation history. The 'confirming email' and 'package details' references are also mentioned in previous messages but not again, indicating they might be missing from the conversation."
+}

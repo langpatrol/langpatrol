@@ -1,0 +1,206 @@
+{
+  "expected_issue_codes": [
+    "MISSING_REFERENCE"
+  ],
+  "missing_references": [
+    {
+      "text": "this trip",
+      "start": 25,
+      "end": 34,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the necessary",
+      "start": 72,
+      "end": 85,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the school",
+      "start": 117,
+      "end": 127,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that incorporates",
+      "start": 205,
+      "end": 222,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the school",
+      "start": 117,
+      "end": 127,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that might",
+      "start": 433,
+      "end": 443,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the school",
+      "start": 117,
+      "end": 127,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this will",
+      "start": 700,
+      "end": 709,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the school",
+      "start": 117,
+      "end": 127,
+      "type": "definite_noun"
+    },
+    {
+      "text": "these issues",
+      "start": 1037,
+      "end": 1049,
+      "type": "definite_noun"
+    },
+    {
+      "text": "The trip",
+      "start": 1051,
+      "end": 1059,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that all",
+      "start": 1189,
+      "end": 1197,
+      "type": "definite_noun"
+    },
+    {
+      "text": "those with",
+      "start": 1406,
+      "end": 1416,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the school",
+      "start": 117,
+      "end": 127,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that can",
+      "start": 1651,
+      "end": 1659,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the school",
+      "start": 117,
+      "end": 127,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that might",
+      "start": 433,
+      "end": 443,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the school",
+      "start": 117,
+      "end": 127,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that have",
+      "start": 2408,
+      "end": 2417,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the community",
+      "start": 2447,
+      "end": 2460,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the school",
+      "start": 117,
+      "end": 127,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the school",
+      "start": 117,
+      "end": 127,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that have",
+      "start": 2408,
+      "end": 2417,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that might",
+      "start": 433,
+      "end": 443,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that can",
+      "start": 1651,
+      "end": 1659,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the concepts",
+      "start": 3306,
+      "end": 3318,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that have",
+      "start": 2408,
+      "end": 2417,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the school",
+      "start": 117,
+      "end": 127,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that the",
+      "start": 3470,
+      "end": 3478,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this information",
+      "start": 3742,
+      "end": 3758,
+      "type": "definite_noun"
+    },
+    {
+      "text": "The report",
+      "start": 3868,
+      "end": 3878,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the school",
+      "start": 117,
+      "end": 127,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the school",
+      "start": 117,
+      "end": 127,
+      "type": "definite_noun"
+    }
+  ],
+  "notes": "The reference to 'the report' is missing from the conversation history."
+}

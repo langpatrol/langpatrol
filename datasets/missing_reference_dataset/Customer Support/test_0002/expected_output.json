@@ -1,0 +1,200 @@
+{
+  "expected_issue_codes": [
+    "MISSING_REFERENCE"
+  ],
+  "missing_references": [
+    {
+      "text": "that didn",
+      "start": 316,
+      "end": 325,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the spelling",
+      "start": 419,
+      "end": 431,
+      "type": "definite_noun"
+    },
+    {
+      "text": "The problem",
+      "start": 489,
+      "end": 500,
+      "type": "definite_noun"
+    },
+    {
+      "text": "these steps",
+      "start": 531,
+      "end": 542,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the error",
+      "start": 551,
+      "end": 560,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this situation",
+      "start": 700,
+      "end": 714,
+      "type": "definite_noun"
+    },
+    {
+      "text": "The payment",
+      "start": 783,
+      "end": 794,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this resolved",
+      "start": 827,
+      "end": 840,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the deadline",
+      "start": 852,
+      "end": 864,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this issue",
+      "start": 1098,
+      "end": 1108,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this problem",
+      "start": 1191,
+      "end": 1203,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that might",
+      "start": 1248,
+      "end": 1258,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this error",
+      "start": 1278,
+      "end": 1288,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the issue",
+      "start": 1367,
+      "end": 1376,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this issue",
+      "start": 1098,
+      "end": 1108,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that the",
+      "start": 1785,
+      "end": 1793,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the issue",
+      "start": 1367,
+      "end": 1376,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the current",
+      "start": 2121,
+      "end": 2132,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that this",
+      "start": 2248,
+      "end": 2257,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the root",
+      "start": 2366,
+      "end": 2374,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the issue",
+      "start": 1367,
+      "end": 1376,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the situation",
+      "start": 2434,
+      "end": 2447,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the past",
+      "start": 2601,
+      "end": 2609,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this account",
+      "start": 2662,
+      "end": 2674,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the ordinary",
+      "start": 2695,
+      "end": 2707,
+      "type": "definite_noun"
+    },
+    {
+      "text": "The last",
+      "start": 2709,
+      "end": 2717,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this challenging",
+      "start": 2961,
+      "end": 2977,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this issue",
+      "start": 1098,
+      "end": 1108,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the expected",
+      "start": 3383,
+      "end": 3395,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the main",
+      "start": 3524,
+      "end": 3532,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the future",
+      "start": 3621,
+      "end": 3631,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this matter",
+      "start": 3750,
+      "end": 3761,
+      "type": "definite_noun"
+    }
+  ],
+  "notes": "The user mentioned 'the problem' and 'this issue', but the noun 'report' was not referenced in the conversation history."
+}

@@ -1,0 +1,314 @@
+{
+  "expected_issue_codes": [
+    "MISSING_REFERENCE"
+  ],
+  "missing_references": [
+    {
+      "text": "This conversation",
+      "start": 0,
+      "end": 17,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the ability",
+      "start": 38,
+      "end": 49,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the system",
+      "start": 53,
+      "end": 63,
+      "type": "definite_noun"
+    },
+    {
+      "text": "The user",
+      "start": 135,
+      "end": 143,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that are",
+      "start": 204,
+      "end": 212,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the assistant",
+      "start": 242,
+      "end": 255,
+      "type": "definite_noun"
+    },
+    {
+      "text": "The scenario",
+      "start": 257,
+      "end": 269,
+      "type": "definite_noun"
+    },
+    {
+      "text": "The system",
+      "start": 489,
+      "end": 499,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the reference",
+      "start": 527,
+      "end": 540,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the airline",
+      "start": 544,
+      "end": 555,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the assistant",
+      "start": 242,
+      "end": 255,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the response",
+      "start": 678,
+      "end": 690,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the user",
+      "start": 694,
+      "end": 702,
+      "type": "definite_noun"
+    },
+    {
+      "text": "The conversation",
+      "start": 714,
+      "end": 730,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that there",
+      "start": 759,
+      "end": 769,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the airline",
+      "start": 544,
+      "end": 555,
+      "type": "definite_noun"
+    },
+    {
+      "text": "The system",
+      "start": 489,
+      "end": 499,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this case",
+      "start": 1000,
+      "end": 1009,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the user",
+      "start": 694,
+      "end": 702,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the airline",
+      "start": 544,
+      "end": 555,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the assistant",
+      "start": 242,
+      "end": 255,
+      "type": "definite_noun"
+    },
+    {
+      "text": "The system",
+      "start": 489,
+      "end": 499,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the user",
+      "start": 694,
+      "end": 702,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that was",
+      "start": 1264,
+      "end": 1272,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the assistant",
+      "start": 242,
+      "end": 255,
+      "type": "definite_noun"
+    },
+    {
+      "text": "The test",
+      "start": 1303,
+      "end": 1311,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the system",
+      "start": 53,
+      "end": 63,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the system",
+      "start": 53,
+      "end": 63,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the conversation",
+      "start": 1471,
+      "end": 1487,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the specific",
+      "start": 1509,
+      "end": 1521,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that was",
+      "start": 1264,
+      "end": 1272,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the assistant",
+      "start": 242,
+      "end": 255,
+      "type": "definite_noun"
+    },
+    {
+      "text": "The system",
+      "start": 489,
+      "end": 499,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the reference",
+      "start": 527,
+      "end": 540,
+      "type": "definite_noun"
+    },
+    {
+      "text": "The test",
+      "start": 1303,
+      "end": 1311,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the user",
+      "start": 694,
+      "end": 702,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the assistant",
+      "start": 242,
+      "end": 255,
+      "type": "definite_noun"
+    },
+    {
+      "text": "The conversation",
+      "start": 714,
+      "end": 730,
+      "type": "definite_noun"
+    },
+    {
+      "text": "The system",
+      "start": 489,
+      "end": 499,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the context",
+      "start": 2047,
+      "end": 2058,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the conversation",
+      "start": 1471,
+      "end": 1487,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the specific",
+      "start": 1509,
+      "end": 1521,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that was",
+      "start": 1264,
+      "end": 1272,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the assistant",
+      "start": 242,
+      "end": 255,
+      "type": "definite_noun"
+    },
+    {
+      "text": "The test",
+      "start": 1303,
+      "end": 1311,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that the",
+      "start": 759,
+      "end": 767,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the system",
+      "start": 53,
+      "end": 63,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the user",
+      "start": 694,
+      "end": 702,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the assistant",
+      "start": 242,
+      "end": 255,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this test",
+      "start": 2586,
+      "end": 2595,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the system",
+      "start": 53,
+      "end": 63,
+      "type": "definite_noun"
+    }
+  ],
+  "notes": "The reference to the airline's policy is missing in the conversation history."
+}

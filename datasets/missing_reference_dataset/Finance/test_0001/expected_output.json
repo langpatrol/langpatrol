@@ -1,0 +1,248 @@
+{
+  "expected_issue_codes": [
+    "MISSING_REFERENCE"
+  ],
+  "missing_references": [
+    {
+      "text": "The user",
+      "start": 0,
+      "end": 8,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the reference",
+      "start": 24,
+      "end": 37,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that has",
+      "start": 146,
+      "end": 154,
+      "type": "definite_noun"
+    },
+    {
+      "text": "The transaction",
+      "start": 196,
+      "end": 211,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the user",
+      "start": 395,
+      "end": 403,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that the",
+      "start": 451,
+      "end": 459,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this scenario",
+      "start": 499,
+      "end": 512,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the financial",
+      "start": 514,
+      "end": 527,
+      "type": "definite_noun"
+    },
+    {
+      "text": "those related",
+      "start": 623,
+      "end": 636,
+      "type": "definite_noun"
+    },
+    {
+      "text": "these guidelines",
+      "start": 729,
+      "end": 745,
+      "type": "definite_noun"
+    },
+    {
+      "text": "The background",
+      "start": 806,
+      "end": 820,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this transaction",
+      "start": 836,
+      "end": 852,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the company",
+      "start": 887,
+      "end": 898,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the necessary",
+      "start": 959,
+      "end": 972,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the user",
+      "start": 395,
+      "end": 403,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the specific",
+      "start": 1119,
+      "end": 1131,
+      "type": "definite_noun"
+    },
+    {
+      "text": "these regulations",
+      "start": 1148,
+      "end": 1165,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that might",
+      "start": 1192,
+      "end": 1202,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this situation",
+      "start": 1218,
+      "end": 1232,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that outlines",
+      "start": 1240,
+      "end": 1253,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the details",
+      "start": 1254,
+      "end": 1265,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the investment",
+      "start": 1269,
+      "end": 1283,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the amount",
+      "start": 1295,
+      "end": 1305,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the company",
+      "start": 887,
+      "end": 898,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the initial",
+      "start": 1387,
+      "end": 1398,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the due",
+      "start": 1439,
+      "end": 1446,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the financial",
+      "start": 514,
+      "end": 527,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the legitimacy",
+      "start": 1542,
+      "end": 1556,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the transaction",
+      "start": 1560,
+      "end": 1575,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this task",
+      "start": 1657,
+      "end": 1666,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that your",
+      "start": 1697,
+      "end": 1706,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the user",
+      "start": 395,
+      "end": 403,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the original",
+      "start": 1896,
+      "end": 1908,
+      "type": "definite_noun"
+    },
+    {
+      "text": "those related",
+      "start": 623,
+      "end": 636,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that any",
+      "start": 2029,
+      "end": 2037,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the user",
+      "start": 395,
+      "end": 403,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that the",
+      "start": 451,
+      "end": 459,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that this",
+      "start": 2348,
+      "end": 2357,
+      "type": "definite_noun"
+    },
+    {
+      "text": "The user",
+      "start": 0,
+      "end": 8,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that need",
+      "start": 2493,
+      "end": 2502,
+      "type": "definite_noun"
+    }
+  ],
+  "notes": "The user asked for information about a specific type of report, but it was not mentioned in the conversation history."
+}

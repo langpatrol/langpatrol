@@ -1,0 +1,194 @@
+{
+  "expected_issue_codes": [
+    "MISSING_REFERENCE"
+  ],
+  "missing_references": [
+    {
+      "text": "those described",
+      "start": 136,
+      "end": 151,
+      "type": "definite_noun"
+    },
+    {
+      "text": "The report",
+      "start": 212,
+      "end": 222,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the literature",
+      "start": 477,
+      "end": 491,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the effectiveness",
+      "start": 665,
+      "end": 682,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this new",
+      "start": 686,
+      "end": 694,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the current",
+      "start": 924,
+      "end": 935,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this topic",
+      "start": 950,
+      "end": 960,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that have",
+      "start": 1033,
+      "end": 1042,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the efficacy",
+      "start": 1056,
+      "end": 1068,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this medication",
+      "start": 1083,
+      "end": 1098,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the latest",
+      "start": 1264,
+      "end": 1274,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the potential",
+      "start": 1383,
+      "end": 1396,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this medication",
+      "start": 1083,
+      "end": 1098,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the most",
+      "start": 1488,
+      "end": 1496,
+      "type": "definite_noun"
+    },
+    {
+      "text": "these compare",
+      "start": 1562,
+      "end": 1575,
+      "type": "definite_noun"
+    },
+    {
+      "text": "those reported",
+      "start": 1579,
+      "end": 1593,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that the",
+      "start": 1708,
+      "end": 1716,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the following",
+      "start": 1732,
+      "end": 1745,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the following information",
+      "start": 1732,
+      "end": 1757,
+      "type": "forward_reference"
+    },
+    {
+      "text": "the potential",
+      "start": 1383,
+      "end": 1396,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this new",
+      "start": 686,
+      "end": 694,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the complexity",
+      "start": 2530,
+      "end": 2544,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this case",
+      "start": 2548,
+      "end": 2557,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the past",
+      "start": 2698,
+      "end": 2706,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that you",
+      "start": 2971,
+      "end": 2979,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this new",
+      "start": 686,
+      "end": 694,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that demonstrate",
+      "start": 3130,
+      "end": 3146,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the report",
+      "start": 1713,
+      "end": 1723,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the current",
+      "start": 924,
+      "end": 935,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this topic",
+      "start": 950,
+      "end": 960,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this matter",
+      "start": 3653,
+      "end": 3664,
+      "type": "definite_noun"
+    }
+  ],
+  "notes": "The reference to Dr. Johnson is missing from the conversation history, and Jane Smith was not mentioned until the prompt."
+}

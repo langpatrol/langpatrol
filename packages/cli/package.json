@@ -2,7 +2,7 @@
   "name": "langpatrol-cli",
   "version": "0.1.3",
   "description": "CLI tool for analyzing prompts with LangPatrol",
-  "license": "MIT",
+  "license": "Elastic License 2.0",
   "type": "module",
   "bin": {
     "langpatrol": "./bin/langpatrol.js"
@@ -31,4 +31,3 @@
     "access": "public"
   }
 }
-

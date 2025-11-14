@@ -1,0 +1,164 @@
+{
+  "expected_issue_codes": [
+    "MISSING_REFERENCE"
+  ],
+  "missing_references": [
+    {
+      "text": "this vacation",
+      "start": 99,
+      "end": 112,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the airport",
+      "start": 221,
+      "end": 232,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that has",
+      "start": 233,
+      "end": 241,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the city",
+      "start": 252,
+      "end": 260,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the weekend",
+      "start": 329,
+      "end": 340,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this time",
+      "start": 555,
+      "end": 564,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that everything",
+      "start": 818,
+      "end": 833,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that your",
+      "start": 894,
+      "end": 903,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the new",
+      "start": 1000,
+      "end": 1007,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the details",
+      "start": 1079,
+      "end": 1090,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the environmental",
+      "start": 1272,
+      "end": 1289,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the airline",
+      "start": 1325,
+      "end": 1336,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the largest",
+      "start": 1356,
+      "end": 1367,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the world",
+      "start": 1412,
+      "end": 1421,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the news",
+      "start": 1711,
+      "end": 1719,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the upcoming",
+      "start": 1726,
+      "end": 1738,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that the",
+      "start": 1776,
+      "end": 1784,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the latest",
+      "start": 1878,
+      "end": 1888,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that everything",
+      "start": 818,
+      "end": 833,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the total",
+      "start": 2106,
+      "end": 2115,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the tickets",
+      "start": 2124,
+      "end": 2135,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the airport",
+      "start": 221,
+      "end": 232,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that meet",
+      "start": 2340,
+      "end": 2349,
+      "type": "definite_noun"
+    },
+    {
+      "text": "these requirements",
+      "start": 2350,
+      "end": 2368,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that serve",
+      "start": 2436,
+      "end": 2446,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that offer",
+      "start": 2631,
+      "end": 2641,
+      "type": "definite_noun"
+    }
+  ],
+  "notes": "The reference to the report is missing from the conversation history. The reference to data is also missing, but it was mentioned in a previous message."
+}

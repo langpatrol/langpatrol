@@ -1,0 +1,296 @@
+{
+  "expected_issue_codes": [
+    "MISSING_REFERENCE"
+  ],
+  "missing_references": [
+    {
+      "text": "the next",
+      "start": 149,
+      "end": 157,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the issue",
+      "start": 318,
+      "end": 327,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the process",
+      "start": 393,
+      "end": 404,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this might",
+      "start": 576,
+      "end": 586,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the changes",
+      "start": 753,
+      "end": 764,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the number",
+      "start": 967,
+      "end": 977,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the support",
+      "start": 1292,
+      "end": 1303,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this time",
+      "start": 1335,
+      "end": 1344,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the issue",
+      "start": 318,
+      "end": 327,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the self-service",
+      "start": 1805,
+      "end": 1821,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the code",
+      "start": 1878,
+      "end": 1886,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this situation",
+      "start": 2008,
+      "end": 2022,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the future",
+      "start": 2026,
+      "end": 2036,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the resolution",
+      "start": 2062,
+      "end": 2076,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this issue",
+      "start": 2099,
+      "end": 2109,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the fee",
+      "start": 2295,
+      "end": 2302,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that might",
+      "start": 2376,
+      "end": 2386,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the future",
+      "start": 2026,
+      "end": 2036,
+      "type": "definite_noun"
+    },
+    {
+      "text": "those situations",
+      "start": 2536,
+      "end": 2552,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the future",
+      "start": 2026,
+      "end": 2036,
+      "type": "definite_noun"
+    },
+    {
+      "text": "these topics",
+      "start": 2722,
+      "end": 2734,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this matter",
+      "start": 2837,
+      "end": 2848,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the background",
+      "start": 2861,
+      "end": 2875,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the level",
+      "start": 2991,
+      "end": 3000,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this instance",
+      "start": 3047,
+      "end": 3060,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the process",
+      "start": 393,
+      "end": 404,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the potential",
+      "start": 3471,
+      "end": 3484,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this issue",
+      "start": 2099,
+      "end": 2109,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the issue",
+      "start": 318,
+      "end": 327,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this issue",
+      "start": 2099,
+      "end": 2109,
+      "type": "definite_noun"
+    },
+    {
+      "text": "these topics",
+      "start": 2722,
+      "end": 2734,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this situation",
+      "start": 2008,
+      "end": 2022,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that comes",
+      "start": 4009,
+      "end": 4019,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the system",
+      "start": 4098,
+      "end": 4108,
+      "type": "definite_noun"
+    },
+    {
+      "text": "This experience",
+      "start": 4322,
+      "end": 4337,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that sometimes",
+      "start": 4358,
+      "end": 4372,
+      "type": "definite_noun"
+    },
+    {
+      "text": "these kinds",
+      "start": 4426,
+      "end": 4437,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that comes",
+      "start": 4009,
+      "end": 4019,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the customer",
+      "start": 4650,
+      "end": 4662,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the issue",
+      "start": 318,
+      "end": 327,
+      "type": "definite_noun"
+    },
+    {
+      "text": "This experience",
+      "start": 4322,
+      "end": 4337,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the importance",
+      "start": 4817,
+      "end": 4831,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this documentation",
+      "start": 5286,
+      "end": 5304,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the self-service",
+      "start": 1805,
+      "end": 1821,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this issue",
+      "start": 2099,
+      "end": 2109,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this issue",
+      "start": 2099,
+      "end": 2109,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that your",
+      "start": 5876,
+      "end": 5885,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this issue",
+      "start": 2099,
+      "end": 2109,
+      "type": "definite_noun"
+    }
+  ],
+  "notes": "The reference to 'the report' is missing in the conversation history."
+}

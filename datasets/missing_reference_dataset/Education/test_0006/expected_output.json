@@ -1,0 +1,218 @@
+{
+  "expected_issue_codes": [
+    "MISSING_REFERENCE"
+  ],
+  "missing_references": [
+    {
+      "text": "the required",
+      "start": 130,
+      "end": 142,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the specific",
+      "start": 387,
+      "end": 399,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the letter",
+      "start": 417,
+      "end": 427,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the financial",
+      "start": 838,
+      "end": 851,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that come",
+      "start": 864,
+      "end": 873,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that proves",
+      "start": 1017,
+      "end": 1028,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the program",
+      "start": 1086,
+      "end": 1097,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the National",
+      "start": 1155,
+      "end": 1167,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the Federal",
+      "start": 1204,
+      "end": 1215,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that shows",
+      "start": 1359,
+      "end": 1369,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that they",
+      "start": 1545,
+      "end": 1554,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the necessary",
+      "start": 1573,
+      "end": 1586,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that the",
+      "start": 1545,
+      "end": 1553,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the issue",
+      "start": 1736,
+      "end": 1745,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that student",
+      "start": 1766,
+      "end": 1778,
+      "type": "definite_noun"
+    },
+    {
+      "text": "This can",
+      "start": 1909,
+      "end": 1917,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the system",
+      "start": 1993,
+      "end": 2003,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the Department",
+      "start": 2087,
+      "end": 2101,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the application",
+      "start": 2145,
+      "end": 2160,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the correct",
+      "start": 2234,
+      "end": 2245,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the necessary",
+      "start": 1573,
+      "end": 1586,
+      "type": "definite_noun"
+    },
+    {
+      "text": "This includes",
+      "start": 2299,
+      "end": 2312,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that missing",
+      "start": 2626,
+      "end": 2638,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the deferment",
+      "start": 2656,
+      "end": 2669,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this time",
+      "start": 2740,
+      "end": 2749,
+      "type": "definite_noun"
+    },
+    {
+      "text": "these potential",
+      "start": 3010,
+      "end": 3025,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the process",
+      "start": 3115,
+      "end": 3126,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the following",
+      "start": 3183,
+      "end": 3196,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the consequences",
+      "start": 3468,
+      "end": 3484,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the deferment",
+      "start": 2656,
+      "end": 2669,
+      "type": "definite_noun"
+    },
+    {
+      "text": "these pitfalls",
+      "start": 3681,
+      "end": 3695,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the role",
+      "start": 3972,
+      "end": 3980,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the student",
+      "start": 4000,
+      "end": 4011,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this form",
+      "start": 4077,
+      "end": 4086,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the Department",
+      "start": 2087,
+      "end": 2101,
+      "type": "definite_noun"
+    }
+  ],
+  "notes": "The user is missing the specific requirements mentioned in their loan servicer's letter, which should be included in the application package."
+}

@@ -1,0 +1,38 @@
+{
+  "expected_issue_codes": [
+    "MISSING_REFERENCE"
+  ],
+  "missing_references": [
+    {
+      "text": "the report",
+      "start": 1943,
+      "end": 1953,
+      "type": "definite_noun"
+    },
+    {
+      "text": "Dr. Smith's findings",
+      "start": 50,
+      "end": 60,
+      "type": "proper_noun"
+    },
+    {
+      "text": "Science",
+      "start": 1820,
+      "end": 1827,
+      "type": "title_case"
+    },
+    {
+      "text": "Nature Medicine",
+      "start": 324,
+      "end": 339,
+      "type": "title_case"
+    },
+    {
+      "text": "the FDA's review process",
+      "start": 507,
+      "end": 531,
+      "type": "definite_noun"
+    }
+  ],
+  "notes": "The report will not include any specific information on the report's own methodology or data quality. The user is missing references for Dr. Smith's findings and the FDA's review process."
+}

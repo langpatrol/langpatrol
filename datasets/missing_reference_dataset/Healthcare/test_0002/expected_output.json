@@ -1,0 +1,260 @@
+{
+  "expected_issue_codes": [
+    "MISSING_REFERENCE"
+  ],
+  "missing_references": [
+    {
+      "text": "that was",
+      "start": 53,
+      "end": 61,
+      "type": "definite_noun"
+    },
+    {
+      "text": "The medication",
+      "start": 120,
+      "end": 134,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that affects",
+      "start": 194,
+      "end": 206,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this condition",
+      "start": 248,
+      "end": 262,
+      "type": "definite_noun"
+    },
+    {
+      "text": "The recent",
+      "start": 383,
+      "end": 393,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the medical",
+      "start": 441,
+      "end": 452,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the Journal",
+      "start": 562,
+      "end": 573,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that highlights",
+      "start": 594,
+      "end": 609,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the medication",
+      "start": 610,
+      "end": 624,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the full",
+      "start": 686,
+      "end": 694,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this study",
+      "start": 786,
+      "end": 796,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the date",
+      "start": 829,
+      "end": 837,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the study",
+      "start": 847,
+      "end": 856,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the number",
+      "start": 858,
+      "end": 868,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the full",
+      "start": 686,
+      "end": 694,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the report",
+      "start": 973,
+      "end": 983,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the methodology",
+      "start": 1036,
+      "end": 1051,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the researchers",
+      "start": 1087,
+      "end": 1102,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the title",
+      "start": 1158,
+      "end": 1167,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the article",
+      "start": 1171,
+      "end": 1182,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the report",
+      "start": 973,
+      "end": 983,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the names",
+      "start": 1209,
+      "end": 1218,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the lead",
+      "start": 1222,
+      "end": 1230,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the study",
+      "start": 847,
+      "end": 856,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the field",
+      "start": 1314,
+      "end": 1323,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the nature",
+      "start": 1446,
+      "end": 1456,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the years",
+      "start": 1525,
+      "end": 1534,
+      "type": "definite_noun"
+    },
+    {
+      "text": "This recent",
+      "start": 1618,
+      "end": 1629,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the Grand",
+      "start": 1909,
+      "end": 1918,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that specializes",
+      "start": 1993,
+      "end": 2009,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the cultural",
+      "start": 2038,
+      "end": 2050,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that align",
+      "start": 2194,
+      "end": 2204,
+      "type": "definite_noun"
+    },
+    {
+      "text": "these values",
+      "start": 2210,
+      "end": 2222,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the same",
+      "start": 2244,
+      "end": 2252,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that you",
+      "start": 2274,
+      "end": 2282,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the study",
+      "start": 847,
+      "end": 856,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the requested",
+      "start": 2341,
+      "end": 2354,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the full",
+      "start": 686,
+      "end": 694,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the report",
+      "start": 973,
+      "end": 983,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that might",
+      "start": 2680,
+      "end": 2690,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this new",
+      "start": 2742,
+      "end": 2750,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the broader",
+      "start": 2826,
+      "end": 2837,
+      "type": "definite_noun"
+    }
+  ],
+  "notes": "The reference to the new medication's report is missing because it was never mentioned in the conversation history."
+}

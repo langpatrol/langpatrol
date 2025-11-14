@@ -1,0 +1,26 @@
+[
+  {
+    "role": "user",
+    "content": "I'm scheduling a meeting with our new pharma partner for next quarter."
+  },
+  {
+    "role": "assistant",
+    "content": "That sounds great! Can you provide me with their contact information?"
+  },
+  {
+    "role": "user",
+    "content": "I need to review the partnership proposal before we discuss details. Can you send it over?"
+  },
+  {
+    "role": "assistant",
+    "content": "Here is the proposal, but I noticed our team lead is missing from the attendee list."
+  },
+  {
+    "role": "user",
+    "content": "That's unusual. Let me check on that real quick."
+  },
+  {
+    "role": "assistant",
+    "content": "I found out that they were unexpectedly called away for a meeting with another company."
+  }
+]

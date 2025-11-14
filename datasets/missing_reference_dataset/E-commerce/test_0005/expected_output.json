@@ -1,0 +1,224 @@
+{
+  "expected_issue_codes": [
+    "MISSING_REFERENCE"
+  ],
+  "missing_references": [
+    {
+      "text": "the meeting",
+      "start": 24,
+      "end": 35,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the past",
+      "start": 204,
+      "end": 212,
+      "type": "definite_noun"
+    },
+    {
+      "text": "As discussed earlier",
+      "start": 222,
+      "end": 242,
+      "type": "deictic"
+    },
+    {
+      "text": "the increasing",
+      "start": 249,
+      "end": 263,
+      "type": "definite_noun"
+    },
+    {
+      "text": "As discussed earlier",
+      "start": 222,
+      "end": 242,
+      "type": "deictic"
+    },
+    {
+      "text": "the report",
+      "start": 494,
+      "end": 504,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that was",
+      "start": 505,
+      "end": 513,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that discussion",
+      "start": 534,
+      "end": 549,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the section",
+      "start": 566,
+      "end": 577,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that data",
+      "start": 664,
+      "end": 673,
+      "type": "definite_noun"
+    },
+    {
+      "text": "The previous",
+      "start": 1077,
+      "end": 1089,
+      "type": "definite_noun"
+    },
+    {
+      "text": "The previous report",
+      "start": 1077,
+      "end": 1096,
+      "type": "deictic_noun"
+    },
+    {
+      "text": "the pilot",
+      "start": 1132,
+      "end": 1141,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the same",
+      "start": 1201,
+      "end": 1209,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the loyalty",
+      "start": 1254,
+      "end": 1265,
+      "type": "definite_noun"
+    },
+    {
+      "text": "those thresholds",
+      "start": 1347,
+      "end": 1363,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the new",
+      "start": 1452,
+      "end": 1459,
+      "type": "definite_noun"
+    },
+    {
+      "text": "those targets",
+      "start": 1582,
+      "end": 1595,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that impact",
+      "start": 1743,
+      "end": 1754,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the delays",
+      "start": 1882,
+      "end": 1892,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that may",
+      "start": 2121,
+      "end": 2129,
+      "type": "definite_noun"
+    },
+    {
+      "text": "these delays",
+      "start": 2149,
+      "end": 2161,
+      "type": "definite_noun"
+    },
+    {
+      "text": "these initiatives",
+      "start": 2264,
+      "end": 2281,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this opportunity",
+      "start": 2349,
+      "end": 2365,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that measure",
+      "start": 2501,
+      "end": 2513,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the success",
+      "start": 2514,
+      "end": 2525,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the COVID-19",
+      "start": 2848,
+      "end": 2860,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this topic",
+      "start": 2983,
+      "end": 2993,
+      "type": "definite_noun"
+    },
+    {
+      "text": "those findings",
+      "start": 3229,
+      "end": 3243,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that were",
+      "start": 3244,
+      "end": 3253,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the new",
+      "start": 1452,
+      "end": 1459,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that illustrate",
+      "start": 3376,
+      "end": 3391,
+      "type": "definite_noun"
+    },
+    {
+      "text": "these strategies",
+      "start": 3455,
+      "end": 3471,
+      "type": "definite_noun"
+    },
+    {
+      "text": "This would",
+      "start": 3497,
+      "end": 3507,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that others",
+      "start": 3561,
+      "end": 3572,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the recent",
+      "start": 3696,
+      "end": 3706,
+      "type": "definite_noun"
+    }
+  ],
+  "notes": "The references to 'customer feedback trends' and 'previous report's findings' were not explicitly mentioned in the conversation history, so they should be flagged as missing."
+}

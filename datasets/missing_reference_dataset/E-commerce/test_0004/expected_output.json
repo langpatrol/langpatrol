@@ -1,0 +1,248 @@
+{
+  "expected_issue_codes": [
+    "MISSING_REFERENCE"
+  ],
+  "missing_references": [
+    {
+      "text": "that specializes",
+      "start": 72,
+      "end": 88,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this growing",
+      "start": 294,
+      "end": 306,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the MacBook",
+      "start": 439,
+      "end": 450,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the best",
+      "start": 487,
+      "end": 495,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the specific",
+      "start": 567,
+      "end": 579,
+      "type": "definite_noun"
+    },
+    {
+      "text": "As discussed earlier",
+      "start": 611,
+      "end": 631,
+      "type": "deictic"
+    },
+    {
+      "text": "that can",
+      "start": 649,
+      "end": 657,
+      "type": "definite_noun"
+    },
+    {
+      "text": "The previous",
+      "start": 750,
+      "end": 762,
+      "type": "definite_noun"
+    },
+    {
+      "text": "The previous report",
+      "start": 750,
+      "end": 769,
+      "type": "deictic_noun"
+    },
+    {
+      "text": "these professional",
+      "start": 1192,
+      "end": 1210,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this growing",
+      "start": 294,
+      "end": 306,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that our",
+      "start": 1270,
+      "end": 1278,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the specific",
+      "start": 567,
+      "end": 579,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that can",
+      "start": 649,
+      "end": 657,
+      "type": "definite_noun"
+    },
+    {
+      "text": "This means",
+      "start": 1503,
+      "end": 1513,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that require",
+      "start": 1788,
+      "end": 1800,
+      "type": "definite_noun"
+    },
+    {
+      "text": "these tools",
+      "start": 2043,
+      "end": 2054,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that can",
+      "start": 649,
+      "end": 657,
+      "type": "definite_noun"
+    },
+    {
+      "text": "The previous",
+      "start": 750,
+      "end": 762,
+      "type": "definite_noun"
+    },
+    {
+      "text": "The previous report",
+      "start": 750,
+      "end": 769,
+      "type": "deictic_noun"
+    },
+    {
+      "text": "the options",
+      "start": 2309,
+      "end": 2320,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that fits",
+      "start": 2351,
+      "end": 2360,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the difference",
+      "start": 2413,
+      "end": 2427,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the standard",
+      "start": 2436,
+      "end": 2448,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the MacBook",
+      "start": 439,
+      "end": 450,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the following",
+      "start": 2574,
+      "end": 2587,
+      "type": "definite_noun"
+    },
+    {
+      "text": "The main",
+      "start": 2592,
+      "end": 2600,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the standard",
+      "start": 2436,
+      "end": 2448,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the MacBook",
+      "start": 439,
+      "end": 450,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the different",
+      "start": 2711,
+      "end": 2724,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that are",
+      "start": 2841,
+      "end": 2849,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that are",
+      "start": 2841,
+      "end": 2849,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the report",
+      "start": 3207,
+      "end": 3217,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the report mentioned",
+      "start": 3207,
+      "end": 3227,
+      "type": "positional_reference"
+    },
+    {
+      "text": "that might",
+      "start": 3273,
+      "end": 3283,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that are",
+      "start": 2841,
+      "end": 2849,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that meets",
+      "start": 3543,
+      "end": 3553,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the right",
+      "start": 3717,
+      "end": 3726,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that will",
+      "start": 3789,
+      "end": 3798,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this area",
+      "start": 3848,
+      "end": 3857,
+      "type": "definite_noun"
+    }
+  ],
+  "notes": "The reference to the 'previous report' is missing its antecedent in the conversation history."
+}

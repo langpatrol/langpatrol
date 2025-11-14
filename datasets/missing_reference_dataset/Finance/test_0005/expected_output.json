@@ -1,0 +1,224 @@
+{
+  "expected_issue_codes": [
+    "MISSING_REFERENCE"
+  ],
+  "missing_references": [
+    {
+      "text": "the quarterly",
+      "start": 25,
+      "end": 38,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the market",
+      "start": 214,
+      "end": 224,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the past",
+      "start": 281,
+      "end": 289,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this quarter",
+      "start": 431,
+      "end": 443,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this goal",
+      "start": 509,
+      "end": 518,
+      "type": "definite_noun"
+    },
+    {
+      "text": "these initiatives",
+      "start": 738,
+      "end": 755,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the previous",
+      "start": 767,
+      "end": 779,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the previous report",
+      "start": 767,
+      "end": 786,
+      "type": "deictic_noun"
+    },
+    {
+      "text": "these initiatives",
+      "start": 738,
+      "end": 755,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that our",
+      "start": 1142,
+      "end": 1150,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that prioritizes",
+      "start": 1369,
+      "end": 1385,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that offer",
+      "start": 1840,
+      "end": 1850,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the key",
+      "start": 1917,
+      "end": 1924,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the previous",
+      "start": 767,
+      "end": 779,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the previous report",
+      "start": 767,
+      "end": 786,
+      "type": "deictic_noun"
+    },
+    {
+      "text": "this quarter",
+      "start": 431,
+      "end": 443,
+      "type": "definite_noun"
+    },
+    {
+      "text": "This means",
+      "start": 2154,
+      "end": 2164,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that every",
+      "start": 2188,
+      "end": 2198,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the ROI",
+      "start": 2335,
+      "end": 2342,
+      "type": "definite_noun"
+    },
+    {
+      "text": "This may",
+      "start": 2416,
+      "end": 2424,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that the",
+      "start": 2559,
+      "end": 2567,
+      "type": "definite_noun"
+    },
+    {
+      "text": "These projections",
+      "start": 2658,
+      "end": 2675,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the industry",
+      "start": 2748,
+      "end": 2760,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this assumption",
+      "start": 2779,
+      "end": 2794,
+      "type": "definite_noun"
+    },
+    {
+      "text": "these inflation",
+      "start": 2931,
+      "end": 2946,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this quarter",
+      "start": 431,
+      "end": 443,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that our",
+      "start": 1142,
+      "end": 1150,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the following",
+      "start": 3313,
+      "end": 3326,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the next",
+      "start": 3386,
+      "end": 3394,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that our",
+      "start": 1142,
+      "end": 1150,
+      "type": "definite_noun"
+    },
+    {
+      "text": "these requirements",
+      "start": 3597,
+      "end": 3615,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that may",
+      "start": 3788,
+      "end": 3796,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that your",
+      "start": 4331,
+      "end": 4340,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the assumptions",
+      "start": 4386,
+      "end": 4401,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that may",
+      "start": 3788,
+      "end": 3796,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this matter",
+      "start": 4833,
+      "end": 4844,
+      "type": "definite_noun"
+    }
+  ],
+  "notes": "The reference to 'previous report' is missing its antecedent in the conversation history."
+}

@@ -1,0 +1,272 @@
+{
+  "expected_issue_codes": [
+    "MISSING_REFERENCE"
+  ],
+  "missing_references": [
+    {
+      "text": "the purchase",
+      "start": 29,
+      "end": 41,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the midst",
+      "start": 124,
+      "end": 133,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the right",
+      "start": 203,
+      "end": 212,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the past",
+      "start": 333,
+      "end": 341,
+      "type": "definite_noun"
+    },
+    {
+      "text": "The number",
+      "start": 395,
+      "end": 405,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the total",
+      "start": 580,
+      "end": 589,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the quarter",
+      "start": 613,
+      "end": 624,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that includes",
+      "start": 701,
+      "end": 714,
+      "type": "definite_noun"
+    },
+    {
+      "text": "these key",
+      "start": 715,
+      "end": 724,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the past",
+      "start": 333,
+      "end": 341,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the number",
+      "start": 775,
+      "end": 785,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the total",
+      "start": 580,
+      "end": 589,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that the",
+      "start": 878,
+      "end": 886,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the laptops",
+      "start": 906,
+      "end": 917,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the timely",
+      "start": 1108,
+      "end": 1118,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the equipment",
+      "start": 1131,
+      "end": 1144,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the availability",
+      "start": 1238,
+      "end": 1254,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the installation",
+      "start": 1258,
+      "end": 1274,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this date",
+      "start": 1284,
+      "end": 1293,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the sales",
+      "start": 1345,
+      "end": 1354,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that was",
+      "start": 1367,
+      "end": 1375,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that reflects",
+      "start": 1504,
+      "end": 1517,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the average",
+      "start": 1782,
+      "end": 1793,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the total",
+      "start": 580,
+      "end": 589,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the overall",
+      "start": 1933,
+      "end": 1944,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this further",
+      "start": 2001,
+      "end": 2013,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the first",
+      "start": 2241,
+      "end": 2250,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that the",
+      "start": 878,
+      "end": 886,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the following must",
+      "start": 2332,
+      "end": 2350,
+      "type": "forward_reference"
+    },
+    {
+      "text": "the warranty",
+      "start": 883,
+      "end": 895,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the laptops",
+      "start": 906,
+      "end": 917,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the installation",
+      "start": 1258,
+      "end": 1274,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the sales",
+      "start": 1345,
+      "end": 1354,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the requested",
+      "start": 2545,
+      "end": 2558,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the payment",
+      "start": 2608,
+      "end": 2619,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this order",
+      "start": 2630,
+      "end": 2640,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that the",
+      "start": 878,
+      "end": 886,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the details",
+      "start": 2874,
+      "end": 2885,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the order",
+      "start": 2891,
+      "end": 2900,
+      "type": "definite_noun"
+    },
+    {
+      "text": "This will",
+      "start": 2915,
+      "end": 2924,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the purchase",
+      "start": 29,
+      "end": 41,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the specifications",
+      "start": 2987,
+      "end": 3005,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this matter",
+      "start": 3079,
+      "end": 3090,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the perfect",
+      "start": 3211,
+      "end": 3222,
+      "type": "definite_noun"
+    }
+  ],
+  "notes": "The user referenced a 'report' that was not mentioned in the conversation history, indicating a missing reference."
+}

@@ -1,0 +1,10 @@
+[
+  {
+    "role": "user",
+    "content": "Hi, I'm scheduling an appointment for my follow-up test. Can you help me with that?"
+  },
+  {
+    "role": "assistant",
+    "content": "Of course! What date and time were you thinking of?"
+  }
+]

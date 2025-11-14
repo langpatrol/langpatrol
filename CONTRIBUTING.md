@@ -33,9 +33,9 @@ pnpm test
 This is a pnpm workspace monorepo:
 
 - `packages/engine` - Core analysis engine (Elastic License 2.0)
-- `packages/langpatrol` - Public SDK (MIT)
-- `packages/cli` - Command-line tool (MIT)
-- `packages/rules` - Shared lexicons and patterns (MIT)
+- `packages/langpatrol` - Public SDK (Elastic License 2.0)
+- `packages/cli` - Command-line tool (Elastic License 2.0)
+- `packages/rules` - Shared lexicons and patterns (Elastic License 2.0)
 - `apps/devserver` - Express API for local testing
 - `apps/devui` - React/Vite UI for interactive testing
 
@@ -171,7 +171,7 @@ Rules detect prompt issues locally without external API calls. When adding a new
 
 By contributing, you agree that your contributions will be licensed under the same license as the package you're modifying:
 - `@langpatrol/engine`: Elastic License 2.0
-- All other packages: MIT
+- All other packages: Elastic License 2.0
 
 See [LICENSE-FAQ.md](./docs/LICENSE-FAQ.md) for details.
 

@@ -1,0 +1,188 @@
+{
+  "expected_issue_codes": [
+    "MISSING_REFERENCE"
+  ],
+  "missing_references": [
+    {
+      "text": "the correct",
+      "start": 85,
+      "end": 96,
+      "type": "definite_noun"
+    },
+    {
+      "text": "As discussed earlier",
+      "start": 104,
+      "end": 124,
+      "type": "deictic"
+    },
+    {
+      "text": "the past",
+      "start": 151,
+      "end": 159,
+      "type": "definite_noun"
+    },
+    {
+      "text": "The issue",
+      "start": 382,
+      "end": 391,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the email",
+      "start": 516,
+      "end": 525,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the problem",
+      "start": 546,
+      "end": 557,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the situation",
+      "start": 665,
+      "end": 678,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the usual",
+      "start": 959,
+      "end": 968,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the process",
+      "start": 1048,
+      "end": 1059,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this issue",
+      "start": 1144,
+      "end": 1154,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that would",
+      "start": 1259,
+      "end": 1269,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the solutions",
+      "start": 1381,
+      "end": 1394,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this report",
+      "start": 1574,
+      "end": 1585,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that need",
+      "start": 1689,
+      "end": 1698,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this issue",
+      "start": 1144,
+      "end": 1154,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this issue",
+      "start": 1144,
+      "end": 1154,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that might",
+      "start": 1891,
+      "end": 1901,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the problem",
+      "start": 546,
+      "end": 557,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the features",
+      "start": 2292,
+      "end": 2304,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this issue",
+      "start": 1144,
+      "end": 1154,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this issue",
+      "start": 1144,
+      "end": 1154,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that might",
+      "start": 1891,
+      "end": 1901,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the activation",
+      "start": 2875,
+      "end": 2889,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that have",
+      "start": 2989,
+      "end": 2998,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the past",
+      "start": 151,
+      "end": 159,
+      "type": "definite_noun"
+    },
+    {
+      "text": "This would",
+      "start": 3029,
+      "end": 3039,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the scope",
+      "start": 3069,
+      "end": 3078,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the problem",
+      "start": 546,
+      "end": 557,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this information",
+      "start": 3348,
+      "end": 3364,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this matter",
+      "start": 3499,
+      "end": 3510,
+      "type": "definite_noun"
+    }
+  ],
+  "notes": "The user is missing specific references to the report and email address in their message. The assistant should indicate that these references are missing and provide guidance on how to proceed with troubleshooting."
+}

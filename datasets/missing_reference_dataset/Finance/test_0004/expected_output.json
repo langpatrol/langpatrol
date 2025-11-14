@@ -1,0 +1,260 @@
+{
+  "expected_issue_codes": [
+    "MISSING_REFERENCE"
+  ],
+  "missing_references": [
+    {
+      "text": "the trends",
+      "start": 25,
+      "end": 35,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the past",
+      "start": 73,
+      "end": 81,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this data",
+      "start": 138,
+      "end": 147,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that aimed",
+      "start": 229,
+      "end": 239,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this process",
+      "start": 312,
+      "end": 324,
+      "type": "definite_noun"
+    },
+    {
+      "text": "The goal",
+      "start": 463,
+      "end": 471,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the quarterly",
+      "start": 593,
+      "end": 606,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that there",
+      "start": 636,
+      "end": 646,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the specific",
+      "start": 737,
+      "end": 749,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that shows",
+      "start": 771,
+      "end": 781,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this trend",
+      "start": 782,
+      "end": 792,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this surge",
+      "start": 845,
+      "end": 855,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the new",
+      "start": 1119,
+      "end": 1126,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this year",
+      "start": 1166,
+      "end": 1175,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the key",
+      "start": 1187,
+      "end": 1194,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this campaign",
+      "start": 1222,
+      "end": 1235,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the results",
+      "start": 1341,
+      "end": 1352,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this campaign",
+      "start": 1222,
+      "end": 1235,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the revised",
+      "start": 1405,
+      "end": 1416,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that were",
+      "start": 1439,
+      "end": 1448,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the key",
+      "start": 1187,
+      "end": 1194,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that meeting",
+      "start": 1554,
+      "end": 1566,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the next",
+      "start": 1614,
+      "end": 1622,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the predicted",
+      "start": 1655,
+      "end": 1668,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the expected",
+      "start": 1704,
+      "end": 1716,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the budget",
+      "start": 1832,
+      "end": 1842,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the next",
+      "start": 1614,
+      "end": 1622,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that were",
+      "start": 1439,
+      "end": 1448,
+      "type": "definite_noun"
+    },
+    {
+      "text": "these decisions",
+      "start": 2084,
+      "end": 2099,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the following",
+      "start": 2211,
+      "end": 2224,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the following information",
+      "start": 2211,
+      "end": 2236,
+      "type": "forward_reference"
+    },
+    {
+      "text": "the past",
+      "start": 73,
+      "end": 81,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the key",
+      "start": 1187,
+      "end": 1194,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the new",
+      "start": 1119,
+      "end": 1126,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this year",
+      "start": 1166,
+      "end": 1175,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the revised",
+      "start": 1405,
+      "end": 1416,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the next",
+      "start": 1614,
+      "end": 1622,
+      "type": "definite_noun"
+    },
+    {
+      "text": "The finalized",
+      "start": 2567,
+      "end": 2580,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the next",
+      "start": 1614,
+      "end": 1622,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that demonstrate",
+      "start": 2779,
+      "end": 2795,
+      "type": "definite_noun"
+    },
+    {
+      "text": "This would",
+      "start": 2879,
+      "end": 2889,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the marketplace",
+      "start": 2991,
+      "end": 3006,
+      "type": "definite_noun"
+    }
+  ],
+  "notes": "The user is missing a clear reference to the 'previous report' mentioned in the conversation history."
+}

@@ -1,0 +1,188 @@
+{
+  "expected_issue_codes": [
+    "MISSING_REFERENCE"
+  ],
+  "missing_references": [
+    {
+      "text": "the next",
+      "start": 48,
+      "end": 56,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the security",
+      "start": 104,
+      "end": 116,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the device",
+      "start": 129,
+      "end": 139,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that can",
+      "start": 384,
+      "end": 392,
+      "type": "definite_noun"
+    },
+    {
+      "text": "These malicious",
+      "start": 460,
+      "end": 475,
+      "type": "definite_noun"
+    },
+    {
+      "text": "these threats",
+      "start": 608,
+      "end": 621,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the common",
+      "start": 651,
+      "end": 661,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that can",
+      "start": 384,
+      "end": 392,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the different",
+      "start": 779,
+      "end": 792,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that are",
+      "start": 810,
+      "end": 818,
+      "type": "definite_noun"
+    },
+    {
+      "text": "these threats",
+      "start": 608,
+      "end": 621,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the authenticity",
+      "start": 1171,
+      "end": 1187,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that indicate",
+      "start": 1286,
+      "end": 1299,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that the",
+      "start": 1357,
+      "end": 1365,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the seller",
+      "start": 1391,
+      "end": 1401,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the actual",
+      "start": 1408,
+      "end": 1418,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the device",
+      "start": 129,
+      "end": 139,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that provide",
+      "start": 1493,
+      "end": 1505,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that offer",
+      "start": 1731,
+      "end": 1741,
+      "type": "definite_noun"
+    },
+    {
+      "text": "these features",
+      "start": 1742,
+      "end": 1756,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that some",
+      "start": 2074,
+      "end": 2083,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this feature",
+      "start": 2113,
+      "end": 2125,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this feature",
+      "start": 2113,
+      "end": 2125,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that can",
+      "start": 384,
+      "end": 392,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the best",
+      "start": 2578,
+      "end": 2586,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the features",
+      "start": 2609,
+      "end": 2621,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that some",
+      "start": 2074,
+      "end": 2083,
+      "type": "definite_noun"
+    },
+    {
+      "text": "these offers",
+      "start": 2819,
+      "end": 2831,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that meets",
+      "start": 3268,
+      "end": 3278,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the guidance",
+      "start": 3341,
+      "end": 3353,
+      "type": "definite_noun"
+    }
+  ],
+  "notes": "The 'report' feature is mentioned in the conversation, but its exact functionality and availability are unclear. The user is seeking more information on this topic."
+}

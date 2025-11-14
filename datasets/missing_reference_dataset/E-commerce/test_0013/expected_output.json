@@ -1,0 +1,128 @@
+{
+  "expected_issue_codes": [
+    "MISSING_REFERENCE"
+  ],
+  "missing_references": [
+    {
+      "text": "the latest",
+      "start": 401,
+      "end": 411,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the differences",
+      "start": 513,
+      "end": 528,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the ThinkPad",
+      "start": 537,
+      "end": 549,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that the",
+      "start": 661,
+      "end": 669,
+      "type": "definite_noun"
+    },
+    {
+      "text": "those who",
+      "start": 702,
+      "end": 711,
+      "type": "definite_noun"
+    },
+    {
+      "text": "those who",
+      "start": 702,
+      "end": 711,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the Dell",
+      "start": 896,
+      "end": 904,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that can",
+      "start": 1079,
+      "end": 1087,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the features",
+      "start": 1521,
+      "end": 1533,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that are",
+      "start": 1656,
+      "end": 1664,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that might",
+      "start": 1786,
+      "end": 1796,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that you",
+      "start": 2000,
+      "end": 2008,
+      "type": "definite_noun"
+    },
+    {
+      "text": "these options",
+      "start": 2076,
+      "end": 2089,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the right",
+      "start": 2208,
+      "end": 2217,
+      "type": "definite_noun"
+    },
+    {
+      "text": "The report",
+      "start": 2372,
+      "end": 2382,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that certain",
+      "start": 2407,
+      "end": 2419,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this topic",
+      "start": 2597,
+      "end": 2607,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the laptop",
+      "start": 2755,
+      "end": 2765,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the pros",
+      "start": 2968,
+      "end": 2976,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that might",
+      "start": 1786,
+      "end": 1796,
+      "type": "definite_noun"
+    }
+  ],
+  "notes": "The 'report' reference is missing, as it was not mentioned in the conversation history. The Dell Latitude series reference is present in the prompt, but not in the conversation history."
+}

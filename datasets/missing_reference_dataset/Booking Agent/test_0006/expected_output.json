@@ -1,0 +1,224 @@
+{
+  "expected_issue_codes": [
+    "MISSING_REFERENCE"
+  ],
+  "missing_references": [
+    {
+      "text": "the status",
+      "start": 33,
+      "end": 43,
+      "type": "definite_noun"
+    },
+    {
+      "text": "as discussed earlier",
+      "start": 58,
+      "end": 78,
+      "type": "deictic"
+    },
+    {
+      "text": "the changes",
+      "start": 103,
+      "end": 114,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that occurred",
+      "start": 115,
+      "end": 128,
+      "type": "definite_noun"
+    },
+    {
+      "text": "The previous",
+      "start": 187,
+      "end": 199,
+      "type": "definite_noun"
+    },
+    {
+      "text": "The previous report",
+      "start": 187,
+      "end": 206,
+      "type": "deictic_noun"
+    },
+    {
+      "text": "that the",
+      "start": 217,
+      "end": 225,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the rescheduling",
+      "start": 327,
+      "end": 343,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the weather",
+      "start": 727,
+      "end": 738,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this development",
+      "start": 841,
+      "end": 857,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the new",
+      "start": 899,
+      "end": 906,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that takes",
+      "start": 962,
+      "end": 972,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that the",
+      "start": 217,
+      "end": 225,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the booking",
+      "start": 1367,
+      "end": 1378,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that the",
+      "start": 217,
+      "end": 225,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this matter",
+      "start": 1695,
+      "end": 1706,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the booking",
+      "start": 1367,
+      "end": 1378,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that all",
+      "start": 1845,
+      "end": 1853,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the next",
+      "start": 1916,
+      "end": 1924,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the booking",
+      "start": 1367,
+      "end": 1378,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the importance",
+      "start": 2127,
+      "end": 2141,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this update",
+      "start": 2145,
+      "end": 2156,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the processing",
+      "start": 2426,
+      "end": 2440,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this request",
+      "start": 2444,
+      "end": 2456,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the status",
+      "start": 33,
+      "end": 43,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that may",
+      "start": 2607,
+      "end": 2615,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that need",
+      "start": 2687,
+      "end": 2696,
+      "type": "definite_noun"
+    },
+    {
+      "text": "these matters",
+      "start": 2871,
+      "end": 2884,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the airline",
+      "start": 2974,
+      "end": 2985,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the procedures",
+      "start": 3067,
+      "end": 3081,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the typical",
+      "start": 3124,
+      "end": 3135,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this one",
+      "start": 3167,
+      "end": 3175,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the status",
+      "start": 33,
+      "end": 43,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the next",
+      "start": 1916,
+      "end": 1924,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that all",
+      "start": 1845,
+      "end": 1853,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this matter",
+      "start": 1695,
+      "end": 1706,
+      "type": "definite_noun"
+    }
+  ],
+  "notes": "The reference 'the report' is missing, as it was not mentioned in the conversation history. The noun 'rescheduling' is also missing, as it was not explicitly mentioned."
+}

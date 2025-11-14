@@ -1,0 +1,18 @@
+[
+  {
+    "role": "user",
+    "content": "Hi, I'd like to book a flight from New York to London for next week."
+  },
+  {
+    "role": "assistant",
+    "content": "I'd be happy to help you with that. Can you please provide your passport details?"
+  },
+  {
+    "role": "user",
+    "content": "My passport number is ABC123 and my name is John Smith."
+  },
+  {
+    "role": "assistant",
+    "content": "Thank you, Mr. Smith. I've located a flight for you on Friday at 10am. Would you like me to book it?"
+  }
+]

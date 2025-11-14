@@ -1,0 +1,10 @@
+[
+  {
+    "role": "user",
+    "content": "Hi doctor, I have a question about my recent test results."
+  },
+  {
+    "role": "assistant",
+    "content": "I'm happy to help. Can you please tell me what specific result you're concerned about?"
+  }
+]

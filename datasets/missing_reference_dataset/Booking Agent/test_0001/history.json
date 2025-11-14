@@ -1,0 +1,26 @@
+[
+  {
+    "role": "user",
+    "content": "Hi, I'm booking a flight for tomorrow and I need to know if there are any changes to the schedule."
+  },
+  {
+    "role": "assistant",
+    "content": "I've checked the system and everything looks good. The flight is on time and there have been no cancellations or changes."
+  },
+  {
+    "role": "user",
+    "content": "Great, thanks for letting me know. Can you also check if there's any baggage allowance left?"
+  },
+  {
+    "role": "assistant",
+    "content": "Let me check that for you. According to the system, you have 10kg of checked baggage and 5kg of hand luggage available."
+  },
+  {
+    "role": "user",
+    "content": "That sounds good. I also need to know if there are any lounge access options available?"
+  },
+  {
+    "role": "assistant",
+    "content": "I've checked on that for you. It looks like the lounge is currently closed due to maintenance, but we can provide you with a complimentary drink and snack at the gate."
+  }
+]

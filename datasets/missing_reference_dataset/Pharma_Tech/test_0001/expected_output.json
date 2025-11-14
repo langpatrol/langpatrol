@@ -1,0 +1,200 @@
+{
+  "expected_issue_codes": [
+    "MISSING_REFERENCE"
+  ],
+  "missing_references": [
+    {
+      "text": "the midst",
+      "start": 183,
+      "end": 192,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the clinical",
+      "start": 383,
+      "end": 395,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that was",
+      "start": 409,
+      "end": 417,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the report",
+      "start": 556,
+      "end": 566,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the usual",
+      "start": 625,
+      "end": 634,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the report",
+      "start": 556,
+      "end": 566,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the trial",
+      "start": 664,
+      "end": 673,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the company-wide",
+      "start": 698,
+      "end": 714,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that was",
+      "start": 409,
+      "end": 417,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that there",
+      "start": 902,
+      "end": 912,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the implementation",
+      "start": 946,
+      "end": 964,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this effort",
+      "start": 1129,
+      "end": 1140,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the clinical",
+      "start": 383,
+      "end": 395,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this discussion",
+      "start": 1408,
+      "end": 1423,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that could",
+      "start": 1533,
+      "end": 1543,
+      "type": "definite_noun"
+    },
+    {
+      "text": "The FDA",
+      "start": 1565,
+      "end": 1572,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the new",
+      "start": 1728,
+      "end": 1735,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the importance",
+      "start": 1756,
+      "end": 1770,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that all",
+      "start": 1875,
+      "end": 1883,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this guidance",
+      "start": 1960,
+      "end": 1973,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the potential",
+      "start": 2083,
+      "end": 2096,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that would",
+      "start": 2269,
+      "end": 2279,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the use",
+      "start": 2358,
+      "end": 2365,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that requires",
+      "start": 2627,
+      "end": 2640,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the report",
+      "start": 556,
+      "end": 566,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that our",
+      "start": 3011,
+      "end": 3019,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the past",
+      "start": 3098,
+      "end": 3106,
+      "type": "definite_noun"
+    },
+    {
+      "text": "This includes",
+      "start": 3179,
+      "end": 3192,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the application",
+      "start": 3448,
+      "end": 3463,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the current",
+      "start": 3632,
+      "end": 3643,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the direction",
+      "start": 3937,
+      "end": 3950,
+      "type": "definite_noun"
+    },
+    {
+      "text": "these requirements",
+      "start": 4011,
+      "end": 4029,
+      "type": "definite_noun"
+    }
+  ],
+  "notes": "The user is trying to access a clinical trial report that was generated last week, but it's not showing up on their dashboard. They're also looking for information on regulatory requirements and AI-powered trial analytics."
+}

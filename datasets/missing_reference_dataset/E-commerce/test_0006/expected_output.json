@@ -1,0 +1,194 @@
+{
+  "expected_issue_codes": [
+    "MISSING_REFERENCE"
+  ],
+  "missing_references": [
+    {
+      "text": "the SmartWatch",
+      "start": 47,
+      "end": 61,
+      "type": "definite_noun"
+    },
+    {
+      "text": "The order",
+      "start": 191,
+      "end": 200,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the order",
+      "start": 277,
+      "end": 286,
+      "type": "definite_noun"
+    },
+    {
+      "text": "as discussed earlier",
+      "start": 388,
+      "end": 408,
+      "type": "deictic"
+    },
+    {
+      "text": "the previous",
+      "start": 414,
+      "end": 426,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the previous report",
+      "start": 414,
+      "end": 433,
+      "type": "deictic_noun"
+    },
+    {
+      "text": "that report",
+      "start": 519,
+      "end": 530,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the retailer",
+      "start": 597,
+      "end": 609,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that the",
+      "start": 635,
+      "end": 643,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the refund",
+      "start": 727,
+      "end": 737,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that there",
+      "start": 760,
+      "end": 770,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that was",
+      "start": 838,
+      "end": 846,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this delay",
+      "start": 994,
+      "end": 1004,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the SmartWatch",
+      "start": 47,
+      "end": 61,
+      "type": "definite_noun"
+    },
+    {
+      "text": "The product",
+      "start": 1077,
+      "end": 1088,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the shipping",
+      "start": 1263,
+      "end": 1275,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the same",
+      "start": 1379,
+      "end": 1387,
+      "type": "definite_noun"
+    },
+    {
+      "text": "This inconsistency",
+      "start": 1534,
+      "end": 1552,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the responses",
+      "start": 1741,
+      "end": 1754,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the status",
+      "start": 1827,
+      "end": 1837,
+      "type": "definite_noun"
+    },
+    {
+      "text": "The representative",
+      "start": 1852,
+      "end": 1870,
+      "type": "definite_noun"
+    },
+    {
+      "text": "The representative mentioned",
+      "start": 1852,
+      "end": 1880,
+      "type": "positional_reference"
+    },
+    {
+      "text": "that they",
+      "start": 1881,
+      "end": 1890,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the matter",
+      "start": 1907,
+      "end": 1917,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that technical",
+      "start": 2034,
+      "end": 2048,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the past",
+      "start": 2185,
+      "end": 2193,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this issue",
+      "start": 2298,
+      "end": 2308,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the situation",
+      "start": 2375,
+      "end": 2388,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this matter",
+      "start": 2635,
+      "end": 2646,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the refund",
+      "start": 727,
+      "end": 737,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this issue",
+      "start": 2298,
+      "end": 2308,
+      "type": "definite_noun"
+    }
+  ],
+  "notes": "The user is trying to follow up on their refund, but customer support keeps referring them to a missing report that was never actually shared."
+}

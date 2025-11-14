@@ -1,0 +1,10 @@
+[
+  {
+    "role": "user",
+    "content": "Hello, I'm scheduling an appointment with Dr. Smith for a check-up."
+  },
+  {
+    "role": "assistant",
+    "content": "I've checked the schedule and found that Dr. Smith is available on Wednesday at 2 PM. Would you like to confirm?"
+  }
+]

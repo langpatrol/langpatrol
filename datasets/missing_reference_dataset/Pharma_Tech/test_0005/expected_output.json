@@ -1,0 +1,212 @@
+{
+  "expected_issue_codes": [
+    "MISSING_REFERENCE"
+  ],
+  "missing_references": [
+    {
+      "text": "that were",
+      "start": 128,
+      "end": 137,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the latest",
+      "start": 191,
+      "end": 201,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that just",
+      "start": 227,
+      "end": 236,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that shipment",
+      "start": 299,
+      "end": 312,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the previous",
+      "start": 412,
+      "end": 424,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the previous report",
+      "start": 412,
+      "end": 431,
+      "type": "deictic_noun"
+    },
+    {
+      "text": "that there",
+      "start": 443,
+      "end": 453,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the expected",
+      "start": 480,
+      "end": 492,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the numbers",
+      "start": 542,
+      "end": 553,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that data",
+      "start": 642,
+      "end": 651,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the forefront",
+      "start": 700,
+      "end": 713,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that target",
+      "start": 755,
+      "end": 766,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that have",
+      "start": 926,
+      "end": 935,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this batch",
+      "start": 1039,
+      "end": 1049,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the product",
+      "start": 1086,
+      "end": 1097,
+      "type": "definite_noun"
+    },
+    {
+      "text": "as discussed earlier",
+      "start": 1132,
+      "end": 1152,
+      "type": "deictic"
+    },
+    {
+      "text": "the new",
+      "start": 1182,
+      "end": 1189,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that just",
+      "start": 227,
+      "end": 236,
+      "type": "definite_noun"
+    },
+    {
+      "text": "These cutting-edge",
+      "start": 1240,
+      "end": 1258,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the product",
+      "start": 1086,
+      "end": 1097,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that they",
+      "start": 1480,
+      "end": 1489,
+      "type": "definite_noun"
+    },
+    {
+      "text": "as discussed earlier",
+      "start": 1132,
+      "end": 1152,
+      "type": "deictic"
+    },
+    {
+      "text": "the timeline",
+      "start": 1737,
+      "end": 1749,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the new",
+      "start": 1182,
+      "end": 1189,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this innovative",
+      "start": 1894,
+      "end": 1909,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the projected",
+      "start": 1992,
+      "end": 2005,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the testing",
+      "start": 2043,
+      "end": 2054,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that need",
+      "start": 2120,
+      "end": 2129,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the latest",
+      "start": 191,
+      "end": 201,
+      "type": "definite_noun"
+    },
+    {
+      "text": "these concerns",
+      "start": 2667,
+      "end": 2681,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that can",
+      "start": 2853,
+      "end": 2861,
+      "type": "definite_noun"
+    },
+    {
+      "text": "these challenges",
+      "start": 2876,
+      "end": 2892,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the meeting",
+      "start": 2928,
+      "end": 2939,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the details",
+      "start": 3297,
+      "end": 3308,
+      "type": "definite_noun"
+    }
+  ],
+  "notes": "The following references are missing clear antecedents: 'the report', 'shipment', 'Clinical Trial Completion Rate', 'new tech innovations', 'product launch event', and 'new AI-powered diagnostic tool'."
+}

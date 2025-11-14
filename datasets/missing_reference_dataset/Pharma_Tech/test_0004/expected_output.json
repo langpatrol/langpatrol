@@ -1,0 +1,290 @@
+{
+  "expected_issue_codes": [
+    "MISSING_REFERENCE"
+  ],
+  "missing_references": [
+    {
+      "text": "the updated",
+      "start": 19,
+      "end": 30,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the recent",
+      "start": 142,
+      "end": 152,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this product",
+      "start": 218,
+      "end": 230,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the successful",
+      "start": 332,
+      "end": 346,
+      "type": "definite_noun"
+    },
+    {
+      "text": "The previous",
+      "start": 383,
+      "end": 395,
+      "type": "definite_noun"
+    },
+    {
+      "text": "The previous report",
+      "start": 383,
+      "end": 402,
+      "type": "deictic_noun"
+    },
+    {
+      "text": "the new",
+      "start": 471,
+      "end": 478,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the changes",
+      "start": 629,
+      "end": 640,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the recent",
+      "start": 142,
+      "end": 152,
+      "type": "definite_noun"
+    },
+    {
+      "text": "The new",
+      "start": 750,
+      "end": 757,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that our",
+      "start": 942,
+      "end": 950,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the current",
+      "start": 1042,
+      "end": 1053,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the trial",
+      "start": 1064,
+      "end": 1073,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the recent",
+      "start": 142,
+      "end": 152,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the latest",
+      "start": 1347,
+      "end": 1357,
+      "type": "definite_noun"
+    },
+    {
+      "text": "The report",
+      "start": 1456,
+      "end": 1466,
+      "type": "definite_noun"
+    },
+    {
+      "text": "The report mentioned",
+      "start": 1456,
+      "end": 1476,
+      "type": "positional_reference"
+    },
+    {
+      "text": "the recent",
+      "start": 142,
+      "end": 152,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the recent",
+      "start": 142,
+      "end": 152,
+      "type": "definite_noun"
+    },
+    {
+      "text": "The market",
+      "start": 1777,
+      "end": 1787,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the growing",
+      "start": 1820,
+      "end": 1831,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the next",
+      "start": 1932,
+      "end": 1940,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this trend",
+      "start": 1977,
+      "end": 1987,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the recent",
+      "start": 142,
+      "end": 152,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the key",
+      "start": 2188,
+      "end": 2195,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the market",
+      "start": 2210,
+      "end": 2220,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the updated",
+      "start": 19,
+      "end": 30,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that they",
+      "start": 2419,
+      "end": 2428,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the recent",
+      "start": 142,
+      "end": 152,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the clinical",
+      "start": 2700,
+      "end": 2712,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the new",
+      "start": 471,
+      "end": 478,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that the",
+      "start": 2419,
+      "end": 2427,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that may",
+      "start": 2978,
+      "end": 2986,
+      "type": "definite_noun"
+    },
+    {
+      "text": "This information",
+      "start": 3026,
+      "end": 3042,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the next",
+      "start": 1932,
+      "end": 1940,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that any",
+      "start": 3161,
+      "end": 3169,
+      "type": "definite_noun"
+    },
+    {
+      "text": "The report",
+      "start": 1456,
+      "end": 1466,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the near",
+      "start": 3484,
+      "end": 3492,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that the",
+      "start": 2419,
+      "end": 2427,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the following",
+      "start": 3581,
+      "end": 3594,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the current",
+      "start": 1042,
+      "end": 1053,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the clinical",
+      "start": 2700,
+      "end": 2712,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the key",
+      "start": 2188,
+      "end": 2195,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the market",
+      "start": 2210,
+      "end": 2220,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the near",
+      "start": 3484,
+      "end": 3492,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that addresses",
+      "start": 4035,
+      "end": 4049,
+      "type": "definite_noun"
+    },
+    {
+      "text": "these requirements",
+      "start": 4050,
+      "end": 4068,
+      "type": "definite_noun"
+    }
+  ],
+  "notes": "The user is unclear on the relevance of certain references to their current context, indicating a missing reference."
+}

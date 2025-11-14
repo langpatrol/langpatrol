@@ -1,0 +1,152 @@
+{
+  "expected_issue_codes": [
+    "MISSING_REFERENCE"
+  ],
+  "missing_references": [
+    {
+      "text": "As discussed earlier",
+      "start": 124,
+      "end": 144,
+      "type": "deictic"
+    },
+    {
+      "text": "this quarter",
+      "start": 233,
+      "end": 245,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this topic",
+      "start": 329,
+      "end": 339,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the details",
+      "start": 370,
+      "end": 381,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the report",
+      "start": 467,
+      "end": 477,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that was",
+      "start": 478,
+      "end": 486,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that call",
+      "start": 566,
+      "end": 575,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that all",
+      "start": 831,
+      "end": 839,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that the",
+      "start": 927,
+      "end": 935,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this requirement",
+      "start": 975,
+      "end": 991,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this report",
+      "start": 1019,
+      "end": 1030,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the report",
+      "start": 467,
+      "end": 477,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the report",
+      "start": 467,
+      "end": 477,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the company",
+      "start": 1228,
+      "end": 1239,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this report",
+      "start": 1019,
+      "end": 1030,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the report",
+      "start": 467,
+      "end": 477,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the same",
+      "start": 1826,
+      "end": 1834,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that support",
+      "start": 1895,
+      "end": 1907,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the past",
+      "start": 2009,
+      "end": 2017,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the past",
+      "start": 2009,
+      "end": 2017,
+      "type": "definite_noun"
+    },
+    {
+      "text": "those campaigns",
+      "start": 2657,
+      "end": 2672,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the success",
+      "start": 3207,
+      "end": 3218,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this matter",
+      "start": 3339,
+      "end": 3350,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that our",
+      "start": 3428,
+      "end": 3436,
+      "type": "definite_noun"
+    }
+  ],
+  "notes": "The user's message contains a vague reference to 'the report' without specifying which report or section they are referring to. The assistant's previous response does not provide clear context for the user's request."
+}

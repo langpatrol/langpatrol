@@ -1,0 +1,20 @@
+{
+  "expected_issue_codes": [
+    "MISSING_REFERENCE"
+  ],
+  "missing_references": [
+    {
+      "text": "report",
+      "start": 491,
+      "end": 497,
+      "type": "definite_noun"
+    },
+    {
+      "text": "slides",
+      "start": 2100,
+      "end": 2106,
+      "type": "noun"
+    }
+  ],
+  "notes": "The 'report' reference is missing from the conversation history, but it was clearly mentioned in the context. The 'slides' reference is not present in the conversation history."
+}

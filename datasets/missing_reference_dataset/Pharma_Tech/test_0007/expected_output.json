@@ -1,0 +1,254 @@
+{
+  "expected_issue_codes": [
+    "MISSING_REFERENCE"
+  ],
+  "missing_references": [
+    {
+      "text": "the recent",
+      "start": 24,
+      "end": 34,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the Journal",
+      "start": 126,
+      "end": 137,
+      "type": "definite_noun"
+    },
+    {
+      "text": "The pharmaceutical",
+      "start": 158,
+      "end": 176,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the rise",
+      "start": 314,
+      "end": 322,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the need",
+      "start": 371,
+      "end": 379,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this context",
+      "start": 450,
+      "end": 462,
+      "type": "definite_noun"
+    },
+    {
+      "text": "These strategies",
+      "start": 600,
+      "end": 616,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the study",
+      "start": 842,
+      "end": 851,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the potential",
+      "start": 901,
+      "end": 914,
+      "type": "definite_noun"
+    },
+    {
+      "text": "The research",
+      "start": 988,
+      "end": 1000,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the current",
+      "start": 1021,
+      "end": 1032,
+      "type": "definite_noun"
+    },
+    {
+      "text": "these strategies",
+      "start": 1095,
+      "end": 1111,
+      "type": "definite_noun"
+    },
+    {
+      "text": "The study",
+      "start": 1115,
+      "end": 1124,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the need",
+      "start": 371,
+      "end": 379,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that have",
+      "start": 1358,
+      "end": 1367,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the methodology",
+      "start": 1479,
+      "end": 1494,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the study",
+      "start": 842,
+      "end": 851,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the specific",
+      "start": 1569,
+      "end": 1581,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the sample",
+      "start": 1634,
+      "end": 1644,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the generalizability",
+      "start": 1725,
+      "end": 1745,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the findings",
+      "start": 1749,
+      "end": 1761,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the limitations",
+      "start": 1799,
+      "end": 1814,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that may",
+      "start": 1869,
+      "end": 1877,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the adaptive",
+      "start": 1894,
+      "end": 1906,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the study",
+      "start": 842,
+      "end": 851,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that could",
+      "start": 2019,
+      "end": 2029,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the validity",
+      "start": 2037,
+      "end": 2049,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the results",
+      "start": 2053,
+      "end": 2064,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the following",
+      "start": 2145,
+      "end": 2158,
+      "type": "definite_noun"
+    },
+    {
+      "text": "The specific",
+      "start": 2165,
+      "end": 2177,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the study",
+      "start": 842,
+      "end": 851,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that may",
+      "start": 1869,
+      "end": 1877,
+      "type": "definite_noun"
+    },
+    {
+      "text": "The role",
+      "start": 2374,
+      "end": 2382,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the adaptive",
+      "start": 1894,
+      "end": 1906,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the potential",
+      "start": 901,
+      "end": 914,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the study",
+      "start": 842,
+      "end": 851,
+      "type": "definite_noun"
+    },
+    {
+      "text": "these concerns",
+      "start": 2844,
+      "end": 2858,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the implications",
+      "start": 2879,
+      "end": 2895,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this research",
+      "start": 2899,
+      "end": 2912,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the study",
+      "start": 842,
+      "end": 851,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the current",
+      "start": 1021,
+      "end": 1032,
+      "type": "definite_noun"
+    }
+  ],
+  "notes": "The user referenced a report and study, but they do not exist in the conversation history."
+}

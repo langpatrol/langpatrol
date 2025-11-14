@@ -1,0 +1,18 @@
+[
+  {
+    "role": "user",
+    "content": "Hello, I'm a lawyer with a question about contract law. Can you explain what constitutes a unilateral agreement?"
+  },
+  {
+    "role": "assistant",
+    "content": "A unilateral agreement refers to an arrangement where one party agrees to do something without the other party's explicit consent."
+  },
+  {
+    "role": "user",
+    "content": "That sounds like it could apply in my current situation, but I'm not sure what 'situational' means. Can you clarify?"
+  },
+  {
+    "role": "assistant",
+    "content": "In this context, 'situational' refers to something that is related to or occurs within a specific situation or circumstance."
+  }
+]

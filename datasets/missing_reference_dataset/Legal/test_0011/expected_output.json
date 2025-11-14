@@ -1,0 +1,308 @@
+{
+  "expected_issue_codes": [
+    "MISSING_REFERENCE"
+  ],
+  "missing_references": [
+    {
+      "text": "the distribution",
+      "start": 81,
+      "end": 97,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the current",
+      "start": 419,
+      "end": 430,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the company",
+      "start": 485,
+      "end": 496,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that any",
+      "start": 643,
+      "end": 651,
+      "type": "definite_noun"
+    },
+    {
+      "text": "these references",
+      "start": 1003,
+      "end": 1019,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the following",
+      "start": 1097,
+      "end": 1110,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the total",
+      "start": 1116,
+      "end": 1125,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the time",
+      "start": 1166,
+      "end": 1174,
+      "type": "definite_noun"
+    },
+    {
+      "text": "these references",
+      "start": 1003,
+      "end": 1019,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the settlement",
+      "start": 1392,
+      "end": 1406,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that the",
+      "start": 1435,
+      "end": 1443,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the allocation",
+      "start": 1468,
+      "end": 1482,
+      "type": "definite_noun"
+    },
+    {
+      "text": "The value",
+      "start": 1571,
+      "end": 1580,
+      "type": "definite_noun"
+    },
+    {
+      "text": "these shares",
+      "start": 1584,
+      "end": 1596,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this information",
+      "start": 1702,
+      "end": 1718,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the end",
+      "start": 1722,
+      "end": 1729,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the week",
+      "start": 1733,
+      "end": 1741,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the negotiations",
+      "start": 1770,
+      "end": 1786,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this affects",
+      "start": 1897,
+      "end": 1909,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the relationship",
+      "start": 1954,
+      "end": 1970,
+      "type": "definite_noun"
+    },
+    {
+      "text": "these two",
+      "start": 1979,
+      "end": 1988,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that need",
+      "start": 2110,
+      "end": 2119,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the settlement",
+      "start": 1392,
+      "end": 1406,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that apply",
+      "start": 2266,
+      "end": 2276,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this situation",
+      "start": 2280,
+      "end": 2294,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that govern",
+      "start": 2396,
+      "end": 2407,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the distribution",
+      "start": 81,
+      "end": 97,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that need",
+      "start": 2110,
+      "end": 2119,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the implications",
+      "start": 2656,
+      "end": 2672,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the settlement",
+      "start": 1392,
+      "end": 1406,
+      "type": "definite_noun"
+    },
+    {
+      "text": "these documents",
+      "start": 2745,
+      "end": 2760,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that need",
+      "start": 2110,
+      "end": 2119,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this prompt",
+      "start": 3044,
+      "end": 3055,
+      "type": "definite_noun"
+    },
+    {
+      "text": "these references",
+      "start": 1003,
+      "end": 1019,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that need",
+      "start": 2110,
+      "end": 2119,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the accuracy",
+      "start": 3215,
+      "end": 3227,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the information",
+      "start": 3248,
+      "end": 3263,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the costs",
+      "start": 3332,
+      "end": 3341,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the requested",
+      "start": 3383,
+      "end": 3396,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the time",
+      "start": 1166,
+      "end": 1174,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this task",
+      "start": 3502,
+      "end": 3511,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that need",
+      "start": 2110,
+      "end": 2119,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the necessary",
+      "start": 3598,
+      "end": 3611,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the scope",
+      "start": 3672,
+      "end": 3681,
+      "type": "definite_noun"
+    },
+    {
+      "text": "these references",
+      "start": 1003,
+      "end": 1019,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the requested",
+      "start": 3383,
+      "end": 3396,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that need",
+      "start": 2110,
+      "end": 2119,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this task",
+      "start": 3502,
+      "end": 3511,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this matter",
+      "start": 3992,
+      "end": 4003,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the status",
+      "start": 4063,
+      "end": 4073,
+      "type": "definite_noun"
+    }
+  ],
+  "notes": "The references 'Blue Mountain Inc.' and 'Green Valley Capital' are missing in the conversation history."
+}

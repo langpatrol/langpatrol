@@ -73,5 +73,6 @@ export async function guardedCall(messages, model) {
 
 ## License
 
-MIT
+Elastic License 2.0
+
 

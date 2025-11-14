@@ -1,0 +1,18 @@
+[
+  {
+    "role": "user",
+    "content": "Hello, I'm reaching out about the latest clinical trial results. Can you tell me more about the efficacy of the new drug?"
+  },
+  {
+    "role": "assistant",
+    "content": "I'd be happy to provide an update on the trial. The primary outcome measure was the percentage change in HbA1c levels."
+  },
+  {
+    "role": "user",
+    "content": "That sounds interesting, but I'm not sure what specific data points were used to calculate this percentage change."
+  },
+  {
+    "role": "assistant",
+    "content": "Let me check the appendix for more information. (appendix not included in this conversation history)"
+  }
+]

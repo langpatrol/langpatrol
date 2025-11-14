@@ -1,0 +1,350 @@
+{
+  "expected_issue_codes": [
+    "MISSING_REFERENCE"
+  ],
+  "missing_references": [
+    {
+      "text": "the cheapest",
+      "start": 79,
+      "end": 91,
+      "type": "definite_noun"
+    },
+    {
+      "text": "The client",
+      "start": 164,
+      "end": 174,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that can",
+      "start": 251,
+      "end": 259,
+      "type": "definite_noun"
+    },
+    {
+      "text": "these two",
+      "start": 325,
+      "end": 334,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the cheapest",
+      "start": 79,
+      "end": 91,
+      "type": "definite_noun"
+    },
+    {
+      "text": "The report",
+      "start": 613,
+      "end": 623,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the average",
+      "start": 639,
+      "end": 650,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that the",
+      "start": 722,
+      "end": 730,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the current",
+      "start": 745,
+      "end": 756,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that includes",
+      "start": 820,
+      "end": 833,
+      "type": "definite_noun"
+    },
+    {
+      "text": "those operated",
+      "start": 866,
+      "end": 880,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that the",
+      "start": 722,
+      "end": 730,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that may",
+      "start": 1073,
+      "end": 1081,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the complexity",
+      "start": 1168,
+      "end": 1182,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the cheapest",
+      "start": 79,
+      "end": 91,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that may",
+      "start": 1073,
+      "end": 1081,
+      "type": "definite_noun"
+    },
+    {
+      "text": "these times",
+      "start": 1370,
+      "end": 1381,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the most",
+      "start": 1406,
+      "end": 1414,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the month",
+      "start": 1448,
+      "end": 1457,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the best",
+      "start": 1493,
+      "end": 1501,
+      "type": "definite_noun"
+    },
+    {
+      "text": "those days",
+      "start": 1511,
+      "end": 1521,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the booking",
+      "start": 1581,
+      "end": 1592,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that need",
+      "start": 1646,
+      "end": 1655,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that may",
+      "start": 1073,
+      "end": 1081,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the overall",
+      "start": 1728,
+      "end": 1739,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the flight",
+      "start": 1748,
+      "end": 1758,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the client",
+      "start": 1769,
+      "end": 1779,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the off-season",
+      "start": 1873,
+      "end": 1887,
+      "type": "definite_noun"
+    },
+    {
+      "text": "The client",
+      "start": 164,
+      "end": 174,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this trip",
+      "start": 2200,
+      "end": 2209,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the agency",
+      "start": 2454,
+      "end": 2464,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that the",
+      "start": 722,
+      "end": 730,
+      "type": "definite_noun"
+    },
+    {
+      "text": "those operated",
+      "start": 866,
+      "end": 880,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that the",
+      "start": 722,
+      "end": 730,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the current",
+      "start": 745,
+      "end": 756,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that are",
+      "start": 3084,
+      "end": 3092,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the cheapest",
+      "start": 79,
+      "end": 91,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the following",
+      "start": 3223,
+      "end": 3236,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the average",
+      "start": 639,
+      "end": 650,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that offer",
+      "start": 3342,
+      "end": 3352,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the week",
+      "start": 3385,
+      "end": 3393,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the year",
+      "start": 3422,
+      "end": 3430,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that may",
+      "start": 1073,
+      "end": 1081,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the overall",
+      "start": 1728,
+      "end": 1739,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the flight",
+      "start": 1748,
+      "end": 1758,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that may",
+      "start": 1073,
+      "end": 1081,
+      "type": "definite_noun"
+    },
+    {
+      "text": "these findings",
+      "start": 3827,
+      "end": 3841,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the cheapest",
+      "start": 79,
+      "end": 91,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the best",
+      "start": 1493,
+      "end": 1501,
+      "type": "definite_noun"
+    },
+    {
+      "text": "those days",
+      "start": 1511,
+      "end": 1521,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this information",
+      "start": 4050,
+      "end": 4066,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that may",
+      "start": 1073,
+      "end": 1081,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this project",
+      "start": 4231,
+      "end": 4243,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that need",
+      "start": 1646,
+      "end": 1655,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the required",
+      "start": 4333,
+      "end": 4345,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that need",
+      "start": 1646,
+      "end": 1655,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the report",
+      "start": 1018,
+      "end": 1028,
+      "type": "definite_noun"
+    }
+  ],
+  "notes": "The references to 'cheapest days' and 'data' are missing from the conversation history."
+}

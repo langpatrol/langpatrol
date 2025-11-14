@@ -1,0 +1,10 @@
+[
+  {
+    "role": "user",
+    "content": "Hello, I'm preparing for our meeting tomorrow and I wanted to confirm the agenda."
+  },
+  {
+    "role": "assistant",
+    "content": "The agenda has been finalized. We will be discussing the new clinical trial results and their implications on patient outcomes."
+  }
+]

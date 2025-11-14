@@ -1,0 +1,218 @@
+{
+  "expected_issue_codes": [
+    "MISSING_REFERENCE"
+  ],
+  "missing_references": [
+    {
+      "text": "the booking",
+      "start": 27,
+      "end": 38,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the itinerary",
+      "start": 129,
+      "end": 142,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the status",
+      "start": 162,
+      "end": 172,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the reports",
+      "start": 176,
+      "end": 187,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that were",
+      "start": 188,
+      "end": 197,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that everyone",
+      "start": 310,
+      "end": 323,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the same",
+      "start": 330,
+      "end": 338,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the progress",
+      "start": 391,
+      "end": 403,
+      "type": "definite_noun"
+    },
+    {
+      "text": "these reports",
+      "start": 407,
+      "end": 420,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the status",
+      "start": 162,
+      "end": 172,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the marketing",
+      "start": 541,
+      "end": 554,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the sales",
+      "start": 566,
+      "end": 575,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the last",
+      "start": 588,
+      "end": 596,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the availability",
+      "start": 703,
+      "end": 719,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the conference",
+      "start": 723,
+      "end": 737,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the hotel",
+      "start": 747,
+      "end": 756,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that meets",
+      "start": 821,
+      "end": 831,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the number",
+      "start": 870,
+      "end": 880,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that can",
+      "start": 994,
+      "end": 1002,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the number",
+      "start": 870,
+      "end": 880,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the day",
+      "start": 1341,
+      "end": 1348,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the expenses",
+      "start": 1445,
+      "end": 1457,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the last",
+      "start": 588,
+      "end": 596,
+      "type": "definite_noun"
+    },
+    {
+      "text": "This will",
+      "start": 1678,
+      "end": 1687,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that have",
+      "start": 1863,
+      "end": 1872,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the last",
+      "start": 588,
+      "end": 596,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that our",
+      "start": 2099,
+      "end": 2107,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the meeting",
+      "start": 2199,
+      "end": 2210,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that the",
+      "start": 2236,
+      "end": 2244,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that cater",
+      "start": 2467,
+      "end": 2477,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that meet",
+      "start": 821,
+      "end": 830,
+      "type": "definite_noun"
+    },
+    {
+      "text": "these requirements",
+      "start": 2603,
+      "end": 2621,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that you",
+      "start": 2710,
+      "end": 2718,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the meeting",
+      "start": 2199,
+      "end": 2210,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this information",
+      "start": 2976,
+      "end": 2992,
+      "type": "definite_noun"
+    }
+  ],
+  "notes": "The user is missing a clear reference to the previous report, which was submitted last quarter."
+}

@@ -1,0 +1,43 @@
+You are tasked with evaluating a complex legal case involvi[MISSING_REFERENCE]n[MISSING_REFERENCE]g a multinational corporation accused of violating environmental regulations in several countries. The corporation, known as EcoPolis Inc., has been at the center of controversy for its alleged role in polluting water sources and contributing to climate change through its manufacturing processes.
+
+Background information reveals that EcoPolis Inc. is a large-scale industrial company with operations in over 20 countries worldwide. Its products are used in various sectors, including construction, consumer electronics, and automotive manufacturing. The corporation's global reach and diverse product offerings make it a significant player in the international market.
+
+However, its success has come at a cost. EcoPolis Inc. has been accused of ignoring environmental regulations and prioritizing profits over sustainability. In several countries, including Germany, France, and Italy, the company has been fined millions of dollars for violating air and water pollution laws. The European Union has also launched an investigation into EcoPolis Inc.'s practices, alleging that the company has breached EU environmental law.
+
+The latest development in this case comes from a group of NGOs (non-governmental organizations) who have filed a lawsuit against EcoPolis Inc., alleging that the company's actions have caused significant harm to local communities and the environment. The plaintiffs claim that EcoPolis Inc.'s manufacturing processes have contaminated water sources, causing widespread health problems and economic losses for affected communities.
+
+As part of this case, you are tasked with evaluating the legal requirements and constraints that apply to EcoPolis Inc. in each of the countries where it operates. Specifically, you need to assess whether the company has complied with environmental regulations and identify any potential liabilities or damages owed to affected parties.
+
+To achieve this task, you will need to consider the following factors:
+
+1. National environmental laws and regulations: Research and analyze the environmental laws and regulations in each of the countries where EcoPolis Inc. operates.
+2. International agreements: Consider international agreements such as the Paris Agreement and the Basel Convention, which may apply to EcoPolis Inc.'s activities.
+3. Industry standards: Evaluate industry-specific standards and guidelines for environmental management and sustainability practices.
+4. Company policies and procedures: Review EcoPolis Inc.'s internal policies and procedures related to environmental management and sustainability.
+
+Your task is to:
+
+1. Identify any potential liabilities or damages owed to affected parties.
+2. Assess the company's compliance with environmental regulations in each of the countries where it operates.
+3. Provide recommendations for improving EcoPolis Inc.'s environmental practices and policies.
+
+To complete this task, you will need to consider the following specific requirements and constraints:
+
+* You must analyze data from at least 10 countries where EcoPolis Inc. operates.
+* You must evaluate the company's compliance with environmental regulations in each of these countries using publicly available data and information.
+* You must provide recommendations for improving EcoPolis Inc.'s environmental practices and policies, including suggestions for reducing waste, conserving resources, and promoting sustainable development.
+
+Your analysis should also consider the following examples or use cases:
+
+* A study on the economic impact of environmental degradation in developing countries.
+* Case law related to corporate liability for environmental damage.
+* Industry reports on sustainable practices and supply chain management.
+
+Finally, you are required to submit your report in a clear and concise manner, using proper formatting and citations. The report should include:
+
+1. An executive summary of the findings and recommendations.
+2. A detailed analysis of EcoPolis Inc.'s compliance with environmental regulations in each of the countries where it operates.
+3. Recommendations for improving the company's environmental practices and policies.
+4. Supporting evidence and data used to inform your analysis.
+
+Your report should be no longer than 10 pages, double-spaced, and use a standard font (e.g., Arial, Calibri, or Times New Roman). The reference list should include at least 20 sources cited in the report.

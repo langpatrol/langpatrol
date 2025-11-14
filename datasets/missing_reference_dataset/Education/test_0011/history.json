@@ -1,0 +1,18 @@
+[
+  {
+    "role": "user",
+    "content": "Hi, I'm looking for information on the new semester schedule. Can you tell me when the classes start?"
+  },
+  {
+    "role": "assistant",
+    "content": "The new semester started last Monday and continues until mid-December."
+  },
+  {
+    "role": "user",
+    "content": "That's great to know! I was wondering if there are any changes to the course catalog this year."
+  },
+  {
+    "role": "assistant",
+    "content": "Actually, yes, we did make some changes. The business program is now being offered as an online degree for the first time."
+  }
+]

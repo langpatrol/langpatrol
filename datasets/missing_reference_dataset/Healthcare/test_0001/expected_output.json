@@ -1,0 +1,152 @@
+{
+  "expected_issue_codes": [
+    "MISSING_REFERENCE"
+  ],
+  "missing_references": [
+    {
+      "text": "the hospital",
+      "start": 42,
+      "end": 54,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the surgery",
+      "start": 295,
+      "end": 306,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the necessary",
+      "start": 342,
+      "end": 355,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that need",
+      "start": 517,
+      "end": 526,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the surgery",
+      "start": 295,
+      "end": 306,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the procedure",
+      "start": 687,
+      "end": 700,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the potential",
+      "start": 731,
+      "end": 744,
+      "type": "definite_noun"
+    },
+    {
+      "text": "these risks",
+      "start": 871,
+      "end": 882,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that need",
+      "start": 517,
+      "end": 526,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the typical",
+      "start": 958,
+      "end": 969,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the report",
+      "start": 1083,
+      "end": 1093,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the hospital",
+      "start": 42,
+      "end": 54,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the day",
+      "start": 1124,
+      "end": 1131,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the report",
+      "start": 1083,
+      "end": 1093,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this context",
+      "start": 1254,
+      "end": 1266,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the surgery",
+      "start": 295,
+      "end": 306,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that they",
+      "start": 1559,
+      "end": 1568,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the existing",
+      "start": 1611,
+      "end": 1623,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this refers",
+      "start": 1842,
+      "end": 1853,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the wound",
+      "start": 2160,
+      "end": 2169,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the best",
+      "start": 2282,
+      "end": 2290,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that may",
+      "start": 2479,
+      "end": 2487,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that can",
+      "start": 2550,
+      "end": 2558,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the healing",
+      "start": 3129,
+      "end": 3140,
+      "type": "definite_noun"
+    }
+  ],
+  "notes": "The reference 'the report' is missing from the conversation history."
+}

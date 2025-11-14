@@ -1,0 +1,188 @@
+{
+  "expected_issue_codes": [
+    "MISSING_REFERENCE"
+  ],
+  "missing_references": [
+    {
+      "text": "the process",
+      "start": 7,
+      "end": 18,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this report",
+      "start": 30,
+      "end": 41,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this project",
+      "start": 210,
+      "end": 222,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the final",
+      "start": 265,
+      "end": 274,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the report",
+      "start": 383,
+      "end": 393,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the final",
+      "start": 265,
+      "end": 274,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the latest",
+      "start": 517,
+      "end": 527,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the technical",
+      "start": 539,
+      "end": 552,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the detailed",
+      "start": 576,
+      "end": 588,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the analysis",
+      "start": 624,
+      "end": 636,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the report",
+      "start": 383,
+      "end": 393,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the references",
+      "start": 722,
+      "end": 736,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the data",
+      "start": 1039,
+      "end": 1047,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the overall",
+      "start": 1323,
+      "end": 1334,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the report",
+      "start": 383,
+      "end": 393,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the results",
+      "start": 1492,
+      "end": 1503,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the report",
+      "start": 383,
+      "end": 393,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that needs",
+      "start": 1654,
+      "end": 1664,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the level",
+      "start": 1709,
+      "end": 1718,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that should",
+      "start": 1893,
+      "end": 1904,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the way",
+      "start": 1924,
+      "end": 1931,
+      "type": "definite_noun"
+    },
+    {
+      "text": "these projects",
+      "start": 1973,
+      "end": 1987,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the need",
+      "start": 2186,
+      "end": 2194,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the pressure",
+      "start": 2224,
+      "end": 2236,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that can",
+      "start": 2289,
+      "end": 2297,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the field",
+      "start": 2886,
+      "end": 2895,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that might",
+      "start": 2957,
+      "end": 2967,
+      "type": "definite_noun"
+    },
+    {
+      "text": "these matters",
+      "start": 3044,
+      "end": 3057,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this project",
+      "start": 210,
+      "end": 222,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the time",
+      "start": 3148,
+      "end": 3156,
+      "type": "definite_noun"
+    }
+  ],
+  "notes": "The user mentioned the final report, but it was not explicitly discussed in the conversation history. The assistant should not be able to provide a copy of the report or offer guidance on citing it."
+}

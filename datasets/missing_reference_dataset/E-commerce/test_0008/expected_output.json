@@ -1,0 +1,224 @@
+{
+  "expected_issue_codes": [
+    "MISSING_REFERENCE"
+  ],
+  "missing_references": [
+    {
+      "text": "the phone",
+      "start": 195,
+      "end": 204,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the differences",
+      "start": 327,
+      "end": 342,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the new",
+      "start": 351,
+      "end": 358,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the iPhone",
+      "start": 377,
+      "end": 387,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that compares",
+      "start": 454,
+      "end": 467,
+      "type": "definite_noun"
+    },
+    {
+      "text": "these two",
+      "start": 468,
+      "end": 477,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the improved",
+      "start": 543,
+      "end": 555,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the iPhone",
+      "start": 377,
+      "end": 387,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the phone",
+      "start": 195,
+      "end": 204,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the camera",
+      "start": 904,
+      "end": 914,
+      "type": "definite_noun"
+    },
+    {
+      "text": "those deals",
+      "start": 1114,
+      "end": 1125,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the price",
+      "start": 1195,
+      "end": 1204,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the best",
+      "start": 1342,
+      "end": 1350,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the different",
+      "start": 1423,
+      "end": 1436,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the iPhone",
+      "start": 377,
+      "end": 387,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the same",
+      "start": 1623,
+      "end": 1631,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the overall",
+      "start": 1683,
+      "end": 1694,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the phone",
+      "start": 195,
+      "end": 204,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that set",
+      "start": 1880,
+      "end": 1888,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the competition",
+      "start": 1903,
+      "end": 1918,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the iPhone",
+      "start": 377,
+      "end": 387,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the requirements",
+      "start": 2109,
+      "end": 2125,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the checkout",
+      "start": 2265,
+      "end": 2277,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the typical",
+      "start": 2477,
+      "end": 2488,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the return",
+      "start": 2610,
+      "end": 2620,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the conditions",
+      "start": 2715,
+      "end": 2729,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the return",
+      "start": 2610,
+      "end": 2620,
+      "type": "definite_noun"
+    },
+    {
+      "text": "these questions",
+      "start": 2892,
+      "end": 2907,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the iPhone",
+      "start": 377,
+      "end": 387,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that showcase",
+      "start": 3238,
+      "end": 3251,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the phone",
+      "start": 195,
+      "end": 204,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the warranty",
+      "start": 3441,
+      "end": 3453,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the iPhone",
+      "start": 377,
+      "end": 387,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the best",
+      "start": 1342,
+      "end": 1350,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the time",
+      "start": 3813,
+      "end": 3821,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this information",
+      "start": 3841,
+      "end": 3857,
+      "type": "definite_noun"
+    }
+  ],
+  "notes": "The word 'study' is not mentioned in the conversation history, and neither is 'promotions'. Therefore, these references are considered missing."
+}

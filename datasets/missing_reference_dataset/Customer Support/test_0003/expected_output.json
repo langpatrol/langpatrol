@@ -1,0 +1,230 @@
+{
+  "expected_issue_codes": [
+    "MISSING_REFERENCE"
+  ],
+  "missing_references": [
+    {
+      "text": "the aim",
+      "start": 51,
+      "end": 58,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that there",
+      "start": 152,
+      "end": 162,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that weren",
+      "start": 187,
+      "end": 197,
+      "type": "definite_noun"
+    },
+    {
+      "text": "The billing",
+      "start": 236,
+      "end": 247,
+      "type": "definite_noun"
+    },
+    {
+      "text": "The issue",
+      "start": 383,
+      "end": 392,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the report",
+      "start": 437,
+      "end": 447,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this information",
+      "start": 622,
+      "end": 638,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this matter",
+      "start": 676,
+      "end": 687,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this issue",
+      "start": 782,
+      "end": 792,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the billing",
+      "start": 848,
+      "end": 859,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the report",
+      "start": 437,
+      "end": 447,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the report",
+      "start": 437,
+      "end": 447,
+      "type": "definite_noun"
+    },
+    {
+      "text": "these discrepancies",
+      "start": 985,
+      "end": 1004,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the steps",
+      "start": 1072,
+      "end": 1081,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this situation",
+      "start": 1108,
+      "end": 1122,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that would",
+      "start": 1253,
+      "end": 1263,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the potential",
+      "start": 1335,
+      "end": 1348,
+      "type": "definite_noun"
+    },
+    {
+      "text": "these missing",
+      "start": 1359,
+      "end": 1372,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that your",
+      "start": 1577,
+      "end": 1586,
+      "type": "definite_noun"
+    },
+    {
+      "text": "these needs",
+      "start": 1621,
+      "end": 1632,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this issue",
+      "start": 782,
+      "end": 792,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the future",
+      "start": 1776,
+      "end": 1786,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the past",
+      "start": 1854,
+      "end": 1862,
+      "type": "definite_noun"
+    },
+    {
+      "text": "these measures",
+      "start": 1885,
+      "end": 1899,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the removal",
+      "start": 1937,
+      "end": 1948,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this issue",
+      "start": 782,
+      "end": 792,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the corrected",
+      "start": 2100,
+      "end": 2113,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that might",
+      "start": 2172,
+      "end": 2182,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the resolution",
+      "start": 2190,
+      "end": 2204,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the status",
+      "start": 2369,
+      "end": 2379,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the progress",
+      "start": 2398,
+      "end": 2410,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that all",
+      "start": 2451,
+      "end": 2459,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that there",
+      "start": 152,
+      "end": 162,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this issue",
+      "start": 782,
+      "end": 792,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this matter",
+      "start": 676,
+      "end": 687,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the steps",
+      "start": 1072,
+      "end": 1081,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the future",
+      "start": 1776,
+      "end": 1786,
+      "type": "definite_noun"
+    }
+  ],
+  "notes": "The reference to the report is missing in the conversation history."
+}

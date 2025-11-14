@@ -1,0 +1,20 @@
+{
+  "expected_issue_codes": [
+    "MISSING_REFERENCE"
+  ],
+  "missing_references": [
+    {
+      "text": "report",
+      "start": 1621,
+      "end": 1627,
+      "type": "definite_noun"
+    },
+    {
+      "text": "Q1 2022",
+      "start": 1440,
+      "end": 1447,
+      "type": "proper_noun"
+    }
+  ],
+  "notes": "The report on sales trends for laptops in Q1 is missing, but the X500 series performance and quarterly sales figures are mentioned in previous messages."
+}

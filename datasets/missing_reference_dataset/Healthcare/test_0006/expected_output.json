@@ -1,0 +1,212 @@
+{
+  "expected_issue_codes": [
+    "MISSING_REFERENCE"
+  ],
+  "missing_references": [
+    {
+      "text": "as discussed earlier",
+      "start": 49,
+      "end": 69,
+      "type": "deictic"
+    },
+    {
+      "text": "the issues",
+      "start": 80,
+      "end": 90,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the blood",
+      "start": 96,
+      "end": 105,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the abnormal",
+      "start": 146,
+      "end": 158,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the previous",
+      "start": 173,
+      "end": 185,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the previous report",
+      "start": 173,
+      "end": 192,
+      "type": "deictic_noun"
+    },
+    {
+      "text": "the new",
+      "start": 215,
+      "end": 222,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that was",
+      "start": 242,
+      "end": 250,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the dosage",
+      "start": 387,
+      "end": 397,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the recent",
+      "start": 572,
+      "end": 582,
+      "type": "definite_noun"
+    },
+    {
+      "text": "The abnormal",
+      "start": 613,
+      "end": 625,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that this",
+      "start": 757,
+      "end": 766,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the new",
+      "start": 215,
+      "end": 222,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that all",
+      "start": 883,
+      "end": 891,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the time",
+      "start": 1128,
+      "end": 1136,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the exact",
+      "start": 1180,
+      "end": 1189,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that need",
+      "start": 1364,
+      "end": 1373,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this follow-up",
+      "start": 1479,
+      "end": 1493,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the potential",
+      "start": 1604,
+      "end": 1617,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this topic",
+      "start": 1937,
+      "end": 1947,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the dosage",
+      "start": 387,
+      "end": 397,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the reasons",
+      "start": 2091,
+      "end": 2102,
+      "type": "definite_noun"
+    },
+    {
+      "text": "these changes",
+      "start": 2110,
+      "end": 2123,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that all",
+      "start": 883,
+      "end": 891,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the situation",
+      "start": 2506,
+      "end": 2519,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this further",
+      "start": 2619,
+      "end": 2631,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the phone",
+      "start": 2637,
+      "end": 2646,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that our",
+      "start": 2679,
+      "end": 2687,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that any",
+      "start": 2746,
+      "end": 2754,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this call",
+      "start": 2777,
+      "end": 2786,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the best",
+      "start": 3136,
+      "end": 3144,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this matter",
+      "start": 3226,
+      "end": 3237,
+      "type": "definite_noun"
+    },
+    {
+      "text": "these concerns",
+      "start": 3276,
+      "end": 3290,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the best",
+      "start": 3136,
+      "end": 3144,
+      "type": "definite_noun"
+    }
+  ],
+  "notes": "The 'previous report' and 'dosage adjustments' references are missing clear antecedents in the conversation history."
+}

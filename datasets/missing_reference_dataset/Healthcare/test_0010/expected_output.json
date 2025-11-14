@@ -1,0 +1,11 @@
+{
+  "expected_issue_codes": [],
+  "missing_references": [
+    {
+      "text": "report",
+      "start": 100,
+      "end": 110
+    }
+  ],
+  "notes": "The reference to 'report' was not mentioned in the conversation history"
+}

@@ -1,0 +1,350 @@
+{
+  "expected_issue_codes": [
+    "MISSING_REFERENCE"
+  ],
+  "missing_references": [
+    {
+      "text": "the Smith",
+      "start": 20,
+      "end": 29,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that the",
+      "start": 55,
+      "end": 63,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the investigation",
+      "start": 74,
+      "end": 91,
+      "type": "definite_noun"
+    },
+    {
+      "text": "As discussed earlier",
+      "start": 130,
+      "end": 150,
+      "type": "deictic"
+    },
+    {
+      "text": "the report",
+      "start": 60,
+      "end": 70,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the previous",
+      "start": 435,
+      "end": 447,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the previous report",
+      "start": 435,
+      "end": 454,
+      "type": "deictic_noun"
+    },
+    {
+      "text": "the assistant",
+      "start": 460,
+      "end": 473,
+      "type": "definite_noun"
+    },
+    {
+      "text": "The Smith",
+      "start": 504,
+      "end": 513,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the CEO",
+      "start": 597,
+      "end": 604,
+      "type": "definite_noun"
+    },
+    {
+      "text": "The investigation",
+      "start": 717,
+      "end": 734,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the alleged",
+      "start": 854,
+      "end": 865,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the credibility",
+      "start": 921,
+      "end": 936,
+      "type": "definite_noun"
+    },
+    {
+      "text": "these witnesses",
+      "start": 940,
+      "end": 955,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the sensitive",
+      "start": 1018,
+      "end": 1031,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this case",
+      "start": 1042,
+      "end": 1051,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the current",
+      "start": 1094,
+      "end": 1105,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the report",
+      "start": 60,
+      "end": 70,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the likelihood",
+      "start": 1221,
+      "end": 1235,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that may",
+      "start": 1291,
+      "end": 1299,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the trial",
+      "start": 1313,
+      "end": 1322,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the report",
+      "start": 60,
+      "end": 70,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the case",
+      "start": 1446,
+      "end": 1454,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the specific",
+      "start": 1529,
+      "end": 1541,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the witness",
+      "start": 1556,
+      "end": 1567,
+      "type": "definite_noun"
+    },
+    {
+      "text": "these discrepancies",
+      "start": 1672,
+      "end": 1691,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the course",
+      "start": 1715,
+      "end": 1725,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the alleged",
+      "start": 854,
+      "end": 865,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the reasoning",
+      "start": 1918,
+      "end": 1931,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this change",
+      "start": 1939,
+      "end": 1950,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the prosecution",
+      "start": 1981,
+      "end": 1996,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the witnesses",
+      "start": 2013,
+      "end": 2026,
+      "type": "definite_noun"
+    },
+    {
+      "text": "these allegations",
+      "start": 2162,
+      "end": 2179,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the prosecution",
+      "start": 1981,
+      "end": 1996,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the confidentiality",
+      "start": 2281,
+      "end": 2300,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the report",
+      "start": 60,
+      "end": 70,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the report",
+      "start": 60,
+      "end": 70,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the case",
+      "start": 1446,
+      "end": 1454,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that are",
+      "start": 2582,
+      "end": 2590,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this decision",
+      "start": 2607,
+      "end": 2620,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that all",
+      "start": 2717,
+      "end": 2725,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the investigation",
+      "start": 74,
+      "end": 91,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this report",
+      "start": 2867,
+      "end": 2878,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that may",
+      "start": 1291,
+      "end": 1299,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that all",
+      "start": 2717,
+      "end": 2725,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the key",
+      "start": 3208,
+      "end": 3215,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that all",
+      "start": 2717,
+      "end": 2725,
+      "type": "definite_noun"
+    },
+    {
+      "text": "This case",
+      "start": 3374,
+      "end": 3383,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the situation",
+      "start": 3519,
+      "end": 3532,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the Smith",
+      "start": 20,
+      "end": 29,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this meeting",
+      "start": 3939,
+      "end": 3951,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this meeting",
+      "start": 3939,
+      "end": 3951,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the previous",
+      "start": 435,
+      "end": 447,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the previous report",
+      "start": 435,
+      "end": 454,
+      "type": "deictic_noun"
+    },
+    {
+      "text": "this information",
+      "start": 4255,
+      "end": 4271,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the report",
+      "start": 60,
+      "end": 70,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this matter",
+      "start": 4394,
+      "end": 4405,
+      "type": "definite_noun"
+    }
+  ],
+  "notes": "The reference to the 'previous report' is missing its antecedent, as it was not explicitly linked to a specific discussion or topic in the conversation history."
+}

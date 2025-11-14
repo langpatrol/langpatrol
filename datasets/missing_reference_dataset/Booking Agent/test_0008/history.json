@@ -1,0 +1,14 @@
+[
+  {
+    "role": "user",
+    "content": "Hi, I'm interested in booking a flight for next month."
+  },
+  {
+    "role": "assistant",
+    "content": "Great! Can you please provide your name and contact information so we can assist you further?"
+  },
+  {
+    "role": "user",
+    "content": "I'd like to book a flight from New York to Los Angeles."
+  }
+]

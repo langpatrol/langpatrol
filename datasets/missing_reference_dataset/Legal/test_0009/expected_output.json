@@ -1,0 +1,20 @@
+{
+  "expected_issue_codes": [
+    "MISSING_REFERENCE"
+  ],
+  "missing_references": [
+    {
+      "text": "the policy",
+      "start": 30,
+      "end": 40,
+      "type": "noun"
+    },
+    {
+      "text": "the regulations",
+      "start": 50,
+      "end": 60,
+      "type": "noun"
+    }
+  ],
+  "notes": "The references to the policy and regulations are missing from the conversation history."
+}

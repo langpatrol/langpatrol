@@ -1,0 +1,176 @@
+{
+  "expected_issue_codes": [
+    "MISSING_REFERENCE"
+  ],
+  "missing_references": [
+    {
+      "text": "that offers",
+      "start": 89,
+      "end": 100,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the entire",
+      "start": 209,
+      "end": 219,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that all",
+      "start": 549,
+      "end": 557,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the report",
+      "start": 572,
+      "end": 582,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that any",
+      "start": 610,
+      "end": 618,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the Eiffel",
+      "start": 1217,
+      "end": 1227,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that will",
+      "start": 1263,
+      "end": 1272,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the most",
+      "start": 1311,
+      "end": 1319,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the French",
+      "start": 1433,
+      "end": 1443,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that all",
+      "start": 549,
+      "end": 557,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that fit",
+      "start": 1688,
+      "end": 1696,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this range",
+      "start": 1704,
+      "end": 1714,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that may",
+      "start": 1792,
+      "end": 1800,
+      "type": "definite_noun"
+    },
+    {
+      "text": "these details",
+      "start": 1846,
+      "end": 1859,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that includes",
+      "start": 2024,
+      "end": 2037,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the necessary",
+      "start": 2042,
+      "end": 2055,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the wedding",
+      "start": 2220,
+      "end": 2231,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the most",
+      "start": 1311,
+      "end": 1319,
+      "type": "definite_noun"
+    },
+    {
+      "text": "these venues",
+      "start": 2335,
+      "end": 2347,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the booking",
+      "start": 2751,
+      "end": 2762,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that both",
+      "start": 2794,
+      "end": 2803,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the alternative",
+      "start": 2823,
+      "end": 2838,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the booking",
+      "start": 2751,
+      "end": 2762,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the status",
+      "start": 3229,
+      "end": 3239,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that may",
+      "start": 1792,
+      "end": 1800,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the trip",
+      "start": 3389,
+      "end": 3397,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that all",
+      "start": 549,
+      "end": 557,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the report",
+      "start": 572,
+      "end": 582,
+      "type": "definite_noun"
+    }
+  ],
+  "notes": "The reference to Agent Thompson's certification level and any notable achievements is missing in the conversation history."
+}

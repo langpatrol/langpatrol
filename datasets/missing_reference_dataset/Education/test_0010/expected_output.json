@@ -1,0 +1,260 @@
+{
+  "expected_issue_codes": [
+    "MISSING_REFERENCE"
+  ],
+  "missing_references": [
+    {
+      "text": "the local",
+      "start": 29,
+      "end": 38,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that focuses",
+      "start": 316,
+      "end": 328,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this trip",
+      "start": 384,
+      "end": 393,
+      "type": "definite_noun"
+    },
+    {
+      "text": "The museum",
+      "start": 418,
+      "end": 428,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that would",
+      "start": 534,
+      "end": 544,
+      "type": "definite_noun"
+    },
+    {
+      "text": "The report",
+      "start": 562,
+      "end": 572,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that this",
+      "start": 580,
+      "end": 589,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the exhibit",
+      "start": 770,
+      "end": 781,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that the",
+      "start": 878,
+      "end": 886,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this exhibit",
+      "start": 585,
+      "end": 597,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the public",
+      "start": 1002,
+      "end": 1012,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the museum",
+      "start": 1067,
+      "end": 1077,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that would",
+      "start": 534,
+      "end": 544,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the museum",
+      "start": 1067,
+      "end": 1077,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that our",
+      "start": 1303,
+      "end": 1311,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the museum",
+      "start": 1067,
+      "end": 1077,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the new",
+      "start": 1433,
+      "end": 1440,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this type",
+      "start": 1619,
+      "end": 1628,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that requires",
+      "start": 1801,
+      "end": 1814,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the exhibit",
+      "start": 770,
+      "end": 781,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the museum",
+      "start": 1067,
+      "end": 1077,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that offer",
+      "start": 2259,
+      "end": 2269,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that our",
+      "start": 1303,
+      "end": 1311,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the trip",
+      "start": 2420,
+      "end": 2428,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the museum",
+      "start": 1067,
+      "end": 1077,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this trip",
+      "start": 384,
+      "end": 393,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that would",
+      "start": 534,
+      "end": 544,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the museum",
+      "start": 1067,
+      "end": 1077,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the museum",
+      "start": 1067,
+      "end": 1077,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the museum",
+      "start": 1067,
+      "end": 1077,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the exhibit",
+      "start": 770,
+      "end": 781,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the museum",
+      "start": 1067,
+      "end": 1077,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the science",
+      "start": 4445,
+      "end": 4456,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that offer",
+      "start": 2259,
+      "end": 2269,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the community",
+      "start": 4880,
+      "end": 4893,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this topic",
+      "start": 4897,
+      "end": 4907,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that outlines",
+      "start": 5170,
+      "end": 5183,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the museum",
+      "start": 1067,
+      "end": 1077,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this outline",
+      "start": 5360,
+      "end": 5372,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the museum",
+      "start": 1067,
+      "end": 1077,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the science",
+      "start": 4445,
+      "end": 4456,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that you",
+      "start": 5621,
+      "end": 5629,
+      "type": "definite_noun"
+    }
+  ],
+  "notes": "The report from the museum's education department mentioned an exhibit on environmental sustainability, but it was unclear if this is a real or upcoming exhibit."
+}

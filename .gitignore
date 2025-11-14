@@ -35,3 +35,4 @@ POSTHOG_ANALYTICS_CONVENTIONS.md
 coverage/
 **/coverage/
 *.lcov
+**/venv/*

@@ -1,0 +1,14 @@
+{
+  "expected_issue_codes": [
+    "MISSING_REFERENCE"
+  ],
+  "missing_references": [
+    {
+      "text": "the report",
+      "start": 159,
+      "end": 169,
+      "type": "definite_noun"
+    }
+  ],
+  "notes": "The reference to the report is missing from the conversation history, as it was not explicitly mentioned in any of the messages."
+}

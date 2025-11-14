@@ -1,0 +1,266 @@
+{
+  "expected_issue_codes": [
+    "MISSING_REFERENCE"
+  ],
+  "missing_references": [
+    {
+      "text": "the agency",
+      "start": 27,
+      "end": 37,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this quarter",
+      "start": 111,
+      "end": 123,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the end",
+      "start": 140,
+      "end": 147,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the year",
+      "start": 151,
+      "end": 159,
+      "type": "definite_noun"
+    },
+    {
+      "text": "The booking",
+      "start": 259,
+      "end": 270,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the increasing",
+      "start": 319,
+      "end": 333,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the market",
+      "start": 349,
+      "end": 359,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that there",
+      "start": 455,
+      "end": 465,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this promotion",
+      "start": 621,
+      "end": 635,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the specific",
+      "start": 647,
+      "end": 659,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the offer",
+      "start": 683,
+      "end": 692,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the sales",
+      "start": 705,
+      "end": 714,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that month",
+      "start": 727,
+      "end": 737,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the contract",
+      "start": 772,
+      "end": 784,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the best",
+      "start": 860,
+      "end": 868,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the following",
+      "start": 948,
+      "end": 961,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the following reports",
+      "start": 948,
+      "end": 969,
+      "type": "forward_reference"
+    },
+    {
+      "text": "this quarter",
+      "start": 111,
+      "end": 123,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that may",
+      "start": 1281,
+      "end": 1289,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the past",
+      "start": 1337,
+      "end": 1345,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that our",
+      "start": 1607,
+      "end": 1615,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this quarter",
+      "start": 111,
+      "end": 123,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the above",
+      "start": 1787,
+      "end": 1796,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the above reports",
+      "start": 1787,
+      "end": 1804,
+      "type": "deictic_noun"
+    },
+    {
+      "text": "that highlights",
+      "start": 1849,
+      "end": 1864,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the industry",
+      "start": 1888,
+      "end": 1900,
+      "type": "definite_noun"
+    },
+    {
+      "text": "This should",
+      "start": 1902,
+      "end": 1913,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that could",
+      "start": 2018,
+      "end": 2028,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the sales",
+      "start": 705,
+      "end": 714,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the performance",
+      "start": 2164,
+      "end": 2179,
+      "type": "definite_noun"
+    },
+    {
+      "text": "these meetings",
+      "start": 2278,
+      "end": 2292,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that the",
+      "start": 455,
+      "end": 463,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the necessary",
+      "start": 2495,
+      "end": 2508,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this quarter",
+      "start": 111,
+      "end": 123,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the promotion",
+      "start": 2867,
+      "end": 2880,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that helped",
+      "start": 2963,
+      "end": 2974,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this period",
+      "start": 2997,
+      "end": 3008,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the coming",
+      "start": 3101,
+      "end": 3111,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that all",
+      "start": 3255,
+      "end": 3263,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that all",
+      "start": 3255,
+      "end": 3263,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this will",
+      "start": 3419,
+      "end": 3428,
+      "type": "definite_noun"
+    },
+    {
+      "text": "these matters",
+      "start": 3505,
+      "end": 3518,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the required",
+      "start": 3552,
+      "end": 3564,
+      "type": "definite_noun"
+    }
+  ],
+  "notes": "The 'report' reference is missing as it was not provided by the assistant. The user clearly mentions needing a report, but the assistant responds with a vague statement and does not provide any information about the report."
+}

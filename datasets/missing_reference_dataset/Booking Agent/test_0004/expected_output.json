@@ -1,0 +1,146 @@
+{
+  "expected_issue_codes": [
+    "MISSING_REFERENCE"
+  ],
+  "missing_references": [
+    {
+      "text": "the extended",
+      "start": 8,
+      "end": 20,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that can",
+      "start": 400,
+      "end": 408,
+      "type": "definite_noun"
+    },
+    {
+      "text": "these specific",
+      "start": 509,
+      "end": 523,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this package",
+      "start": 790,
+      "end": 802,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this package",
+      "start": 790,
+      "end": 802,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that might",
+      "start": 989,
+      "end": 999,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this package",
+      "start": 790,
+      "end": 802,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the total",
+      "start": 1122,
+      "end": 1131,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the entire",
+      "start": 1201,
+      "end": 1211,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that can",
+      "start": 400,
+      "end": 408,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this budget",
+      "start": 1316,
+      "end": 1327,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that you",
+      "start": 1421,
+      "end": 1429,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the terms",
+      "start": 1475,
+      "end": 1484,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the language",
+      "start": 1559,
+      "end": 1571,
+      "type": "definite_noun"
+    },
+    {
+      "text": "these terms",
+      "start": 1683,
+      "end": 1694,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the requirements",
+      "start": 1948,
+      "end": 1964,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this applies",
+      "start": 2146,
+      "end": 2158,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the given",
+      "start": 2233,
+      "end": 2242,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that our",
+      "start": 2555,
+      "end": 2563,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that can",
+      "start": 400,
+      "end": 408,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the total",
+      "start": 1122,
+      "end": 1131,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this new",
+      "start": 2952,
+      "end": 2960,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the total",
+      "start": 1122,
+      "end": 1131,
+      "type": "definite_noun"
+    }
+  ],
+  "notes": "The user is asking about the 'previous report' and its relevance to their booking, but the assistant did not provide a clear explanation. The phrase 'group discounts' was mentioned earlier in the conversation, but it's unclear if this is related to the current booking or just a separate offer."
+}

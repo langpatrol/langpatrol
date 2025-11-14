@@ -1,0 +1,278 @@
+{
+  "expected_issue_codes": [
+    "MISSING_REFERENCE"
+  ],
+  "missing_references": [
+    {
+      "text": "the company",
+      "start": 52,
+      "end": 63,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this report",
+      "start": 205,
+      "end": 216,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the revenue",
+      "start": 278,
+      "end": 289,
+      "type": "definite_noun"
+    },
+    {
+      "text": "The lack",
+      "start": 331,
+      "end": 339,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the report",
+      "start": 359,
+      "end": 369,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the company",
+      "start": 52,
+      "end": 63,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the company",
+      "start": 52,
+      "end": 63,
+      "type": "definite_noun"
+    },
+    {
+      "text": "This includes",
+      "start": 613,
+      "end": 626,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the company",
+      "start": 52,
+      "end": 63,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that can",
+      "start": 1022,
+      "end": 1030,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that could",
+      "start": 1166,
+      "end": 1176,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the company",
+      "start": 52,
+      "end": 63,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the current",
+      "start": 1306,
+      "end": 1317,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the company",
+      "start": 52,
+      "end": 63,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that could",
+      "start": 1166,
+      "end": 1176,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the company",
+      "start": 52,
+      "end": 63,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that have",
+      "start": 1817,
+      "end": 1826,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the company",
+      "start": 52,
+      "end": 63,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that our",
+      "start": 1901,
+      "end": 1909,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the current",
+      "start": 1306,
+      "end": 1317,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the fact",
+      "start": 2037,
+      "end": 2045,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that financial",
+      "start": 2046,
+      "end": 2060,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that any",
+      "start": 2146,
+      "end": 2154,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the finance",
+      "start": 2373,
+      "end": 2384,
+      "type": "definite_noun"
+    },
+    {
+      "text": "The company",
+      "start": 2395,
+      "end": 2406,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that has",
+      "start": 2450,
+      "end": 2458,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the past",
+      "start": 2495,
+      "end": 2503,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this growth",
+      "start": 2524,
+      "end": 2535,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the cost",
+      "start": 2548,
+      "end": 2556,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the potential",
+      "start": 2724,
+      "end": 2737,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that need",
+      "start": 2798,
+      "end": 2807,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the financial",
+      "start": 2995,
+      "end": 3008,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the same",
+      "start": 3037,
+      "end": 3045,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the one",
+      "start": 3058,
+      "end": 3065,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this information",
+      "start": 3212,
+      "end": 3228,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the company",
+      "start": 52,
+      "end": 63,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this analysis",
+      "start": 3421,
+      "end": 3434,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that our",
+      "start": 1901,
+      "end": 1909,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that includes",
+      "start": 3555,
+      "end": 3568,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this information",
+      "start": 3212,
+      "end": 3228,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that our",
+      "start": 1901,
+      "end": 1909,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the company",
+      "start": 52,
+      "end": 63,
+      "type": "definite_noun"
+    },
+    {
+      "text": "This could",
+      "start": 4056,
+      "end": 4066,
+      "type": "definite_noun"
+    },
+    {
+      "text": "these resources",
+      "start": 4246,
+      "end": 4261,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the company",
+      "start": 52,
+      "end": 63,
+      "type": "definite_noun"
+    }
+  ],
+  "notes": "The reference to the report is missing, as well as the figures mentioned in the context of revenue and net income."
+}

@@ -1,0 +1,308 @@
+{
+  "expected_issue_codes": [
+    "MISSING_REFERENCE"
+  ],
+  "missing_references": [
+    {
+      "text": "the extended",
+      "start": 8,
+      "end": 20,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that utilizes",
+      "start": 114,
+      "end": 127,
+      "type": "definite_noun"
+    },
+    {
+      "text": "The trial",
+      "start": 244,
+      "end": 253,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the project",
+      "start": 413,
+      "end": 424,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the entire",
+      "start": 468,
+      "end": 478,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the bottom",
+      "start": 525,
+      "end": 535,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this issue",
+      "start": 539,
+      "end": 549,
+      "type": "definite_noun"
+    },
+    {
+      "text": "The problem",
+      "start": 552,
+      "end": 563,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that our",
+      "start": 567,
+      "end": 575,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the trial",
+      "start": 634,
+      "end": 643,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the FDA",
+      "start": 708,
+      "end": 715,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the meeting",
+      "start": 867,
+      "end": 878,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that there",
+      "start": 937,
+      "end": 947,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this trial",
+      "start": 978,
+      "end": 988,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that there",
+      "start": 937,
+      "end": 947,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the trial",
+      "start": 634,
+      "end": 643,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that some",
+      "start": 1168,
+      "end": 1177,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the database",
+      "start": 1203,
+      "end": 1215,
+      "type": "definite_noun"
+    },
+    {
+      "text": "those changes",
+      "start": 1271,
+      "end": 1284,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that maybe",
+      "start": 1324,
+      "end": 1334,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the information",
+      "start": 1367,
+      "end": 1382,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that there",
+      "start": 937,
+      "end": 947,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the line",
+      "start": 1436,
+      "end": 1444,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this trial",
+      "start": 978,
+      "end": 988,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that there",
+      "start": 937,
+      "end": 947,
+      "type": "definite_noun"
+    },
+    {
+      "text": "The team",
+      "start": 1660,
+      "end": 1668,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the project",
+      "start": 413,
+      "end": 424,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the meeting",
+      "start": 867,
+      "end": 878,
+      "type": "definite_noun"
+    },
+    {
+      "text": "The trial",
+      "start": 244,
+      "end": 253,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the shuffle",
+      "start": 1997,
+      "end": 2008,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this further",
+      "start": 2035,
+      "end": 2047,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the trial",
+      "start": 634,
+      "end": 643,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that might",
+      "start": 2279,
+      "end": 2289,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the records",
+      "start": 2313,
+      "end": 2324,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the trial",
+      "start": 634,
+      "end": 643,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the trial",
+      "start": 634,
+      "end": 643,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the project",
+      "start": 413,
+      "end": 424,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the vaccine",
+      "start": 2553,
+      "end": 2564,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that might",
+      "start": 2279,
+      "end": 2289,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that you",
+      "start": 3003,
+      "end": 3011,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the following",
+      "start": 3018,
+      "end": 3031,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the following systems",
+      "start": 3018,
+      "end": 3039,
+      "type": "forward_reference"
+    },
+    {
+      "text": "the clinical",
+      "start": 3081,
+      "end": 3093,
+      "type": "definite_noun"
+    },
+    {
+      "text": "The FDA",
+      "start": 3121,
+      "end": 3128,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the trial",
+      "start": 634,
+      "end": 643,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the project",
+      "start": 413,
+      "end": 424,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that discretion",
+      "start": 3459,
+      "end": 3474,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this situation",
+      "start": 3485,
+      "end": 3499,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this information",
+      "start": 3525,
+      "end": 3541,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the vaccine",
+      "start": 2553,
+      "end": 2564,
+      "type": "definite_noun"
+    }
+  ],
+  "notes": "The user is unable to find any information on a vaccine trial that was supposed to start last month. The assistant has checked the internal database and FDA website, but no record of the trial exists. The user believes they have seen documentation of the trial in meeting minutes from last month, but this has not been found in the database."
+}

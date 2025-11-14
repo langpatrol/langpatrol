@@ -1,0 +1,248 @@
+{
+  "expected_issue_codes": [
+    "MISSING_REFERENCE"
+  ],
+  "missing_references": [
+    {
+      "text": "the effectiveness",
+      "start": 45,
+      "end": 62,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the impact",
+      "start": 162,
+      "end": 172,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the results",
+      "start": 265,
+      "end": 276,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the COVID-19",
+      "start": 405,
+      "end": 417,
+      "type": "definite_noun"
+    },
+    {
+      "text": "The program",
+      "start": 476,
+      "end": 487,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the final",
+      "start": 651,
+      "end": 660,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that there",
+      "start": 679,
+      "end": 689,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the program",
+      "start": 721,
+      "end": 732,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this lack",
+      "start": 795,
+      "end": 804,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the effectiveness",
+      "start": 45,
+      "end": 62,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the specific",
+      "start": 987,
+      "end": 999,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that all",
+      "start": 1400,
+      "end": 1408,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the same",
+      "start": 1433,
+      "end": 1441,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the program",
+      "start": 721,
+      "end": 732,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that teachers",
+      "start": 2028,
+      "end": 2041,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the implementation",
+      "start": 2055,
+      "end": 2073,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this research",
+      "start": 2107,
+      "end": 2120,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that tailors",
+      "start": 2249,
+      "end": 2261,
+      "type": "definite_noun"
+    },
+    {
+      "text": "The program",
+      "start": 476,
+      "end": 487,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the curriculum",
+      "start": 2499,
+      "end": 2513,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that implementing",
+      "start": 2538,
+      "end": 2555,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this approach",
+      "start": 2796,
+      "end": 2809,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the effectiveness",
+      "start": 45,
+      "end": 62,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that teachers",
+      "start": 2028,
+      "end": 2041,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the information",
+      "start": 3386,
+      "end": 3401,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the program",
+      "start": 721,
+      "end": 732,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that were",
+      "start": 3478,
+      "end": 3487,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the pilot",
+      "start": 3505,
+      "end": 3514,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the personalized",
+      "start": 3608,
+      "end": 3624,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the implementation",
+      "start": 2055,
+      "end": 2073,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that this",
+      "start": 3790,
+      "end": 3799,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the discussion",
+      "start": 3854,
+      "end": 3868,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the benefits",
+      "start": 3890,
+      "end": 3902,
+      "type": "definite_noun"
+    },
+    {
+      "text": "As discussed earlier",
+      "start": 3929,
+      "end": 3949,
+      "type": "deictic"
+    },
+    {
+      "text": "that teachers",
+      "start": 2028,
+      "end": 2041,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the classroom",
+      "start": 4065,
+      "end": 4078,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that topic",
+      "start": 4093,
+      "end": 4103,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the implementation",
+      "start": 2055,
+      "end": 2073,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the effectiveness",
+      "start": 45,
+      "end": 62,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this educational",
+      "start": 4599,
+      "end": 4615,
+      "type": "definite_noun"
+    }
+  ],
+  "notes": "The user is looking for more information on how the pilot program was implemented and what results were achieved. The assistant should provide details on specific strategies used by teachers to deliver personalized instruction and any notable challenges or successes reported by students."
+}

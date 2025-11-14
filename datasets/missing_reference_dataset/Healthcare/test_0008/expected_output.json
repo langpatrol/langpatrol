@@ -1,0 +1,236 @@
+{
+  "expected_issue_codes": [
+    "MISSING_REFERENCE"
+  ],
+  "missing_references": [
+    {
+      "text": "The following",
+      "start": 0,
+      "end": 13,
+      "type": "definite_noun"
+    },
+    {
+      "text": "The following conversation",
+      "start": 0,
+      "end": 26,
+      "type": "forward_reference"
+    },
+    {
+      "text": "the patient",
+      "start": 119,
+      "end": 130,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the doctor",
+      "start": 146,
+      "end": 156,
+      "type": "definite_noun"
+    },
+    {
+      "text": "The context",
+      "start": 170,
+      "end": 181,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that the",
+      "start": 185,
+      "end": 193,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the implications",
+      "start": 267,
+      "end": 283,
+      "type": "definite_noun"
+    },
+    {
+      "text": "The patient",
+      "start": 373,
+      "end": 384,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the past",
+      "start": 472,
+      "end": 480,
+      "type": "definite_noun"
+    },
+    {
+      "text": "The patient",
+      "start": 373,
+      "end": 384,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that her",
+      "start": 715,
+      "end": 723,
+      "type": "definite_noun"
+    },
+    {
+      "text": "The doctor",
+      "start": 903,
+      "end": 913,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the patient",
+      "start": 119,
+      "end": 130,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the patient",
+      "start": 119,
+      "end": 130,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the doctor",
+      "start": 146,
+      "end": 156,
+      "type": "definite_noun"
+    },
+    {
+      "text": "The conversation",
+      "start": 1086,
+      "end": 1102,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the following",
+      "start": 1190,
+      "end": 1203,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the following specific",
+      "start": 1190,
+      "end": 1212,
+      "type": "forward_reference"
+    },
+    {
+      "text": "The patient",
+      "start": 373,
+      "end": 384,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that means",
+      "start": 1366,
+      "end": 1376,
+      "type": "definite_noun"
+    },
+    {
+      "text": "The doctor",
+      "start": 903,
+      "end": 913,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the patient",
+      "start": 119,
+      "end": 130,
+      "type": "definite_noun"
+    },
+    {
+      "text": "The patient",
+      "start": 373,
+      "end": 384,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that next",
+      "start": 1713,
+      "end": 1722,
+      "type": "definite_noun"
+    },
+    {
+      "text": "The doctor",
+      "start": 903,
+      "end": 913,
+      "type": "definite_noun"
+    },
+    {
+      "text": "these rashes",
+      "start": 1911,
+      "end": 1923,
+      "type": "definite_noun"
+    },
+    {
+      "text": "The patient",
+      "start": 373,
+      "end": 384,
+      "type": "definite_noun"
+    },
+    {
+      "text": "The conversation",
+      "start": 1086,
+      "end": 1102,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the following",
+      "start": 1190,
+      "end": 1203,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the following specific",
+      "start": 1190,
+      "end": 1212,
+      "type": "forward_reference"
+    },
+    {
+      "text": "The report",
+      "start": 2277,
+      "end": 2287,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the lab",
+      "start": 2399,
+      "end": 2406,
+      "type": "definite_noun"
+    },
+    {
+      "text": "The patient",
+      "start": 373,
+      "end": 384,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the cause",
+      "start": 2853,
+      "end": 2862,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the patient",
+      "start": 119,
+      "end": 130,
+      "type": "definite_noun"
+    },
+    {
+      "text": "The conversation",
+      "start": 1086,
+      "end": 1102,
+      "type": "definite_noun"
+    },
+    {
+      "text": "The doctor",
+      "start": 903,
+      "end": 913,
+      "type": "definite_noun"
+    },
+    {
+      "text": "The patient",
+      "start": 373,
+      "end": 384,
+      "type": "definite_noun"
+    }
+  ],
+  "notes": "The conversation lacks clear antecedents for the references 'the report' and 'the results'."
+}

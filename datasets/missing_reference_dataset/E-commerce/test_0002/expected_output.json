@@ -1,0 +1,164 @@
+{
+  "expected_issue_codes": [
+    "MISSING_REFERENCE"
+  ],
+  "missing_references": [
+    {
+      "text": "that meets",
+      "start": 66,
+      "end": 76,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the importance",
+      "start": 149,
+      "end": 163,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the right",
+      "start": 176,
+      "end": 185,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the rise",
+      "start": 223,
+      "end": 231,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the numerous",
+      "start": 420,
+      "end": 432,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the market",
+      "start": 454,
+      "end": 464,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the best",
+      "start": 503,
+      "end": 511,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that offers",
+      "start": 742,
+      "end": 753,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the features",
+      "start": 833,
+      "end": 845,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the Dell",
+      "start": 918,
+      "end": 926,
+      "type": "definite_noun"
+    },
+    {
+      "text": "The Dell",
+      "start": 1083,
+      "end": 1091,
+      "type": "definite_noun"
+    },
+    {
+      "text": "those who",
+      "start": 1206,
+      "end": 1215,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the other",
+      "start": 1259,
+      "end": 1268,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the Apple",
+      "start": 1275,
+      "end": 1284,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that might",
+      "start": 1474,
+      "end": 1484,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that needs",
+      "start": 1602,
+      "end": 1612,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the day",
+      "start": 1642,
+      "end": 1649,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that your",
+      "start": 1768,
+      "end": 1777,
+      "type": "definite_noun"
+    },
+    {
+      "text": "these core",
+      "start": 2019,
+      "end": 2029,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that might",
+      "start": 1474,
+      "end": 1484,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the web",
+      "start": 2608,
+      "end": 2615,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the types",
+      "start": 2871,
+      "end": 2880,
+      "type": "definite_noun"
+    },
+    {
+      "text": "This will",
+      "start": 2919,
+      "end": 2928,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that align",
+      "start": 2988,
+      "end": 2998,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the necessary",
+      "start": 3334,
+      "end": 3347,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that compares",
+      "start": 3396,
+      "end": 3409,
+      "type": "definite_noun"
+    }
+  ],
+  "notes": "The user mentions creating a report comparing different laptop models, but the words 'report' and 'trends' are not explicitly mentioned in the conversation history. The system should flag these references as missing."
+}

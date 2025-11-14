@@ -1,0 +1,308 @@
+{
+  "expected_issue_codes": [
+    "MISSING_REFERENCE"
+  ],
+  "missing_references": [
+    {
+      "text": "the notes",
+      "start": 21,
+      "end": 30,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the Johnson",
+      "start": 99,
+      "end": 110,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that session",
+      "start": 169,
+      "end": 181,
+      "type": "definite_noun"
+    },
+    {
+      "text": "The plaintiff",
+      "start": 297,
+      "end": 310,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that the",
+      "start": 332,
+      "end": 340,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the agreed-upon",
+      "start": 408,
+      "end": 423,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the goods",
+      "start": 596,
+      "end": 605,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the case",
+      "start": 725,
+      "end": 733,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the hearing",
+      "start": 750,
+      "end": 761,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the status",
+      "start": 849,
+      "end": 859,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the hearing",
+      "start": 750,
+      "end": 761,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the counterclaims",
+      "start": 908,
+      "end": 925,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the latest",
+      "start": 975,
+      "end": 985,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this regard",
+      "start": 1002,
+      "end": 1013,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that need",
+      "start": 1066,
+      "end": 1075,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the hearing",
+      "start": 750,
+      "end": 761,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the report",
+      "start": 1223,
+      "end": 1233,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the court",
+      "start": 1254,
+      "end": 1263,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the defendant",
+      "start": 337,
+      "end": 350,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the case",
+      "start": 725,
+      "end": 733,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the outcome",
+      "start": 1391,
+      "end": 1402,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the implications",
+      "start": 1427,
+      "end": 1443,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this ruling",
+      "start": 1447,
+      "end": 1458,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the case",
+      "start": 725,
+      "end": 733,
+      "type": "definite_noun"
+    },
+    {
+      "text": "This will",
+      "start": 1703,
+      "end": 1712,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the total",
+      "start": 1887,
+      "end": 1896,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that may",
+      "start": 1974,
+      "end": 1982,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the future",
+      "start": 1998,
+      "end": 2008,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this topic",
+      "start": 2051,
+      "end": 2061,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the updated",
+      "start": 2090,
+      "end": 2101,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that need",
+      "start": 1066,
+      "end": 1075,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the original",
+      "start": 2294,
+      "end": 2306,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the opposing",
+      "start": 2360,
+      "end": 2372,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this was",
+      "start": 2471,
+      "end": 2479,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the expected",
+      "start": 2575,
+      "end": 2587,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that need",
+      "start": 1066,
+      "end": 1075,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the opposing",
+      "start": 2360,
+      "end": 2372,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this matter",
+      "start": 2896,
+      "end": 2907,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the litigation",
+      "start": 3023,
+      "end": 3037,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that everyone",
+      "start": 3242,
+      "end": 3255,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the same",
+      "start": 3262,
+      "end": 3270,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that our",
+      "start": 3361,
+      "end": 3369,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the current",
+      "start": 3404,
+      "end": 3415,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the case",
+      "start": 725,
+      "end": 733,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that need",
+      "start": 1066,
+      "end": 1075,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the desired",
+      "start": 3891,
+      "end": 3902,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this case",
+      "start": 3914,
+      "end": 3923,
+      "type": "definite_noun"
+    },
+    {
+      "text": "This will",
+      "start": 1703,
+      "end": 1712,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the complexities",
+      "start": 4129,
+      "end": 4145,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this matter",
+      "start": 2896,
+      "end": 2907,
+      "type": "definite_noun"
+    }
+  ],
+  "notes": "The user is missing clear antecedents for the references 'the report' and 'previous discussion'. The assistant should detect these missing references."
+}

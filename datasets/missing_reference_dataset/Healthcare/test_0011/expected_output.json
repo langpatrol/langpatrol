@@ -1,0 +1,212 @@
+{
+  "expected_issue_codes": [
+    "MISSING_REFERENCE"
+  ],
+  "missing_references": [
+    {
+      "text": "the past",
+      "start": 225,
+      "end": 233,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that this",
+      "start": 261,
+      "end": 270,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the cause",
+      "start": 306,
+      "end": 315,
+      "type": "definite_noun"
+    },
+    {
+      "text": "these symptoms",
+      "start": 319,
+      "end": 333,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the next",
+      "start": 399,
+      "end": 407,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the available",
+      "start": 436,
+      "end": 449,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this appointment",
+      "start": 470,
+      "end": 486,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that fit",
+      "start": 631,
+      "end": 639,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the registration",
+      "start": 885,
+      "end": 901,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the clinic",
+      "start": 1000,
+      "end": 1010,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the estimated",
+      "start": 1126,
+      "end": 1139,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the test",
+      "start": 1152,
+      "end": 1160,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this aspect",
+      "start": 1292,
+      "end": 1303,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the testing",
+      "start": 1422,
+      "end": 1433,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this appointment",
+      "start": 470,
+      "end": 486,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that refers",
+      "start": 1743,
+      "end": 1754,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the report",
+      "start": 1764,
+      "end": 1774,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the test",
+      "start": 1152,
+      "end": 1160,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that some",
+      "start": 2029,
+      "end": 2038,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the billing",
+      "start": 2127,
+      "end": 2138,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the test",
+      "start": 1152,
+      "end": 1160,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that need",
+      "start": 2458,
+      "end": 2467,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this follow-up",
+      "start": 266,
+      "end": 280,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the test",
+      "start": 1152,
+      "end": 1160,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that are",
+      "start": 2991,
+      "end": 2999,
+      "type": "definite_noun"
+    },
+    {
+      "text": "This would",
+      "start": 3049,
+      "end": 3059,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the testing",
+      "start": 1422,
+      "end": 1433,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this one",
+      "start": 3207,
+      "end": 3215,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that tend",
+      "start": 3272,
+      "end": 3281,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the typical",
+      "start": 3396,
+      "end": 3407,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the testing",
+      "start": 1422,
+      "end": 1433,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the appointment",
+      "start": 3598,
+      "end": 3613,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the test",
+      "start": 1152,
+      "end": 1160,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this follow-up",
+      "start": 266,
+      "end": 280,
+      "type": "definite_noun"
+    }
+  ],
+  "notes": "The 'report' and 'fasting requirements' are not mentioned in the conversation history, indicating they are missing references."
+}

@@ -1,0 +1,28 @@
+Here is the extended prompt:
+
+We are currently working on a highly anticipated vaccine trial for a new technology that utilizes cutting-edge gene editing tools to create a more effective and efficient treatment for a specific genetic disorder. The trial was initially expected to start last month, but it has been met with resistance from our internal team and even from external regulatory agencies. I'm part of the project management team responsible for overseeing the entire process, and I've been tasked with getting to the bottom of this issue.
+
+The problem is that our internal database doesn't seem to have any information on the trial's expected start date or its current status. We've also checked the FDA website, but all we can find are general guidelines and regulations related to clinical trials, with no mention of our specific project. I've reviewed the meeting minutes from last month, as you requested, and it appears that there was[MISSING_REFERENCE] indeed a discussion about this trial, including an expected start date.
+
+However, when [MISSING_REFERENCE]I asked our team to investigate further, they told me that there were no records of the [MISSING_REFERENCE][MISSING_REFERENCE]trial in our system. They also mentioned that some changes had been made to the database recent[MISSING_REFERENCE][MISSING_REFERENCE][MISSING_REFERENCE][MISSING_REFERENCE]ly, but th[MISSING_REFERENCE][MISSI[MISSING_REFERENCE]NG_REFERENCE][MISSING[MISSIN[MISS[MISS[MISSING_REFERENCE]ING_REFERENCE]ING_REFERENCE]G_REFERENCE]_REFERENCE][MISSING_REFERENCE][MISSING_REFERENCE][MISSING_REFERENCE]ey can't seem to pinpoint exactly what those changes [MISSING_REFERENCE]might have been. I'm starting to think that maybe someone simply forgot to update the information or that there was a [MISSIN[MISSING_REFERENCE][MISSING_REFERENCE]G_REFERENCE][MISSING_REFERENCE][MISSING_REFERENCE][MISSING_REFERENCE]mis[MISSING_REFERENCE][MISSING_REFERENCE]communication somewhere along the line.
+
+As you know, we've been following this trial for months now, and every time I ask about its status, I get told that there's no re[MISSING_REFERENCE]cord of it. This is[MISSING_REFERENCE] really frustrating because we need to know what h[MISSING_REFERENCE]appened to it. The team is gett[MISSING_REFERENCE]ing anxious, and our investor[MISSING_REFERENCE]s are starting to wonder if we're holding u[MISSING_REFERENCE]p progress on the project.
+
+I've attached a copy of the meeting minutes for your reference, which I hope will help clarify things. The trial was expected to be a major breakthrough in gene editing technolo[MISSING_REFERENCE]gy, but now it seems like it's been lost in the shuffle. Can you please look into this further and provide me with some answers? Specifically, I'd like to know:
+
+* Is there any information available on the trial's current status or its expected completion date?
+* Were there any changes made to our internal database rece[MISSING_REFERENCE]ntly that might have[MISSING_REFERENCE] deleted or hidden the records of the trial?
+* Are there any external regulatory agencies that we should be contacting to get more information about the trial's status?
+* Can you provide some guidance on [MISSING_REFERENCE][MISSING_REFERENCE]how to proceed w[MISSING_REFERENCE]ith the project now that it seems like the vaccine trial has been cancelled due to unforeseen circumstances?
+
+I'd also appreciate it if you could keep an eye out for any other potential clinical trials [MISSING_REFERENCE][MISSING_REFERENCE]or research projects in our field that might be worth exploring. We're always looking for innovative solutions and new technologies, so I'm hoping that we might stumble upon something even better than what was originally planned.
+
+In terms of technical requirements, I'd like to request that you check the following systems:
+
+* Our internal database (specifically, the clinical trial management system)
+* The F[MISSING_REFERENCE[MISSING_REFERENCE]]DA websi[MISSING_REFERENCE]te
+* Our team's project management [MISSING_REFERENCE]software (to see[MISSING_REFERENCE] if there are any records or updates related to the trial)
+
+Please let me know if you need any additional information or clarification from our end. We're eager to get back on track and move forward with the project as soon as possible.
+
+One final note: I want to emphasize that discretion is key in this situation. We can't af[MISSING_REFERENCE]ford t[MISSING_REFERENCE]o have this information[MISSING_REFERENCE] getting out publicly just yet, so please be careful about who you share any findings or updates with. We'll keep our stakeholders informed once we have a better understanding of what happened to the vaccine trial.

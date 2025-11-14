@@ -1,0 +1,224 @@
+{
+  "expected_issue_codes": [
+    "MISSING_REFERENCE"
+  ],
+  "missing_references": [
+    {
+      "text": "the extended",
+      "start": 8,
+      "end": 20,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that has",
+      "start": 99,
+      "end": 107,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the tracking",
+      "start": 226,
+      "end": 238,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the status",
+      "start": 453,
+      "end": 463,
+      "type": "definite_noun"
+    },
+    {
+      "text": "The most",
+      "start": 478,
+      "end": 486,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the report",
+      "start": 517,
+      "end": 527,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the status",
+      "start": 453,
+      "end": 463,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the report",
+      "start": 517,
+      "end": 527,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that there",
+      "start": 949,
+      "end": 959,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the packaging",
+      "start": 982,
+      "end": 995,
+      "type": "definite_noun"
+    },
+    {
+      "text": "those are",
+      "start": 1019,
+      "end": 1028,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the delivery",
+      "start": 1059,
+      "end": 1071,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the issues",
+      "start": 1144,
+      "end": 1154,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that arose",
+      "start": 1155,
+      "end": 1165,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the shipping",
+      "start": 1256,
+      "end": 1268,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this process",
+      "start": 1340,
+      "end": 1352,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the status",
+      "start": 453,
+      "end": 463,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the lack",
+      "start": 1501,
+      "end": 1509,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the scenes",
+      "start": 1605,
+      "end": 1615,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that delays",
+      "start": 1933,
+      "end": 1944,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the following",
+      "start": 2133,
+      "end": 2146,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the issues",
+      "start": 1144,
+      "end": 1154,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the packaging",
+      "start": 982,
+      "end": 995,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the shipping",
+      "start": 1256,
+      "end": 1268,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the status",
+      "start": 453,
+      "end": 463,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the issue",
+      "start": 1144,
+      "end": 1153,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this process",
+      "start": 1340,
+      "end": 1352,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the issue",
+      "start": 1144,
+      "end": 1153,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this experience",
+      "start": 3034,
+      "end": 3049,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the issues",
+      "start": 1144,
+      "end": 1154,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that this",
+      "start": 3169,
+      "end": 3178,
+      "type": "definite_noun"
+    },
+    {
+      "text": "these issues",
+      "start": 3403,
+      "end": 3415,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the future",
+      "start": 3464,
+      "end": 3474,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this investigation",
+      "start": 3688,
+      "end": 3706,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this matter",
+      "start": 3825,
+      "end": 3836,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the issue",
+      "start": 1144,
+      "end": 1153,
+      "type": "definite_noun"
+    }
+  ],
+  "notes": "The user is requesting a copy of the shipping label and an explanation of what went wrong with the package. They are also asking for information on the status of their account, the estimated delivery date, and clarification on what happened to the package after it was scanned."
+}

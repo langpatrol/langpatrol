@@ -1,0 +1,52 @@
+The following conversation between a patient and their doctor is requested to be provided, with specific details about the patient's concerns and the doctor's responses. The context is that the patient has been experiencing some unusual symptoms and wants to discuss the implications of their test results from a recent lab test with their doctor.
+
+Background information: The patient is a 45-year-old female who has been experiencing recurring headaches and fatigue over the past few months. She has also noticed some skin rashes on her arms and legs, which she thinks may be related to her symptoms. She has tried over-the-counter pain relievers and antihistamines without relief.
+
+The patient's lab results show that her liver enzymes are slightly elevated, indicating possible liver damage or inflammation. Her kidney function tests are also slightly abnormal, suggesting potential kidney problems. The doctor needs to provide a natural-sounding conversation between the patient and their doctor, including specific details about the patient's concerns and the doctor's responses.
+
+The conversation should be at least 200 words long, include multiple questions and answers, and address the following specific scenarios:
+
+* The patient mentions a specific test result, but doesn't specify what it means (e.g., "My liver enzymes are elevated. Can you tell me what that means?").
+* The doctor asks for clarification on the patient's symptoms, such as "Can you describe your headaches in more detail? Are they constant or do they come and go?"
+* The patient requests a follow-up appointment to discuss their results further (e.g., "I'd like to schedule an appointment to talk more about my lab results. Can we do that next week?").
+* The doctor asks for more information about a particular symptom, such as "You mentioned having skin rashes on your arms and legs. Have you noticed any triggers or patterns with these rashes?"
+* The patient requests additional tests or evaluations, such as "I'd like to get a CT scan of my liver to make sure it's not damaged."
+
+The conversation should also address the following specific requirements:
+
+* Use medical terminology correctly
+* Use proper grammar and punctuation
+* Be conversational in tone, but professional
+
+Specific reference: The report is located at section 10-20. Type is definite noun.
+
+Expected issue codes: MISSING_reference
+
+Requirements for the lab results:
+
+* Slightly elevated liver enzymes (AST/ALT): 100-200 units/L (normal range)
+* Abnormal kidney function tests (creatinine, urea): 1.2-2.5 mg/dL (normal range)
+* Skin rashes on arms and legs
+
+Patient's medical history:
+
+* Hypertension
+* High cholesterol
+* History of allergies to penicillin and sulfa
+
+Doctor's notes:
+
+* The patient's symptoms are not typical for liver damage or kidney problems.
+* Further testing is needed to determine the cause of the patient's symptoms.
+
+Use cases:
+
+* A patient with similar symptoms may be experiencing a viral infection, such as hepatitis C.
+* A patient with similar symptoms may also have an autoimmune disorder, such as lupus.
+* A patient with similar symptoms may require medication to manage their condition, such as pain relievers or antihistamines.
+
+Additional instructions:
+
+* The conversation should be written in a natural-sounding style, avoiding jargon and technical terms whenever possible.
+* The doctor's responses should be based on typical medical practice and not on any specific diagnosis or treatment plan.
+* The patient's concerns and symptoms should be taken seriously and addressed promptly.

@@ -1,0 +1,194 @@
+{
+  "expected_issue_codes": [
+    "MISSING_REFERENCE"
+  ],
+  "missing_references": [
+    {
+      "text": "the laptop",
+      "start": 67,
+      "end": 77,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that meet",
+      "start": 193,
+      "end": 202,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the specific",
+      "start": 203,
+      "end": 215,
+      "type": "definite_noun"
+    },
+    {
+      "text": "The main",
+      "start": 293,
+      "end": 301,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this particular",
+      "start": 461,
+      "end": 476,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the report",
+      "start": 566,
+      "end": 576,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the battery",
+      "start": 619,
+      "end": 630,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the purchase",
+      "start": 642,
+      "end": 654,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this model",
+      "start": 723,
+      "end": 733,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the laptop",
+      "start": 67,
+      "end": 77,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the laptop",
+      "start": 67,
+      "end": 77,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the web",
+      "start": 1075,
+      "end": 1082,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this one",
+      "start": 1421,
+      "end": 1429,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the best",
+      "start": 1445,
+      "end": 1453,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this model",
+      "start": 723,
+      "end": 733,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the final",
+      "start": 1643,
+      "end": 1652,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that the",
+      "start": 1683,
+      "end": 1691,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the expected",
+      "start": 1772,
+      "end": 1784,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the report",
+      "start": 566,
+      "end": 576,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the laptop",
+      "start": 67,
+      "end": 77,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the status",
+      "start": 1996,
+      "end": 2006,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the charger",
+      "start": 2063,
+      "end": 2074,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that will",
+      "start": 2075,
+      "end": 2084,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the laptop",
+      "start": 67,
+      "end": 77,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this model",
+      "start": 723,
+      "end": 733,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this laptop",
+      "start": 2501,
+      "end": 2512,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the support",
+      "start": 2726,
+      "end": 2737,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the laptop",
+      "start": 67,
+      "end": 77,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that the",
+      "start": 1683,
+      "end": 1691,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the laptop",
+      "start": 67,
+      "end": 77,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the display",
+      "start": 3248,
+      "end": 3259,
+      "type": "definite_noun"
+    }
+  ],
+  "notes": "The reference to the 'report' on the laptop's warranty page is missing from the conversation history."
+}

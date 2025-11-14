@@ -1,0 +1,302 @@
+{
+  "expected_issue_codes": [
+    "MISSING_REFERENCE"
+  ],
+  "missing_references": [
+    {
+      "text": "the system",
+      "start": 121,
+      "end": 131,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this issue",
+      "start": 303,
+      "end": 313,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the same",
+      "start": 404,
+      "end": 412,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the system",
+      "start": 121,
+      "end": 131,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that the",
+      "start": 841,
+      "end": 849,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the ordinary",
+      "start": 973,
+      "end": 985,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that all",
+      "start": 1045,
+      "end": 1053,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the required",
+      "start": 1057,
+      "end": 1069,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that something",
+      "start": 1111,
+      "end": 1125,
+      "type": "definite_noun"
+    },
+    {
+      "text": "these error",
+      "start": 1160,
+      "end": 1171,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this and",
+      "start": 1234,
+      "end": 1242,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the payment",
+      "start": 1337,
+      "end": 1348,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that may",
+      "start": 1474,
+      "end": 1482,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the issue",
+      "start": 1505,
+      "end": 1514,
+      "type": "definite_noun"
+    },
+    {
+      "text": "these errors",
+      "start": 1568,
+      "end": 1580,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this compatibility",
+      "start": 1745,
+      "end": 1763,
+      "type": "definite_noun"
+    },
+    {
+      "text": "The customer",
+      "start": 1771,
+      "end": 1783,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the delay",
+      "start": 1801,
+      "end": 1810,
+      "type": "definite_noun"
+    },
+    {
+      "text": "This incident",
+      "start": 1856,
+      "end": 1869,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the importance",
+      "start": 1886,
+      "end": 1900,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this issue",
+      "start": 303,
+      "end": 313,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this issue",
+      "start": 303,
+      "end": 313,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this and",
+      "start": 1234,
+      "end": 1242,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that works",
+      "start": 2150,
+      "end": 2160,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that there",
+      "start": 2197,
+      "end": 2207,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the system",
+      "start": 121,
+      "end": 131,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the payment",
+      "start": 1337,
+      "end": 1348,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this issue",
+      "start": 303,
+      "end": 313,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that are",
+      "start": 2614,
+      "end": 2622,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the payment",
+      "start": 1337,
+      "end": 1348,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the payment",
+      "start": 1337,
+      "end": 1348,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the system",
+      "start": 121,
+      "end": 131,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the types",
+      "start": 2883,
+      "end": 2892,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that can",
+      "start": 2922,
+      "end": 2930,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this issue",
+      "start": 303,
+      "end": 313,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that could",
+      "start": 3106,
+      "end": 3116,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this compatibility",
+      "start": 1745,
+      "end": 1763,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that might",
+      "start": 3213,
+      "end": 3223,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the system",
+      "start": 121,
+      "end": 131,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this issue",
+      "start": 303,
+      "end": 313,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this issue",
+      "start": 303,
+      "end": 313,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the following",
+      "start": 3442,
+      "end": 3455,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the following information",
+      "start": 3442,
+      "end": 3467,
+      "type": "forward_reference"
+    },
+    {
+      "text": "the compatibility",
+      "start": 3510,
+      "end": 3527,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the issue",
+      "start": 1505,
+      "end": 1514,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that might",
+      "start": 3213,
+      "end": 3223,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the system",
+      "start": 121,
+      "end": 131,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this issue",
+      "start": 303,
+      "end": 313,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this issue",
+      "start": 303,
+      "end": 313,
+      "type": "definite_noun"
+    }
+  ],
+  "notes": "The user is trying to reference a non-existent 'the report' and also references a noun ('this payment method') that was not discussed in the conversation history."
+}

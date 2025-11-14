@@ -1,0 +1,248 @@
+{
+  "expected_issue_codes": [
+    "MISSING_REFERENCE"
+  ],
+  "missing_references": [
+    {
+      "text": "the context",
+      "start": 3,
+      "end": 14,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the recently",
+      "start": 103,
+      "end": 115,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this trial",
+      "start": 184,
+      "end": 194,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the efficacy",
+      "start": 211,
+      "end": 223,
+      "type": "definite_noun"
+    },
+    {
+      "text": "The study",
+      "start": 308,
+      "end": 317,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the development",
+      "start": 434,
+      "end": 449,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the data",
+      "start": 570,
+      "end": 578,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the percentage",
+      "start": 604,
+      "end": 618,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the previous",
+      "start": 658,
+      "end": 670,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the previous report",
+      "start": 658,
+      "end": 677,
+      "type": "deictic_noun"
+    },
+    {
+      "text": "this metric",
+      "start": 766,
+      "end": 777,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the study",
+      "start": 856,
+      "end": 865,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the following",
+      "start": 981,
+      "end": 994,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the following information",
+      "start": 981,
+      "end": 1006,
+      "type": "forward_reference"
+    },
+    {
+      "text": "the key",
+      "start": 1043,
+      "end": 1050,
+      "type": "definite_noun"
+    },
+    {
+      "text": "The specific",
+      "start": 1147,
+      "end": 1159,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the primary",
+      "start": 1173,
+      "end": 1184,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the secondary",
+      "start": 1216,
+      "end": 1229,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the study",
+      "start": 856,
+      "end": 865,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the trial",
+      "start": 1366,
+      "end": 1375,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the trial",
+      "start": 1366,
+      "end": 1375,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the raw",
+      "start": 1541,
+      "end": 1548,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this study",
+      "start": 1676,
+      "end": 1686,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the analysis",
+      "start": 1789,
+      "end": 1801,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the market",
+      "start": 1846,
+      "end": 1856,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the necessary",
+      "start": 1911,
+      "end": 1924,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the study",
+      "start": 856,
+      "end": 865,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the sales",
+      "start": 2041,
+      "end": 2050,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the analysis",
+      "start": 1789,
+      "end": 1801,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the market",
+      "start": 1846,
+      "end": 1856,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the report",
+      "start": 2238,
+      "end": 2248,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that may",
+      "start": 2313,
+      "end": 2321,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that our",
+      "start": 2370,
+      "end": 2378,
+      "type": "definite_noun"
+    },
+    {
+      "text": "The study",
+      "start": 308,
+      "end": 317,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the development",
+      "start": 434,
+      "end": 449,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that all",
+      "start": 2661,
+      "end": 2669,
+      "type": "definite_noun"
+    },
+    {
+      "text": "The raw",
+      "start": 2838,
+      "end": 2845,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the trial",
+      "start": 1366,
+      "end": 1375,
+      "type": "definite_noun"
+    },
+    {
+      "text": "This additional",
+      "start": 3199,
+      "end": 3214,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the trial",
+      "start": 1366,
+      "end": 1375,
+      "type": "definite_noun"
+    }
+  ],
+  "notes": "The user is asking for specific details about the trial's results and methodology, but the assistant mentioned a study in their previous response without providing the necessary context or data."
+}

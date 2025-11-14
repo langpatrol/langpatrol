@@ -1,0 +1,278 @@
+{
+  "expected_issue_codes": [
+    "MISSING_REFERENCE"
+  ],
+  "missing_references": [
+    {
+      "text": "the legal",
+      "start": 39,
+      "end": 48,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that has",
+      "start": 172,
+      "end": 180,
+      "type": "definite_noun"
+    },
+    {
+      "text": "The agency",
+      "start": 227,
+      "end": 237,
+      "type": "definite_noun"
+    },
+    {
+      "text": "those affected",
+      "start": 427,
+      "end": 441,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the context",
+      "start": 467,
+      "end": 478,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the FDCPA",
+      "start": 525,
+      "end": 534,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the report",
+      "start": 553,
+      "end": 563,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the company",
+      "start": 624,
+      "end": 635,
+      "type": "definite_noun"
+    },
+    {
+      "text": "The FDCPA",
+      "start": 907,
+      "end": 916,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that debt",
+      "start": 926,
+      "end": 935,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the amount",
+      "start": 1064,
+      "end": 1074,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the creditor",
+      "start": 1081,
+      "end": 1093,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the consumer",
+      "start": 1106,
+      "end": 1118,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the debt",
+      "start": 1138,
+      "end": 1146,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the report",
+      "start": 553,
+      "end": 563,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that may",
+      "start": 1423,
+      "end": 1431,
+      "type": "definite_noun"
+    },
+    {
+      "text": "these regulations",
+      "start": 1446,
+      "end": 1463,
+      "type": "definite_noun"
+    },
+    {
+      "text": "This could",
+      "start": 1465,
+      "end": 1475,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the agency",
+      "start": 1494,
+      "end": 1504,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the company",
+      "start": 624,
+      "end": 635,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that apply",
+      "start": 1776,
+      "end": 1786,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the FDCPA",
+      "start": 525,
+      "end": 534,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the agency",
+      "start": 1494,
+      "end": 1504,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the CFPB",
+      "start": 2078,
+      "end": 2086,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that collectors",
+      "start": 2131,
+      "end": 2146,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the debt",
+      "start": 1138,
+      "end": 1146,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the consumer",
+      "start": 1106,
+      "end": 1118,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that might",
+      "start": 2312,
+      "end": 2322,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the key",
+      "start": 2659,
+      "end": 2666,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that meeting",
+      "start": 2779,
+      "end": 2791,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the next",
+      "start": 2806,
+      "end": 2814,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the complaint",
+      "start": 2851,
+      "end": 2864,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the FDCPA",
+      "start": 525,
+      "end": 534,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the agency",
+      "start": 1494,
+      "end": 1504,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the best",
+      "start": 3116,
+      "end": 3124,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the complaint",
+      "start": 2851,
+      "end": 2864,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the potential",
+      "start": 3165,
+      "end": 3178,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the company",
+      "start": 624,
+      "end": 635,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the FDCPA",
+      "start": 525,
+      "end": 534,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that they",
+      "start": 3494,
+      "end": 3503,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that addresses",
+      "start": 3690,
+      "end": 3704,
+      "type": "definite_noun"
+    },
+    {
+      "text": "these questions",
+      "start": 3712,
+      "end": 3727,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the complaint",
+      "start": 2851,
+      "end": 2864,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this matter",
+      "start": 3851,
+      "end": 3862,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the report",
+      "start": 553,
+      "end": 563,
+      "type": "definite_noun"
+    }
+  ],
+  "notes": "The reference to the report is missing from the conversation history."
+}

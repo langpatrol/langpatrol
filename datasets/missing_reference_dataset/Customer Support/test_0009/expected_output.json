@@ -1,0 +1,332 @@
+{
+  "expected_issue_codes": [
+    "MISSING_REFERENCE"
+  ],
+  "missing_references": [
+    {
+      "text": "that the",
+      "start": 50,
+      "end": 58,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the package",
+      "start": 86,
+      "end": 97,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that the",
+      "start": 50,
+      "end": 58,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this order",
+      "start": 236,
+      "end": 246,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the initial",
+      "start": 269,
+      "end": 280,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the tracking",
+      "start": 55,
+      "end": 67,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the package",
+      "start": 86,
+      "end": 97,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the old",
+      "start": 346,
+      "end": 353,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the shipping",
+      "start": 203,
+      "end": 215,
+      "type": "definite_noun"
+    },
+    {
+      "text": "The customer",
+      "start": 642,
+      "end": 654,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that the",
+      "start": 50,
+      "end": 58,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that there",
+      "start": 739,
+      "end": 749,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the shipping",
+      "start": 203,
+      "end": 215,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the time",
+      "start": 800,
+      "end": 808,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that some",
+      "start": 852,
+      "end": 861,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this unexpected",
+      "start": 935,
+      "end": 950,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this situation",
+      "start": 973,
+      "end": 987,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the order",
+      "start": 1034,
+      "end": 1043,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the tracking",
+      "start": 55,
+      "end": 67,
+      "type": "definite_noun"
+    },
+    {
+      "text": "The report",
+      "start": 1164,
+      "end": 1174,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this issue",
+      "start": 1224,
+      "end": 1234,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the shipping",
+      "start": 203,
+      "end": 215,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that may",
+      "start": 1445,
+      "end": 1453,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this delay",
+      "start": 1466,
+      "end": 1476,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that were",
+      "start": 1529,
+      "end": 1538,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the initial",
+      "start": 269,
+      "end": 280,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the package",
+      "start": 86,
+      "end": 97,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the original",
+      "start": 1698,
+      "end": 1710,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that would",
+      "start": 1725,
+      "end": 1735,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the delivery",
+      "start": 1750,
+      "end": 1762,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the future",
+      "start": 1943,
+      "end": 1953,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the shipping",
+      "start": 203,
+      "end": 215,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that affected",
+      "start": 2123,
+      "end": 2136,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the delivery",
+      "start": 1750,
+      "end": 1762,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the package",
+      "start": 86,
+      "end": 97,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the future",
+      "start": 1943,
+      "end": 1953,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that you",
+      "start": 2336,
+      "end": 2344,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this matter",
+      "start": 2354,
+      "end": 2365,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that you",
+      "start": 2336,
+      "end": 2344,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the following",
+      "start": 2638,
+      "end": 2651,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the following additional",
+      "start": 2638,
+      "end": 2662,
+      "type": "forward_reference"
+    },
+    {
+      "text": "this issue",
+      "start": 1224,
+      "end": 1234,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that may",
+      "start": 1445,
+      "end": 1453,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this matter",
+      "start": 2354,
+      "end": 2365,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that may",
+      "start": 1445,
+      "end": 1453,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the delivery",
+      "start": 1750,
+      "end": 1762,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the report",
+      "start": 2989,
+      "end": 2999,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the order",
+      "start": 1034,
+      "end": 1043,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this issue",
+      "start": 1224,
+      "end": 1234,
+      "type": "definite_noun"
+    },
+    {
+      "text": "that this",
+      "start": 3099,
+      "end": 3108,
+      "type": "definite_noun"
+    },
+    {
+      "text": "the future",
+      "start": 1943,
+      "end": 1953,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this message",
+      "start": 3396,
+      "end": 3408,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this matter",
+      "start": 2354,
+      "end": 2365,
+      "type": "definite_noun"
+    },
+    {
+      "text": "this issue",
+      "start": 1224,
+      "end": 1234,
+      "type": "definite_noun"
+    }
+  ],
+  "notes": "The user is missing references to the report and timeline, which are likely expected in a customer support conversation."
+}

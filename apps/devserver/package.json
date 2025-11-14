@@ -1,6 +1,7 @@
 {
   "name": "langpatrol-devserver",
-  "version": "0.1.2",
+  "version": "0.1.3",
+  "license": "Elastic License 2.0",
   "private": true,
   "type": "module",
   "scripts": {
@@ -18,4 +19,3 @@
     "@types/cors": "^2.8.17"
   }
 }
-
