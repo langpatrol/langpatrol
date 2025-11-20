@@ -13,7 +13,7 @@ We're building LangPatrol in the open and welcome contributions! This guide will
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-org/langpatrol.git
+git clone https://github.com/langpatrol/langpatrol.git
 cd langpatrol
 
 # Install dependencies
