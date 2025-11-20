@@ -7,13 +7,16 @@
 
 import type { AnalyzeInput, Report } from '../types';
 import { createIssueId, createPreview } from '../util/reporting';
+import { extractText } from '../util/text';
 
 const PLACEHOLDER_HANDLEBARS = /\{\{\s*([#/>!&^]?)([a-zA-Z0-9_.]+)\s*\}\}/g;
 const PLACEHOLDER_JINJA = /\{\{\s*([a-zA-Z0-9_.]+)\s*\}\}/g;
 const PLACEHOLDER_EJS = /<%\s*([a-zA-Z0-9_.]+)\s*%>/g;
 
 export function run(input: AnalyzeInput, acc: Report): void {
-  const text = input.prompt || '';
+  // Analyze full conversation (prompt + all messages) to catch placeholders
+  // defined anywhere in the conversation history
+  const text = extractText(input);
   if (!text) return;
 
   const dialect = input.templateDialect || detectDialect(text);
@@ -66,7 +69,9 @@ export function run(input: AnalyzeInput, acc: Report): void {
           char: Math.min(...Array.from(unresolvedMap.values()).flatMap((v) => v.positions))
         }
       },
-      scope: { type: 'prompt' },
+      scope: input.messages && input.messages.length > 0
+        ? { type: 'messages', messageIndex: input.messages.length - 1 }
+        : { type: 'prompt' },
       confidence: 'high'
     });
   }

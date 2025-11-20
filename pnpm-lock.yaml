@@ -126,12 +126,6 @@ importers:
         specifier: ^1.0.10
         version: 1.0.21
     devDependencies:
-      '@langpatrol/eslint-config':
-        specifier: workspace:*
-        version: link:../../tooling/eslint-config
-      '@langpatrol/prettier-config':
-        specifier: workspace:*
-        version: link:../../tooling/prettier-config
       '@types/diff':
         specifier: ^5.0.8
         version: 5.2.3

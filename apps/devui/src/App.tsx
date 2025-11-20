@@ -38,6 +38,10 @@ export default function App() {
   const [usePhraseLevel, setUsePhraseLevel] = useState<boolean>(false);
   const [useMultiHypothesis, setUseMultiHypothesis] = useState<boolean>(true);
   const [debugMode, setDebugMode] = useState<boolean>(false);
+  // Cloud mode settings
+  const [useCloudMode, setUseCloudMode] = useState<boolean>(false);
+  const [apiKey, setApiKey] = useState<string>('');
+  const [apiBaseUrl, setApiBaseUrl] = useState<string>('http://localhost:3000');
   const [testResults, setTestResults] = useState<{
     filename: string;
     fileSize: number;
@@ -180,7 +184,10 @@ export default function App() {
           chunkOverlap: useChunkedMatching ? chunkOverlap : undefined,
           useSentenceLevel: useSentenceLevel || undefined,
           usePhraseLevel: usePhraseLevel || undefined,
-          useMultiHypothesis: useMultiHypothesis !== undefined ? useMultiHypothesis : undefined
+          useMultiHypothesis: useMultiHypothesis !== undefined ? useMultiHypothesis : undefined,
+          // Cloud API options
+          apiKey: useCloudMode && apiKey ? apiKey : undefined,
+          apiBaseUrl: useCloudMode && apiBaseUrl ? apiBaseUrl : undefined
         }
       };
 
@@ -216,6 +223,67 @@ export default function App() {
           <div style={{ flex: 1, overflowY: 'auto', padding: 16 }}>
 
             <h1 style={{ marginBottom: 16, fontSize: 24, fontWeight: 'bold' }}>Settings</h1>
+            
+            {/* Cloud Mode Section */}
+            <div style={{ marginBottom: 16, padding: 12, border: '1px solid #007bff', borderRadius: 4, backgroundColor: '#e7f3ff' }}>
+              <label style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 8, fontWeight: 'bold' }}>
+                <span>Cloud Mode:</span>
+                <code style={{ fontFamily: 'monospace', backgroundColor: '#007bff', color: 'white', padding: '2px 6px', borderRadius: 3 }}>CLOUD API</code>
+              </label>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+                <label style={{ display: 'flex', alignItems: 'center', cursor: 'pointer', fontSize: 14 }}>
+                  <input
+                    type="checkbox"
+                    checked={useCloudMode}
+                    onChange={(e) => setUseCloudMode(e.target.checked)}
+                    style={{ marginRight: 6, cursor: 'pointer' }}
+                  />
+                  <span>
+                    <strong>Use Cloud API</strong> - Route analysis through cloud API instead of local processing
+                  </span>
+                </label>
+                {useCloudMode && (
+                  <>
+                    <div style={{ marginTop: 8 }}>
+                      <label style={{ display: 'block', marginBottom: 4, fontSize: 14, fontWeight: 'bold' }}>
+                        API Key:
+                      </label>
+                      <input
+                        type="password"
+                        value={apiKey}
+                        onChange={(e) => setApiKey(e.target.value)}
+                        placeholder="Enter your API key"
+                        style={{ width: '100%', padding: 8, fontFamily: 'monospace', fontSize: 14, border: '1px solid #ddd', borderRadius: 4 }}
+                      />
+                      <div style={{ fontSize: 12, color: '#666', marginTop: 4 }}>
+                        Your API key will be sent to the cloud API for authentication
+                      </div>
+                    </div>
+                    <div style={{ marginTop: 8 }}>
+                      <label style={{ display: 'block', marginBottom: 4, fontSize: 14, fontWeight: 'bold' }}>
+                        API Base URL:
+                      </label>
+                      <input
+                        type="text"
+                        value={apiBaseUrl}
+                        onChange={(e) => setApiBaseUrl(e.target.value)}
+                        placeholder="http://localhost:3000"
+                        style={{ width: '100%', padding: 8, fontFamily: 'monospace', fontSize: 14, border: '1px solid #ddd', borderRadius: 4 }}
+                      />
+                      <div style={{ fontSize: 12, color: '#666', marginTop: 4 }}>
+                        Base URL for the cloud API (default: http://localhost:3000)
+                      </div>
+                    </div>
+                    {useCloudMode && !apiKey && (
+                      <div style={{ padding: 8, backgroundColor: '#fff3cd', border: '1px solid #ffc107', borderRadius: 4, fontSize: 12, color: '#856404' }}>
+                        ⚠️ Please enter your API key to use cloud mode
+                      </div>
+                    )}
+                  </>
+                )}
+              </div>
+            </div>
+
             <div style={{ marginBottom: 16 }}>
               <label style={{ display: 'block', marginBottom: 8, fontWeight: 'bold' }}>Model:</label>
               <select value={model} onChange={(e) => setModel(e.target.value)} style={{ padding: 8, width: '100%', maxWidth: 300 }}>
@@ -627,20 +695,22 @@ export default function App() {
             <div style={{ display: 'flex', flexDirection: 'column', gap: 8, marginBottom: 8 }}>
               <button
                 onClick={run}
-                disabled={loading}
+                disabled={loading || (useCloudMode && !apiKey)}
                 style={{
                   width: '100%',
                   padding: '12px 24px',
                   fontSize: 16,
                   fontWeight: 'bold',
-                  backgroundColor: loading ? '#ccc' : '#007bff',
+                  backgroundColor: loading || (useCloudMode && !apiKey) ? '#ccc' : (useCloudMode ? '#28a745' : '#007bff'),
                   color: 'white',
                   border: 'none',
                   borderRadius: 4,
-                  cursor: loading ? 'not-allowed' : 'pointer'
+                  cursor: loading || (useCloudMode && !apiKey) ? 'not-allowed' : 'pointer'
                 }}
               >
-                {loading ? 'Analyzing...' : 'Analyze'}
+                {loading 
+                  ? (useCloudMode ? 'Analyzing via Cloud...' : 'Analyzing...') 
+                  : (useCloudMode ? 'Analyze via Cloud API' : 'Analyze')}
               </button>
 
               {enabledRules.MISSING_REFERENCE && (
