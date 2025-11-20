@@ -22,8 +22,7 @@ import {
 async function analyzePromptCloud(input: AnalyzeInput, apiKey: string, baseUrl: string): Promise<Report> {
   // Remove apiKey and apiBaseUrl from the request body
   const { options, ...restInput } = input;
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const { apiKey: _apiKey, apiBaseUrl: _apiBaseUrl, ...restOptions } = options || {};
+  const { apiKey: _, apiBaseUrl: __, ...restOptions } = options || {};
   
   const requestBody: AnalyzeInput = {
     ...restInput,
