@@ -30,14 +30,29 @@ export function run(input: AnalyzeInput, acc: Report): void {
       : { type: 'prompt' };
 
   // Handle both prompt-only and messages scenarios
+  // When both prompt and messages are provided, combine them:
+  // - current = last message (or prompt if no messages)
+  // - history = prompt + all messages except last (full conversation context)
   let current: string;
   let historyText: string;
 
   if (messages.length > 0) {
-    // Multi-turn conversation
+    // Multi-turn conversation: current is last message, history includes prompt + previous messages
     current = messages[messages.length - 1]?.content || '';
-    const history = messages.slice(0, -1);
-    historyText = joinMessages(history);
+    const historyMessages = messages.slice(0, -1);
+    const historyParts: string[] = [];
+    
+    // Include prompt in history if provided
+    if (input.prompt) {
+      historyParts.push(input.prompt);
+    }
+    
+    // Include all previous messages
+    if (historyMessages.length > 0) {
+      historyParts.push(joinMessages(historyMessages));
+    }
+    
+    historyText = historyParts.join('\n');
   } else if (input.prompt) {
     // Single prompt without messages
     current = input.prompt;
@@ -78,13 +93,23 @@ export function run(input: AnalyzeInput, acc: Report): void {
   const windowBytes = input.options?.antecedentWindow?.bytes;
   
   // Apply windowing to history
+  // Note: prompt is always included in history, windowing only applies to messages
   let searchableHistory = historyText;
   if (messages.length > 0 && windowMessages) {
     const historyMessages = messages.slice(0, -1);
     const windowedMessages = windowMessages > 0 
       ? historyMessages.slice(-windowMessages)
       : historyMessages;
-    searchableHistory = joinMessages(windowedMessages);
+    
+    // Rebuild history with prompt + windowed messages
+    const historyParts: string[] = [];
+    if (input.prompt) {
+      historyParts.push(input.prompt);
+    }
+    if (windowedMessages.length > 0) {
+      historyParts.push(joinMessages(windowedMessages));
+    }
+    searchableHistory = historyParts.join('\n');
   }
   if (windowBytes && searchableHistory.length > windowBytes) {
     searchableHistory = searchableHistory.slice(-windowBytes);
@@ -675,14 +700,31 @@ export async function runAsync(input: AnalyzeInput, acc: Report): Promise<void> 
       : { type: 'prompt' };
 
   // Handle both prompt-only and messages scenarios
+  // When both prompt and messages are provided, combine them:
+  // - current = last message (or prompt if no messages)
+  // - history = prompt + all messages except last (full conversation context)
   let current: string;
   let historyText: string;
 
   if (messages.length > 0) {
+    // Multi-turn conversation: current is last message, history includes prompt + previous messages
     current = messages[messages.length - 1]?.content || '';
-    const history = messages.slice(0, -1);
-    historyText = joinMessages(history);
+    const historyMessages = messages.slice(0, -1);
+    const historyParts: string[] = [];
+    
+    // Include prompt in history if provided
+    if (input.prompt) {
+      historyParts.push(input.prompt);
+    }
+    
+    // Include all previous messages
+    if (historyMessages.length > 0) {
+      historyParts.push(joinMessages(historyMessages));
+    }
+    
+    historyText = historyParts.join('\n');
   } else if (input.prompt) {
+    // Single prompt without messages
     current = input.prompt;
     historyText = '';
   } else {
@@ -713,13 +755,24 @@ export async function runAsync(input: AnalyzeInput, acc: Report): Promise<void> 
   const windowMessages = input.options?.antecedentWindow?.messages;
   const windowBytes = input.options?.antecedentWindow?.bytes;
   
+  // Apply windowing to history
+  // Note: prompt is always included in history, windowing only applies to messages
   let searchableHistory = historyText;
   if (messages.length > 0 && windowMessages) {
     const historyMessages = messages.slice(0, -1);
     const windowedMessages = windowMessages > 0 
       ? historyMessages.slice(-windowMessages)
       : historyMessages;
-    searchableHistory = joinMessages(windowedMessages);
+    
+    // Rebuild history with prompt + windowed messages
+    const historyParts: string[] = [];
+    if (input.prompt) {
+      historyParts.push(input.prompt);
+    }
+    if (windowedMessages.length > 0) {
+      historyParts.push(joinMessages(windowedMessages));
+    }
+    searchableHistory = historyParts.join('\n');
   }
   if (windowBytes && searchableHistory.length > windowBytes) {
     searchableHistory = searchableHistory.slice(-windowBytes);

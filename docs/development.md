@@ -16,7 +16,7 @@ This guide helps you set up and contribute to LangPatrol development.
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-org/langpatrol.git
+git clone https://github.com/langpatrol/langpatrol.git
 cd langpatrol
 ```
 

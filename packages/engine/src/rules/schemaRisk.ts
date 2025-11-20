@@ -60,7 +60,9 @@ export function run(input: AnalyzeInput, acc: Report): void {
       ],
       occurrences
     },
-    scope: input.prompt ? { type: 'prompt' } : { type: 'messages' },
+    scope: input.messages && input.messages.length > 0
+      ? { type: 'messages', messageIndex: input.messages.length - 1 }
+      : { type: 'prompt' },
     confidence: 'medium'
   });
 
