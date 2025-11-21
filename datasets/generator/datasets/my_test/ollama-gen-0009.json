@@ -1,0 +1,18 @@
+{
+  "id": "ollama-gen-0009",
+  "category": "ollama-generated",
+  "prompt": "Here's a realistic prompt that contains multiple issues:\n\n**Prompt**\n\nAs discussed earlier in the project kickoff meeting on January 10th, we're still awaiting the updated sales report from Q4 that was supposed to be delivered by the end of last week. The previous results showed a significant increase in revenue, but without the latest numbers, it's challenging to provide a comprehensive analysis.\n\nPlease generate a detailed explanation of the sales data, including the top-performing products and regions, as well as a concise summary of our quarterly performance (max 500 characters). Also, please include the following JSON data: `{\"product_a\": {\"revenue\": 10000, \"units_sold\": 500}, \"product_b\": {\"revenue\": 20000, \"units_sold\": 1000}}`.\n\nAdditionally, we require a step-by-step guide on how to update our CRM system with the new sales data. Please provide a JSON-only output for the initial sync, and then include explanations of each step in the format \"### Step [number]: [brief description]\". The final report should not exceed 1500 characters.\n\nPlease note that this is a high-priority task, and we need it completed within the next 48 hours. Also, please be concise in your response, as we're on a tight deadline for our quarterly review meeting.\n\n**Issues**\n\n1. **MISSING_PLACEHOLDER**: The prompt contains variables like `previous results`, `top-performing products`, and `quarterly performance` without context or definitions.\n2. **CONFLICTING_INSTRUCTION**: The prompt asks for both a \"detailed explanation\" and a concise summary, which may lead to conflicting responses.\n3. **TOKEN_OVERAGE**: The prompt requires explanations alongside the JSON data, which could potentially exceed the token limit.\n\nThis prompt should be substantial enough for performance testing while containing multiple issues that can be challenging for an AI prompt analyzer to resolve naturally.",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are a helpful AI assistant."
+    },
+    {
+      "role": "user",
+      "content": "I need help with a task."
+    }
+  ],
+  "schema": null,
+  "expectedIssueCodes": [],
+  "notes": "Generated with Ollama model llama3.2, target tokens: 2000"
+}

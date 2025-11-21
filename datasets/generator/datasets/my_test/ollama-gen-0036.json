@@ -1,0 +1,22 @@
+{
+  "id": "ollama-gen-0036",
+  "category": "ollama-generated",
+  "prompt": "Here's a generated prompt that contains multiple issues:\n\n**Prompt**\n\nCan you assist me in generating a detailed report on our quarterly sales figures as discussed earlier? I've attached the previous results from Q2 and would like to build upon them. Please include an analysis of the top-performing regions, products, and customer segments, along with recommendations for optimization and growth strategies.\n\nFor this report, please use a JSON format that includes:\n\n* A table with sales data by region (North America, Europe, Asia Pacific)\n* A bar chart showing product performance (with x-axis labels)\n* A scatter plot illustrating the correlation between customer demographics and purchasing behavior\n* A brief narrative explanation for each visual representation, totaling approximately 200 words\n\nPlease be concise in your report, but also provide some additional context where necessary. Additionally, please ensure that all data is aggregated to a level of at least 100 units.\n\nThe report should include:\n\n* At least 5 key findings and recommendations\n* A clear summary of the top-performing regions and products\n* An analysis of customer segment trends and opportunities for growth\n\nPlease format your output as follows: [JSON table] [bar chart] [scatter plot]\n\n**Additional requirements**\n\n* Use a consistent color palette throughout the report (primary color: blue, secondary color: green)\n* Include a brief overview of our company's mission statement (approx. 50 words)\n* Please use clear and concise language in your narrative explanations\n\nNote that this prompt includes multiple issues:\n\n1. **MISSING_PLACEHOLDER**: The template variable `{{customer_name}}` is used without being defined.\n2. **CONFLICTING_INSTRUCTION**: The prompt asks for both a concise report and additional context where necessary.\n3. **TOKEN_OVERAGE**: The request to include narrative explanations alongside the JSON output may exceed the token limit.\n\nThis prompt is substantial, realistic, and useful, making it suitable for performance testing of an AI prompt analyzer.",
+  "messages": [
+    {
+      "role": "system",
+      "content": "Welcome to our report generation tool. Please provide your report details."
+    },
+    {
+      "role": "user",
+      "content": "Hi, I'd like to generate a detailed report on our quarterly sales figures as discussed earlier. Can you assist me?"
+    },
+    {
+      "role": "assistant",
+      "content": "I can help you with that! To get started, I need some information from you. Could you please share the previous Q2 results you mentioned and specify which specific aspects of the report you'd like to focus on?"
+    }
+  ],
+  "schema": null,
+  "expectedIssueCodes": [],
+  "notes": "Generated with Ollama model llama3.2, target tokens: 2000"
+}

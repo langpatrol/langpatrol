@@ -1,0 +1,18 @@
+{
+  "id": "ollama-gen-0007",
+  "category": "ollama-generated",
+  "prompt": "Here is a realistic prompt that contains multiple issues:\n\n**Prompt:** \n\n\"Hi there, I'm having some issues with the recent order I placed on your website. As discussed earlier in our conversation, I was expecting the shipment to arrive by now, but it's been over 2 weeks since I received confirmation from your team that it would be delivered within a week. The report above (which I assume is the one showing my order status) indicates that there are still no updates on this front. However, previous results (from last year) show that orders with similar status have shipped within 5-7 days of being confirmed.\n\nI've tried to follow the steps below to resolve the issue: first, I checked the tracking information provided by your team; next, I contacted my local post office to see if they had any issues with receiving the package; and finally, I reached out to your customer support again. Unfortunately, all these attempts have been unsuccessful so far.\n\nThe steps I took are detailed below:\n\n*   I logged into my account on the website and checked for any updates on the order status.\n*   I contacted our local post office to see if they had received the package and what their status was.\n*   I reached out to your customer support team again, providing all relevant information and asking for an update on the shipment.\n\nThe requirements for this task are as follows:\n\n*   Please provide a detailed explanation of why my order has not shipped yet (be concise).\n*   Please include the tracking number associated with my order in the JSON output you provide.\n*   The explanations should be approximately 200 words or less, including the tracking information.\n\nPlease note that there is a limit on the number of tokens I can use for this task - no more than 5000 characters. Also, please make sure the JSON output only contains the necessary data (JSON only) and exclude any unnecessary fields. \n\nI've attached a screenshot of my order status report from your website for reference.\n\nAdditional information: The package weighs approximately 15 pounds and is approximately 24 inches in length. Please include this information in the output as well.\n\nThe deadline for completion of this task is within the next 72 hours. Please confirm receipt of this request by responding to this message with a confirmation code.\n\n**Token Count:** approximately 7000-8000 characters (including explanations and JSON data)\n\nThis prompt contains multiple issues:\n\n1.  MISSING_PLACEHOLDER: The prompt uses template variables like `{{variable}}`, `{{#if var}}`, and `{{customer_name}}` without defining them.\n2.  MISSING_REFERENCE: The prompt assumes context for \"the report above\" or \"previous results,\" but doesn't provide sufficient information to identify the specific reports in question.\n3.  CONFLICTING_INSTRUCTION: The prompt asks for a concise explanation, but also requests that it be approximately 200 words or less (which may not align with the concise requirement).\n4.  SCHEMA_RISK: The prompt requests JSON output alongside narrative explanations, which could create schema risk if not handled correctly.\n5.  TOKEN_OVERAGE: The prompt mentions token limits of 5000 characters but creates a prompt that exceeds this limit by approximately 1000-2000 tokens.",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are a helpful AI assistant."
+    },
+    {
+      "role": "user",
+      "content": "I need help with a task."
+    }
+  ],
+  "schema": null,
+  "expectedIssueCodes": [],
+  "notes": "Generated with Ollama model llama3.2, target tokens: 2000"
+}

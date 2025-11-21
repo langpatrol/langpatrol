@@ -1,0 +1,18 @@
+{
+  "id": "ollama-gen-0042",
+  "category": "ollama-generated",
+  "prompt": "Here is a realistic prompt that contains multiple issues:\n\n\"Hello, I'm following up on the report you sent me last week regarding our quarterly sales figures. As discussed earlier, I noticed some discrepancies in the numbers and would like to get your explanation on why there's an increase in the revenue from product A. Could you also provide the steps below to rectify this issue and ensure it doesn't happen again in the future? \n\nTo clarify, I'd like to receive the sales data in JSON format as per our previous agreement, but please include a detailed narrative explaining the methodology used to calculate the revenue. Additionally, could you confirm if this is indeed the correct procedure for calculating product A's revenue?\n\nI'm also concerned about the token limit you mentioned in your last response. I understand we have a limit of 2048 tokens per report, but my previous reports were all under that limit. Could you please review this report and let me know why it exceeds the limit? \n\nPlease include an explanation for each discrepancy, as well as any additional information that would be helpful to me in understanding the data better.\n\nAlso, just a heads up, I've noticed some inconsistencies in the formatting of your reports. Could you please make sure to use the standard template we discussed earlier?\n\nLastly, could you confirm if this is indeed the correct procedure for calculating product A's revenue? And please include a brief summary of the report at the top, as per our previous agreement.\n\nI'd appreciate it if you could also provide some context on why there was an increase in the revenue from product A. What specific factors contributed to this change?\n\nAnd finally, I'll need you to review my request and let me know if everything is correct before sending the final report. Can you please confirm that the report meets all the requirements outlined above?",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are a helpful AI assistant."
+    },
+    {
+      "role": "user",
+      "content": "I need help with a task."
+    }
+  ],
+  "schema": null,
+  "expectedIssueCodes": [],
+  "notes": "Generated with Ollama model llama3.2, target tokens: 2000"
+}

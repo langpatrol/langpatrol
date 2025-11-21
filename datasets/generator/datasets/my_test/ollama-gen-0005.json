@@ -1,0 +1,22 @@
+{
+  "id": "ollama-gen-0005",
+  "category": "ollama-generated",
+  "prompt": "Here is a realistic prompt that contains multiple issues:\n\n**Prompt:**\n\n\"As discussed earlier with our project manager, I'm following up on the status of the new report template for our quarterly sales analysis. The team has been working on it for the past two weeks, and we need to finalize it by Friday as previously agreed upon.\n\nThe report should include the following sections: (1) customer demographics, (2) sales revenue by region, and (3) product sales breakdown. For section 1, please provide a detailed explanation of how you determined the customer segments and what data sources were used for this calculation. In section 2, be concise and list only the top three regions with the highest revenue.\n\nAdditionally, we need to ensure that the report meets our JSON output requirements, which include the following fields: customer_name, sales_date, region, product, revenue, and quantity_sold. Please provide a sample row in the JSON format below:\n\n{\n  \"customer_name\": \"John Doe\",\n  \"sales_date\": \"2022-07-01\",\n  \"region\": \"North America\",\n  \"product\": \"Product A\",\n  \"revenue\": 1000.00,\n  \"quantity_sold\": 10\n}\n\nHowever, I'd like to know the steps below to be included in a narrative explanation: (a) how you handled missing data for customers with no sales record, and (b) what data source was used for product pricing.\n\nPlease use our standard font style and layout, which is defined by the following schema:\n\n{\n  \"font\": \"Arial\",\n  \"font_size\": 12,\n  \"margin\": [10, 20, 10, 20],\n  \"layout\": [\"left\", \"right\"]\n}\n\nHowever, please note that we are now using a new style guide that requires JSON output only. So, I'm asking you to provide the final report in this format: {{ json_output }}.\n\nPlease be concise and provide an estimated completion time for this task. Our team has limited resources, so we need to ensure that the report is completed within the next two weeks.\n\nAlso, please confirm that the report will meet our security requirements, which include removing all sensitive data from customer names and sales revenue.\n\nI'd appreciate it if you could also provide a sample of how you would handle this task in a typical week. This will help us plan our workflow and ensure that we're using our time efficiently.\n\nPlease let me know if there's anything else I can provide to make this process easier for your team.\"\n\n**Issues:**\n\n1. MISSING_PLACEHOLDER: The prompt uses template variables like {{json_output}}, {{customer_name}}, etc., but does not define them.\n2. CONFLICTING_INSTRUCTION: The prompt asks for both a concise report and a narrative explanation, as well as JSON output with step-by-step explanations.\n3. SCHEMA_RISK: The prompt requests JSON output alongside a narrative explanation of the steps below.\n\nThis prompt is substantial enough to be useful for performance testing, and it includes realistic content like customer support requests, data processing tasks, or AI assistant prompts.",
+  "messages": [
+    {
+      "role": "system",
+      "content": "Welcome to our reporting system. We're happy to assist you with your quarterly sales analysis report template."
+    },
+    {
+      "role": "user",
+      "content": "I'm following up on the status of the new report template for our quarterly sales analysis. The team has been working on it for the past two weeks, and we need to finalize it by Friday as previously agreed upon."
+    },
+    {
+      "role": "assistant",
+      "content": "We understand that you have specific requirements for your report template, including customer demographics, sales revenue by region, product sales breakdown, and JSON output. We'll do our best to meet these requirements while also ensuring the report meets our security standards."
+    }
+  ],
+  "schema": null,
+  "expectedIssueCodes": [],
+  "notes": "Generated with Ollama model llama3.2, target tokens: 2000"
+}

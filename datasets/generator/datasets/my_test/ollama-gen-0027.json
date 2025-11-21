@@ -1,0 +1,18 @@
+{
+  "id": "ollama-gen-0027",
+  "category": "ollama-generated",
+  "prompt": "Here is a realistic prompt that includes multiple issues:\n\n**Prompt:** \n\n\"As discussed in the meeting last week and as outlined in the report above, we need to process the sales data for the quarter ending March 31st. The report provided by Sarah contains errors and inconsistencies that must be corrected before proceeding with analysis. We require a detailed breakdown of the sales revenue by region, product category, and customer type, including explanations for any discrepancies.\n\nPlease provide a JSON output containing the following information:\n\n- Top 5 regions by sales revenue (including explanations for any anomalies)\n- Product categories with sales revenue above $100,000 (be concise in your explanation, but include at least 2 metrics to support your findings)\n- Customer segments with sales above $50,000 (include a list of top 3 customer segments by sales revenue)\n\nWe also require a narrative explanation of the data analysis process, including any assumptions made and potential biases considered. Please ensure that your response is within the 2000 token limit.\n\nAdditionally, we need to verify that our internal systems are compatible with the output format you provide. Can you confirm whether JSON only or include explanations in the output?\n\nPlease note that due to high volume of sales data, we require a priority processing queue to expedite the analysis and delivery of results. Please prioritize tasks based on urgency and potential business impact.\n\nAlso, please let us know if there are any specific security or compliance requirements that need to be met for this project. Are there any specific token limits or character counts that need to be adhered to?\n\nWe appreciate your prompt attention to this matter, as timely delivery is crucial for our quarterly sales projections.\"\n\nThis prompt includes:\n\n* MISSING_PLACEHOLDER: Template variables like {{variable}}, {{#if var}}, and customer names are used without context.\n* MISSING_REFERENCE: Phrases like \"the report above\" and \"previous results\" are used without providing the actual content or context.\n* CONFLICTING_INSTRUCTION: Directives like \"be concise\" vs \"include explanations\" are given simultaneously.\n* SCHEMA_RISK: Request for JSON output is combined with a need for narrative/explanations alongside it.\n* TOKEN_OVERAGE: Mention of token limits and character counts, along with a request to prioritize tasks based on urgency.\n\nThis prompt should be substantial enough for performance testing and include realistic content that would require an AI analyzer or prompt generator to evaluate.",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are a helpful AI assistant."
+    },
+    {
+      "role": "user",
+      "content": "I need help with a task."
+    }
+  ],
+  "schema": null,
+  "expectedIssueCodes": [],
+  "notes": "Generated with Ollama model llama3.2, target tokens: 2000"
+}

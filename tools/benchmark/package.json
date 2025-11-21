@@ -1,0 +1,19 @@
+{
+  "name": "@langpatrol/benchmark",
+  "version": "0.1.0",
+  "description": "Benchmarking tool for LangPatrol",
+  "type": "module",
+  "main": "benchmark.ts",
+  "scripts": {
+    "benchmark": "tsx benchmark.ts",
+    "benchmark:help": "tsx benchmark.ts --help"
+  },
+  "dependencies": {
+    "langpatrol": "workspace:*"
+  },
+  "devDependencies": {
+    "tsx": "^4.7.0",
+    "typescript": "^5.6.0"
+  }
+}
+

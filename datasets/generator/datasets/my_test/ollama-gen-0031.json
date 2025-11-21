@@ -1,0 +1,22 @@
+{
+  "id": "ollama-gen-0031",
+  "category": "ollama-generated",
+  "prompt": "Here's a realistic prompt that contains multiple issues:\n\n\"Hello, I'm reaching out regarding my recent order ({{order_number}}) placed on {{date_of_order}}. As discussed earlier in our conversation, I've been experiencing some issues with the product not arriving as expected. The report above (link to internal tracking document {{tracking_number}}) shows that it was shipped on {{ship_date}}, but I still haven't received it.\n\nI'd like you to verify if there are any steps below (please provide a detailed explanation of each step) that need to be taken by me or your team to resolve this issue. Specifically, I'm wondering about the following:\n\n* Can you confirm if the shipping address provided was accurate and up-to-date?\n* Are there any previous results (previous orders with similar issues) that we can draw from to inform our response?\n\nPlease provide a concise summary of the next steps below (be concise). Additionally, please output the order details in JSON format only (JSON only).\n\nHowever, I'd also appreciate it if you could include some narrative explanations alongside the JSON output. The steps should be easy to follow and understand for an average customer.\n\nOne more thing, the token limit for our internal response is 4000 tokens. Please ensure that your response does not exceed this limit.\n\nPlease go ahead and assist me with resolving this issue as soon as possible.\"\n\nThis prompt includes the following issues:\n\n1. MISSING_PLACEHOLDER: The use of template variables like {{order_number}}, {{date_of_order}}, etc.\n2. MISSING_REFERENCE: The phrase \"the report above\" without context or reference to an actual document.\n3. CONFLICTING_INSTRUCTION: The request for a concise summary (be concise) and detailed explanations alongside JSON output.\n4. SCHEMA_RISK: Requesting both JSON output and narrative explanations in the same response.\n5. TOKEN_OVERAGE: Mentioning a token limit of 4000 tokens while creating a prompt that would naturally exceed this limit.\n\nPlease note that the actual length of the generated response will depend on how the AI analyzer chooses to address each issue.",
+  "messages": [
+    {
+      "role": "system",
+      "content": "Welcome to our support center. We're here to help you with any issues related to your recent order."
+    },
+    {
+      "role": "user",
+      "content": "I'm reaching out regarding my recent order (12345) placed on 2022-01-15. As discussed earlier in our conversation, I've been experiencing some issues with the product not arriving as expected."
+    },
+    {
+      "role": "assistant",
+      "content": "Thank you for reaching out to us about your issue. To better assist you, could you please provide more details about the tracking number and shipping address used for your order?"
+    }
+  ],
+  "schema": null,
+  "expectedIssueCodes": [],
+  "notes": "Generated with Ollama model llama3.2, target tokens: 2000"
+}

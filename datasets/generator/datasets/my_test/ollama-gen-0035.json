@@ -1,0 +1,18 @@
+{
+  "id": "ollama-gen-0035",
+  "category": "ollama-generated",
+  "prompt": "Here is a realistic prompt that contains multiple issues:\n\n**Customer Support Request with Schema Risk and Token Overage**\n\n\"Hi, I'm reaching out to inquire about my recent payment method changes. As discussed earlier in our conversation on 02/10, I was advised to update my payment information due to the card expiration issue mentioned in the report above. The steps below were taken to resolve this: \n\n1. Update card expiration date\n2. Verify new card details\n\nHowever, after re-examining the new purchase and reviewing previous results from our transactions data, it appears that there are discrepancies between the updated payment info and the original card details.\n\nCan you please provide me with a concise explanation of why these discrepancies occur and walk me through the steps to rectify this issue? Also, could you provide the JSON output of my updated payment method for verification purposes?\n\nPlease note that our team is under strict token limits for this quarter, so I'd appreciate it if you could ensure that your response adheres to the 500-token limit. Additionally, can you please include a detailed explanation of how we can implement this fix in our production environment? The more information you can provide on this topic, the better.\n\nFurthermore, as per our conversation on 02/15 regarding the recent security patch, I'd like to request that you confirm whether the updated payment info includes all necessary security measures and whether there are any potential risks associated with this update.\n\nPlease acknowledge receipt of this request and let me know if you require any additional information from my end. I appreciate your prompt attention to this matter and look forward to hearing back from you soon.\"",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are a helpful AI assistant."
+    },
+    {
+      "role": "user",
+      "content": "I need help with a task."
+    }
+  ],
+  "schema": null,
+  "expectedIssueCodes": [],
+  "notes": "Generated with Ollama model llama3.2, target tokens: 2000"
+}

@@ -1,0 +1,22 @@
+{
+  "id": "ollama-gen-0049",
+  "category": "ollama-generated",
+  "prompt": "Here's a realistic prompt that incorporates multiple issues:\n\n**Prompt**\n\nI'm reaching out to request an update on the status of my business account, which was flagged for review due to suspected suspicious activity in our monthly reporting cycle. As discussed earlier, we've been reviewing our payment processing procedures and have implemented additional security measures to prevent similar incidents in the future.\n\nHowever, I'd like to clarify that our previous report showed a discrepancy between the data we provided and what was reported by your system. The steps below outline the actions we took to resolve this issue: (1) re-verified payment processing protocols, (2) updated our system to ensure seamless integration with your API, and (3) conducted regular security audits to prevent similar errors.\n\nRegarding the current status of my account, I've reviewed the report above and noticed that there's an error in the JSON output. Specifically, the \"total transactions\" value is incorrect. Can you please provide a detailed explanation for this discrepancy and include a corrected version of the JSON data in your response? Furthermore, I'd like to request that you only return the relevant information in the JSON format, without providing additional narrative explanations or descriptions.\n\nAdditionally, could you confirm whether any token limits have been exceeded with my account's recent activity? If so, please provide an estimate of the number of tokens used and a plan for reducing future usage. Finally, I'd appreciate it if you could be concise in your response and focus on delivering the necessary information to resolve this issue.\n\n**Expected issues:**\n\n* MISSING_PLACEHOLDER: The phrase \"steps below\" does not have any defined variables.\n* CONFLICTING_INSTRUCTION: The prompt asks for both a detailed explanation and a concise response.\n* TOKEN_OVERAGE: The prompt mentions token limits but creates an overly complex request that would likely exceed the limit.\n\nThis prompt should provide a realistic scenario for performance testing, while also highlighting multiple issues in the AI prompt analyzer.",
+  "messages": [
+    {
+      "role": "system",
+      "content": "Welcome to our support portal. We've received your inquiry about the status of your business account. Our system will now retrieve relevant information and display it in a JSON format."
+    },
+    {
+      "role": "user",
+      "content": "I'm reaching out to request an update on the status of my business account, which was flagged for review due to suspected suspicious activity in our monthly reporting cycle. As discussed earlier, we've been reviewing our payment processing procedures and have implemented additional security measures to prevent similar incidents in the future."
+    },
+    {
+      "role": "assistant",
+      "content": "{\"status\": \"Under Review\", \"last_reviewed\": \"2023-02-20T14:30:00Z\"}"
+    }
+  ],
+  "schema": null,
+  "expectedIssueCodes": [],
+  "notes": "Generated with Ollama model llama3.2, target tokens: 2000"
+}

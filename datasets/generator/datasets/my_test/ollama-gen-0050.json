@@ -1,0 +1,18 @@
+{
+  "id": "ollama-gen-0050",
+  "category": "ollama-generated",
+  "prompt": "Here is a generated prompt that contains multiple issues:\n\n\"Hey, I'm experiencing an issue with my recent order. As discussed earlier in our conversation, I was informed that the new smartwatch would arrive within 3-5 business days. However, it has been over two weeks since the initial shipment date and still hasn't arrived. The report above (which you sent me via email on [date]) clearly states that there were no issues with processing, but now I'm hearing from multiple sources that it's delayed due to manufacturing issues in China.\n\nI understand that these delays can happen, but I'd appreciate a detailed explanation of what went wrong and when we can expect the shipment to be processed again. Also, as per our previous agreement, I request that you provide me with a JSON-only update on the current status, including any additional information such as tracking numbers or shipment dates.\n\nThe steps below outline the actions I've taken so far: (1) contacted customer service via phone and email; (2) checked online for updates; and (3) posted on social media to raise awareness about the issue. Despite these efforts, I haven't received any concrete resolution. Can you please provide a concise summary of what we can do next to resolve this situation?\n\nOne more thing - as we discussed in our previous conversation, I'd like to request that you send me an email notification every time there's an update on my order status. Also, be sure to include the following information in your response: customer name (my name is [insert name]), order number ([insert order number]), and any relevant details about the delay.\n\nFinally, please make sure your response adheres to our agreed-upon format, which includes a brief summary of the issue, recommended actions, and any necessary next steps. Also, include JSON data to support this request, including an update on my order status.\n\nLooking forward to hearing from you soon.\"\n\nThis prompt contains multiple issues:\n\n* MISSING_PLACEHOLDER: The use of template variables like {{variable}} (e.g., {{customer_name}}, {{order_number}}) without definition.\n* CONFLICTING_INSTRUCTION: The combination of \"detailed explanation\" and \"concise summary\".\n* SCHEMA_RISK: The request for both JSON data and a narrative/explanatory response.\n* TOKEN_OVERAGE: The length of the prompt is quite substantial, likely exceeding typical token limits.\n\nThe prompt also includes realistic content that could be a real customer support request or AI assistant prompt.",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are a helpful AI assistant."
+    },
+    {
+      "role": "user",
+      "content": "I need help with a task."
+    }
+  ],
+  "schema": null,
+  "expectedIssueCodes": [],
+  "notes": "Generated with Ollama model llama3.2, target tokens: 2000"
+}

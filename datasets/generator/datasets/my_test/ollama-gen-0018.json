@@ -1,0 +1,22 @@
+{
+  "id": "ollama-gen-0018",
+  "category": "ollama-generated",
+  "prompt": "Here's a realistic prompt that contains multiple issues:\n\n**Customer Support Request**\n\nAs discussed earlier, I'm experiencing an issue with my recent purchase. According to the report above, the order was supposed to arrive within 3-5 business days, but it has been 7 days and I haven't received any updates on its status. The steps below were taken in good faith, but unfortunately, they have not yielded any results:\n\n1. Checked the tracking information provided by the seller.\n2. Contacted the customer support team via phone and email to inquire about the status of my order.\n3. Scanned the invoice for any potential errors or discrepancies.\n\nHowever, I've been instructed to proceed with using a JSON-based solution to resolve this issue, which is not ideal given the complexity of the problem at hand. Can you please provide me with a detailed explanation of the steps involved in resolving this issue and include the relevant JSON data that would be used in your solution? Be concise in your response, as I need to understand the process quickly.\n\nTo clarify, my order number is #XXXXX, and I'd like you to confirm whether it's still processing or has been shipped. Please provide a JSON output of any updates you have on this matter, along with a brief narrative explaining what these changes mean for me as a customer.\n\nAlso, please note that the token limit for this response is 2000 tokens. Can you ensure that your solution stays within this limit while still providing a comprehensive and accurate answer?\n\nI appreciate your prompt attention to this matter, and I look forward to hearing back from you soon.\n\n(Note: This prompt includes multiple issues such as:\n\n* MISSING_PLACEHOLDER (e.g., #XXXXX)\n* CONFLICTING_INSTRUCTION (short vs long response)\n* SCHEMA_RISK (JSON output requested alongside narrative explanation)\n* TOKEN_OVERAGE)",
+  "messages": [
+    {
+      "role": "system",
+      "content": "Welcome to our customer support chat. We'll be happy to assist you with your issue. Can you please provide more details about your order, such as the order number?"
+    },
+    {
+      "role": "user",
+      "content": "I'm experiencing an issue with my recent purchase. According to the report above, the order was supposed to arrive within 3-5 business days, but it has been 7 days and I haven't received any updates on its status."
+    },
+    {
+      "role": "assistant",
+      "content": "Thank you for providing more context. However, we noticed that the order number #XXXXX is missing from your message. Could you please provide the correct order number so we can look into this further?"
+    }
+  ],
+  "schema": null,
+  "expectedIssueCodes": [],
+  "notes": "Generated with Ollama model llama3.2, target tokens: 2000"
+}

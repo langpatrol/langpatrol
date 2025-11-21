@@ -1,0 +1,22 @@
+{
+  "id": "ollama-gen-0047",
+  "category": "ollama-generated",
+  "prompt": "Here is a realistic prompt that contains multiple issues:\n\n**Prompt**\n\nAs discussed earlier in our meeting on February 10th, we're experiencing issues with our new customer database integration. The report above (attached to this email) shows that the number of active customers has increased by 30% over the past quarter, but the sales team reports that this growth is not translating to increased revenue.\n\nThe steps below outline the proposed solution: we will need to re-run the data cleaning script on the customer master file using the updated schema (available in JSON format via this link: [insert link]). However, please note that this will require significant changes to our existing workflow, and I would appreciate it if you could provide a detailed explanation of the impact on our business processes.\n\nThe key performance indicators (KPIs) we're tracking include customer acquisition costs, retention rates, and sales velocity. We also need to ensure that all relevant stakeholders are informed about these changes.\n\nWhen generating the updated report, please include explanations for any changes to the database schema or data cleaning process. Specifically, I would like you to address the following questions:\n\n* How will this impact our customer journey mapping?\n* What are the potential risks associated with these changes?\n* Are there any specific metrics we should be tracking to measure the success of this update?\n\nThe updated report should be in JSON format only, as per company policy. Please also keep it concise, no more than 2 pages in length. However, I would appreciate a detailed explanation for each section, so please do not abbreviate or omit any necessary information.\n\n**Issues:**\n\n1. **MISSING_PLACEHOLDER**: The use of \"this link\" without defining what the link refers to.\n2. **CONFLICTING_INSTRUCTION**: The request for concise writing (2 pages in length) and detailed explanations simultaneously.\n3. **SCHEMA_RISK**: Requesting JSON output alongside narrative/explanations, which may not be feasible or compatible with each other.\n\nThis prompt should provide a substantial test case for an AI prompt analyzer, covering multiple issues and requiring a nuanced understanding of the task requirements.",
+  "messages": [
+    {
+      "role": "system",
+      "content": "Meeting Summary - Customer Database Integration Issue"
+    },
+    {
+      "role": "user",
+      "content": "Hi, I'm following up on our discussion from February 10th regarding the customer database integration issues. Can you provide more information on the proposed solution?"
+    },
+    {
+      "role": "assistant",
+      "content": "As discussed earlier, we plan to re-run the data cleaning script using the updated schema available at [insert link]. This will require significant changes to our workflow and impact our business processes."
+    }
+  ],
+  "schema": null,
+  "expectedIssueCodes": [],
+  "notes": "Generated with Ollama model llama3.2, target tokens: 2000"
+}

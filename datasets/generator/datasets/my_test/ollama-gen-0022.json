@@ -1,0 +1,22 @@
+{
+  "id": "ollama-gen-0022",
+  "category": "ollama-generated",
+  "prompt": "Here is a realistic prompt that contains multiple issues from the list above:\n\n**Prompt**\n\n\"As discussed earlier in our report on Q2 2023 sales projections, we need to review and update the forecasting model to account for the recent changes in market trends. The previous results indicated a 5% decrease in sales due to increased competition, but the steps below outline our plan to adapt to this shift.\n\nFirstly, please provide a JSON-only output of the updated forecast models, including the probability distributions for each scenario (low, medium, and high). However, I'd like you to include a brief narrative explanation of how these probabilities were calculated, and also highlight areas where our current strategy may not be sufficient. This is crucial as we need to justify our plan to stakeholders.\n\nTo ensure accuracy, please reference the report above for context on our previous assumptions about market trends. Also, note that the model parameters have been updated based on the latest industry reports, so please factor in these changes when providing your output.\n\nAs a reminder, please be concise in your response and avoid unnecessary details. However, I'd like you to include additional explanations for key areas where we're seeing significant discrepancies between our forecasted sales and actual results. We've noticed that certain product lines are performing better than expected, which could indicate an opportunity for us to adjust our pricing strategy.\n\nTo clarify, please confirm that your output will not exceed 20,000 tokens in total. Also, kindly highlight any areas where we can improve our forecasting accuracy, specifically focusing on the potential risks and consequences of underestimating or overestimating market trends.\n\nAdditionally, please ensure that your response adheres to the following schema:\n\n- Introduction (100 tokens)\n- Forecasting Model Output (5,000 tokens)\n  - JSON data with probability distributions\n  - Brief narrative explanation\n- Contextual Reference (200 tokens)\n- Additional Explanations and Recommendations (3,000 tokens)\n  - Detailed explanations for key areas of discrepancy\n  - Opportunities for pricing strategy adjustments\n- Conclusion (100 tokens)\n\nPlease note that we're working under tight deadlines, so every bit of efficiency counts. We appreciate your prompt response and look forward to reviewing your output.\n\n**Note:** I included the following issues naturally in this prompt:\n\n1. MISSING_PLACEHOLDER: The mention of \"steps below\" without defining them.\n2. CONFLICTING_INSTRUCTION: The request for both a concise and detailed explanation, as well as JSON-only output with narrative explanations.\n3. SCHEMA_RISK: The request for both JSON data and narrative/explanations alongside it, despite not specifying the exact schema.\n4. TOKEN_OVERAGE: Mentioning token limits (20,000 tokens) but creating a prompt that could potentially exceed this limit due to its extensive nature.\"",
+  "messages": [
+    {
+      "role": "system",
+      "content": "Welcome to our conversation hub! We're here to assist you with your Q2 2023 sales projection report. Can we start by clarifying some details? Please confirm that you'd like to proceed with updating the forecasting model and providing a JSON-only output of the updated forecast models, including probability distributions."
+    },
+    {
+      "role": "user",
+      "content": "Yes, I'd like to move forward with the update. However, I need to reference our previous report on Q2 2023 sales projections. Can you please provide me with the link or a summary of the key points we discussed earlier?"
+    },
+    {
+      "role": "assistant",
+      "content": "The report can be found in our shared drive under 'Q2 2023 Sales Projections'. The key points include our previous assumptions about market trends, which have been updated based on the latest industry reports. We'll also highlight areas where our current strategy may not be sufficient."
+    }
+  ],
+  "schema": null,
+  "expectedIssueCodes": [],
+  "notes": "Generated with Ollama model llama3.2, target tokens: 2000"
+}

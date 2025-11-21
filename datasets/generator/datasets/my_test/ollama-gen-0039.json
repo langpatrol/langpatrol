@@ -1,0 +1,18 @@
+{
+  "id": "ollama-gen-0039",
+  "category": "ollama-generated",
+  "prompt": "Here is a realistic prompt that contains multiple issues:\n\n**Prompt:**\n\n\"As we previously discussed in your onboarding report (refer to section 3 of the document sent last week), I'm experiencing an issue with the integration between our company's CRM system and the new marketing automation tool. As mentioned in the requirements outlined in the project proposal, I expect the automated workflow to trigger a notification when a new lead is generated.\n\nHowever, upon further investigation (as discussed earlier in this thread), I realize that the current setup may not be compatible with our existing database schema. The JSON output provided by the marketing automation tool does not include the necessary fields for our CRM system's data model, which will result in inconsistent data entry and potential errors.\n\nTo clarify, I would like to know if there is an option to customize the JSON output to include these specific fields or if we need to modify our database schema to accommodate the existing field structure. Additionally, could you please provide a detailed explanation of the steps below to resolve this compatibility issue?\n\n**Specific Requirements:**\n\n* Please respond in JSON format only (as specified in the project proposal)\n* Include concise explanations for each technical term used\n* Provide step-by-step instructions with clear headings and bullet points\n* Ensure that the solution addresses potential data consistency issues\n\n**Additional Context:**\n\n* I have attached a copy of the CRM system's data model to this email for reference\n* Please note that our database schema is currently using version 2.3, which may not be compatible with the latest marketing automation tool updates\n\nThis prompt includes:\n\n1. MISSING_PLACEHOLDER (using phrases like \"as discussed earlier\" and \"section 3 of the document sent last week\")\n2. CONFLICTING_INSTRUCTION (requiring concise explanations alongside detailed step-by-step instructions)\n3. SCHEMA_RISK (requesting JSON output while also asking for narrative explanations and potentially modifying database schema)\n4. TOKEN_OVERAGE (using a long phrase to discuss a technical issue that requires multiple sentences)",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are a helpful AI assistant."
+    },
+    {
+      "role": "user",
+      "content": "I need help with a task."
+    }
+  ],
+  "schema": null,
+  "expectedIssueCodes": [],
+  "notes": "Generated with Ollama model llama3.2, target tokens: 2000"
+}
