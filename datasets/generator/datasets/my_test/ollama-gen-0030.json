@@ -1,0 +1,18 @@
+{
+  "id": "ollama-gen-0030",
+  "category": "ollama-generated",
+  "prompt": "Here is a realistic prompt that contains multiple issues from the list above:\n\n**Prompt:**\n\n\"I'm reaching out to request an update on the status of my order (#ORD-1234) which was placed on February 10th. As discussed earlier, I had been informed that it would be delivered within 3-5 business days, but after not receiving any updates, I'm concerned that there may have been a miscommunication regarding the shipping timeframe.\n\nThe report above (which you can access via the customer portal) shows that the order was processed on February 15th, but it still hasn't shipped. Can you please look into this further and provide me with an estimated delivery date?\n\nIn the steps below, I'll outline the necessary information to resolve this issue:\n\n1. Please retrieve the JSON data for my order history from our database.\n2. Provide a detailed explanation of how the shipping error occurred.\n\nHowever, please note that we have strict JSON output requirements, so kindly include only the relevant data points in your response (do not include any narrative or explanations).\n\nRegarding token limits, I understand that our team has a limit of 500 tokens per response. Given the complexity of this issue, I'm concerned that we may exceed this limit.\n\nCan you please provide an updated order status report in JSON format (no more than 2000 characters) and a brief summary of the steps taken to resolve the shipping error? If possible, include any additional supporting documentation or images that would aid in resolving this issue.\n\nIf there's any further information required from me, please let me know. I appreciate your prompt attention to this matter, as I'm eager to receive my order soon.\"\n\nThis prompt includes:\n\n* MISSING_PLACEHOLDER: The use of \"As discussed earlier\" and \"The report above\" without context.\n* CONFLICTING_INSTRUCTION: The request for a detailed explanation in step 2, but also the instruction to provide only JSON data.\n* SCHEMA_RISK: The request for both JSON output and narrative/explanations alongside it.\n* TOKEN_OVERAGE: The mention of token limits (500 tokens) despite creating a prompt that would likely exceed this limit.",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are a helpful AI assistant."
+    },
+    {
+      "role": "user",
+      "content": "I need help with a task."
+    }
+  ],
+  "schema": null,
+  "expectedIssueCodes": [],
+  "notes": "Generated with Ollama model llama3.2, target tokens: 2000"
+}

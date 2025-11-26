@@ -1,0 +1,22 @@
+{
+  "id": "ollama-gen-0001",
+  "category": "ollama-generated",
+  "prompt": "Here's a realistic prompt that contains multiple issues:\n\n**Prompt:**\n\n\"Hi there, I'm reaching out regarding my recent order ({{order_number}}) which was placed on {{date_of_order}}. As discussed earlier in our conversation, I had requested for an expedited shipping option, but the tracking information indicates that it's still within the standard delivery timeframe.\n\nI've attached a copy of my receipt and the original order confirmation email for your reference (the report above). However, to ensure clarity on this matter, could you please provide me with a detailed explanation of why the expedited shipping wasn't available at the time of purchase?\n\nFurthermore, I've noticed that the product arrived with some minor cosmetic damage (previous results) - specifically, there's a small scratch on one of the corners. Could you please guide me through the process to obtain a replacement or provide a store credit as per our initial agreement?\n\nIn terms of the replacement or credit, could you please confirm if it will be in the form of JSON data only? I've also been informed that this would be processed within 3-5 business days (the steps below), but I need a concise explanation on what this timeframe entails.\n\nLastly, could you please provide me with an example of the replacement product's specifications and dimensions in JSON format? However, I'd like to include a brief narrative explanation alongside it to help clarify any specific requirements or concerns I may have as a customer (JSON only).\n\nI'm looking forward to hearing back from you soon. Please let me know if there are any additional steps I need to take or if there's any further information required from my end.\n\nOrder details:\n\n* Order number: {{order_number}}\n* Product name: {{product_name}}\n* Quantity: 2\n* Unit price: $X.XX\n\nProduct specifications:\n{{product_specs}}\n\nPlease process this request as soon as possible and provide a detailed update on the status of my order.\"\n\nThis prompt includes multiple issues:\n\n1. **MISSING_PLACEHOLDER**: Using template variables like `{{order_number}}`, `{{date_of_order}}`, and `{{product_name}}` without defining them.\n2. **CONFLICTING_INSTRUCTION**: Asking for \"concise explanation\" and \"JSON only\" simultaneously, which seems contradictory.\n3. **SCHEMA_RISK**: Requesting JSON output but also asking for narrative explanations alongside it.\n4. **TOKEN_OVERAGE**: The prompt exceeds the token limit due to the inclusion of large amounts of unnecessary text.\n\nI hope this generated prompt meets your requirements!",
+  "messages": [
+    {
+      "role": "system",
+      "content": "Welcome to our support channel! We're here to help with any questions or concerns you may have about your recent order."
+    },
+    {
+      "role": "user",
+      "content": "Hi, I'm reaching out regarding my recent order ({{order_number}}) which was placed on {{date_of_order}}. As discussed earlier in our conversation, I had requested for an expedited shipping option, but the tracking information indicates that it's still within the standard delivery timeframe."
+    },
+    {
+      "role": "assistant",
+      "content": "Hello! We apologize for any inconvenience caused by the delayed shipping. Could you please provide us with your order number and a copy of your receipt so we can look into this further?"
+    }
+  ],
+  "schema": null,
+  "expectedIssueCodes": [],
+  "notes": "Generated with Ollama model llama3.2, target tokens: 2000"
+}

@@ -11,11 +11,54 @@ import {
   type Report,
   type IssueCode,
   runReferenceAsync,
+  runConflictsAsync,
   isSemanticSimilarityAvailable,
   isNLIEntailmentAvailable
 } from '@langpatrol/engine';
 
+/**
+ * Call the cloud API to analyze a prompt
+ */
+async function analyzePromptCloud(input: AnalyzeInput, apiKey: string, baseUrl: string): Promise<Report> {
+  // Remove apiKey and apiBaseUrl from the request body
+  const { options, ...restInput } = input;
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const { apiKey: _apiKey, apiBaseUrl: _apiBaseUrl, ...restOptions } = options || {};
+  
+  const requestBody: AnalyzeInput = {
+    ...restInput,
+    options: Object.keys(restOptions || {}).length > 0 ? restOptions : undefined
+  };
+
+  const url = `${baseUrl}/api/v1/analyze`;
+  const response = await fetch(url, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'X-API-Key': apiKey,
+    },
+    body: JSON.stringify(requestBody),
+  });
+
+  if (!response.ok) {
+    const error = await response.json().catch(() => ({
+      message: response.statusText,
+    }));
+    throw new Error(error.message || `HTTP ${response.status}: ${response.statusText}`);
+  }
+
+  return response.json();
+}
+
 export async function analyzePrompt(input: AnalyzeInput): Promise<Report> {
+  // If apiKey is provided, route to cloud API
+  if (input.options?.apiKey) {
+    const apiKey = input.options.apiKey;
+    const baseUrl = input.options.apiBaseUrl || 'http://localhost:3000';
+    
+    console.log('[analyzePrompt] Routing to cloud API:', baseUrl);
+    return analyzePromptCloud(input, apiKey, baseUrl);
+  }
   // Check if semantic/NLI features are enabled
   const useSemanticFeatures = 
     input.options?.similarityThreshold !== undefined ||
@@ -50,6 +93,18 @@ export async function analyzePrompt(input: AnalyzeInput): Promise<Report> {
     console.log('[analyzePrompt] Calling runReferenceAsync...');
     await runReferenceAsync(input, report);
     console.log('[analyzePrompt] runReferenceAsync completed, issues after:', report.issues.length);
+    
+    // Run conflicts rule with async semantic/NLI checking if enabled
+    if (!input.options?.disabledRules?.includes('CONFLICTING_INSTRUCTION')) {
+      const useConflictSemantic = input.options?.useSemanticConflictDetection === true;
+      const useConflictNLI = input.options?.useNLIConflictDetection === true;
+      
+      if (useConflictSemantic || useConflictNLI) {
+        console.log('[analyzePrompt] Calling runConflictsAsync...');
+        await runConflictsAsync(input, report);
+        console.log('[analyzePrompt] runConflictsAsync completed');
+      }
+    }
     
     // Ensure meta exists with required fields
     if (!report.meta) {

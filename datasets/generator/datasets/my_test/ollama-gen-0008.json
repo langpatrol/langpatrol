@@ -1,0 +1,22 @@
+{
+  "id": "ollama-gen-0008",
+  "category": "ollama-generated",
+  "prompt": "Here is a realistic prompt that contains multiple issues:\n\n\"Hello {{customer_name}}, \n\nI hope this email finds you well. I am reaching out to follow up on my previous inquiry regarding the new product development project we discussed in our last meeting. As discussed earlier, our team had reviewed the initial prototype and provided feedback, but unfortunately, it didn't meet our expectations.\n\nAccording to the report above, our quality assurance team identified several issues that needed to be addressed before proceeding with the production phase. I would like you to provide a detailed explanation of these findings, including the steps below to rectify them:\n\n1. Review the product's material composition and ensure it meets our sustainability standards.\n2. Conduct additional testing to validate the product's performance under different environmental conditions.\n3. Provide a revised timeline for completion, taking into account the potential rework required.\n\nPlease provide your response in JSON format only, as per our agreed-upon protocol. However, I would appreciate it if you could also include a brief narrative explanation (max 200 words) to help me understand the context and implications of your findings.\n\nAdditionally, please note that our team is working within a strict token limit of 5000 characters for this project. Could you please ensure that your response adheres to this constraint?\n\nI appreciate your prompt attention to this matter, and I look forward to receiving your report by the end of the week.\n\nBest regards,\n[Your Name]\"\n\nThis prompt includes:\n\n* MISSING_PLACEHOLDER: The template variable `{{customer_name}}` is not defined.\n* MISSING_REFERENCE: The phrase \"the report above\" is used without context.\n* CONFLICTING_INSTRUCTION: The request for JSON output and narrative explanation may be seen as contradictory.\n* SCHEMA_RISK: Requesting both JSON output and a brief narrative explanation may cause issues with schema requirements.\n* TOKEN_OVERAGE: The prompt itself exceeds the 5000 character token limit.\n\nNote that this prompt is substantial enough to require performance testing, but also realistic and useful for a customer support or product development task.",
+  "messages": [
+    {
+      "role": "system",
+      "content": "Hello {{customer_name}}, we've received your email regarding the new product development project. We'll do our best to assist you with your inquiry."
+    },
+    {
+      "role": "user",
+      "content": "Hi, I'd like to start by asking: what happened during our last meeting that led to this follow-up email? Also, could you please provide more context about the report you mentioned?"
+    },
+    {
+      "role": "assistant",
+      "content": "Unfortunately, {{customer_name}}, we don't have any record of a previous meeting or report provided. Could you please clarify the context and provide more information about your inquiry?"
+    }
+  ],
+  "schema": null,
+  "expectedIssueCodes": [],
+  "notes": "Generated with Ollama model llama3.2, target tokens: 2000"
+}

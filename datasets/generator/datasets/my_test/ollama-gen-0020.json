@@ -1,0 +1,18 @@
+{
+  "id": "ollama-gen-0020",
+  "category": "ollama-generated",
+  "prompt": "Here's a realistic prompt that contains multiple issues:\n\n**Prompt:**\n\n\"As discussed earlier in your report, I'm experiencing an error with our monthly sales data. The previous results indicate that our top-selling product has seen a significant decline in revenue over the past quarter. However, upon further investigation, I found discrepancies between the reported numbers and the actual values. Specifically, the numbers for January and February appear to be incorrect.\n\nI've attached the relevant documents, including the sales report and the discrepancy log. As per our previous discussion, please provide a detailed explanation of the cause of this issue and propose steps to rectify it.\n\nPlease format your response in JSON format, as requested earlier. However, I'd like to request that you also include a concise summary of the main points for non-technical stakeholders.\n\nI've set a token limit of 500 for this task, so please be concise but detailed in your explanation. Additionally, I'd like to know what steps you will take to ensure this issue doesn't recur in the future.\n\nPlease note that we need to prioritize our top-selling product, as it's crucial to our business revenue. Ensure that any proposed solutions or recommendations are aligned with our overall sales strategy.\n\nThe steps below outline the expected output format: [insert JSON schema]\n\n**JSON Output Requirements:**\n\n* Include a detailed explanation of the cause of the issue ( max 200 tokens)\n* Provide a concise summary of the main points for non-technical stakeholders (max 100 tokens)\n* Include relevant data and supporting evidence to substantiate your claims\n* Use clear and concise language, avoiding technical jargon\n\n**Response Format:**\n\nPlease provide your response in the following format:\n\n{\n\"causes_of_issue\": [...],\n\"recommended_steps\": [...],\n\"summary_for_non_technical_stakeholders\": [...]\n}\n\nThe final answer should be concise but detailed. Please ensure that it adheres to the token limit of 500.\n\n**Assumptions:**\n\n* Our sales data is stored in a cloud-based platform with secure access for authorized personnel.\n* The discrepancy log and sales report are attached as PDFs.\n\nThis prompt includes issues such as:\n\n1. MISSING_PLACEHOLDER (template variables like {{variable}}, {{#if var}}, or {{customer_name}} that are not defined)\n2. CONFLICTING_INSTRUCTION (requesting concise explanation vs detailed explanation, and including narrative/explanations alongside JSON output)\n3. SCHEMA_RISK (requesting JSON output without providing clear guidance on formatting requirements)\n\nPlease note that this prompt is designed to be realistic and useful, while also containing multiple issues naturally. The content should be substantial enough for performance testing, with approximately 2000 tokens.",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are a helpful AI assistant."
+    },
+    {
+      "role": "user",
+      "content": "I need help with a task."
+    }
+  ],
+  "schema": null,
+  "expectedIssueCodes": [],
+  "notes": "Generated with Ollama model llama3.2, target tokens: 2000"
+}

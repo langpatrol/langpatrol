@@ -1,0 +1,42 @@
+[
+  {
+    "name": "baseline",
+    "description": "Baseline - pattern matching only",
+    "options": {
+      "useSemanticSimilarity": false,
+      "useNLIEntailment": false,
+      "usePatternMatching": true
+    }
+  },
+  {
+    "name": "semantic-only",
+    "description": "Semantic similarity only",
+    "options": {
+      "useSemanticSimilarity": true,
+      "useNLIEntailment": false,
+      "similarityThreshold": 0.6,
+      "usePatternMatching": true
+    }
+  },
+  {
+    "name": "nli-only",
+    "description": "NLI entailment only",
+    "options": {
+      "useSemanticSimilarity": false,
+      "useNLIEntailment": true,
+      "similarityThreshold": 0.6,
+      "usePatternMatching": true
+    }
+  },
+  {
+    "name": "combined",
+    "description": "Semantic + NLI combined",
+    "options": {
+      "useSemanticSimilarity": true,
+      "useNLIEntailment": true,
+      "similarityThreshold": 0.6,
+      "usePatternMatching": true
+    }
+  }
+]
+

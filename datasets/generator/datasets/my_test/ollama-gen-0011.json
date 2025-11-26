@@ -1,0 +1,18 @@
+{
+  "id": "ollama-gen-0011",
+  "category": "ollama-generated",
+  "prompt": "Here's a realistic prompt that contains multiple issues:\n\n\"Hello, I'm reaching out regarding the issue with my recent order (order #123456). As discussed earlier, you mentioned that the package would be delivered within 3-5 business days. However, it has been 7 business days since I placed the order and still haven't received any updates on the status of my shipment.\n\nAccording to your report above, the production team was expecting a delay due to high demand, but previous results from this quarter showed no significant increase in production time. Nevertheless, the steps below were supposed to be implemented to mitigate this issue: (1) expedited shipping options for priority orders, (2) increased staffing levels during peak periods, and (3) reevaluation of supplier contracts.\n\nThe current status report provided earlier states that we've experienced a shortage of inventory in our warehouses due to supply chain disruptions. Can you please provide me with an updated forecast for my order, considering these factors? The output should be in JSON format only, as per the steps outlined below:\n\n- List the top 5 most frequently ordered items within the next month\n- Include detailed explanations for each item's expected demand and sales projections (max 2 sentences per item)\n- Provide a recommended course of action to mitigate potential stockouts\n\nAdditionally, please note that our team is working on a new product launch in the coming weeks, which will require increased staffing levels. We're concerned about meeting this deadline due to the token limits you mentioned earlier; we expect around 5,000 characters for the report, but we'd like to know if there's any flexibility with the current token limit (500 tokens per response).\n\nPlease ensure that your output is concise and to the point, as per the original instruction. If possible, include narrative explanations alongside the JSON data to provide context. However, please note that this may exceed our token budget for the day.\n\nLastly, could you confirm whether we're still on track to meet our quarterly sales targets? The steps below outline a detailed plan for achieving these targets:\n\n- Increase marketing efforts by 20% in Q2\n- Launch new product lines during the summer season\n- Provide regular sales reports to stakeholders\n\nPlease provide a high-level overview of our current progress, including any necessary updates or adjustments. We appreciate your attention to this matter and look forward to receiving an update soon.\n\nBest regards,\n[Your Name]\"\n\nThis prompt includes multiple issues:\n\n1. MISSING_PLACEHOLDER: The use of variables like \"order #123456\", \"previous results\", \"the steps below\" without proper definition.\n2. MISSING_REFERENCE: Phrases like \"as discussed earlier\" and \"the report above\" are used without context.\n3. CONFLICTING_INSTRUCTION: The prompt includes contradictory directives, such as \"be concise\" vs \"detailed explanation\".\n4. SCHEMA_RISK: The request for JSON output alongside narrative explanations may cause issues with schema consistency.\n5. TOKEN_OVERAGE: The mention of token limits and the potential to exceed them due to the substantial content required.",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are a helpful AI assistant."
+    },
+    {
+      "role": "user",
+      "content": "I need help with a task."
+    }
+  ],
+  "schema": null,
+  "expectedIssueCodes": [],
+  "notes": "Generated with Ollama model llama3.2, target tokens: 2000"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "ollama-gen-0006",
+  "category": "ollama-generated",
+  "prompt": "Here is a prompt that includes multiple issues:\n\n**Request to Update Customer Account Information with JSON Output**\n\n\"Hi there,\n\nI'm reaching out because I need to update my account information for our annual subscription. As discussed earlier in our previous conversation, you informed me that we would be sending an updated customer list to my email address on the 15th of this month. However, upon reviewing the report above, I noticed some discrepancies with the information provided.\n\nTo clarify, my name was listed as 'John Doe' but my preferred title is 'Mr.' and my email address should reflect my personal account, not my business one. I would appreciate it if you could update this information on our system ASAP so that we can proceed with the subscription renewal.\n\nAdditionally, I'd like to request a detailed explanation of how this data will be used in our analytics pipeline moving forward. We're experiencing some issues with token overage and need to understand how to optimize our reporting without exceeding the limit of 5000 characters per JSON output.\n\nAlso, could you please provide me with a step-by-step guide on how to update my account information? The steps below should include screenshots and any relevant notes from previous conversations. Please ensure that these instructions are concise and easy to follow.\n\nLastly, I've noticed some conflicts in the documentation regarding the accepted file formats for our subscription data. Could you please clarify whether we can submit only JSON files or if we need to include additional metadata like CSV or Excel spreadsheets?\n\nThank you so much for your help with this matter! I look forward to hearing back from you soon.\n\nBest regards,\nJohn Doe\"\n\nThis prompt includes the following issues:\n\n* MISSING_PLACEHOLDER: No defined template variables (e.g., {{variable}}, {{#if var}}) are used throughout the prompt.\n* CONFLICTING_INSTRUCTION: The prompt asks for both a concise step-by-step guide and detailed explanations, as well as instructions on how to handle token overage.\n* SCHEMA_RISK: It requests JSON output while also asking for narrative/explanations alongside it (e.g., \"provide screenshots\").\n* TOKEN_OVERAGE: The prompt explicitly mentions the token limit of 5000 characters per JSON output.\n\nThe prompt is substantial and realistic, covering a customer support request with specific data processing requirements.",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are a helpful AI assistant."
+    },
+    {
+      "role": "user",
+      "content": "I need help with a task."
+    }
+  ],
+  "schema": null,
+  "expectedIssueCodes": [],
+  "notes": "Generated with Ollama model llama3.2, target tokens: 2000"
+}

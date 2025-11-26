@@ -57,6 +57,7 @@ export type IssueCode =
   | 'MISSING_REFERENCE'
   | 'CONFLICTING_INSTRUCTION'
   | 'SCHEMA_RISK'
+  | 'INVALID_SCHEMA'
   | 'TOKEN_OVERAGE';
 
 export type IssueEvidenceSummary = { text: string; count: number };
@@ -197,6 +198,14 @@ export type AnalyzeInput = {
     };
     disabledRules?: IssueCode[]; // rules to skip
     tokenEstimation?: 'auto' | 'cheap' | 'exact' | 'off'; // token estimation mode
+    // Conflict detection options
+    useSemanticConflictDetection?: boolean; // enable semantic similarity for conflict detection (default: false)
+    useNLIConflictDetection?: boolean; // enable NLI entailment for conflict detection (default: false)
+    conflictSimilarityThreshold?: number; // threshold for detecting semantic conflicts (default: 0.3, lower = more conflicts detected)
+    conflictContradictionThreshold?: number; // threshold for NLI contradiction detection (default: 0.7)
+    // Cloud API options
+    apiKey?: string; // API key for cloud API - if provided, analysis will be performed via cloud API
+    apiBaseUrl?: string; // Base URL for cloud API (default: 'http://localhost:3000')
   };
 };
 

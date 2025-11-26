@@ -1,0 +1,18 @@
+{
+  "id": "ollama-gen-0013",
+  "category": "ollama-generated",
+  "prompt": "Here is a realistic prompt that contains multiple issues:\n\n\"Hi there, I'm reaching out regarding my recent purchase from your store on January 10th. As discussed earlier with John in the sales team, I was expecting to receive my new laptop by now, but it's still pending shipment. The report above shows the order status as 'processing', which seems inconsistent with what John told me.\n\nI need to review the steps below to ensure everything is in order: [INSERT TABLE WITH ORDER DETAILS]. Please provide a detailed explanation of why there are delays and what I can do to expedite the process. Also, please include JSON output with relevant data points for future reference.\n\nThe product description mentions that it comes with a 2-year warranty, but the steps below indicate that only a limited warranty period is applied in certain regions. Can you clarify this discrepancy? Additionally, be concise and provide a clear summary of the next steps I can take to resolve this issue. As we discussed previously, please ensure your response includes explanations and supporting evidence.\n\nPlease respond as soon as possible, and please keep your message under 1000 tokens. Note that our team is restricted to only using JSON output for data analysis purposes, so please format your response accordingly. Token limit warning: Please be mindful of the token count; our system will trigger an error if we exceed 500 tokens.\n\nLastly, I'd like to request a follow-up email with a personalized message addressed to my customer name (insert customer name). Can you confirm that this is feasible and what additional steps are required from my end? Thank you for your prompt attention to this matter.\"\n\nThis prompt includes the following issues:\n\n1. MISSING_PLACEHOLDER: The prompt uses template variables like `INSERT TABLE WITH ORDER DETAILS` without providing any context or data.\n2. MISSING_REFERENCE: The prompt mentions \"the report above\" and \"previous results\" without referencing a specific document or source.\n3. CONFLICTING_INSTRUCTION: The prompt asks for concise responses, but also requests detailed explanations and supporting evidence.\n4. SCHEMA_RISK: The prompt requests JSON output alongside narrative/explanations.\n5. TOKEN_OVERAGE: The prompt mentions a token limit of 500 tokens, but is likely to exceed this limit due to its substantial content.\n\nPlease note that I've aimed for a target length of approximately 2000 tokens (8000 characters) as requested.",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are a helpful AI assistant."
+    },
+    {
+      "role": "user",
+      "content": "I need help with a task."
+    }
+  ],
+  "schema": null,
+  "expectedIssueCodes": [],
+  "notes": "Generated with Ollama model llama3.2, target tokens: 2000"
+}

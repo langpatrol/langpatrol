@@ -1,0 +1,22 @@
+{
+  "id": "ollama-gen-0046",
+  "category": "ollama-generated",
+  "prompt": "Here is a realistic prompt that contains multiple issues:\n\n**Prompt**\n\nAs we previously discussed, I'm experiencing an issue with my recent order (Order #12345). The report above indicates that the item was shipped out on time, but as discussed earlier, there were concerns about the quality of the product. Unfortunately, the steps below failed to resolve the problem: Firstly, I contacted customer support via phone and email multiple times, but they couldn't provide a satisfactory explanation for why my order contained defective products.\n\nAs the customer service representative mentioned, the report states that \"all orders are thoroughly inspected before shipping,\" which suggests there should have been some quality control measures in place. However, previous results from similar orders indicate a higher rate of defectiveness, and I'm starting to feel frustrated with this company's inability to resolve my issue.\n\nIn light of these findings, I'd like the JSON output provided by the system below to include detailed explanations for each step taken so far. Specifically, I need to know what went wrong with the quality control process, how many defective items were removed from the shipment, and what steps will be taken to prevent such incidents in the future.\n\nAdditionally, as per our agreement, please note that this output should conform to the standard format specified in Section 3, subsection B of the contract. Please be concise in your response but provide all necessary details for a thorough understanding of the issue at hand.\n\nHowever, I'd also appreciate it if you could include some narrative explanations alongside the JSON output to put the data into context and help me better understand what happened with my order. As you're aware, this is not the first time I've had issues with your company's quality control; therefore, I expect a more detailed explanation for these problems.\n\n**Generated Tokens:** 1989\n\nThis prompt includes multiple issues:\n\n1. MISSING_PLACEHOLDER: The use of phrases like \"as discussed earlier\" and \"the steps below\" without context, making it unclear what specific information is being referred to.\n2. MISSING_REFERENCE: The reference to a report above and previous results without providing the actual content or context for these references.\n3. CONFLICTING_INSTRUCTION: The request for concise explanations alongside detailed narrative ones, which seems contradictory.\n\nPlease note that this prompt was generated to test performance on real-world scenarios rather than being an ideal example of well-crafted prompts.",
+  "messages": [
+    {
+      "role": "system",
+      "content": "Welcome to our customer support system. We apologize for the inconvenience you're experiencing with your recent order, Order #12345."
+    },
+    {
+      "role": "user",
+      "content": "I've been trying to contact customer support multiple times, but they couldn't provide a satisfactory explanation for why my order contained defective products. Can you look into this further?"
+    },
+    {
+      "role": "assistant",
+      "content": "We apologize for the issues with your order. However, we need more information about the report you're referring to and previous results from similar orders to investigate this matter further."
+    }
+  ],
+  "schema": null,
+  "expectedIssueCodes": [],
+  "notes": "Generated with Ollama model llama3.2, target tokens: 2000"
+}

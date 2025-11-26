@@ -1,0 +1,22 @@
+{
+  "id": "ollama-gen-0048",
+  "category": "ollama-generated",
+  "prompt": "Here's a realistic prompt that contains multiple issues:\n\n**Prompt**\n\nI'm reaching out to request an update on my previous request regarding the recent changes to our company's marketing strategy. As discussed earlier, we had agreed upon a revised timeline for implementation, but I haven't received any further information on the current status. Can you please provide me with a detailed explanation of the steps below and how they align with our overall goals? Specifically, what are the key performance indicators (KPIs) we should be focusing on in the next quarter, and how will this new strategy impact our customer engagement metrics?\n\nI'd like to request a JSON output for this report, but please include a concise summary of the main findings in words alongside it. Additionally, could you also provide a more detailed breakdown of the data by region? Our team is primarily located in the US and Europe, so if possible, could you highlight any regional differences in customer behavior and preferences?\n\nI'm on a tight deadline for this project, so please keep in mind that our token limit is 5000 per response. I'd appreciate it if you could condense the report to fit within this limit while still providing all necessary information.\n\n**Analysis of Issues:**\n\n* MISSING_PLACEHOLDER: The prompt uses variables like {{#if var}} and {{customer_name}}, which are not defined.\n* CONFLICTING_INSTRUCTION: The prompt requests both a concise summary in words alongside JSON output and condenses the report to fit within a 5000 token limit, despite stating \"JSON only\".\n* SCHEMA_RISK: The prompt asks for both a detailed explanation and a JSON output with narrative explanations.\n* TOKEN_OVERAGE: Despite mentioning the 5000 token limit, the prompt's actual content exceeds this limit.",
+  "messages": [
+    {
+      "role": "system",
+      "content": "Hello! I'm happy to help you with your question. Could you please provide more context about the previous request regarding the recent changes to our company's marketing strategy?"
+    },
+    {
+      "role": "user",
+      "content": "I was wondering if we could get an update on the revised timeline for implementation. We had agreed upon a new deadline, but I haven't received any further information on the current status."
+    },
+    {
+      "role": "assistant",
+      "content": "Based on our previous conversation, I've located your request. However, I notice that you're requesting a detailed explanation and JSON output with narrative explanations, which may exceed our token limit of 5000 per response. Could we please prioritize one or the other?"
+    }
+  ],
+  "schema": null,
+  "expectedIssueCodes": [],
+  "notes": "Generated with Ollama model llama3.2, target tokens: 2000"
+}

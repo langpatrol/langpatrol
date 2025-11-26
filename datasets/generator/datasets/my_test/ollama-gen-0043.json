@@ -1,0 +1,18 @@
+{
+  "id": "ollama-gen-0043",
+  "category": "ollama-generated",
+  "prompt": "Here is a realistic prompt that contains multiple issues:\n\n**Issue Description and Request**\n\nAs discussed earlier in your onboarding process, we have identified an issue with our inventory management system that requires attention. The report above shows that we are running low on stock of our flagship product, \"Premium X500\". According to the previous results, this is due to a combination of factors including increased demand from new customers and shipping delays.\n\nTo resolve this, I need you to provide me with a detailed explanation of the current inventory levels across all stores. Please include a list of the top 5 products that are selling out the fastest, as well as an analysis of why these products are in high demand. Additionally, I would like you to generate a JSON report that includes the following information:\n\n- Current stock levels for each product\n- Number of customers who have purchased each product\n- Top 5 products by revenue\n\nHowever, please be concise and only include the key statistics. **JSON output should be limited to 2 pages**.\n\nFurthermore, I would like you to assume that our customer base consists of two main demographics: young professionals aged 25-35 and families with children under the age of 12. Please take this into account when providing your analysis.\n\nI also request that you include a visual representation of the data, such as a bar chart or scatter plot, to help illustrate the key findings.\n\n**Token Limit Warning:** This prompt exceeds the recommended token limit for most models. Please note that excessive tokens may result in decreased performance and accuracy.\n\nThis prompt includes:\n\n1. MISSING_PLACEHOLDER: The template variable \"{{ report above }}\" is not defined.\n2. CONFLICTING_INSTRUCTION: The request to be concise conflicts with the need for a detailed explanation, as well as the requirement for a visual representation of the data.\n3. TOKEN_OVERAGE: The prompt exceeds the recommended token limit by approximately 500 tokens.\n\nLet me know if this meets your requirements!",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are a helpful AI assistant."
+    },
+    {
+      "role": "user",
+      "content": "I need help with a task."
+    }
+  ],
+  "schema": null,
+  "expectedIssueCodes": [],
+  "notes": "Generated with Ollama model llama3.2, target tokens: 2000"
+}

@@ -1,0 +1,22 @@
+{
+  "id": "ollama-gen-0016",
+  "category": "ollama-generated",
+  "prompt": "Here is a prompt that intentionally includes multiple issues:\n\n\"Hi, I'm reaching out to you regarding my recent order (order #XXXXX) which was placed on 02/15/2023. As discussed earlier in our conversation on 02/10/2023, I was expecting the product to be shipped by now, but it still hasn't arrived. The report above shows that the status is 'processing', but I'm concerned that this might not be accurate given previous results.\n\nI'd like you to provide a detailed explanation of what's causing the delay and when I can expect to receive my order. Please include all relevant information, such as tracking numbers, shipping carriers, and any other pertinent details.\n\nAdditionally, could you please generate a JSON output for me that includes the following fields: 'order_date', 'expected_shipment_date', 'actual_shipment_date', 'status', 'tracking_number', and 'carrier'? I'd like to see this information in a concise format, as per our previous discussion about being concise with responses.\n\nHowever, please note that I'm looking for a more detailed explanation of the shipping process, so could you also provide some narrative explanations alongside the JSON output? Specifically, I'd like to know what steps are being taken by the warehouse team and how they're tracking the packages.\n\nAlso, since our conversation about the token limit was previously mentioned (specifically, we discussed not exceeding 2048 tokens), I'm concerned that this prompt might exceed the token limit. Nevertheless, please provide a response in the following format: 'JSON output here' followed by 'explanation'. Could you also include some sample data to demonstrate what this would look like?\n\nThe steps below outline the expected process for resolving my issue:\n\n1. Verify the order status\n2. Contact the warehouse team\n3. Provide an explanation of the delay\n4. Offer a solution or alternative\n\nI'd appreciate it if you could follow these steps and provide a response that meets all of my requirements.\n\nNote: I've included the customer's contact information above, but please keep this confidential. Also, since we previously discussed using {{customer_name}} in our responses, I'll be referring to myself as 'XXXXX' throughout this conversation.\"\n\nThis prompt includes:\n\n* MISSING_PLACEHOLDER: The phrase \"as discussed earlier\" is used without providing context or reference to a previous conversation.\n* CONFLICTING_INSTRUCTION: The prompt asks for both a concise response and narrative explanations alongside the JSON output.\n* SCHEMA_RISK: Requesting both JSON output and narrative explanations creates a potential schema risk, as the AI may struggle to balance the two formats.\n* TOKEN_OVERAGE: The prompt mentions token limits but creates a lengthy response that could exceed 2048 tokens.",
+  "messages": [
+    {
+      "role": "system",
+      "content": "Welcome to our support platform. We're happy to assist you with your order inquiry."
+    },
+    {
+      "role": "user",
+      "content": "Hi, I'm reaching out to you regarding my recent order (order #XXXXX) which was placed on 02/15/2023. As discussed earlier in our conversation on 02/10/2023, I was expecting the product to be shipped by now, but it still hasn't arrived. The report above shows that the status is 'processing', but I'm concerned that this might not be accurate given previous results."
+    },
+    {
+      "role": "assistant",
+      "content": "I apologize for any inconvenience caused. However, I couldn't find any record of a previous conversation on 02/10/2023. Could you please provide more context or details about your order and the issues you're experiencing?"
+    }
+  ],
+  "schema": null,
+  "expectedIssueCodes": [],
+  "notes": "Generated with Ollama model llama3.2, target tokens: 2000"
+}

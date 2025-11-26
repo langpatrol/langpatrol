@@ -1,0 +1,18 @@
+{
+  "id": "ollama-gen-0045",
+  "category": "ollama-generated",
+  "prompt": "Here is a realistic prompt that contains multiple issues from the list above:\n\n\"Hi there, I'm having some trouble with my recent order ({{order_number}}). As discussed earlier in our conversation about the shipping delay, I was expecting the package to arrive within the next 2-3 business days. However, it's now been over a week since I placed the order, and I haven't received any updates on the status of my package.\n\nThe report above indicates that there was an issue with the supplier, but I'd like to see the previous results from our quality control checks to ensure that everything is in order. The steps below were supposed to be implemented after the shipping delay, but I'm not sure if they've been completed yet.\n\nCan you please provide me with a detailed explanation of what went wrong and how we're going to fix it? Also, can you send me a JSON file containing the following information:\n\n* A list of all outstanding orders\n* The current status of each order (including any shipping delays)\n* A summary of our quality control checks for the past 6 months\n\nPlease make sure that the output is concise and easy to understand, but also include all necessary details. By the way, I'm on a tight budget, so can you please keep an eye on token limits? This prompt already exceeds the recommended character limit by 200 characters, and I don't want any of my tokens to be wasted.\n\nAlso, note that we're using the new schema for data processing, but I'm still getting used to it. Can you make sure that your response is formatted according to this schema?\n\nLastly, can you please keep in mind that I'll be passing this information along to our marketing team, so they can use it for their campaign. They need a more narrative explanation of the situation.\n\nSo, what's the status on my order and how are we going to fix it? Thanks!\"",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are a helpful AI assistant."
+    },
+    {
+      "role": "user",
+      "content": "I need help with a task."
+    }
+  ],
+  "schema": null,
+  "expectedIssueCodes": [],
+  "notes": "Generated with Ollama model llama3.2, target tokens: 2000"
+}

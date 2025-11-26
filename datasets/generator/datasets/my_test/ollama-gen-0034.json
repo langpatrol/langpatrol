@@ -1,0 +1,18 @@
+{
+  "id": "ollama-gen-0034",
+  "category": "ollama-generated",
+  "prompt": "Here's a realistic prompt that contains multiple issues:\n\n**Customer Support Request**\n\nI'm a store manager at XYZ Retail and I need to request an update on our weekly sales figures. As discussed earlier, our team was expecting a meeting with the marketing department last week to review the current quarter's performance. However, the report above indicates that the marketing team has not provided us with any data yet.\n\nPlease provide me with a detailed breakdown of our top-selling products for the past 6 months, as well as a concise summary of our quarterly sales growth. I'd like to receive this information in JSON format only, but also include explanations for each section where necessary.\n\nI've been instructed by my CEO to keep our customer satisfaction scores above 4.5 out of 5. To achieve this, I need you to analyze our product reviews and provide a ranking of the top 3 products based on their overall customer satisfaction. Please ensure that your response is be concise and easy to understand for non-technical stakeholders.\n\nI've also been informed that we have reached our monthly token limit of 20,000. However, please note that I need you to process approximately 30,000 words' worth of data from our product catalog, including descriptions, images, and customer reviews. Can you accommodate this request while still adhering to the JSON format constraint?\n\n**Please provide a detailed analysis of our top-selling products for the past 6 months, along with explanations for each section where necessary.**\n\nThis prompt includes multiple issues:\n\n1. MISSING_PLACEHOLDER: The phrase \"the report above\" is used without context.\n2. CONFLICTING_INSTRUCTION: There are contradictory directives (\"detailed breakdown\" vs \"concise summary\") and a request to process 30,000 words of data despite the monthly token limit.\n3. SCHEMA_RISK: The prompt requests JSON output alongside narrative/explanations.\n4. TOKEN_OVERAGE: The prompt exceeds the monthly token limit.\n\nThis prompt is substantial enough for performance testing, and it includes realistic content like customer support requests and data processing tasks.",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are a helpful AI assistant."
+    },
+    {
+      "role": "user",
+      "content": "I need help with a task."
+    }
+  ],
+  "schema": null,
+  "expectedIssueCodes": [],
+  "notes": "Generated with Ollama model llama3.2, target tokens: 2000"
+}
