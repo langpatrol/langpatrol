@@ -1,4 +1,26 @@
 # Changelog
+## [0.1.4] - 2025-01-XX
+
+### Added
+
+* **Benchmarking tools** - Comprehensive benchmarking suite in `tools/benchmark/` for evaluating analysis performance:
+  - Multi-parameter testing with configurable parameter sets
+  - Support for CSV datasets and text files
+  - Comprehensive metrics (latency, issues, costs, rule timings)
+  - Accuracy metrics (precision, recall, F1 score) when expected issues are provided
+  - JSON reports, CSV tables, and interactive HTML charts with Chart.js
+  - Parameter impact analysis showing how each parameter affects latency and accuracy
+  - Parallel execution and warmup runs support
+  - Timeout protection for large prompts
+* **Schema validation rules** - New `INVALID_SCHEMA` issue code that validates JSON Schema structures:
+  - Detects missing `type` when `properties` or `items` are present (strict mode requirement)
+  - Validates type values against JSON Schema 7 specification
+  - Validates property types recursively
+  - Provides detailed error messages with schema paths and keywords
+  - Uses strict Ajv validation with comprehensive error reporting
+  - Can be disabled via `disabledRules: ['INVALID_SCHEMA']`
+* **Synthetic prompt dataset** - Collection of test prompts for validation and benchmarking
+
 ## [0.1.3] - 2025-11-09
 
 ### Added
