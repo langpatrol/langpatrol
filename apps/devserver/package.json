@@ -1,7 +1,6 @@
 {
   "name": "langpatrol-devserver",
   "version": "0.1.4",
-  "license": "Elastic License 2.0",
   "private": true,
   "type": "module",
   "scripts": {
