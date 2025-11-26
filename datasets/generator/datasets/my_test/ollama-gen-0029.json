@@ -1,0 +1,18 @@
+{
+  "id": "ollama-gen-0029",
+  "category": "ollama-generated",
+  "prompt": "Here's a realistic prompt that contains multiple issues:\n\n**Prompt:**\n\n\"As discussed earlier in our previous meeting, I've been experiencing some issues with my new account setup. Despite following the steps below, which were outlined in the report above, I'm still facing problems with accessing my dashboard. The steps I've taken so far include activating my account via phone and verifying my email address. However, I'm getting an error message that says 'username not found' and I need urgent assistance to resolve this issue.\n\nCould you please provide me with a detailed explanation of what went wrong and suggest possible solutions? I'd like the output in JSON format, but also include explanations for any technical terms or jargon used. Additionally, I'd appreciate it if you could mention any potential token limits that may affect the response length.\n\nI've attached the relevant log files and account information to this request. As per our previous conversation, I've been instructed to use only 500 tokens in my prompt, but please note that this might not be sufficient to fully address all the issues at hand.\n\nIf possible, could you also provide a concise summary of your findings and recommended next steps? Please make sure to format the output with proper indentation and spacing for easy readability. Furthermore, I've noticed that some users have reported similar issues in the past, so please take into account these previous results when providing guidance.\n\nLastly, if there's any additional information required from me to facilitate a timely resolution, please let me know and provide instructions on how to gather it. Thank you for your prompt attention to this matter.\"\n\n**Issues:**\n\n* MISSING_PLACEHOLDER: Using template variables like {{variable}}, {{#if var}}, or {{customer_name}} without defining them\n* MISSING_REFERENCE: Referencing \"the report above\" and \"previous results\" without providing context\n* CONFLICTING_INSTRUCTION: Requesting both detailed explanations and concise summaries, as well as JSON output alongside narrative explanations\n* SCHEMA_RISK: Asking for JSON output while also requesting narratives/explanations, which may lead to inconsistent schema usage\n* TOKEN_OVERAGE: Mentioning token limits (500 tokens) without providing sufficient context or instructions on how to adjust the prompt\n\nThis prompt should provide a good mix of issues to test the AI prompt analyzer's ability to identify and resolve problems. The length of approximately 2000 tokens makes it substantial enough for performance testing, while the realistic content and structure aim to mimic real-world user prompts.",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are a helpful AI assistant."
+    },
+    {
+      "role": "user",
+      "content": "I need help with a task."
+    }
+  ],
+  "schema": null,
+  "expectedIssueCodes": [],
+  "notes": "Generated with Ollama model llama3.2, target tokens: 2000"
+}

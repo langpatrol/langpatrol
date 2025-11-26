@@ -1,0 +1,22 @@
+{
+  "id": "ollama-gen-0026",
+  "category": "ollama-generated",
+  "prompt": "Here is a realistic prompt that contains multiple issues from the list above:\n\n**Customer Support Request**\n\nI'm following up on my previous inquiry regarding the issue with the recent shipment of our product, which I reported to you as discussed earlier. As mentioned in the report above, the package was damaged upon arrival, and I'd like to request a replacement or a full refund.\n\nHowever, before we proceed, I'd appreciate it if you could provide me with a detailed explanation of your shipping procedures and protocols, including any safety measures taken to prevent damage during transit. This will help me better understand the situation and make an informed decision regarding my next steps.\n\nCould you please process this request in JSON format only? I'm on a tight deadline and need the information quickly. Also, please ensure that your response is concise and to the point, as I don't have time for lengthy explanations or unnecessary details.\n\nI've attached the relevant documentation and images of the damaged package below (JSON attachment). Please review them carefully and let me know if there's anything else you'd like to add to my case.\n\n**Attachments**\n\n* damage_report.json\n* packaging_info.pdf\n\nPlease include a brief summary of your findings in the response, as well as any next steps or recommendations for resolving this issue. If possible, please provide an estimated timeframe for when I can expect the replacement or refund to be processed.\n\nAdditionally, could you please confirm whether there are any additional fees or charges associated with processing this request? I'd like to review our company's policy on such matters before proceeding further.\n\nI've been a loyal customer of your company for many years and appreciate your attention to this matter. I'm confident that we can resolve this issue amicably, but I need clear guidance on the next steps.\n\nPlease respond with an estimated timeframe for resolving this issue, as well as any additional information or clarification required from my end.\n\n**Token Count:** approximately 2000 tokens (roughly 8000 characters)\n\nThis prompt includes multiple issues:\n\n* MISSING_PLACEHOLDER: The use of phrases like \"as discussed earlier\", \"previous results\", and \"next steps\" without context.\n* CONFLICTING_INSTRUCTION: The directive to be concise while also requesting a detailed explanation.\n* SCHEMA_RISK: Requesting JSON output alongside narrative/explanations.\n* TOKEN_OVERAGE: Mentioning token limits while creating a prompt that would likely exceed them due to its length and complexity.",
+  "messages": [
+    {
+      "role": "system",
+      "content": "Customer support request detected. Please provide context for the issue with your recent shipment."
+    },
+    {
+      "role": "user",
+      "content": "I'm following up on my previous inquiry regarding the issue with the recent shipment of our product, which I reported to you as discussed earlier. As mentioned in the report above, the package was damaged upon arrival, and I'd like to request a replacement or a full refund."
+    },
+    {
+      "role": "assistant",
+      "content": "Thank you for following up on your previous inquiry. However, we couldn't find any record of a previous discussion regarding this issue. Can you please provide more context or details about the damage?"
+    }
+  ],
+  "schema": null,
+  "expectedIssueCodes": [],
+  "notes": "Generated with Ollama model llama3.2, target tokens: 2000"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "ollama-gen-0032",
+  "category": "ollama-generated",
+  "prompt": "Here is a realistic prompt that contains multiple issues from the list above:\n\n**Prompt**\n\n\"Hi John, I'm having some trouble with my recent order ( Order #12345) and I was wondering if you could help me troubleshoot. As discussed earlier in our previous conversation regarding this issue, I had noticed some discrepancies between the product description on your website and the actual product arrived at my doorstep.\n\nThe package arrived yesterday morning, but when I opened it, I found that the item 'Smartphone Charging Dock' was missing. I have attached a photo of the packaging to this email for reference. According to the steps below, I should have received this item as part of the order:\n\n1. Inspect product for damage\n2. Check contents against the packing slip\n3. Contact customer support if any items are missing or damaged\n\nI have followed these steps and verified that the dock is indeed not present. However, when I checked the report above (the receipt and packing slip), it shows that the item was supposed to be included.\n\nThe report also mentions 'Special instructions' on page 3 of the packing slip which include a specific request for the customer to contact support if any items are missing or damaged. As per our previous discussion, we agreed that I would be responsible for reporting this issue immediately.\n\nHowever, since I have already reported the issue, can you please provide me with an updated report (JSON only) with the revised order total and a detailed explanation of why the item was not included? Also, can you confirm whether there are any token limits on the response format?\n\nI would appreciate it if you could also include some narrative explanations for the revised order total to help me better understand the changes.\n\nOne additional question - are there any plans to restock this product in the near future? If so, when can I expect the next shipment of 'Smartphone Charging Dock's to arrive? \n\nPlease provide a concise summary of the issue and solution below (max 200 characters). \n\nAlso, please ensure that your response adheres to the following schema:\n\n* Order details\n\t+ Order #12345\n\t+ Customer name: John Doe\n\t+ Order date: 2023-02-15\n\t+ Total cost: $219.99\n* Item list:\n\t+ Smartphone Charging Dock\n\t+ Product description: 'A premium smartphone charging dock with wireless charging capabilities'\n\t+ Product image: 'charging-dock.jpg'\n* Special instructions:\n\t+ Contact customer support immediately if any items are missing or damaged\n* Revised order total: $219.99\n\nPlease provide the revised report (JSON) and a detailed explanation of the changes.\n\n**Token Count:** approximately 790 tokens",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are a helpful AI assistant."
+    },
+    {
+      "role": "user",
+      "content": "I need help with a task."
+    }
+  ],
+  "schema": null,
+  "expectedIssueCodes": [],
+  "notes": "Generated with Ollama model llama3.2, target tokens: 2000"
+}

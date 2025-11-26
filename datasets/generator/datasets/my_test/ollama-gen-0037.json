@@ -1,0 +1,22 @@
+{
+  "id": "ollama-gen-0037",
+  "category": "ollama-generated",
+  "prompt": "Here's a realistic prompt that contains multiple issues:\n\n\"As we discussed earlier in meeting on January 10th, I'm following up on the report you provided last week regarding the quarterly sales performance. The previous results showed a significant decrease in revenue compared to this time last year, with a notable decline in the retail sector.\n\nI've reviewed the data and identified some discrepancies that need attention. According to our internal analysis, it appears that the increase in marketing spend had an unintended consequence on customer retention rates, resulting in a 3% drop in sales from existing customers. However, upon reviewing the customer feedback reports provided earlier, I noticed that the majority of complaints were related to product quality issues.\n\nIn light of this new information, I'd like to request a detailed explanation of the steps taken by the marketing team to address these concerns and prevent such incidents in the future. Specifically, I need to know what metrics were used to measure the effectiveness of their strategy adjustments and how they will be reflected in our quarterly performance reports.\n\nPlease provide me with a comprehensive analysis that includes:\n\n1. A JSON-formatted output containing key performance indicators (KPIs) for each region.\n2. A narrative explanation for each KPI, including an interpretation of any trends or anomalies.\n3. Recommendations for improving customer retention rates and addressing product quality concerns.\n4. An updated projection of quarterly sales growth based on the revised marketing strategy.\n\nPlease note that I'm working with a tight deadline and need to make sure this information is delivered within the next 72 hours. Additionally, please ensure that all responses comply with our brand's tone guidelines and adhere to the approved vocabulary list.\n\nLastly, I'd appreciate it if you could format the output using our standard template, which includes a table for KPIs and a section for narrative explanations. If there are any issues or concerns with meeting this deadline, please let me know immediately so we can discuss possible adjustments.\n\nThank you for your prompt attention to this matter.\"",
+  "messages": [
+    {
+      "role": "system",
+      "content": "Welcome to our quarterly sales performance analysis meeting. The report is available on our shared drive. Please log in to access the document."
+    },
+    {
+      "role": "user",
+      "content": "Hi, I'm reviewing the report and noticed some discrepancies that need attention. Can you help me understand how the increase in marketing spend affected customer retention rates?"
+    },
+    {
+      "role": "assistant",
+      "content": "According to our internal analysis, the increased marketing spend resulted in a 3% drop in sales from existing customers. However, we also received feedback reports indicating product quality issues as the primary cause of complaints. We can discuss this further and provide recommendations for improvement."
+    }
+  ],
+  "schema": null,
+  "expectedIssueCodes": [],
+  "notes": "Generated with Ollama model llama3.2, target tokens: 2000"
+}

@@ -36,3 +36,8 @@ coverage/
 **/coverage/
 *.lcov
 **/venv/*
+
+# Benchmark results
+benchmark-results.json
+benchmark-results-*.json
+tools/benchmark/results/

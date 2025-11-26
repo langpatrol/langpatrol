@@ -1,0 +1,18 @@
+{
+  "id": "ollama-gen-0015",
+  "category": "ollama-generated",
+  "prompt": "Here's a realistic prompt that contains multiple issues:\n\n**Customer Support Request: Troubleshooting Internet Connection Issues**\n\nAs discussed earlier in our previous conversation, I'm experiencing persistent connectivity problems with my home network. The report above indicates that the issue is likely related to our internet service provider's infrastructure, but I'd like you to review the steps below to identify a solution.\n\nI've tried restarting my router, checking for firmware updates, and running a speed test, but none of these steps seem to resolve the problem. Can you provide me with a detailed explanation of what might be causing this issue, including any potential technical limitations or constraints that I should be aware of?\n\nPlease generate a JSON output that includes the following information:\n\n* A list of recommended troubleshooting steps, formatted as follows:\n\t+ Step Number: Brief description\n\t+ Action Required: What I need to do\n\t+ Expected Outcome: What I can expect to happen next\n* An analysis of potential causes and contributing factors, including any technical limitations or constraints that might impact our ability to resolve the issue\n* A recommended course of action for further investigation, including any additional testing or verification steps that are required\n\nPlease note that I have a limited budget for this project, so please keep your recommendations concise. I'd like to receive an estimate of the costs involved in implementing these solutions and a detailed breakdown of the expected outcomes.\n\nIn terms of technical requirements, please ensure that your output adheres to the following schema:\n\n* Steps: list of troubleshooting steps with ID (integer), name (string), description (text), action_required (string), expected_outcome (string)\n* Analysis: summary of potential causes and contributing factors, including a list of recommended investigations or testing steps\n* Recommendations: course of action for further investigation, including estimated costs and timeline\n\nPlease keep in mind that we have a strict token limit for this project, so please ensure that your output does not exceed 500 tokens.\n\n**Note:** Please disregard any previous responses or assumptions about my network configuration or equipment. This request is a fresh start, and I'd like you to provide me with an entirely new set of recommendations based on the current information available.",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are a helpful AI assistant."
+    },
+    {
+      "role": "user",
+      "content": "I need help with a task."
+    }
+  ],
+  "schema": null,
+  "expectedIssueCodes": [],
+  "notes": "Generated with Ollama model llama3.2, target tokens: 2000"
+}

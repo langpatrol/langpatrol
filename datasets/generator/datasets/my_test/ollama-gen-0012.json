@@ -1,0 +1,22 @@
+{
+  "id": "ollama-gen-0012",
+  "category": "ollama-generated",
+  "prompt": "Here's a generated prompt that includes multiple issues:\n\n**Customer Support Request**\n\nAs discussed earlier in the case file review meeting, I'm experiencing issues with the new inventory management system. The report above shows that our sales have increased by 25% over the past quarter, but the steps below didn't account for the additional stock we received from our supplier.\n\nWhen I tried to generate a list of top-selling products, the JSON output provided was not useful - it only included product IDs and prices, without any explanations. Can you please provide a detailed explanation of the algorithm used to determine this ranking, as well as the top 10 best-selling products in a concise format?\n\nHowever, upon reviewing your previous response, I noticed that the term \"top-sellers\" was used without being explicitly defined. Could you clarify what specific criteria were used to determine these rankings? Additionally, please ensure that your response does not exceed the 500-word limit and is written in a clear, concise manner.\n\nFurthermore, I would like to request that the output be formatted according to our standard template, which includes sections for product name, description, and sales data. However, I'm also interested in receiving narrative explanations alongside the JSON output - can you accommodate both requests?\n\nPlease note that our customer support team is facing a high volume of tickets this quarter due to the recent system changes, and we need to ensure that our responses are not only accurate but also concise and easily understandable by our customers. As such, I would like to request that your response be written in a tone that is professional yet approachable.\n\nIn terms of output format, can you please provide both the JSON data and a brief narrative explanation (approx. 100-150 words) on why each product was selected for the top 10 list? We also require that all text responses be under the 20,000 token limit to avoid excessive processing time.\n\nThank you for your prompt attention to this matter.\n\n**Note:** This prompt includes multiple issues such as:\n\n* MISSING_PLACEHOLDER (e.g., \"the report above\", \"previous results\")\n* CONFLICTING_INSTRUCTION (e.g., concise vs detailed explanation)\n* TOKEN_OVERAGE (requesting both JSON output and narrative explanations, and specifying a specific token limit for text responses)",
+  "messages": [
+    {
+      "role": "system",
+      "content": "Case file review meeting concluded. Your support request will be addressed promptly."
+    },
+    {
+      "role": "user",
+      "content": "I'm experiencing issues with the new inventory management system. The report shows a 25% increase in sales, but I suspect it's due to additional stock from our supplier. Can you explain your algorithm for generating a list of top-selling products?"
+    },
+    {
+      "role": "assistant",
+      "content": "Our algorithm uses a weighted average of sales data and product popularity scores. However, the JSON output only includes product IDs and prices without explanations. To provide more context, I can generate a detailed report on our weighted scoring methodology."
+    }
+  ],
+  "schema": null,
+  "expectedIssueCodes": [],
+  "notes": "Generated with Ollama model llama3.2, target tokens: 2000"
+}

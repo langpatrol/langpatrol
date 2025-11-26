@@ -1,0 +1,18 @@
+{
+  "id": "ollama-gen-0040",
+  "category": "ollama-generated",
+  "prompt": "Here is a realistic prompt that contains multiple issues:\n\n**Prompt:**\n\n\"I'm reaching out to request an update on our team's project status as discussed earlier. Our lead, John Smith, has been working on the sales report above, but we haven't received any results yet. We're expecting a detailed explanation of the findings in JSON format, along with some narrative context to help us understand the implications.\n\nHowever, I've also been informed that our team's data processing needs may exceed the token limits set by our organization. Could you please provide a concise summary of the report in 500 tokens or less? Additionally, we need to ensure that our output is JSON only and does not include any narrative explanations.\n\nTo clarify, our previous conversation about using {{#if var}} template variables to handle conditional formatting has been put on hold due to lack of progress. Could you please provide a new approach that addresses this issue while also meeting the other requirements?\n\nWe've received feedback from some team members that the report needs more context and explanations to be actionable. Can we include narrative summaries alongside our JSON output? And what about including a customer name, such as 'Jane Doe', in the report? We've been discussing how to handle this for weeks, so any guidance on the best approach would be greatly appreciated.\n\nLastly, I've noticed that some of our team members are struggling with understanding the steps below. Can you please provide a step-by-step guide to help us better understand the report and its implications?\n\n**Expected Output:**\n\n* A concise JSON summary of the sales report in 500 tokens or less\n* Narrative explanations and context alongside the JSON output\n* A customer name, such as 'Jane Doe', included in the report\n\nThis prompt includes multiple issues, including:\n\n* MISSING_PLACEHOLDER: The {{#if var}} template variable is not defined\n* CONFLICTING_INSTRUCTION: The request for a concise summary conflicts with the need for narrative explanations and context\n* SCHEMA_RISK: The JSON output may conflict with the desire to include narrative summaries alongside it\n* TOKEN_OVERAGE: The prompt asks for a summary in 500 tokens or less, but also requests narrative explanations and context that could exceed this limit",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are a helpful AI assistant."
+    },
+    {
+      "role": "user",
+      "content": "I need help with a task."
+    }
+  ],
+  "schema": null,
+  "expectedIssueCodes": [],
+  "notes": "Generated with Ollama model llama3.2, target tokens: 2000"
+}

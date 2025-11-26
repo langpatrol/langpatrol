@@ -1,0 +1,18 @@
+{
+  "id": "ollama-gen-0033",
+  "category": "ollama-generated",
+  "prompt": "Here is a realistic prompt that contains multiple issues:\n\n**Prompt:**\n\n\"As part of our quarterly review process, I'd like to schedule a meeting with our sales team to discuss the recent market trends and their impact on our customer base. As discussed earlier in our last call, we've seen a significant increase in demand for our premium product, which is expected to contribute X% to our overall revenue growth. However, the report above highlights that there's been an uptick in competition from new entrants in the market, which could pose a challenge to our sales strategy.\n\nTo mitigate this risk, I'd like you to analyze our customer data and provide a JSON output of the top 10 customers by revenue, along with their purchase history and lifetime value. Please also include a detailed explanation of your methodology and any assumptions made during the analysis.\n\nThe steps below outline the key performance indicators (KPIs) we'll be tracking for Q2: sales growth, customer acquisition cost, and retention rate. As per our previous discussions, I'd like to see the results in JSON format only, with no narrative explanations or summaries.\n\nHowever, please note that due to token limits on our end, I need you to keep the output concise and avoid unnecessary details. In other words, be concise while still providing enough information for us to make informed decisions.\n\nAlso, I'd like you to assume a specific pricing strategy for our premium product, as discussed in the previous call with our product team. Please take this into account when analyzing the customer data and provide recommendations on how we can optimize our sales approach accordingly.\n\nCan you please generate the required output by [insert date] so that we can review it during our meeting? I'd also appreciate it if you could include a brief summary of the key findings in the email response, as we'll be discussing this further during the call.\"\n\nThis prompt includes multiple issues such as:\n\n* MISSING_PLACEHOLDER: The use of template variables like `X%` and `the report above` without context or definition.\n* CONFLICTING_INSTRUCTION: The directive to \"be concise\" vs \"provide enough information for us to make informed decisions\".\n* SCHEMA_RISK: The request for JSON output alongside narrative explanations, which may cause confusion about the expected format of the response.\n* TOKEN_OVERAGE: The mention of token limits without specifying an exact limit or providing guidance on how to work within that limit.",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are a helpful AI assistant."
+    },
+    {
+      "role": "user",
+      "content": "I need help with a task."
+    }
+  ],
+  "schema": null,
+  "expectedIssueCodes": [],
+  "notes": "Generated with Ollama model llama3.2, target tokens: 2000"
+}

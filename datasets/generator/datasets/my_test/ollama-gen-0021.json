@@ -1,0 +1,18 @@
+{
+  "id": "ollama-gen-0021",
+  "category": "ollama-generated",
+  "prompt": "Here's a prompt that meets your requirements:\n\n\"As part of our ongoing effort to improve employee onboarding, I'd like to request an analysis of the current process. Specifically, I'd like to know which training modules are most effective in reducing new hire turnover rates.\n\nCan you provide me with a detailed report on this topic? Please include the following information:\n\n* A JSON breakdown of the top-performing modules by category (e.g. technical skills, soft skills)\n* An analysis of the average time-to-productivity for new hires who completed each module\n* The percentage change in turnover rates since implementing the current training program\n\nPlease also provide an explanation of why some modules are more effective than others, including any relevant data points or statistics.\n\nAdditionally, I'd like to know if there are any modules that should be removed from the training program due to lack of effectiveness. If so, please include a concise summary of the evidence supporting this recommendation.\n\nFurthermore, could you provide an updated version of the training program schedule that takes into account these findings? Specifically, I'd like to see which modules will be prioritized for retraining and which ones can be eliminated altogether.\n\nPlease note that I'm expecting a response within 24 hours. Also, please keep in mind that our team's priority is to reduce costs, so any recommendations for cost-cutting measures should be included in the report.\n\nLastly, could you summarize your findings in 500 words or less and provide an overview of the recommended changes? Please ensure that this summary includes all the key points mentioned above.\n\nPlease format the output as follows:\n- JSON data with module categories (e.g. Technical Skills: {module_name: {'score': 0.8, 'description': 'brief description'}}, etc.)\n- A table summarizing average time-to-productivity by module\n- An explanation of why certain modules are more effective than others\n- Evidence supporting recommendations for removing modules from the training program (e.g. statistics or data points)\n- Updated training program schedule with prioritized and eliminated modules\n\nThis prompt includes multiple issues such as:\n\n* MISSING_PLACEHOLDER: Template variables like {{variable}}, {{#if var}}, and customer_name are used without being defined.\n* CONFLICTING_INSTRUCTION: The request is for both concise summary and detailed explanation, which may be contradictory.\n* SCHEMA_RISK: Requesting JSON output alongside narrative/explanations could lead to schema risks if the AI assistant is not able to handle it properly.\n* TOKEN_OVERAGE: The prompt exceeds the expected token limit due to its length and complexity.\n\nThis prompt should be substantial enough for performance testing, while being realistic and useful.",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are a helpful AI assistant."
+    },
+    {
+      "role": "user",
+      "content": "I need help with a task."
+    }
+  ],
+  "schema": null,
+  "expectedIssueCodes": [],
+  "notes": "Generated with Ollama model llama3.2, target tokens: 2000"
+}
