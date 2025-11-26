@@ -57,6 +57,7 @@ export type IssueCode =
   | 'MISSING_REFERENCE'
   | 'CONFLICTING_INSTRUCTION'
   | 'SCHEMA_RISK'
+  | 'INVALID_SCHEMA'
   | 'TOKEN_OVERAGE';
 
 export type IssueEvidenceSummary = { text: string; count: number };

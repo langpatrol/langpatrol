@@ -988,8 +988,8 @@ async function runBenchmarkSuite(config: BenchmarkConfig): Promise<BenchmarkRepo
       console.log('📂 Loading JSON dataset...');
       testCases = loadJsonDataset(config.datasetPath);
     } else {
-      console.log('📂 Loading text files from directory...');
-      testCases = loadTextFiles(config.datasetPath);
+    console.log('📂 Loading text files from directory...');
+    testCases = loadTextFiles(config.datasetPath);
     }
   } else if (stats.isFile() && config.datasetPath.endsWith('.txt')) {
     console.log('📄 Loading single text file...');
@@ -1075,7 +1075,7 @@ async function runBenchmarkSuite(config: BenchmarkConfig): Promise<BenchmarkRepo
     
     const batchResults = await Promise.all(batchPromises);
     allResults.push(...batchResults.flat());
-  }
+    }
   
   // Final progress update
   process.stdout.write(`\r⏳ Progress: 100.0% (${totalRuns}/${totalRuns}) | Complete${' '.repeat(50)}\n`);

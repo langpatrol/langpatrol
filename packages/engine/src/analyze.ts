@@ -10,6 +10,7 @@ import { run as runPlaceholders } from './rules/placeholders';
 import { run as runReference } from './rules/reference';
 import { run as runConflicts } from './rules/conflicts';
 import { run as runSchemaRisk } from './rules/schemaRisk';
+import { run as runSchemaValidation } from './rules/schemaValidation';
 import { run as runTokens } from './rules/tokens';
 import { createTraceId, createIssueId } from './util/reporting';
 import { getModelWindow } from './util/tokenize';
@@ -48,6 +49,12 @@ export function analyze(input: AnalyzeInput): Report {
     runSchemaRisk(input, report);
   }
   ruleTimings.schemaRisk = performance.now() - t;
+
+  t = performance.now();
+  if (!disabledRules.has('INVALID_SCHEMA')) {
+    runSchemaValidation(input, report);
+  }
+  ruleTimings.schemaValidation = performance.now() - t;
 
   t = performance.now();
   if (!disabledRules.has('TOKEN_OVERAGE')) {
