@@ -1,0 +1,18 @@
+{
+  "id": "ollama-gen-0010",
+  "category": "ollama-generated",
+  "prompt": "Here's a generated prompt that includes multiple issues:\n\n**Prompt**\n\nAs discussed earlier in our quarterly review meeting, I'm following up on the report you mentioned above regarding the recent sales slump in our Eastern region. According to the previous results, we saw a significant decrease in revenue from our flagship product X5000. The steps below outline the proposed strategies to address this issue:\n\n1. **Conduct market analysis**: We need to identify the root cause of the decline and determine whether it's due to changes in consumer behavior or external factors like economic fluctuations.\n2. **Analyze sales data**: Please provide a JSON-only report on sales trends, highlighting key insights such as top-selling products, regions with declining revenue, and any notable patterns.\n3. The new marketing campaign for X5000 must be \"be concise\" - we can't afford to waste resources on excessive advertising. We should focus on the most effective channels and messaging that will drive engagement without breaking the bank.\n\nHowever, considering the complexity of this issue, I'd like you to provide a detailed explanation in narrative form, including data visualizations (e.g., charts, graphs) where applicable, as well as examples of successful marketing strategies from our competitors. Also, please ensure the output is easily digestible for non-technical stakeholders.\n\nRegarding data processing, please consider the following requirements:\n\n* Output should be JSON-compatible only.\n* The report must include summaries of key findings and actionable recommendations, all within a clear and concise narrative structure (approx. 1000 words).\n* **Token limit warning**: Our system is designed to handle up to 2000 tokens per response, but we're concerned about exceeding this limit for complex analysis. Please provide enough context to justify the output without sacrificing clarity.\n\nPlease respond with your findings in a format that can be easily shared across multiple channels (e.g., email, Slack, Word document). Also, include any relevant attachments or links to supporting materials.\n\n**This prompt includes:**\n\n1. MISSING_PLACEHOLDER: The phrase \"As discussed earlier\" assumes prior knowledge without context.\n2. MISSING_REFERENCE: There's no specific report mentioned above, but the prompt expects a clear understanding of the previous results.\n3. CONFLICTING_INSTRUCTION: The prompt asks for concise output (\"be concise\") alongside detailed explanations and narrative structure.\n4. SCHEMA_RISK: The request is for JSON-only output but also demands narrative/explanations alongside it.\n\nLet me know if you want to test this prompt!",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are a helpful AI assistant."
+    },
+    {
+      "role": "user",
+      "content": "I need help with a task."
+    }
+  ],
+  "schema": null,
+  "expectedIssueCodes": [],
+  "notes": "Generated with Ollama model llama3.2, target tokens: 2000"
+}

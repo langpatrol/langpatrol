@@ -1,0 +1,22 @@
+{
+  "id": "ollama-gen-0028",
+  "category": "ollama-generated",
+  "prompt": "Here is a generated prompt that contains multiple issues:\n\n**Prompt:**\n\n\"As discussed earlier with our sales team, we are currently experiencing an issue with our new product line's inventory management system. As mentioned in the report above, the previous results indicated that the system was working correctly, but after implementing the latest software update, we're getting a JSON error saying {{product_id}} has insufficient stock levels. However, our internal reports show that the product is still in stock at all major retailers.\n\nTo better understand this discrepancy, could you please provide us with the following information: (1) A detailed explanation of what caused the inventory management system to malfunction after the software update, and (2) a JSON output of the current product stock levels across all retailers? Also, be concise, but please include step-by-step instructions on how to resolve this issue.\n\nAdditionally, as we are on a tight deadline for our quarterly reports, could you please provide us with an updated forecast based on the latest sales data and trends? The report should be in JSON format only, without any narrative explanations. Also, kindly note that the token limit is 500 per response, so please keep your output concise.\n\nFinally, I'd like to request a summary of our current product pipeline and upcoming releases for Q2. Please include a brief overview of each product, along with its expected launch date, and provide an estimate of how many units will be available in the first quarter. Oh, and also, could you please remove any personal identifiable information from the report?\n\nThank you for your prompt assistance with this matter.\"\n\nThis prompt includes:\n\n1. MISSING_PLACEHOLDER: The variable {{product_id}} is not defined.\n2. MISSING_REFERENCE: The phrase \"as discussed earlier\" is used without context.\n3. CONFLICTING_INSTRUCTION: The request for a concise response conflicts with the need to provide detailed explanations and instructions.\n4. SCHEMA_RISK: The prompt requests JSON output alongside narrative explanations, which may lead to schema risk if not handled correctly.\n5. TOKEN_OVERAGE: The prompt mentions token limits but creates a response that would likely exceed them due to its length and complexity.\n\nI hope this generated prompt meets your requirements!",
+  "messages": [
+    {
+      "role": "system",
+      "content": "Welcome to our support chat! We've received your inquiry about the inventory management system issue. Our team will do their best to assist you. Can you please provide more context or details about the report mentioned in your message?"
+    },
+    {
+      "role": "user",
+      "content": "Sorry for the confusion, I was referring to a previous discussion with our sales team regarding the product line's performance. We did send out a report last week that indicated the system was working correctly, but after implementing the latest update, we're seeing this error."
+    },
+    {
+      "role": "assistant",
+      "content": "Thank you for clarifying! I've reviewed the context, but I need to clarify that I don't have direct access to your internal reports or sales team discussions. Can you please provide me with more information about the previous results and what you're experiencing currently?"
+    }
+  ],
+  "schema": null,
+  "expectedIssueCodes": [],
+  "notes": "Generated with Ollama model llama3.2, target tokens: 2000"
+}

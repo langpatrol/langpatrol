@@ -1,0 +1,22 @@
+{
+  "id": "ollama-gen-0023",
+  "category": "ollama-generated",
+  "prompt": "Here is a realistic prompt that contains multiple issues:\n\n**Prompt**\n\nCan you help me resolve an issue with my recent order, as discussed earlier? I received a confirmation email stating that my item would arrive within 3-5 business days, but it's been over two weeks since the initial order date. The report above shows that similar orders have taken longer to ship in the past (see attachment). However, previous results from our customer support team suggest that expedited shipping options are available for an additional fee.\n\nI've checked the steps below and see that I need to contact your customer service team to get assistance. Could you please provide me with a detailed explanation of what happened and how this issue was not addressed sooner? Additionally, could you please include the following information in the response:\n\n* The shipping carrier used for my order\n* A breakdown of the costs associated with expedited shipping\n* A step-by-step guide on how to track the status of my order\n\nPlease respond in JSON format only and within the 250 token limit. Can you also provide a concise summary of the main points discussed above? I've been trying to contact your team via phone, but the system keeps telling me that it's not available due to high call volume (see attachment). Can you please escalate this issue immediately?\n\n**Issues included:**\n\n* MISSING_PLACEHOLDER: Template variables like `{{report}}` and `{{attachment}}` are used without being defined or provided\n* MISSING_REFERENCE: Phrases like \"the report above\" and \"previous results\" are used without context\n* CONFLICTING_INSTRUCTION: Directives like \"Please respond in JSON format only\" and \"Can you also provide a concise summary of the main points discussed above?\" are conflicting\n* TOKEN_OVERAGE: The prompt exceeds the 250 token limit, and includes excessive narrative/explanations\n\nThis prompt is substantial enough to be useful for performance testing, while still being realistic and natural-sounding.",
+  "messages": [
+    {
+      "role": "system",
+      "content": "Hello! We're happy to help you with your recent order. Could you please provide more information about the issue you're experiencing?"
+    },
+    {
+      "role": "user",
+      "content": "I received a confirmation email stating that my item would arrive within 3-5 business days, but it's been over two weeks since the initial order date. I've attached a report showing similar orders have taken longer to ship in the past."
+    },
+    {
+      "role": "assistant",
+      "content": "Thank you for providing the report and your order details. Our system shows that expedited shipping options are available for an additional fee. We'll need to investigate this further and provide a detailed explanation of what happened with your order. Can you please confirm your order number?"
+    }
+  ],
+  "schema": null,
+  "expectedIssueCodes": [],
+  "notes": "Generated with Ollama model llama3.2, target tokens: 2000"
+}

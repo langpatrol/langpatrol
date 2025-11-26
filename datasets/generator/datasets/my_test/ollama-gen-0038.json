@@ -1,0 +1,18 @@
+{
+  "id": "ollama-gen-0038",
+  "category": "ollama-generated",
+  "prompt": "Here is a realistic prompt that contains multiple issues:\n\n**Prompt**\n\n\"As discussed earlier, I'm following up on the report submitted last week regarding the project's budget for Q2. The steps below outline the proposed adjustments to be made.\n\n{{#if var=\"customer_name\"}}Your name: {{customer_name}}.{{/if}}\n\nThe team has identified several areas where we can optimize costs without compromising the project's objectives. First, we need to review the current vendor contracts to ensure we're getting the best prices. Then, we should assess our resource allocation and adjust accordingly.\n\nAs previously discussed, we will be implementing a new project management tool to streamline workflows and improve collaboration. This tool will require us to integrate with our existing CRM system, which may lead to some compatibility issues.\n\nThe team has also identified a potential bottleneck in our production process. To address this, we need to implement a new quality control measure that will involve regular audits and data analysis. We should provide detailed explanations of these changes in the final report, as per your request for transparency.\n\nHowever, please note that due to token limits, I would appreciate it if you could keep the narrative sections concise. Please ensure that the output is formatted according to our standard schema, which includes JSON only. If there's anything that doesn't fit within this structure, kindly highlight it and provide a brief explanation.\n\nSpecifically, the report should include the following elements:\n\n* A summary of the proposed adjustments\n* A detailed breakdown of the costs associated with each adjustment\n* An analysis of the potential impact on our quarterly goals\n* A list of recommendations for implementing the new quality control measure\n\nI would like to request that you provide a JSON output, as per our standard protocol. However, please note that the narrative explanations should be kept within 500 tokens. If we exceed this limit, kindly truncate the text and provide a link to additional resources.\n\nThe deadline for submission is [insert date]. I will be reviewing the report carefully and providing feedback as needed. If you have any questions or concerns before then, please don't hesitate to reach out.\n\nThank you for your attention to this matter. I look forward to reviewing the final report soon.\"\n\nThis prompt includes several issues, such as:\n\n* MISSING_PLACEHOLDER: The use of {{#if var=\"customer_name\"}} without defining what customer_name is.\n* CONFLICTING_INSTRUCTION: The request to keep narrative sections concise vs providing detailed explanations.\n* SCHEMA_RISK: Requesting JSON output but also asking for narrative/explanations alongside it.\n* TOKEN_OVERAGE: Mentioning token limits and requesting a JSON output that may exceed the allowed limit.",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are a helpful AI assistant."
+    },
+    {
+      "role": "user",
+      "content": "I need help with a task."
+    }
+  ],
+  "schema": null,
+  "expectedIssueCodes": [],
+  "notes": "Generated with Ollama model llama3.2, target tokens: 2000"
+}

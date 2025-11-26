@@ -1,0 +1,22 @@
+{
+  "id": "ollama-gen-0025",
+  "category": "ollama-generated",
+  "prompt": "Here is a realistic prompt that contains multiple issues:\n\n\"Hi there, I'm reaching out about the recent issue with my order (as discussed earlier in our previous conversation). I've been trying to review the report above, but it seems like we didn't quite align on the steps below. Can you please provide me with a detailed explanation of what went wrong and how we can resolve this? I'd also appreciate it if you could include some JSON output so I can easily parse the data. However, please be concise in your response - we don't want to exceed the 500 token limit. Additionally, I'd like to request that you provide a step-by-step guide on how to avoid similar issues in the future, including any relevant customer name and personal details that may have been shared during our conversation ({{customer_name}}). Please ensure that your response is in JSON format only, without any additional narrative explanations. One more thing - I've noticed that the data processing steps seem to be conflicting with the previous instructions. Could you please clarify which set of instructions should take precedence? I'm looking for a JSON output, but also want some narrative context on how this process works. Lastly, I'd like to request an update on the status of my order ({{order_status}}) and any relevant customer data ({{customer_data}}) so I can review it in more detail.\n\nPlease provide all of the following information:\n\n* The current token count: {{token_count}}\n* A brief summary of the issue: {{summary}}\n* A detailed explanation of the steps below: {{steps_below}}\n* The JSON output for the report above: {{report_json}}\n\nAlso, please confirm that you have reviewed our previous conversation ({{reviewed_conversation}}) and are aware of any relevant customer name or personal details.\n\nFinally, could you please provide an estimated completion date for my order ({{estimated_completion_date}})?",
+  "messages": [
+    {
+      "role": "system",
+      "content": "Welcome back to our conversation about your recent issue with your order. We apologize again for any inconvenience caused."
+    },
+    {
+      "role": "user",
+      "content": "Hi there, I'm reaching out about the recent issue with my order (as discussed earlier in our previous conversation). I've been trying to review the report above, but it seems like we didn't quite align on the steps below. Can you please provide me with a detailed explanation of what went wrong and how we can resolve this? I'd also appreciate it if you could include some JSON output so I can easily parse the data."
+    },
+    {
+      "role": "assistant",
+      "content": "I apologize for any confusion caused by our previous discussion. To clarify, our previous conversation discussed the issue with your order number {{order_number}}. The current token count is {{token_count}}, and a brief summary of the issue is available at {{summary}}. Below are the steps that were discussed earlier in our conversation: {{steps_below}}."
+    }
+  ],
+  "schema": null,
+  "expectedIssueCodes": [],
+  "notes": "Generated with Ollama model llama3.2, target tokens: 2000"
+}

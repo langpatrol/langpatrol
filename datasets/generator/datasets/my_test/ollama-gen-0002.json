@@ -1,0 +1,18 @@
+{
+  "id": "ollama-gen-0002",
+  "category": "ollama-generated",
+  "prompt": "Here is a realistic prompt that contains multiple issues:\n\n**Prompt:**\n\n\"As we discussed earlier, I'm following up on the report above regarding the discrepancies in our sales data. The previous results showed a 15% decrease in quarterly sales compared to last year's figures. However, upon reviewing the latest numbers, I've noticed some anomalies that need attention.\n\nCan you please provide me with a detailed breakdown of the top-selling products and their corresponding profit margins? Please ensure that your response includes explanations for any deviations from our usual pricing strategy.\n\nRegarding the data processing task at hand, can you output the following information in JSON format:\n\n* customer_name: John Doe\n* product_id: 1234\n* order_date: 2022-01-15\n* total_cost: $100.00\n\nPlease note that we have a token limit of 500 per response. If your output exceeds this limit, please prioritize the most essential information and provide explanations or context where possible.\n\nI'd appreciate it if you could also include some narrative around the anomalies I mentioned earlier. Can you walk me through the steps below to identify the root cause of the discrepancies?\n\n* Step 1: Review sales data from Q4 2022\n* Step 2: Identify top-selling products and their corresponding profit margins\n* Step 3: Analyze pricing strategy deviations\n\nPlease keep your response concise, but provide enough detail for me to understand the issues at hand.\n\nAlso, I've attached a sample customer file (customer_name=Jane Smith, product_id=5678, order_date=2022-02-20) that you can use as reference.\n\n**Schema:**\n\n* Include explanations or context where possible\n* Prioritize essential information within token limit\n* Provide narrative around anomalies\n* Detailed breakdown of top-selling products and profit margins\n\nThis prompt includes:\n\n* MISSING_PLACEHOLDER: {{#if var}}, {{customer_name}}, {{product_id}} are not defined (issue 1)\n* MISSING_REFERENCE: \"as discussed earlier\", \"previous results\" without context (issue 2)\n* CONFLICTING_INSTRUCTION: \"be concise\" vs \"provide enough detail for me to understand the issues at hand\" (issue 3)\n* SCHEMA_RISK: Requesting JSON output alongside narrative/explanations (issue 4)\n* TOKEN_OVERAGE: Mentioning token limits but creating prompts that would exceed them (issue 5)\n\nThis prompt is substantial, realistic, and includes multiple types of issues naturally. It's suitable for performance testing of an AI prompt analyzer.",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are a helpful AI assistant."
+    },
+    {
+      "role": "user",
+      "content": "I need help with a task."
+    }
+  ],
+  "schema": null,
+  "expectedIssueCodes": [],
+  "notes": "Generated with Ollama model llama3.2, target tokens: 2000"
+}

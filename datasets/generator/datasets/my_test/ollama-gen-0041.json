@@ -1,0 +1,22 @@
+{
+  "id": "ollama-gen-0041",
+  "category": "ollama-generated",
+  "prompt": "Here is a realistic prompt that contains multiple issues:\n\n**Prompt:**\n\n\"As per our previous discussion on [CASE_NUMBER], I'm reaching out regarding the discrepancy in the sales figures for Q2. As discussed earlier, we were expecting an increase of 10% compared to last year's Q2. However, upon reviewing the report above, it appears that the numbers have dropped by 5%. I've reviewed the steps below, but I still can't seem to identify the root cause of this anomaly.\n\nI've attempted to analyze the data using our standard JSON schema, but I'm having trouble making sense of the output. Could you please provide me with a detailed explanation of the algorithm used to generate these numbers? I understand that we're currently working within token limits of 2000 for customer support requests, but this prompt is exceeding that limit.\n\nTo clarify, please ensure that your response includes explanations and not just a summary of the data. Additionally, could you please include any relevant supporting materials or attachments in JSON format (as per our standard schema)? I'd like to review these documents alongside the explanation provided here. Please be concise but detailed, as we're working on a tight deadline.\n\nI've also included some additional context below, which includes the relevant customer feedback and market trends that may have contributed to this anomaly. Please take these into account when providing your response.\n\n**Additional Context:**\n\n* Customer Feedback:\n\t+ 'The sales team needs more training on the new product line.'\n\t+ 'There's been an issue with inventory management.'\n* Market Trends:\n\t+ The industry is experiencing a slowdown in growth.\n\t+ Consumer spending has decreased due to economic uncertainty.\n\nPlease provide me with your analysis and recommendations by [DEADLINE] at the latest. I'd appreciate any further clarification or information you can provide during this time.\n\n**JSON Schema Requirements:**\n\n* Include an overview of the data and algorithm used\n* Provide a breakdown of the sales figures by region and product line\n* Include any relevant charts or graphs to support the analysis\n\nPlease note that I've attached the relevant documents for your reference, which include:\n\n* Sales Figures Report (JSON)\n* Customer Feedback Document (PDF)\n\nI'll be waiting for your response. Thank you for your prompt attention to this matter.\"\n\nThis prompt includes multiple issues from the list above:\n\n1. MISSING_PLACEHOLDER: The use of variables like `CASE_NUMBER` and `DEADLINE` without context.\n2. CONFLICTING_INSTRUCTION: The request for both a concise explanation and detailed information, as well as the inclusion of supporting materials in JSON format but also asking for narrative explanations.\n3. SCHEMA_RISK: The request for JSON output alongside narrative/explanatory content.\n\nNote that this prompt is substantial enough to be used for performance testing, and it includes realistic content like customer support requests or data processing tasks.",
+  "messages": [
+    {
+      "role": "system",
+      "content": "Welcome to our chat system. I see you have reached out about a discrepancy in sales figures for Q2."
+    },
+    {
+      "role": "user",
+      "content": "Hi, thanks for responding. As per our previous discussion on CASE_NUMBER, I'm reaching out regarding the discrepancy in the sales figures for Q2. As discussed earlier, we were expecting an increase of 10% compared to last year's Q2. However, upon reviewing the report above, it appears that the numbers have dropped by 5%. I've reviewed the steps below, but I still can't seem to identify the root cause of this anomaly."
+    },
+    {
+      "role": "assistant",
+      "content": "I apologize for not having CASE_NUMBER and DEADLINE in my previous response. To clarify, could you please provide more context about CASE_NUMBER and DEADLINE? Additionally, I want to ensure that I understand your request correctly: You'd like a detailed explanation of the algorithm used to generate these numbers, as well as a breakdown of the sales figures by region and product line, including any relevant charts or graphs. Is that correct?"
+    }
+  ],
+  "schema": null,
+  "expectedIssueCodes": [],
+  "notes": "Generated with Ollama model llama3.2, target tokens: 2000"
+}

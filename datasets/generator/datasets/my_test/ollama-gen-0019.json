@@ -1,0 +1,18 @@
+{
+  "id": "ollama-gen-0019",
+  "category": "ollama-generated",
+  "prompt": "Here's a generated prompt that contains multiple issues:\n\n\"Dear Support Team,\n\nI'm reaching out regarding my recent booking with your company. As discussed earlier, I had requested a weekend getaway to Paris for myself and my partner, but it appears that there was an issue with the initial reservation. The report above indicates that our flight had been canceled due to unforeseen circumstances.\n\nAccording to the steps below, you should have contacted us immediately to offer an alternative solution or refund our payments. However, I never received any updates or notifications from your team. The previous results showed that there were several instances of similar issues in the past few months, but nothing was done to address these concerns.\n\nTo resolve this matter, I would like to request a full refund for my original booking and an additional voucher worth €500 for future travel with your company. Please provide me with the JSON output of our recent booking history, including all relevant details such as flight numbers, dates, and prices. Be concise and include only the necessary information.\n\nAdditionally, could you please send over a detailed explanation of what happened during our last booking attempt, including any communication or interactions we had with your team? We also require an attachment containing our hotel reservation documents to verify our original payment.\n\nPlease respond within 24 hours, and make sure that all responses are in JSON format. If I don't receive a response, please escalate this issue to your supervisor for further investigation.\n\nNote: Our system has a maximum of 1000 tokens per response. Please be mindful of this limit and provide only the necessary information to avoid exceeding the token count.\n\nPlease acknowledge receipt of this request by sending a confirmation email with a unique reference number. This will ensure that our records are updated accordingly.\n\nThank you for your prompt attention to this matter, and I look forward to hearing from you soon.\"\n\nThis prompt includes multiple issues such as:\n\n* MISSING_PLACEHOLDER: The use of \"the report above\" without context.\n* MISSING_REFERENCE: The phrase \"previous results\" is mentioned without any previous context or information provided in the prompt.\n* CONFLICTING_INSTRUCTION: The request for concise JSON output (\"be concise\") alongside a detailed explanation.\n* SCHEMA_RISK: The request for both JSON output and narrative/explanations (detailed explanation).\n* TOKEN_OVERAGE: Mention of token limits, but creating a prompt that would exceed them due to the lengthy content.",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are a helpful AI assistant."
+    },
+    {
+      "role": "user",
+      "content": "I need help with a task."
+    }
+  ],
+  "schema": null,
+  "expectedIssueCodes": [],
+  "notes": "Generated with Ollama model llama3.2, target tokens: 2000"
+}

@@ -1,0 +1,22 @@
+{
+  "id": "ollama-gen-0014",
+  "category": "ollama-generated",
+  "prompt": "Here's a realistic prompt that incorporates multiple issues:\n\n**Prompt:**\n\n\"Hi [customer_name], I'm reaching out about my recent experience with your company's data processing service. As discussed earlier, I had uploaded a large dataset to trigger the automated analysis pipeline, which was supposed to provide me with detailed insights on sales trends. However, after waiting for several days, I haven't received any updates on the status of my request.\n\nThe report above indicates that the pipeline is still running, but I've noticed some discrepancies in the output that suggest a potential issue with the data quality. The steps below outline the actions I took to prepare the dataset: I filtered out any rows with missing values and ensured that all categorical variables were properly encoded.\n\nCould you please provide me with a JSON-only report of the top 10 most significant sales trends, as well as a detailed explanation of why some variables are not being considered in the analysis? Additionally, I'd like to request a brief narrative on what went wrong and how we can prevent similar issues in the future. The output should be concise enough to fit within our standard data reporting limits (max 2000 characters), but still include explanations for any technical terms or jargon used.\n\nPlease note that our team is experiencing token limits, so please keep your response within a maximum of 500 tokens to avoid exceeding the character limit. I'd appreciate it if you could also use {{#if var}} statements to highlight any areas where additional context or information are required.\n\nFinally, could you please provide me with an estimate on when we can expect the revised report to be available? And just to confirm, will the updated output include any new data that wasn't previously included in our original dataset?\n\nLooking forward to hearing back from you soon. Thanks for your assistance!\"\n\nThis prompt includes:\n\n* MISSING_PLACEHOLDER: The use of customer_name without defining it\n* MISSING_REFERENCE: The phrase \"As discussed earlier\" without providing context or a reference\n* CONFLICTING_INSTRUCTION: The request for both concise output (max 2000 characters) and detailed explanations\n* SCHEMA_RISK: The request for both JSON-only report and narrative/explanation alongside it\n* TOKEN_OVERAGE: Mentioning token limits while creating a prompt that exceeds them slightly",
+  "messages": [
+    {
+      "role": "system",
+      "content": "Welcome to our data processing service. We're here to help you with your recent experience. Could you please provide more context about your issue, such as the dataset name and any error messages you've received?"
+    },
+    {
+      "role": "user",
+      "content": "Hi, I'm John Smith and I uploaded a dataset called 'SalesData' last week. The automated analysis pipeline hasn't processed it yet despite waiting for several days. The report above shows that the pipeline is still running but I've noticed some discrepancies in the output."
+    },
+    {
+      "role": "assistant",
+      "content": "Hello John, thank you for reaching out. We apologize for the delay in processing your dataset. Could you please provide us with a copy of the 'SalesData' file or share its ID so we can investigate further? Additionally, could you confirm that you've checked the data quality and encoded categorical variables correctly?"
+    }
+  ],
+  "schema": null,
+  "expectedIssueCodes": [],
+  "notes": "Generated with Ollama model llama3.2, target tokens: 2000"
+}

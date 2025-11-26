@@ -9,7 +9,8 @@
     "test": "pnpm -r test",
     "lint": "pnpm -r lint",
     "format": "pnpm -r format",
-    "release": "pnpm -r build && changeset publish"
+    "release": "pnpm -r build && changeset publish",
+    "benchmark": "tsx tools/benchmark/benchmark.ts"
   },
   "devDependencies": {
     "@changesets/cli": "^2.27.1",

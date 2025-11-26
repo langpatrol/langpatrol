@@ -1,0 +1,139 @@
+id,category,prompt,messages_json,schema_json,expected_issue_codes,notes
+ollama-gen-0001,ollama-generated,"Here is a realistic prompt that contains multiple issues from the list above:
+
+**Customer Support Request: Unable to Access Premium Features**
+
+I'm reaching out to request assistance with my premium subscription. As discussed earlier in our last call on 02/10, I was informed that my account would receive an update to include access to the new feature set. However, I've been experiencing issues trying to activate this new feature and can't seem to get it working.
+
+I've tried following the steps below: {{customer_name}}'s guide on activating premium features; however, the instructions seem outdated (please see the report above for previous results). I'm concerned that there might be an issue with my account setup or a technical problem that's preventing me from accessing these features.
+
+To better assist me, could you please provide a detailed explanation of what steps I need to take to resolve this issue? I'd like to know if there are any specific troubleshooting steps or if I need to contact our technical support team (as previously mentioned in the report).
+
+Additionally, could you please provide an updated JSON output with the necessary information for me to proceed with activating my premium subscription? The new feature set is listed as follows:
+
+```
+[
+  {
+    ""feature_name"": ""new_feature_1"",
+    ""description"": ""brief description of feature 1""
+  },
+  {
+    ""feature_name"": ""new_feature_2"",
+    ""description"": ""brief description of feature 2""
+  }
+]
+```
+
+Please ensure that your response includes only JSON output (JSON only, no explanations or narrative). Be concise in your explanation, as I'm on a tight deadline and need to get this resolved ASAP.
+
+If there are any specific requirements or limitations I should be aware of, please let me know.","[{""role"": ""system"", ""content"": ""You are a helpful AI assistant.""}, {""role"": ""user"", ""content"": ""I need help with a task.""}]",,[],"Generated with Ollama model llama3.2, target tokens: 5000"
+ollama-gen-0002,ollama-generated,"Here is a realistic prompt that contains multiple issues:
+
+**Prompt**
+
+Hi {{customer_name}}, I'm reaching out regarding my recent order (Order #{{order_number}}) which was placed on {{date_of_order}}. As discussed earlier in our previous conversation, I had mentioned that the product was defective and required replacement. However, after receiving the new shipment, I found that it arrived damaged and still contains some of the original packaging materials. The report above (attached to this email as part of our previous discussion) shows that we had previously discussed the return policy and its terms.
+
+I'm requesting a detailed explanation for why my replacement order was not processed in a timely manner, considering our conversation about the urgency of receiving the new shipment. Additionally, I would like to know what steps were taken by your team to resolve this issue, as mentioned below (steps 3-5). Please provide me with a concise answer that adheres to the format specified in the JSON schema provided earlier.
+
+Please ensure that your response is limited to 2000 tokens and includes only relevant information. I'm looking for a step-by-step guide on how to proceed with resolving this issue, including any additional steps or actions that I need to take. Also, please include an image of the damaged product as part of your response.
+
+Can you provide me with the updated shipping information and estimated delivery date for my replacement order? Please make sure that all relevant details are included in your response.
+
+**Note:** The above prompt includes multiple issues:
+
+1. **MISSING_PLACEHOLDER**: Template variables like {{customer_name}}, {{order_number}}, and {{date_of_order}} are not defined.
+2. **CONFLICTING_INSTRUCTION**: Requests for a ""detailed explanation"" and a ""concise answer"" at the same time, along with the instruction to follow the provided JSON schema and adhere to a specific token limit (2000 tokens).
+3. **SCHEMA_RISK**: Asking for both narrative/explanations alongside a JSON output.
+4. **TOKEN_OVERAGE**: Mentioning that some responses may exceed the 2000 token limit.
+
+This prompt is substantial enough to be useful and realistic, while also including multiple issues that can help test the performance of an AI prompt analyzer.","[{""role"": ""system"", ""content"": ""Welcome to our customer support platform. We'll be happy to assist you with your concern. Please provide us with some more context about your recent order.""}, {""role"": ""user"", ""content"": ""Hi, I'm reaching out regarding my recent order (Order #1234) which was placed on January 10th, 2023. As discussed earlier in our previous conversation, I had mentioned that the product was defective and required replacement. However, after receiving the new shipment, I found that it arrived damaged and still contains some of the original packaging materials.""}, {""role"": ""assistant"", ""content"": ""Thank you for providing more context about your issue. We apologize for the inconvenience caused by the damaged shipment. Can you please confirm if our earlier conversation about the return policy and its terms is available for us to review?""}]",,[],"Generated with Ollama model llama3.2, target tokens: 5000"
+ollama-gen-0003,ollama-generated,"Here is a realistic prompt that contains multiple issues:
+
+**Prompt**
+
+""As part of our quarterly review process, please provide me with a detailed analysis of the company's current market trends and competitor landscape. Specifically, I would like to know the following:
+
+- A high-level summary of the current market conditions, including the top 5 trends shaping the industry (JSON only, please). Please ensure that this section is concise and easy to digest, but still provides a solid foundation for further discussion.
+- A more in-depth examination of our main competitors, including their strengths and weaknesses. For example:
+* What are the key differentiators between [Company X] and [Company Y], and how do these impact our overall market position?
+* Provide an analysis of the historical sales data (including a comparison to our own quarterly results) and forecasted future growth.
+- I also need you to include a visual representation of the industry's current state, such as a graph or chart. Can you generate this using Python code that can be executed directly in our production environment?
+
+**Please ensure that all output is formatted with clear headings and concise bullet points.**
+
+**Also note that the maximum allowed token count for this task is 20000 characters (approximately 10000 tokens). Please keep in mind that if your analysis exceeds this limit, I will need to review it on a case-by-case basis and may require further editing or revision.""
+
+This prompt includes several issues:
+
+1. **MISSING_PLACEHOLDER**: The template variable `{{JSON only}}` is not defined.
+2. **CONFLICTING_INSTRUCTION**: There are two contradictory directives: ""be concise"" vs ""provide a detailed analysis"".
+3. **SCHEMA_RISK**: The prompt requests JSON output, but also asks for narrative explanations alongside it.
+4. **TOKEN_OVERAGE**: The prompt mentions a token limit (10000 tokens), but the actual request would likely exceed this limit due to the complexity and detail required.
+
+This prompt should be substantial enough for performance testing while still being realistic and useful.","[{""role"": ""system"", ""content"": ""You are a helpful AI assistant.""}, {""role"": ""user"", ""content"": ""I need help with a task.""}]",,[],"Generated with Ollama model llama3.2, target tokens: 5000"
+ollama-gen-0004,ollama-generated,"Here is a realistic prompt that contains multiple issues:
+
+**Prompt:**
+
+""Hello {{customer_name}}, I'm reaching out to address some concerns regarding our recent purchase of 500 units of medical supplies. As discussed earlier in the report above, we were expecting a faster delivery time for these orders. The previous results indicated a lead time of 4-6 weeks, but it's been 8 weeks since the order was placed and we still haven't received any updates on the status.
+
+I've reviewed the steps below to resolve this issue:
+
+1. Contacted our sales representative to inquire about the delay.
+2. Checked the shipping address for accuracy to ensure no mistakes were made during processing.
+3. Reached out to your customer support team via phone and email to request an update on the shipment.
+
+However, I was told by your representative that 'be concise' in my communication, so I've been trying to avoid unnecessary details. Can you please provide a detailed explanation of what's causing this delay, including any specific steps being taken to resolve it?
+
+Additionally, could you please provide me with a JSON report of the current inventory levels for all medical supplies, as well as an attached document explaining the 'token limits' imposed on our account due to excessive usage in the past month? I need to make sure we're staying within these limits moving forward.
+
+Please ensure that your response adheres to the following guidelines:
+
+* The JSON output should only include data relevant to our order.
+* The explanation for the delay should be concise and easy to understand, as requested by our sales representative.
+* The attached document explaining token limits should provide a detailed breakdown of usage history, including dates and quantities used.
+
+I'd appreciate it if you could also include some narrative explanations alongside the JSON output to help us better understand what's going on here. Please let me know what steps I can take next to resolve this issue and prevent similar delays in the future.
+
+**Example Output:**""
+
+This prompt contains multiple issues, including:
+
+* MISSING_PLACEHOLDER: The {{customer_name}} placeholder is not defined.
+* CONFLICTING_INSTRUCTION: The prompt requests a concise explanation, but also asks for narrative explanations alongside the JSON output.
+* SCHEMA_RISK: The prompt requests both JSON output and attached documents with detailed breakdowns, which could lead to schema risk if not implemented correctly.
+* TOKEN_OVERAGE: The prompt mentions token limits, but creates a scenario that would likely exceed these limits due to the length of the expected response.","[{""role"": ""system"", ""content"": ""You are a helpful AI assistant.""}, {""role"": ""user"", ""content"": ""I need help with a task.""}]",,[],"Generated with Ollama model llama3.2, target tokens: 5000"
+ollama-gen-0005,ollama-generated,"Here is a realistic prompt that contains multiple issues:
+
+**Customer Support Request**
+
+As discussed earlier, I'm experiencing issues with my recent purchase. The report above (attached as ""order_summary.pdf"") indicates that the item arrived damaged. The steps below should resolve the problem: 
+
+1. Check for any visible damage.
+2. Contact our customer support team for assistance.
+
+However, I've tried these steps and the issue persists. Can you provide a detailed explanation of what happened during the shipping process? 
+
+Additionally, as we previously discussed in our conversation last week (the chat log is attached), the item was supposed to be shipped on time, but it seems like there's been a delay.
+
+Regarding the order, I'd appreciate it if you could provide me with a JSON representation of the current status. The format should look something like this:
+
+{
+    ""order_id"": 1234,
+    ""status"": ""damaged"",
+    ""shipping_date"": ""2023-02-15""
+}
+
+But can you also explain what caused the delay and how it affects my expected delivery date? 
+
+Please be concise in your response, but provide a detailed explanation alongside the JSON output. Also, please note that I'm on a token limit for this conversation, so please keep your response within 500 tokens.
+
+(Note: Please ensure that all relevant information is included, as per our previous conversations.)
+
+This prompt includes multiple issues:
+
+1. MISSING_PLACEHOLDER (using template variables like {{variable}}, {{#if var}}, and customer name)
+2. MISSING_REFERENCE (referencing ""the report above"", ""previous results"", and ""the steps below"" without context)
+3. CONFLICTING_INSTRUCTION (requesting a concise response but also asking for detailed explanations)
+4. SCHEMA_RISK (requesting JSON output alongside narrative/explanations)
+5. TOKEN_OVERAGE (mentioning token limits in the prompt)","[{""role"": ""system"", ""content"": ""You are a helpful AI assistant.""}, {""role"": ""user"", ""content"": ""I need help with a task.""}]",,[],"Generated with Ollama model llama3.2, target tokens: 5000"

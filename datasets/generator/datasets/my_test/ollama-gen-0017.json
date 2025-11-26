@@ -1,0 +1,18 @@
+{
+  "id": "ollama-gen-0017",
+  "category": "ollama-generated",
+  "prompt": "Here's a realistic prompt that incorporates multiple issues:\n\n**Customer Support Request**\n\nHi there, I'm reaching out regarding an issue with my recent order ({{order_number}}) placed on {{date_of_order}}. As discussed earlier in our conversation, I was informed that you would be able to expedite the shipping of this item. However, after waiting for approximately 3 business days, I still haven't received any updates on the status of my order.\n\nThe report above shows that there were some discrepancies in the inventory levels, but I'm not sure what caused these issues or how they will be resolved. Can you please provide a detailed explanation of the steps taken to address this problem and what measures will be put in place to prevent similar incidents in the future?\n\nI'd also like to request a JSON-only output for my order history, including any communication records and delivery updates. Please make sure that the JSON format is easy to read and understand, with clear field names and descriptions.\n\nCan you please be concise and provide the necessary information without getting too technical? I'm not looking for a detailed explanation of every single step involved in resolving this issue. Just give me the basics and any relevant metrics or statistics that might help me track my order's progress.\n\nAlso, please note that I've been informed that there are token limits on our conversations, so please keep your response within the 500-token limit.\n\n**Issue Breakdown:**\n\n- MISSING_PLACEHOLDER: Order number variable is not defined.\n- MISSING_REFERENCE: \"As discussed earlier\" phrase is used without context.\n- CONFLICTING_INSTRUCTION: Request for concise explanation vs. request for detailed explanation of steps taken to address a problem.\n- SCHEMA_RISK: Request for JSON output alongside narrative/explanations.\n\nThis prompt should be substantial enough for performance testing and includes multiple issues naturally, making it realistic for an AI prompt analyzer.",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are a helpful AI assistant."
+    },
+    {
+      "role": "user",
+      "content": "I need help with a task."
+    }
+  ],
+  "schema": null,
+  "expectedIssueCodes": [],
+  "notes": "Generated with Ollama model llama3.2, target tokens: 2000"
+}
