@@ -5,11 +5,8 @@
  */
 // SPDX-License-Identifier: Elastic-2.0
 
-import Ajv from 'ajv';
+import Ajv, { ErrorObject } from 'ajv';
 import type { JSONSchema7 } from '../types';
-
-// Ajv instance for schema risk detection (lenient)
-const ajv = new Ajv();
 
 // Separate Ajv instance for strict schema validation
 const strictAjv = new Ajv({ 
@@ -130,11 +127,11 @@ export function validateSchema(schema: JSONSchema7): SchemaValidationError {
     }
     
     // Check for Ajv errors
-    if (!valid || (strictAjv.errors && strictAjv.errors.length > 0)) {
+    if (!valid || (strictAjv.errors && (strictAjv.errors as ErrorObject[])?.length > 0)) {
       const ajvErrors = strictAjv.errors || [];
       return {
         valid: false,
-        errors: ajvErrors.map(err => ({
+        errors: ajvErrors.map((err: ErrorObject) => ({
           instancePath: err.instancePath || '',
           schemaPath: err.schemaPath || '',
           keyword: err.keyword || '',
@@ -147,10 +144,10 @@ export function validateSchema(schema: JSONSchema7): SchemaValidationError {
     return { valid: true };
   } catch (error: unknown) {
     // If validation throws, check for errors in ajv
-    if (strictAjv.errors && strictAjv.errors.length > 0) {
+    if (strictAjv.errors && (strictAjv.errors as ErrorObject[]).length > 0) {
       return {
         valid: false,
-        errors: strictAjv.errors.map(err => ({
+        errors: (strictAjv.errors  as ErrorObject[]).map((err: ErrorObject) => ({
           instancePath: err.instancePath || '',
           schemaPath: err.schemaPath || '',
           keyword: err.keyword || '',

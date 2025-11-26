@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import { run } from './schemaValidation';
-import type { AnalyzeInput, Report } from '../types';
+import type { AnalyzeInput, IssueEvidence, Report } from '../types';
 
 describe('schemaValidation rule', () => {
   it('should detect invalid schema with missing type', () => {
@@ -11,14 +11,14 @@ describe('schemaValidation rule', () => {
           name: { type: 'string' }
         }
         // Missing 'type' at root level
-      } as any
+      }
     };
     const report: Report = { issues: [], suggestions: [] };
 
     run(input, report);
 
     expect(report.issues.some((i) => i.code === 'INVALID_SCHEMA')).toBe(true);
-    expect(report.suggestions.some((s) => s.type === 'TIGHTEN_INSTRUCTION')).toBe(true);
+    expect(report.suggestions?.some((s) => s.type === 'TIGHTEN_INSTRUCTION')).toBe(true);
   });
 
   it('should detect invalid schema with wrong type value', () => {
@@ -29,7 +29,7 @@ describe('schemaValidation rule', () => {
         properties: {
           name: { type: 'string' }
         }
-      } as any
+      }
     };
     const report: Report = { issues: [], suggestions: [] };
 
@@ -46,7 +46,7 @@ describe('schemaValidation rule', () => {
         properties: {
           name: { type: 'invalid' }
         }
-      } as any
+      }
     };
     const report: Report = { issues: [], suggestions: [] };
 
@@ -93,7 +93,7 @@ describe('schemaValidation rule', () => {
           name: { type: 'invalid' },
           age: { type: 'number' }
         }
-      } as any
+      }
     };
     const report: Report = { issues: [], suggestions: [] };
 
@@ -102,7 +102,7 @@ describe('schemaValidation rule', () => {
     const issue = report.issues.find((i) => i.code === 'INVALID_SCHEMA');
     expect(issue).toBeDefined();
     expect(issue?.detail).toContain('Invalid JSON schema');
-    expect(issue?.evidence?.occurrences?.length).toBeGreaterThan(0);
+    expect((issue?.evidence as IssueEvidence)?.occurrences?.length).toBeGreaterThan(0);
   });
 
   it('should handle multiple validation errors', () => {
@@ -114,7 +114,7 @@ describe('schemaValidation rule', () => {
           name: { type: 'invalid' },
           age: { type: 'also_invalid' }
         }
-      } as any
+      }
     };
     const report: Report = { issues: [], suggestions: [] };
 
