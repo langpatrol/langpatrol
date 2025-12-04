@@ -42,8 +42,6 @@ export default function App() {
   const [useCloudMode, setUseCloudMode] = useState<boolean>(false);
   const [apiKey, setApiKey] = useState<string>('');
   const [apiBaseUrl, setApiBaseUrl] = useState<string>('http://localhost:3000');
-  const [enableContextCheck, setEnableContextCheck] = useState<boolean>(false);
-  const [contextDomains, setContextDomains] = useState<string>('');
   const [testResults, setTestResults] = useState<{
     filename: string;
     fileSize: number;
@@ -189,14 +187,7 @@ export default function App() {
           useMultiHypothesis: useMultiHypothesis !== undefined ? useMultiHypothesis : undefined,
           // Cloud API options
           apiKey: useCloudMode && apiKey ? apiKey : undefined,
-          apiBaseUrl: useCloudMode && apiBaseUrl ? apiBaseUrl : undefined,
-          // Domain context check (only available with cloud API and AI Analytics)
-          check_context: (useCloudMode && enableContextCheck && contextDomains.trim()) ? {
-            domains: contextDomains
-              .split(',')
-              .map(d => d.trim())
-              .filter(d => d.length > 0)
-          } : undefined
+          apiBaseUrl: useCloudMode && apiBaseUrl ? apiBaseUrl : undefined
         }
       };
 
@@ -286,47 +277,6 @@ export default function App() {
                     {useCloudMode && !apiKey && (
                       <div style={{ padding: 8, backgroundColor: '#fff3cd', border: '1px solid #ffc107', borderRadius: 4, fontSize: 12, color: '#856404' }}>
                         ⚠️ Please enter your API key to use cloud mode
-                      </div>
-                    )}
-                    {useCloudMode && (
-                      <div style={{ marginTop: 12, padding: 12, border: '1px solid #28a745', borderRadius: 4, backgroundColor: '#d4edda' }}>
-                        <label style={{ display: 'flex', alignItems: 'center', cursor: 'pointer', fontSize: 14, marginBottom: 8 }}>
-                          <input
-                            type="checkbox"
-                            checked={enableContextCheck}
-                            onChange={(e) => setEnableContextCheck(e.target.checked)}
-                            disabled={!apiKey}
-                            style={{ marginRight: 6, cursor: 'pointer' }}
-                          />
-                          <span>
-                            <strong>Domain Context Check</strong> - Validate prompt matches domain activity (AI Analytics only)
-                          </span>
-                        </label>
-                        {enableContextCheck && (
-                          <div style={{ marginTop: 8 }}>
-                            <label style={{ display: 'block', marginBottom: 4, fontSize: 14, fontWeight: 'bold' }}>
-                              Domain Keywords (comma-separated):
-                            </label>
-                            <textarea
-                              value={contextDomains}
-                              onChange={(e) => setContextDomains(e.target.value)}
-                              placeholder="e.g., salesforce, CRM, business automation, customer management"
-                              disabled={!apiKey}
-                              style={{ 
-                                width: '100%', 
-                                padding: 8, 
-                                fontSize: 14, 
-                                border: '1px solid #ddd', 
-                                borderRadius: 4,
-                                minHeight: 60,
-                                fontFamily: 'monospace'
-                              }}
-                            />
-                            <div style={{ fontSize: 12, color: '#666', marginTop: 4 }}>
-                              Prompts unrelated to these domains will be flagged as OUT_OF_CONTEXT (high severity)
-                            </div>
-                          </div>
-                        )}
                       </div>
                     )}
                   </>
