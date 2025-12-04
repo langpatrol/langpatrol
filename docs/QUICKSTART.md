@@ -62,13 +62,33 @@ langpatrol analyze prompt.txt --json --out report.json
 
 ## What Gets Detected
 
-LangPatrol detects five categories of issues:
+LangPatrol detects six categories of issues:
 
 1. **MISSING_PLACEHOLDER** - Unresolved template variables like `{{customer_name}}`
 2. **MISSING_REFERENCE** - References to "the report" or "continue the list" without prior context
 3. **CONFLICTING_INSTRUCTION** - Contradictory directives like "be concise" and "give detailed explanation"
 4. **SCHEMA_RISK** - Prompts requesting JSON but allowing prose commentary
 5. **TOKEN_OVERAGE** - Estimated tokens exceeding model context window
+6. **OUT_OF_CONTEXT** - Prompts that don't match your domain activity (cloud-only, requires AI Analytics)
+
+## Domain Context Checking (Cloud-only)
+
+Validate that prompts match your domain of activity:
+
+```typescript
+const report = await analyzePrompt({
+  prompt: 'How do I cook pasta?',
+  options: {
+    apiKey: 'lp_your_api_key_here',
+    apiBaseUrl: 'https://api.langpatrol.com',
+    check_context: {
+      domains: ['salesforce', 'CRM', 'business automation']
+    }
+  }
+});
+
+// Returns OUT_OF_CONTEXT error if prompt doesn't match domain
+```
 
 ## Next Steps
 
