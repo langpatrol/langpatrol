@@ -15,13 +15,14 @@ Welcome to the LangPatrol documentation. This guide provides comprehensive infor
 - [Core Engine](./architecture.md#core-engine) - The analysis engine internals
 
 ### Detection Rules
-LangPatrol detects five categories of prompt issues:
+LangPatrol detects six categories of prompt issues:
 
 - [Missing Placeholder Detection](./rules/missing-placeholder.md) - Detects unresolved template variables
 - [Missing Reference Detection](./rules/missing-reference.md) - Detects deictic references without antecedents
 - [Conflicting Instruction Detection](./rules/conflicting-instruction.md) - Detects contradictory directives
 - [Schema Risk Detection](./rules/schema-risk.md) - Detects JSON/prose conflicts
 - [Token Overage Detection](./rules/token-overage.md) - Detects context window violations
+- [Out of Context Detection](./rules/out-of-context.md) - Validates prompt matches domain activity (cloud-only)
 
 ### Technical Deep Dives
 - [Semantic Analytics](./technical/semantic-analytics.md) - Embedding-based similarity detection
