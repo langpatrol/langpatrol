@@ -35,7 +35,6 @@ POSTHOG_ANALYTICS_CONVENTIONS.md
 coverage/
 **/coverage/
 *.lcov
-**/venv/*
 
 # Benchmark results
 benchmark-results.json
