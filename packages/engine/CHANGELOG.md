@@ -1,5 +1,14 @@
 # @langpatrol/engine
 
+## 0.1.5
+
+### Minor Changes
+
+- **Added domain context checking support** - Added `check_context` option to `AnalyzeInput` type:
+  - New `check_context` option with `domains` parameter for cloud API domain validation
+  - Cloud API options (`apiKey`, `apiBaseUrl`) added to options type
+  - Supports `OUT_OF_CONTEXT` error code (cloud-only feature)
+
 ## 0.1.4
 
 ### Minor Changes

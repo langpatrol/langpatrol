@@ -98,8 +98,7 @@ type IssueCode =
   | 'MISSING_REFERENCE'
   | 'CONFLICTING_INSTRUCTION'
   | 'SCHEMA_RISK'
-  | 'TOKEN_OVERAGE'
-  | 'OUT_OF_CONTEXT'; // Cloud-only: Detected when prompt doesn't match domain activity
+  | 'TOKEN_OVERAGE';
 ```
 
 ### `Suggestion`
@@ -194,15 +193,6 @@ type AnalyzeOptions = {
   antecedentWindow?: {
     messages?: number;
     bytes?: number;
-  };
-  
-  // Cloud API options
-  apiKey?: string; // API key for cloud API - if provided, analysis will be performed via cloud API
-  apiBaseUrl?: string; // Base URL for cloud API (default: 'http://localhost:3000')
-  
-  // Domain context checking (cloud-only, requires apiKey and AI Analytics subscription)
-  check_context?: {
-    domains: string[]; // List of domain keywords/topics to validate the prompt against
   };
 }
 ```
@@ -576,68 +566,6 @@ Limit search window for reference detection.
   }
 }
 ```
-
-### Cloud API Options
-
-#### `apiKey?: string`
-
-API key for LangPatrol Cloud API. When provided, analysis is performed via the cloud API instead of local processing.
-
-**Note:** Requires a LangPatrol Cloud account and API key.
-
-**Example:**
-```typescript
-{
-  options: {
-    apiKey: 'lp_your_api_key_here',
-    apiBaseUrl: 'https://api.langpatrol.com'
-  }
-}
-```
-
-#### `apiBaseUrl?: string`
-
-Base URL for the cloud API. Defaults to `http://localhost:3000` if not provided.
-
-**Example:**
-```typescript
-{
-  options: {
-    apiKey: 'lp_your_api_key_here',
-    apiBaseUrl: 'https://api.langpatrol.com'
-  }
-}
-```
-
-### Domain Context Checking
-
-#### `check_context?: { domains: string[] }`
-
-**Cloud-only feature** - Validates that the prompt is relevant to your specified domain of activity. Requires an API key and AI Analytics subscription.
-
-When enabled, LangPatrol uses AI to check if the prompt matches your domain keywords. If the prompt is unrelated, it returns an `OUT_OF_CONTEXT` error with high severity.
-
-**Requirements:**
-- Must provide `apiKey` in options
-- Requires AI Analytics subscription (Pro tier or higher)
-- Automatically routes to `/api/v1/ai-analytics` endpoint
-
-**Example:**
-```typescript
-{
-  prompt: 'How do I cook pasta?',
-  options: {
-    apiKey: 'lp_your_api_key_here',
-    apiBaseUrl: 'https://api.langpatrol.com',
-    check_context: {
-      domains: ['salesforce', 'CRM', 'business automation']
-    }
-  }
-}
-// This will return OUT_OF_CONTEXT error since cooking is not related to Salesforce/CRM
-```
-
-**Error Code:** `OUT_OF_CONTEXT` (high severity)
 
 ## Adapters
 

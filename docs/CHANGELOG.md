@@ -1,5 +1,22 @@
 # Changelog
-## [0.1.4] - 2025-01-XX
+## [0.1.5] - 2025-12-04
+
+### Added
+
+* **Domain Context Checking (Cloud-only)** - New `OUT_OF_CONTEXT` error code for validating prompts match your domain activity:
+  - Added `check_context` option with `domains` parameter to specify domain keywords/topics
+  - Automatically routes to `/api/v1/ai-analytics` endpoint when `check_context` is provided
+  - Requires API key and AI Analytics subscription (Pro tier or higher)
+  - Returns high-severity `OUT_OF_CONTEXT` error when prompt doesn't match specified domains
+  - Integrated into SDK with automatic validation (throws error if used without API key)
+  - Added support in both cloud dashboard playground and LangPatrol dev UI
+
+### Changed
+
+* SDK now validates that `check_context` option is only used with `apiKey` provided
+* When `check_context` is provided, SDK automatically routes to AI Analytics endpoint instead of standard analyze endpoint
+
+## [0.1.4] - 2025-11-12
 
 ### Added
 

@@ -37,14 +37,7 @@ Analyzes a prompt or message history and returns a report with issues and sugges
 - `model?: string` - Model name for token estimation
 - `templateDialect?: 'handlebars' | 'jinja' | 'mustache' | 'ejs'` - Template dialect
 - `attachments?: Attachment[]` - File attachments metadata
-- `options?: { 
-    maxCostUSD?: number; 
-    maxInputTokens?: number; 
-    referenceHeads?: string[];
-    apiKey?: string; // Cloud API key
-    apiBaseUrl?: string; // Cloud API base URL
-    check_context?: { domains: string[] }; // Domain context checking (cloud-only)
-  }`
+- `options?: { maxCostUSD?: number; maxInputTokens?: number; referenceHeads?: string[] }`
 
 **Output:**
 - `issues: Issue[]` - Detected issues
@@ -59,7 +52,6 @@ Analyzes a prompt or message history and returns a report with issues and sugges
 - `CONFLICTING_INSTRUCTION` - Contradictory directives
 - `SCHEMA_RISK` - JSON schema mismatches
 - `TOKEN_OVERAGE` - Token limits exceeded
-- `OUT_OF_CONTEXT` - Prompt doesn't match domain activity (cloud-only, requires AI Analytics)
 
 ## Examples
 

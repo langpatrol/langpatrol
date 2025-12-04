@@ -30,12 +30,7 @@ async function analyzePromptCloud(input: AnalyzeInput, apiKey: string, baseUrl: 
     options: Object.keys(restOptions || {}).length > 0 ? restOptions : undefined
   };
 
-  // If check_context is provided, use AI Analytics endpoint (requires AI Analytics subscription)
-  // Otherwise use regular analyze endpoint
-  const hasCheckContext = options?.check_context?.domains && Array.isArray(options.check_context.domains) && options.check_context.domains.length > 0;
-  const endpoint = hasCheckContext ? '/api/v1/ai-analytics' : '/api/v1/analyze';
-  
-  const url = `${baseUrl}${endpoint}`;
+  const url = `${baseUrl}/api/v1/analyze`;
   const response = await fetch(url, {
     method: 'POST',
     headers: {
@@ -56,20 +51,12 @@ async function analyzePromptCloud(input: AnalyzeInput, apiKey: string, baseUrl: 
 }
 
 export async function analyzePrompt(input: AnalyzeInput): Promise<Report> {
-  // Validate that check_context is only used with apiKey
-  if (input.options?.check_context && !input.options?.apiKey) {
-    throw new Error('check_context option requires an apiKey. Domain context checking is only available via the cloud AI Analytics API.');
-  }
-
   // If apiKey is provided, route to cloud API
   if (input.options?.apiKey) {
     const apiKey = input.options.apiKey;
     const baseUrl = input.options.apiBaseUrl || 'http://localhost:3000';
     
-    const hasCheckContext = input.options.check_context?.domains && Array.isArray(input.options.check_context.domains) && input.options.check_context.domains.length > 0;
-    const endpoint = hasCheckContext ? 'AI Analytics' : 'Analyze';
-    
-    console.log(`[analyzePrompt] Routing to cloud API (${endpoint}):`, baseUrl);
+    console.log('[analyzePrompt] Routing to cloud API:', baseUrl);
     return analyzePromptCloud(input, apiKey, baseUrl);
   }
   // Check if semantic/NLI features are enabled

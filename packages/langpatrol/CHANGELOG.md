@@ -1,5 +1,21 @@
 # langpatrol
 
+## 0.1.5
+
+### Minor Changes
+
+- **Added domain context checking (cloud-only)** - New `OUT_OF_CONTEXT` error code for validating prompts match your domain activity:
+  - Added `check_context` option with `domains` parameter to specify domain keywords/topics
+  - Automatically routes to `/api/v1/ai-analytics` endpoint when `check_context` is provided
+  - Requires API key and AI Analytics subscription
+  - Returns high-severity `OUT_OF_CONTEXT` error when prompt doesn't match specified domains
+  - SDK validates that `check_context` is only used with `apiKey` provided
+
+### Patch Changes
+
+- Updated dependencies
+  - @langpatrol/engine@0.1.5
+
 ## 0.1.4
 
 ### Minor Changes
