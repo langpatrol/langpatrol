@@ -206,10 +206,6 @@ export type AnalyzeInput = {
     // Cloud API options
     apiKey?: string; // API key for cloud API - if provided, analysis will be performed via cloud API
     apiBaseUrl?: string; // Base URL for cloud API (default: 'http://localhost:3000')
-    // Domain context checking (cloud-only, requires apiKey and AI Analytics subscription)
-    check_context?: {
-      domains: string[]; // List of domain keywords/topics to validate the prompt against
-    };
   };
 };
 
