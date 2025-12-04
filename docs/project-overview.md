@@ -36,15 +36,16 @@ LangPatrol provides **local, fast validation** that catches these issues before 
 - No data sent to third parties
 - Sub-millisecond to low-millisecond latency for most checks
 
-### 2. Five Detection Categories
+### 2. Six Detection Categories
 
-LangPatrol detects five categories of issues:
+LangPatrol detects six categories of issues:
 
 1. **MISSING_PLACEHOLDER** - Unresolved template variables (e.g., `{{customer_name}}` not filled)
 2. **MISSING_REFERENCE** - Deictic references ("the report", "continue the list") with no prior content
 3. **CONFLICTING_INSTRUCTION** - Contradictory directives ("be concise" and "give a detailed explanation")
 4. **SCHEMA_RISK** - Prompts requesting JSON but also prose or commentary around it
 5. **TOKEN_OVERAGE** - Estimated token length exceeding model context or cost limits
+6. **OUT_OF_CONTEXT** - Prompts that don't match your domain activity (cloud-only, requires AI Analytics)
 
 ### 3. Advanced Semantic Analysis
 
@@ -61,6 +62,7 @@ For missing reference detection, LangPatrol uses advanced NLP techniques:
 - **CLI** - Command-line tool for batch analysis
 - **Adapters** - Framework integrations (LangChain, Vercel AI SDK)
 - **Configurable** - Fine-tune detection sensitivity and methods
+- **Cloud API** - Optional cloud-based AI Analytics for advanced features (domain context checking)
 
 ## Installation
 
@@ -113,7 +115,8 @@ LangPatrol follows a simple workflow:
        ├─► Reference Detection
        ├─► Conflict Detection
        ├─► Schema Risk Detection
-       └─► Token Overage Detection
+       ├─► Token Overage Detection
+       └─► Domain Context Detection (cloud-only)
        │
        ▼
 ┌─────────────┐
