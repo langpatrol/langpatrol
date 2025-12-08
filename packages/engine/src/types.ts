@@ -58,7 +58,8 @@ export type IssueCode =
   | 'CONFLICTING_INSTRUCTION'
   | 'SCHEMA_RISK'
   | 'INVALID_SCHEMA'
-  | 'TOKEN_OVERAGE';
+  | 'TOKEN_OVERAGE'
+  | 'OUT_OF_CONTEXT';
 
 export type IssueEvidenceSummary = { text: string; count: number };
 
