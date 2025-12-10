@@ -150,6 +150,6 @@ if (report.issues.find(i => i.code === 'OUT_OF_CONTEXT')) {
 
 ## License
 
-Elastic License 2.0
+MIT License
 
 

@@ -183,10 +183,11 @@ Use the dev UI (`apps/devui`) for interactive prompt testing and debugging.
 
 ## License
 
-LangPatrol uses a dual-license model:
+LangPatrol is fully open-source:
 
-- **Public SDK** (`langpatrol`, `langpatrol-cli`) - Elastic License 2.0
-- **Core Engine** (`@langpatrol/engine`) - Elastic License 2.0
+- **Public SDK** (`langpatrol`, `langpatrol-cli`) - MIT License
+- **Core Engine** (`@langpatrol/engine`) - MIT License
+- **All packages** - MIT License
 
 See [LICENSE-FAQ.md](./LICENSE-FAQ.md) for details.
 

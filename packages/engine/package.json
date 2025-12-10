@@ -2,7 +2,7 @@
   "name": "@langpatrol/engine",
   "version": "0.1.6",
   "description": "Local prompt validation engine for LangPatrol",
-  "license": "SEE LICENSE IN LICENSE-ELV2",
+  "license": "MIT",
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",

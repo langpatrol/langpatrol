@@ -10,5 +10,5 @@ This package provides shared pattern definitions and lexicons used by the engine
 
 ## License
 
-Elastic License 2.0
+MIT License
 
