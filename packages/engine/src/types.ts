@@ -210,3 +210,20 @@ export type AnalyzeInput = {
   };
 };
 
+// Cloud-only prompt optimization (compression) types
+export type OptimizeInput = {
+  prompt: string;
+  model?: string;
+  options?: {
+    apiKey?: string; // required when calling cloud API
+    apiBaseUrl?: string; // optional base URL override (default: 'http://localhost:3000')
+  };
+};
+
+export type OptimizeResponse = {
+  optimized_prompt: string;
+  ratio: string;
+  origin_tokens: number;
+  optimized_tokens: number;
+};
+

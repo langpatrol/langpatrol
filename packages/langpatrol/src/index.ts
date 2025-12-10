@@ -6,5 +6,6 @@
 // SPDX-License-Identifier: Elastic-2.0
 
 export { analyzePrompt } from './analyzePrompt';
+export { optimizePrompt, type OptimizeInput, type OptimizeResponse } from './optimizePrompt';
 export * from '@langpatrol/engine';
 

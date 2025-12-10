@@ -54,6 +54,42 @@ Analyzes a prompt or message history and returns a report with issues and sugges
 - `cost?: { estInputTokens: number; estUSD?: number }` - Cost estimates
 - `meta?: { latencyMs: number; modelHint?: string }` - Metadata
 
+### `optimizePrompt(input: OptimizeInput): Promise<OptimizeResponse>`
+
+Optimizes (compresses) a user prompt to help reduce token usage. This is a cloud-only feature and requires an API key.
+
+**Input:**
+- `prompt: string` - The prompt text to optimize
+- `model?: string` - Optional target model name
+- `options?: { 
+    apiKey: string;            // Required: cloud API key
+    apiBaseUrl?: string;       // Optional: base URL for cloud API (default: 'http://localhost:3000')
+  }`
+
+**Output:**
+- `optimized_prompt: string` - Optimized prompt text
+- `ratio: string` - Compression ratio (e.g., "33.00%")
+- `origin_tokens: number` - Original token count
+- `optimized_tokens: number` - Optimized token count
+
+**Example:**
+```typescript
+import { optimizePrompt } from 'langpatrol';
+
+const optimized = await optimizePrompt({
+  prompt: 'Write a detailed project proposal for building a new mobile app...',
+  model: 'gpt-4',
+  options: {
+    apiKey: process.env.LANGPATROL_API_KEY!,
+    apiBaseUrl: 'https://api.langpatrol.com' // optional override
+  }
+});
+
+console.log('Compressed prompt:', optimized.compressed);
+console.log('Ratio:', optimized.ratio);
+console.log('Tokens:', optimized.origin_tokens, '->', optimized.optimized_tokens);
+```
+
 ## Issue Codes
 
 - `MISSING_PLACEHOLDER` - Unresolved template variables
