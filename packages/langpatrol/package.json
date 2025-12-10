@@ -2,7 +2,7 @@
   "name": "langpatrol",
   "version": "0.1.7",
   "description": "Developer SDK for pre-inference prompt validation and linting",
-  "license": "Elastic License 2.0",
+  "license": "MIT",
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
