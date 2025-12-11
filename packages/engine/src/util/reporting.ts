@@ -1,9 +1,9 @@
 /**
- * Copyright (c) 2025 Langpatrol (Gavel Inc.)
- * Licensed under the Elastic License 2.0.
+ * Copyright (c) 2025 LangPatrol (Gavel Inc.)
+ * Licensed under the MIT License.
  * See LICENSE file for details.
  */
-// SPDX-License-Identifier: Elastic-2.0
+// SPDX-License-Identifier: MIT
 
 export function createIssueId(prefix = 'iss'): string {
   const random = Math.random().toString(36).slice(2, 10);

@@ -4,7 +4,7 @@ Local prompt validation engine for LangPatrol.
 
 ## License
 
-Elastic License 2.0 - See LICENSE-ELV2
+MIT License
 
 ## Usage
 

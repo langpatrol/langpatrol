@@ -1,9 +1,9 @@
 /**
- * Copyright (c) 2025 Langpatrol (Gavel Inc.)
- * Licensed under the Elastic License 2.0.
+ * Copyright (c) 2025 LangPatrol (Gavel Inc.)
+ * Licensed under the MIT License.
  * See LICENSE file for details.
  */
-// SPDX-License-Identifier: Elastic-2.0
+// SPDX-License-Identifier: MIT
 
 type JSONValue = string | number | boolean | null | JSONValue[] | { [key: string]: JSONValue };
 
@@ -58,7 +58,8 @@ export type IssueCode =
   | 'CONFLICTING_INSTRUCTION'
   | 'SCHEMA_RISK'
   | 'INVALID_SCHEMA'
-  | 'TOKEN_OVERAGE';
+  | 'TOKEN_OVERAGE'
+  | 'OUT_OF_CONTEXT';
 
 export type IssueEvidenceSummary = { text: string; count: number };
 
@@ -206,10 +207,23 @@ export type AnalyzeInput = {
     // Cloud API options
     apiKey?: string; // API key for cloud API - if provided, analysis will be performed via cloud API
     apiBaseUrl?: string; // Base URL for cloud API (default: 'http://localhost:3000')
-    // Domain context checking (cloud-only, requires apiKey and AI Analytics subscription)
-    check_context?: {
-      domains: string[]; // List of domain keywords/topics to validate the prompt against
-    };
   };
+};
+
+// Cloud-only prompt optimization (compression) types
+export type OptimizeInput = {
+  prompt: string;
+  model?: string;
+  options?: {
+    apiKey?: string; // required when calling cloud API
+    apiBaseUrl?: string; // optional base URL override (default: 'http://localhost:3000')
+  };
+};
+
+export type OptimizeResponse = {
+  optimized_prompt: string;
+  ratio: string;
+  origin_tokens: number;
+  optimized_tokens: number;
 };
 

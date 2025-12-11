@@ -1,9 +1,9 @@
 /**
- * Copyright (c) 2025 Langpatrol (Gavel Inc.)
- * Licensed under the Elastic License 2.0.
+ * Copyright (c) 2025 LangPatrol (Gavel Inc.)
+ * Licensed under the MIT License.
  * See LICENSE file for details.
  */
-// SPDX-License-Identifier: Elastic-2.0
+// SPDX-License-Identifier: MIT
 import { pipeline, ZeroShotClassificationOutput, ZeroShotClassificationPipeline } from '@xenova/transformers';
 
 // Lazy-load the NLI model
