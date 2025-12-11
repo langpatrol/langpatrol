@@ -1,4 +1,4 @@
-# 🛡️ LangPatrol
+# 🧐 LangPatrol
 
 **Pre-inference prompt validation and linting for LLMs**
 
@@ -264,6 +264,7 @@ pnpm dev:apps
 We're building LangPatrol in the open and would love to hear from you!
 
 - 📧 **Founders Email**: [founders@langpatrol.com](mailto:founders@langpatrol.com)
+-	⭐ **Let's connect on X** for updates and news: [x.com/langpatrol](https://x.com/langpatrol)
 - 💡 **Feature Requests**: [langpatrol.com/feature-requests](http://langpatrol.com/feature-requests)
 - 🌐 **Website**: [langpatrol.com](https://www.langpatrol.com)
 - 📦 **NPM Package**: [npmjs.com/package/langpatrol](https://www.npmjs.com/package/langpatrol)
