@@ -16,3 +16,7 @@ export { isNLIEntailmentAvailable } from './util/nliEntailment';
 export { checkFulfillmentCombined } from './util/fulfillmentChecker';
 export { isNLPExtractionAvailable } from './util/nlpExtract';
 
+// Utility exports for SDK usage
+export { extractText } from './util/text';
+export { createIssueId, createPreview } from './util/reporting';
+

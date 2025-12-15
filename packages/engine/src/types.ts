@@ -59,7 +59,8 @@ export type IssueCode =
   | 'SCHEMA_RISK'
   | 'INVALID_SCHEMA'
   | 'TOKEN_OVERAGE'
-  | 'OUT_OF_CONTEXT';
+  | 'OUT_OF_CONTEXT'
+  | 'PII_DETECTED';
 
 export type IssueEvidenceSummary = { text: string; count: number };
 
