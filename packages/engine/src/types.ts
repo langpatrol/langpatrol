@@ -60,7 +60,8 @@ export type IssueCode =
   | 'INVALID_SCHEMA'
   | 'TOKEN_OVERAGE'
   | 'OUT_OF_CONTEXT'
-  | 'PII_DETECTED';
+  | 'PII_DETECTED'
+  | 'SECURITY_THREAT';
 
 export type IssueEvidenceSummary = { text: string; count: number };
 

@@ -17,7 +17,8 @@ export default function App() {
     CONFLICTING_INSTRUCTION: true,
     SCHEMA_RISK: true,
     TOKEN_OVERAGE: true,
-    PII_DETECTED: true
+    PII_DETECTED: true,
+    SECURITY_THREAT: true
   });
   const [tokenEstimation, setTokenEstimation] = useState<'auto' | 'cheap' | 'exact' | 'off'>('auto');
   const [maxChars, setMaxChars] = useState<number>(120000);

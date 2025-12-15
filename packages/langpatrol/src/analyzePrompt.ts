@@ -115,6 +115,125 @@ function detectPIIRegex(text: string): Array<{ key: string; value: string; start
 }
 
 /**
+ * Simple regex-based security threat detection for local use (when no API key is provided)
+ */
+function detectSecurityThreatsRegex(text: string): Array<{ pattern: string; value: string; start: number; end: number }> {
+  const detections: Array<{ pattern: string; value: string; start: number; end: number }> = [];
+  const seen = new Set<string>();
+
+  const collect = (regex: RegExp, pattern: string) => {
+    let match: RegExpExecArray | null;
+    const re = new RegExp(regex.source, regex.flags.includes('g') ? regex.flags : regex.flags + 'g');
+    while ((match = re.exec(text)) !== null) {
+      const value = match[0];
+      // Use a normalized key to avoid duplicates
+      const key = `${pattern}:${value.toLowerCase()}`;
+      if (!seen.has(key)) {
+        seen.add(key);
+        detections.push({
+          pattern,
+          value,
+          start: match.index,
+          end: match.index + value.length
+        });
+      }
+    }
+  };
+
+  // Prompt injection patterns - instructions to ignore/override (more flexible)
+  // Pattern 1: "ignore [word] [instruction]" - catches "ignore previous instruction", "ignore all instruction", etc.
+  collect(/\b(ignore|disregard|forget|override|skip|bypass|neglect|abandon)\s+(\w+\s+)?(previous|prior|earlier|above|all|the|your|system|initial|original|earlier|past|before|any)\s+(instructions?|prompts?|rules?|directives?|commands?|messages?|guidelines?|policies?|constraints?|requirements?|restrictions?|limitations?)\b/gi, 'IGNORE_INSTRUCTIONS');
+  // Pattern 2: "ignore all previous" - catches "ignore all previous instruction"
+  collect(/\b(ignore|disregard|forget|override|skip|bypass)\s+(all|everything|any|each|every)\s+(previous|prior|earlier|above|before|past|the|your)\s+(instructions?|prompts?|rules?|directives?|commands?|messages?|guidelines?|policies?|constraints?|requirements?|instruction|prompt|rule|directive|command|message|guideline|policy|constraint|requirement)\b/gi, 'IGNORE_INSTRUCTIONS');
+  // Pattern 3: "ignore everything above/before"
+  collect(/\b(ignore|disregard|forget|override)\s+(everything|all|what|anything|all\s+of|each|every)\s+(above|before|earlier|said|mentioned|written|stated|told|given|provided|specified|defined)\b/gi, 'IGNORE_INSTRUCTIONS');
+  // Pattern 4: "ignore [word] commands/requests"
+  collect(/\b(ignore|disregard|forget|override|skip|bypass)\s+(\w+\s+)?(previous|prior|earlier|above|all|the|your|any|all\s+of)\s+(commands?|requests?|orders?|directions?|steps?|tasks?|instructions?)\b/gi, 'IGNORE_INSTRUCTIONS');
+  collect(/\b(you\s+are|act\s+as|pretend\s+you\s+are|roleplay\s+as|imagine\s+you\s+are|you\s+must\s+act\s+as|behave\s+as|play\s+the\s+role\s+of)\s+(a|an|the)?\s*[^.!?]+(now|immediately|from\s+now\s+on|starting\s+now)\b/gi, 'ROLE_MANIPULATION');
+  collect(/\b(forget|erase|delete|remove|clear|discard|abandon)\s+(your|the|all|any)\s+(system|initial|original|previous|prior|earlier|above|default)\s+(prompt|instructions?|rules?|directives?|guidelines?|policies?|constraints?|context|memory|settings?|configuration)\b/gi, 'FORGET_PROMPT');
+  
+  // Jailbreak attempts
+  collect(/\b(bypass|circumvent|avoid|skip|ignore|evade|escape|get\s+around)\s+(safety|security|content|filter|restriction|policy|guideline|constraint|limit|protection|guard|moderation|safeguard|check|validation)\b/gi, 'JAILBREAK');
+  collect(/\b(you\s+can|you\s+are\s+allowed|you\s+have\s+permission|it\s+is\s+ok|it\s+is\s+fine|it\s+is\s+acceptable|it's\s+ok|it's\s+fine|it's\s+acceptable)\s+to\s+(ignore|bypass|circumvent|violate|break|disregard|override)\b/gi, 'JAILBREAK');
+  
+  // Data exfiltration attempts - more flexible patterns (allow optional words like "with", "the", etc.)
+  collect(/\b(output|print|display|show|reveal|expose|share|tell|give|provide|send|return|write|list|dump|leak|disclose|unveil)\s+(me|us|the\s+user|your|the)\s+(system|initial|original|previous|prior|earlier|above|full|complete|entire|all|any|hidden|secret|confidential|private|internal|sensitive)\s+(prompt|instructions?|rules?|directives?|guidelines?|policies?|constraints?|context|memory|training\s+data|dataset|knowledge\s+base|details?|information|data|content)\b/gi, 'DATA_EXFILTRATION');
+  collect(/\b(what\s+are|tell\s+me|show\s+me|give\s+me|what\s+is|what\s+were|what\s+was|reveal|expose|share|provide)\s+(your|the|your\s+original|your\s+initial|your\s+system|your\s+previous|your\s+prior|your\s+earlier|your\s+above|the\s+hidden|the\s+secret|the\s+confidential|the\s+private|the\s+internal)\s+(prompt|instructions?|rules?|directives?|guidelines?|policies?|constraints?|context|memory|details?|information|data)\b/gi, 'DATA_EXFILTRATION');
+  collect(/\b(provide|give|show|tell|reveal|share|expose|disclose|unveil)\s+(me|us|the\s+user|your)\s+(\w+\s+)?(hidden|secret|confidential|private|internal|sensitive|restricted|classified|protected|undisclosed)\s+(details?|information|data|content|facts?|secrets?|instructions?|prompts?|rules?|directives?|guidelines?|policies?)\b/gi, 'DATA_EXFILTRATION');
+  collect(/\b(provide|give|show|tell|reveal|share|expose|disclose|unveil)\s+(me|us|the\s+user|your)\s+(with\s+)?(the\s+)?(hidden|secret|confidential|private|internal|sensitive|restricted|classified|protected|undisclosed)\s+(details?|information|data|content|facts?|secrets?)\b/gi, 'DATA_EXFILTRATION');
+  
+  // Instruction manipulation
+  collect(/\b(change|modify|alter|update|replace|set|switch|adjust|transform)\s+(your|the|your\s+system|your\s+role|your\s+behavior|your\s+personality|your\s+identity|your\s+name|your\s+purpose|your\s+function)\s+to\b/gi, 'INSTRUCTION_MANIPULATION');
+  collect(/\b(from\s+now\s+on|starting\s+now|beginning\s+now|hereafter|henceforth|going\s+forward|from\s+this\s+point|from\s+here\s+on)\s+(you\s+must|you\s+should|you\s+will|you\s+are|you\s+have\s+to|you\s+need\s+to)\b/gi, 'INSTRUCTION_MANIPULATION');
+  
+  // Social engineering
+  collect(/\b(this\s+is\s+)?(a\s+)?(test|experiment|simulation|hypothetical|fictional|pretend|roleplay|game|exercise|drill|practice|demo|example)\s+(scenario|situation|context|case|example|instance|scenario)\b/gi, 'SOCIAL_ENGINEERING');
+  collect(/\b(do\s+not|don't|never|refuse\s+to|avoid)\s+(following|obeying|adhering\s+to|respecting|honoring|complying\s+with|enforcing|applying|using|implementing)\s+(your|the|any|all|previous|prior|earlier|above|system|initial|original)\s+(instructions?|rules?|directives?|guidelines?|policies?|constraints?|prompts?|commands?)\b/gi, 'SOCIAL_ENGINEERING');
+  
+  // Code generation requests (potentially malicious)
+  collect(/\b(generate|create|write|produce|make|build|code|develop|output|provide|give|show|display)\s+(me|us|the\s+user|a|an|the)?\s*(shell|bash|sh|powershell|cmd|command\s+line|executable|script|malicious|exploit|payload|backdoor|trojan|virus|worm|keylogger|ransomware)\s+(code|script|command|file|program|executable|payload)\b/gi, 'MALICIOUS_CODE');
+  collect(/\b(generate|create|write|produce|make|build|code|develop|output|provide|give|show|display)\s+(me|us|the\s+user|a|an|the)?\s*(code|script|command|file|program|executable|payload)\s+(that|which|to)\s+(hack|exploit|attack|breach|compromise|steal|delete|destroy|corrupt|infect|bypass|circumvent)\b/gi, 'MALICIOUS_CODE');
+  collect(/\b(generate|create|write|produce|make|build|code|develop)\s+(shell|bash|sh|powershell|cmd|command\s+line|executable|script)\s+(code|script|command|file|program)\b/gi, 'MALICIOUS_CODE');
+
+  return detections;
+}
+
+/**
+ * Add security threat detection issues to the report when no API key is provided
+ */
+function addSecurityThreatDetection(input: AnalyzeInput, report: Report): void {
+  const text = extractText(input);
+  if (!text) return;
+
+  const detections = detectSecurityThreatsRegex(text);
+  if (detections.length === 0) return;
+
+  // Group by pattern type
+  const byPattern = new Map<string, Array<{ value: string; start: number; end: number }>>();
+  for (const d of detections) {
+    const existing = byPattern.get(d.pattern) || [];
+    existing.push({ value: d.value, start: d.start, end: d.end });
+    byPattern.set(d.pattern, existing);
+  }
+
+  // Create summary and occurrences
+  const summary = Array.from(byPattern.entries()).map(([pattern, values]) => ({
+    text: pattern.replace(/_/g, ' ').toLowerCase(),
+    count: values.length
+  }));
+
+  const occurrences = detections
+    .slice(0, 50)
+    .map((d) => ({
+      text: d.value,
+      start: d.start,
+      end: d.end,
+      preview: createPreview(text, d.start, d.end)
+    }));
+
+  const issueId = createIssueId();
+  report.issues.push({
+    id: issueId,
+    code: 'SECURITY_THREAT',
+    severity: 'high',
+    detail: `Detected potential security threats (prompt injection/jailbreak): ${summary
+      .map((s) => `${s.text}${s.count > 1 ? ` (×${s.count})` : ''}`)
+      .join(', ')}`,
+    evidence: {
+      summary,
+      occurrences,
+      firstSeenAt: {
+        char: Math.min(...detections.map((d) => d.start))
+      }
+    },
+    scope: input.messages && input.messages.length > 0
+      ? { type: 'messages', messageIndex: input.messages.length - 1 }
+      : { type: 'prompt' },
+    confidence: 'medium' // Regex-based detection has medium confidence
+  });
+}
+
+/**
  * Add PII detection issues to the report when no API key is provided
  */
 function addPIIDetection(input: AnalyzeInput, report: Report): void {
@@ -225,6 +344,11 @@ export async function analyzePrompt(input: AnalyzeInput): Promise<Report> {
       }
     }
     
+    // Add security threat detection if not disabled
+    if (!input.options?.disabledRules?.includes('SECURITY_THREAT')) {
+      addSecurityThreatDetection(input, report);
+    }
+    
     // Add PII detection if not disabled
     if (!input.options?.disabledRules?.includes('PII_DETECTED')) {
       addPIIDetection(input, report);
@@ -246,6 +370,11 @@ export async function analyzePrompt(input: AnalyzeInput): Promise<Report> {
   console.log('[analyzePrompt] Using standard synchronous analyze');
   // Otherwise use standard synchronous analyze
   const report = analyze(input);
+  
+  // Add security threat detection if not disabled
+  if (!input.options?.disabledRules?.includes('SECURITY_THREAT')) {
+    addSecurityThreatDetection(input, report);
+  }
   
   // Add PII detection if not disabled
   if (!input.options?.disabledRules?.includes('PII_DETECTED')) {
