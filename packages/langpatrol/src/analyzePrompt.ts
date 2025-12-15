@@ -13,7 +13,10 @@ import {
   runReferenceAsync,
   runConflictsAsync,
   isSemanticSimilarityAvailable,
-  isNLIEntailmentAvailable
+  isNLIEntailmentAvailable,
+  extractText,
+  createIssueId,
+  createPreview
 } from '@langpatrol/engine';
 
 /**
@@ -48,6 +51,122 @@ async function analyzePromptCloud(input: AnalyzeInput, apiKey: string, baseUrl: 
   }
 
   return response.json();
+}
+
+/**
+ * Simple regex-based PII detection for local use (when no API key is provided)
+ */
+function detectPIIRegex(text: string): Array<{ key: string; value: string; start: number; end: number }> {
+  const detections: Array<{ key: string; value: string; start: number; end: number }> = [];
+  const seen = new Set<string>();
+
+  const collect = (regex: RegExp, key: string) => {
+    let match: RegExpExecArray | null;
+    const re = new RegExp(regex.source, regex.flags.includes('g') ? regex.flags : regex.flags + 'g');
+    while ((match = re.exec(text)) !== null) {
+      const value = match[0];
+      if (!seen.has(value)) {
+        seen.add(value);
+        detections.push({
+          key,
+          value,
+          start: match.index,
+          end: match.index + value.length
+        });
+      }
+    }
+  };
+
+  // Email addresses
+  collect(/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/gi, 'EMAIL');
+
+  // Phone numbers (simple, international friendly)
+  collect(/\b\+?\d[\d\s().-]{6,}\d\b/g, 'PHONE');
+
+  // Credit card numbers (basic 13-16 digits, spaced or dashed)
+  collect(/\b(?:\d[ -]*?){13,16}\b/g, 'CARD');
+
+  // SSN-like patterns
+  collect(/\b\d{3}-\d{2}-\d{4}\b/g, 'SSN');
+
+  // "My name is X" -> extract the name part
+  const nameRe = /\bmy name is\s+([A-Z][a-zA-Z''-]{1,40}(?:\s[A-Z][a-zA-Z''-]{1,40})?)/gi;
+  let nameMatch: RegExpExecArray | null;
+  while ((nameMatch = nameRe.exec(text)) !== null) {
+    const name = nameMatch[1];
+    if (!seen.has(name)) {
+      seen.add(name);
+      detections.push({
+        key: 'NAME',
+        value: name,
+        start: nameMatch.index + nameMatch[0].indexOf(name),
+        end: nameMatch.index + nameMatch[0].indexOf(name) + name.length
+      });
+    }
+  }
+
+  // Filter out trivially short or numeric-only values (false positives)
+  return detections.filter((d) => {
+    const val = d.value.trim();
+    if (!val || val.length < 2) return false;
+    if (/^\d{1,5}$/.test(val)) return false; // skip small numbers like "4", "16722"
+    return true;
+  });
+}
+
+/**
+ * Add PII detection issues to the report when no API key is provided
+ */
+function addPIIDetection(input: AnalyzeInput, report: Report): void {
+  const text = extractText(input);
+  if (!text) return;
+
+  const detections = detectPIIRegex(text);
+  if (detections.length === 0) return;
+
+  // Group by category
+  const byCategory = new Map<string, Array<{ value: string; start: number; end: number }>>();
+  for (const d of detections) {
+    const existing = byCategory.get(d.key) || [];
+    existing.push({ value: d.value, start: d.start, end: d.end });
+    byCategory.set(d.key, existing);
+  }
+
+  // Create summary and occurrences
+  const summary = Array.from(byCategory.entries()).map(([key, values]) => ({
+    text: key,
+    count: values.length
+  }));
+
+  const occurrences = detections
+    .slice(0, 50)
+    .map((d) => ({
+      text: d.value,
+      start: d.start,
+      end: d.end,
+      preview: createPreview(text, d.start, d.end)
+    }));
+
+  const issueId = createIssueId();
+  report.issues.push({
+    id: issueId,
+    code: 'PII_DETECTED',
+    severity: 'medium',
+    detail: `Detected personally identifiable information (PII): ${summary
+      .map((s) => `${s.text}${s.count > 1 ? ` (×${s.count})` : ''}`)
+      .join(', ')}`,
+    evidence: {
+      summary,
+      occurrences,
+      firstSeenAt: {
+        char: Math.min(...detections.map((d) => d.start))
+      }
+    },
+    scope: input.messages && input.messages.length > 0
+      ? { type: 'messages', messageIndex: input.messages.length - 1 }
+      : { type: 'prompt' },
+    confidence: 'high'
+  });
 }
 
 export async function analyzePrompt(input: AnalyzeInput): Promise<Report> {
@@ -106,6 +225,11 @@ export async function analyzePrompt(input: AnalyzeInput): Promise<Report> {
       }
     }
     
+    // Add PII detection if not disabled
+    if (!input.options?.disabledRules?.includes('PII_DETECTED')) {
+      addPIIDetection(input, report);
+    }
+    
     // Ensure meta exists with required fields
     if (!report.meta) {
       report.meta = {
@@ -122,6 +246,12 @@ export async function analyzePrompt(input: AnalyzeInput): Promise<Report> {
   console.log('[analyzePrompt] Using standard synchronous analyze');
   // Otherwise use standard synchronous analyze
   const report = analyze(input);
+  
+  // Add PII detection if not disabled
+  if (!input.options?.disabledRules?.includes('PII_DETECTED')) {
+    addPIIDetection(input, report);
+  }
+  
   // Ensure meta exists with required fields
   if (!report.meta) {
     report.meta = {

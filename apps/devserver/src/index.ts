@@ -3,7 +3,7 @@ import cors from 'cors';
 import { readdir, readFile } from 'node:fs/promises';
 import { existsSync } from 'node:fs';
 import { join } from 'node:path';
-import { analyzePrompt, type AnalyzeInput, isSemanticSimilarityAvailable, isNLIEntailmentAvailable } from 'langpatrol';
+import { analyzePrompt, type AnalyzeInput, isSemanticSimilarityAvailable, isNLIEntailmentAvailable, redactPII } from 'langpatrol';
 
 // Path resolution: try multiple approaches to find the repo root
 // When running via pnpm --filter, cwd might be the package dir, so we need to go up
@@ -45,6 +45,20 @@ app.post('/analyze', async (req, res) => {
   try {
     const report = await analyzePrompt(req.body);
     res.json(report);
+  } catch (e) {
+    res.status(400).json({ error: String(e) });
+  }
+});
+
+// Redact PII from a prompt
+app.post('/redact-pii', async (req, res) => {
+  try {
+    const { prompt, options } = req.body;
+    if (!prompt) {
+      return res.status(400).json({ error: 'prompt is required' });
+    }
+    const result = await redactPII({ prompt, options });
+    res.json(result);
   } catch (e) {
     res.status(400).json({ error: String(e) });
   }

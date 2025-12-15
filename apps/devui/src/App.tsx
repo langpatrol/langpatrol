@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import type { Report } from 'langpatrol';
+import type { Report, RedactedResult } from 'langpatrol';
 
 export default function App() {
   const [prompt, setPrompt] = useState('Summarize the report.');
@@ -16,7 +16,8 @@ export default function App() {
     MISSING_REFERENCE: true,
     CONFLICTING_INSTRUCTION: true,
     SCHEMA_RISK: true,
-    TOKEN_OVERAGE: true
+    TOKEN_OVERAGE: true,
+    PII_DETECTED: true
   });
   const [tokenEstimation, setTokenEstimation] = useState<'auto' | 'cheap' | 'exact' | 'off'>('auto');
   const [maxChars, setMaxChars] = useState<number>(120000);
@@ -61,6 +62,9 @@ export default function App() {
     };
   } | null>(null);
   const [testing, setTesting] = useState(false);
+  // PII Redaction state
+  const [redactionResult, setRedactionResult] = useState<RedactedResult | null>(null);
+  const [redacting, setRedacting] = useState(false);
 
   // Load test files on mount
   useEffect(() => {
@@ -132,6 +136,43 @@ export default function App() {
       alert(`Error: ${error instanceof Error ? error.message : String(error)}`);
     } finally {
       setTesting(false);
+    }
+  };
+
+  const runRedactPII = async () => {
+    if (!prompt.trim()) {
+      alert('Please enter a prompt to redact');
+      return;
+    }
+    setRedacting(true);
+    setRedactionResult(null);
+    try {
+      const body = {
+        prompt,
+        options: useCloudMode && apiKey ? {
+          apiKey,
+          apiBaseUrl: apiBaseUrl || 'http://localhost:3000'
+        } : undefined
+      };
+
+      const r = await fetch('http://localhost:5174/redact-pii', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(body)
+      });
+
+      if (!r.ok) {
+        const error = await r.json();
+        throw new Error(error.error || 'PII redaction failed');
+      }
+
+      const result = await r.json();
+      setRedactionResult(result);
+    } catch (error) {
+      console.error(error);
+      alert(`Error: ${error instanceof Error ? error.message : String(error)}`);
+    } finally {
+      setRedacting(false);
     }
   };
 
@@ -732,6 +773,25 @@ export default function App() {
                   {testing ? 'Testing...' : 'Test Semantic Features • MISSING_REFERENCE'}
                 </button>
               )}
+              <button
+                onClick={runRedactPII}
+                disabled={redacting || (useCloudMode && !apiKey)}
+                style={{
+                  width: '100%',
+                  padding: '12px 24px',
+                  fontSize: 16,
+                  fontWeight: 'bold',
+                  backgroundColor: redacting || (useCloudMode && !apiKey) ? '#ccc' : '#dc3545',
+                  color: 'white',
+                  border: 'none',
+                  borderRadius: 4,
+                  cursor: redacting || (useCloudMode && !apiKey) ? 'not-allowed' : 'pointer'
+                }}
+              >
+                {redacting 
+                  ? (useCloudMode ? 'Redacting via Cloud...' : 'Redacting PII...') 
+                  : (useCloudMode ? 'Redact PII via Cloud API' : 'Redact PII')}
+              </button>
             </div>
           </div>
         </div>
@@ -740,6 +800,92 @@ export default function App() {
         <div style={{ flex: '0 0 50%', overflowY: 'auto', backgroundColor: '#fff' }}>
           <div style={{ padding: 16 }}>
             <h2 style={{ marginTop: 0 }}>Report</h2>
+            
+            {/* PII Redaction Results */}
+            {redactionResult && (
+              <div style={{ marginBottom: 24, padding: 16, backgroundColor: '#fff5f5', borderRadius: 4, border: '1px solid #dc3545' }}>
+                <h3 style={{ marginTop: 0, marginBottom: 12, color: '#dc3545' }}>PII Redaction Results</h3>
+                
+                <div style={{ marginBottom: 16 }}>
+                  <h4 style={{ marginTop: 0, marginBottom: 8 }}>Original Prompt</h4>
+                  <div style={{ 
+                    padding: 12, 
+                    backgroundColor: '#fff', 
+                    borderRadius: 4, 
+                    border: '1px solid #ddd',
+                    fontFamily: 'monospace',
+                    fontSize: 14,
+                    whiteSpace: 'pre-wrap',
+                    wordBreak: 'break-word'
+                  }}>
+                    {redactionResult.prompt}
+                  </div>
+                </div>
+
+                <div style={{ marginBottom: 16 }}>
+                  <h4 style={{ marginTop: 0, marginBottom: 8 }}>Redacted Prompt</h4>
+                  <div style={{ 
+                    padding: 12, 
+                    backgroundColor: '#fff', 
+                    borderRadius: 4, 
+                    border: '1px solid #28a745',
+                    fontFamily: 'monospace',
+                    fontSize: 14,
+                    whiteSpace: 'pre-wrap',
+                    wordBreak: 'break-word',
+                    color: '#28a745'
+                  }}>
+                    {redactionResult.redacted_prompt}
+                  </div>
+                </div>
+
+                {redactionResult.detection && redactionResult.detection.length > 0 && (
+                  <div style={{ marginBottom: 16 }}>
+                    <h4 style={{ marginTop: 0, marginBottom: 8 }}>
+                      Detected PII ({redactionResult.detection.length})
+                    </h4>
+                    <div style={{ 
+                      maxHeight: '400px',
+                      overflowY: 'auto',
+                      border: '1px solid #ddd',
+                      borderRadius: 4,
+                      backgroundColor: '#fff'
+                    }}>
+                      {redactionResult.detection.map((det, idx) => (
+                        <div 
+                          key={idx}
+                          style={{
+                            padding: 12,
+                            borderBottom: idx < redactionResult.detection.length - 1 ? '1px solid #eee' : 'none',
+                            display: 'flex',
+                            justifyContent: 'space-between',
+                            alignItems: 'center'
+                          }}
+                        >
+                          <div style={{ flex: 1 }}>
+                            <div style={{ fontWeight: 'bold', color: '#dc3545', marginBottom: 4 }}>
+                              {det.placeholder} ({det.key})
+                            </div>
+                            <div style={{ fontSize: 12, color: '#666', fontFamily: 'monospace' }}>
+                              {det.value}
+                            </div>
+                          </div>
+                          <div style={{ fontSize: 12, color: '#999', marginLeft: 12 }}>
+                            Index: {det.index}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {(!redactionResult.detection || redactionResult.detection.length === 0) && (
+                  <div style={{ padding: 12, backgroundColor: '#e8f5e9', borderRadius: 4, color: '#2e7d32' }}>
+                    ✓ No PII detected in the prompt
+                  </div>
+                )}
+              </div>
+            )}
             
             {/* Semantic Test Results */}
             {testResults && (

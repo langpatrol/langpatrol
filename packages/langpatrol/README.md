@@ -90,6 +90,58 @@ console.log('Ratio:', optimized.ratio);
 console.log('Tokens:', optimized.origin_tokens, '->', optimized.optimized_tokens);
 ```
 
+### `redactPII(input: RedactPIIInput): Promise<RedactedResult>`
+
+Redacts personally identifiable information (PII) from a prompt. Can use cloud API for better detection, or fall back to local regex-based detection.
+
+**Input:**
+- `prompt: string` - The prompt text to redact
+- `options?: { 
+    apiKey?: string;            // Optional: cloud API key 
+    apiBaseUrl?: string;         // Optional: base URL for cloud API (default: 'http://localhost:3000')
+  }`
+
+**Output:**
+- `prompt: string` - Original prompt text
+- `redacted_prompt: string` - Prompt with PII replaced by indexed placeholders (e.g., `[NAME_1]`, `[EMAIL_2]`)
+- `detection: PIIDetection[]` - Array of detected PII with:
+  - `key: string` - Category (NAME, EMAIL, PHONE, ADDRESS, SSN, CARD, ID)
+  - `value: string` - Original PII value found
+  - `placeholder: string` - Placeholder used in redacted_prompt (e.g., `[NAME_1]`)
+  - `index: number` - Index within this category (1-based)
+
+**Example:**
+```typescript
+import { redactPII } from 'langpatrol';
+
+// Local mode (regex-based detection)
+const result = await redactPII({
+  prompt: 'My name is John Doe and my email is john@example.com'
+});
+
+console.log(result.redacted_prompt);
+// "My name is [NAME_1] and my email is [EMAIL_1]"
+console.log(result.detection);
+// [
+//   { key: 'NAME', value: 'John Doe', placeholder: '[NAME_1]', index: 1 },
+//   { key: 'EMAIL', value: 'john@example.com', placeholder: '[EMAIL_1]', index: 1 }
+// ]
+
+// Cloud mode (Cloud detection, more accurate)
+const cloudResult = await redactPII({
+  prompt: 'Contact me at john@example.com or call 555-1234',
+  options: {
+    apiKey: process.env.LANGPATROL_API_KEY!,
+    apiBaseUrl: 'https://api.langpatrol.com'
+  }
+});
+```
+
+**Note:** 
+- Without an API key, uses local regex-based detection (fast, but may miss some PII)
+- With an API key, uses cloud API for more accurate detection (requires AI Analytics subscription)
+- Detected PII is replaced with indexed placeholders that can be used to reconstruct the original values
+
 ## Issue Codes
 
 - `MISSING_PLACEHOLDER` - Unresolved template variables
@@ -99,6 +151,7 @@ console.log('Tokens:', optimized.origin_tokens, '->', optimized.optimized_tokens
 - `INVALID_SCHEMA` - Invalid JSON Schema structure
 - `TOKEN_OVERAGE` - Token limits exceeded
 - `OUT_OF_CONTEXT` - Prompt doesn't match specified domain activity (cloud-only, requires `check_context` option)
+- `PII_DETECTED` - Personally identifiable information detected in the prompt
 
 ## Examples
 
