@@ -1,0 +1,16 @@
+{
+  "name": "@langpatrol/examples",
+  "version": "1.0.0",
+  "description": "Example scripts demonstrating LangPatrol SDK features",
+  "type": "commonjs",
+  "main": "enhance-prompt-example.js",
+  "scripts": {
+    "example": "node enhance-prompt-example.js"
+  },
+  "dependencies": {
+    "langpatrol": "workspace:*",
+    "dotenv": "^16.4.5"
+  },
+  "private": true
+}
+

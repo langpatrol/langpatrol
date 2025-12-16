@@ -77,36 +77,14 @@ importers:
         specifier: ^5.0.0
         version: 5.4.21(@types/node@20.19.24)
 
-  packages/cli:
+  apps/examples:
     dependencies:
-      glob:
-        specifier: ^10.3.10
-        version: 10.4.5
+      dotenv:
+        specifier: ^16.4.5
+        version: 16.6.1
       langpatrol:
         specifier: workspace:*
-        version: link:../langpatrol
-      picocolors:
-        specifier: ^1.0.0
-        version: 1.1.1
-    devDependencies:
-      '@langpatrol/eslint-config':
-        specifier: workspace:*
-        version: link:../../tooling/eslint-config
-      '@langpatrol/prettier-config':
-        specifier: workspace:*
-        version: link:../../tooling/prettier-config
-      '@types/node':
-        specifier: ^20.11.24
-        version: 20.19.24
-      tsup:
-        specifier: ^8.0.1
-        version: 8.5.0(postcss@8.5.6)(tsx@4.20.6)(typescript@5.9.3)
-      typescript:
-        specifier: ^5.6.0
-        version: 5.9.3
-      vitest:
-        specifier: ^4.0.0
-        version: 4.0.7(@types/node@20.19.24)(tsx@4.20.6)
+        version: link:../../packages/langpatrol
 
   packages/engine:
     dependencies:
@@ -1375,6 +1353,10 @@ packages:
   doctrine@3.0.0:
     resolution: {integrity: sha512-yS+Q5i3hBf7GBkd4KG8a7eBNNWNGLTaEwwYWUijIYM7zrlYDM0BFXHjjPWlWZ1Rg7UaddZeIDmi9jF3HmqiQ2w==}
     engines: {node: '>=6.0.0'}
+
+  dotenv@16.6.1:
+    resolution: {integrity: sha512-uBq4egWHTcTt33a72vpSG0z3HnPuIl6NqYcTrKEg2azoEyl2hpW0zqlxysq2pK9HlDIHyHyakeYaYnSAwd8bow==}
+    engines: {node: '>=12'}
 
   dunder-proto@1.0.1:
     resolution: {integrity: sha512-KIN/nDJBQRcXw0MLVhZE9iQHmG68qAVIBg9CqmUYjmQIhgij9U5MFvrqkUL5FbtyyzZuOeOt0zdeRe4UY7ct+A==}
@@ -3816,6 +3798,8 @@ snapshots:
   doctrine@3.0.0:
     dependencies:
       esutils: 2.0.3
+
+  dotenv@16.6.1: {}
 
   dunder-proto@1.0.1:
     dependencies:
