@@ -32,9 +32,10 @@ export interface EnhancePromptConfig {
   enableSecurityThreatRemoval?: boolean;
   
   /**
-   * API key for cloud services (required for compression and enhanced PII detection)
+   * API key for cloud services (required)
+   * enhancePrompt is a cloud-only feature that requires an API key
    */
-  apiKey?: string;
+  apiKey: string;
   
   /**
    * Base URL for cloud API
@@ -141,7 +142,7 @@ async function sanitizePromptCloud(
  */
 export function enhancePrompt(
   prompt: string,
-  config?: EnhancePromptConfig
+  config: EnhancePromptConfig
 ): Promise<EnhancePromptSuccess>;
 export function enhancePrompt(
   prompt: string,
@@ -151,10 +152,14 @@ export function enhancePrompt(
 ): void;
 export function enhancePrompt(
   prompt: string,
-  config: EnhancePromptConfig = {},
+  config: EnhancePromptConfig,
   onSuccess?: SuccessCallback,
   onError?: ErrorCallback
 ): Promise<EnhancePromptSuccess> | void {
+  // Validate API key is provided
+  if (!config.apiKey) {
+    throw new Error('enhancePrompt requires an API key. Please provide apiKey in the config.');
+  }
   const {
     enablePIIDetection = false,
     enableCompression = false,
