@@ -19,8 +19,12 @@ import {
   createPreview
 } from '@langpatrol/engine';
 
+// Type-safe constant for SECURITY_THREAT (cast to ensure compatibility during builds)
+const SECURITY_THREAT_CODE = 'SECURITY_THREAT' as IssueCode;
+
 /**
- * Call the cloud API to analyze a prompt
+ * Call the cloud AI Analytics API to analyze a prompt
+ * Uses the /ai-analytics endpoint which leverages LLM for enhanced detection
  */
 async function analyzePromptCloud(input: AnalyzeInput, apiKey: string, baseUrl: string): Promise<Report> {
   // Remove apiKey and apiBaseUrl from the request body
@@ -33,7 +37,8 @@ async function analyzePromptCloud(input: AnalyzeInput, apiKey: string, baseUrl: 
     options: Object.keys(restOptions || {}).length > 0 ? restOptions : undefined
   };
 
-  const url = `${baseUrl}/api/v1/analyze`;
+  // Use AI Analytics endpoint for enhanced LLM-based detection
+  const url = `${baseUrl}/api/v1/ai-analytics`;
   const response = await fetch(url, {
     method: 'POST',
     headers: {
@@ -214,7 +219,7 @@ function addSecurityThreatDetection(input: AnalyzeInput, report: Report): void {
   const issueId = createIssueId();
   report.issues.push({
     id: issueId,
-    code: 'SECURITY_THREAT',
+    code: SECURITY_THREAT_CODE,
     severity: 'high',
     detail: `Detected potential security threats (prompt injection/jailbreak): ${summary
       .map((s) => `${s.text}${s.count > 1 ? ` (×${s.count})` : ''}`)
@@ -345,7 +350,7 @@ export async function analyzePrompt(input: AnalyzeInput): Promise<Report> {
     }
     
     // Add security threat detection if not disabled
-    if (!input.options?.disabledRules?.includes('SECURITY_THREAT')) {
+    if (!input.options?.disabledRules?.includes(SECURITY_THREAT_CODE)) {
       addSecurityThreatDetection(input, report);
     }
     
@@ -372,12 +377,12 @@ export async function analyzePrompt(input: AnalyzeInput): Promise<Report> {
   const report = analyze(input);
   
   // Add security threat detection if not disabled
-  if (!input.options?.disabledRules?.includes('SECURITY_THREAT')) {
+  if (!input.options?.disabledRules?.includes(SECURITY_THREAT_CODE)) {
     addSecurityThreatDetection(input, report);
   }
   
   // Add PII detection if not disabled
-  if (!input.options?.disabledRules?.includes('PII_DETECTED')) {
+  if (!input.options?.disabledRules?.includes('PII_DETECTED' as IssueCode)) {
     addPIIDetection(input, report);
   }
   
